@@ -99,7 +99,7 @@ A BRS is written per FUNCTION, never per manual.
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** BLANK.
+- **2.1 Features & Functionalities:** only the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK if the manual has none. Never put pre-conditions in Remarks or Triggered When.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
@@ -133,7 +133,7 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
 ## Step 6 - Event Triggering's
 - One row for each button, link, checkbox or toggle in the images that makes something happen. Examples: Submit, Cancel, Process, Generate, Query/Search, Clear, Apply, Overwrite, Next/Previous, a tab click that loads data, a checkbox that enables fields.
 - Columns:
-  - **Event Type:** "Button Click", "Check Box Click", "Radio Button Click", "Tab Click", "Link Click" or "On Change".
+  - **Event Type:** "Button Click", "Check Box Click", "Radio Button Click", "Menu Click" (an item in a ☰ Group/Single function menu, for example Generate Release Advise), "Tab Click", "Link Click" or "On Change".
   - **Description:** what happens. Take it from the manual's "How to" steps and from the alert or success-bar text in the images.
   - **Triggered When?:** the user action plus the precondition, for example "User clicks Submit after entering all mandatory fields".
   - **Remarks:** the message shown, quoted from the image. Otherwise blank.

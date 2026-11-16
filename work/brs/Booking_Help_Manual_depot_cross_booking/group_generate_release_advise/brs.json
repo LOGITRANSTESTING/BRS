@@ -24,13 +24,16 @@
    "caption": "Image II"
   }
  ],
- "features": [],
+ "features": [
+  "Port release should be generated, and the release advice will be generated based on whether the container is accepted or not.",
+  "Both booking and PR information should be available."
+ ],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
-   "remarks": ""
+   "event_type": "Menu Click",
+   "description": "Generates the release advice for the selected bookings and sends it to the booking customer and the depot address via Right Fax or email.",
+   "triggered_when": "User selects one or more bookings using the check boxes, clicks the Menu icon near Cross Booking Depot Activity and clicks Generate Release Advise.",
+   "remarks": "\"Generate release advise updated successfully\""
   }
  ],
  "search": [],
