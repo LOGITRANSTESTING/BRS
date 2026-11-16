@@ -1,0 +1,63 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Accept Release",
+ "version": "01.01",
+ "date": "16/11/2026",
+ "history": [
+  {
+   "date": "16.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Accept Release details. Accept Release Function allows the user to change the PR status from Prepared to supplied or Empty or full return status.",
+ "images": [
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/single_accept_release/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/single_accept_release/img/03.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/single_accept_release/img/04.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [
+  "PR Status must be in \"Prepared\" status."
+ ],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}
