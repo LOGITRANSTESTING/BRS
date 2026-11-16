@@ -52,8 +52,11 @@
    "fp": "3292c44ad54bc177",
    "n": 3,
    "fn": "single_accept_release",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/brs/BRS - EMS - Accept Release V_1.0.docx",
+   "done_fp": "3292c44ad54bc177",
+   "version": "01.01"
   }
  ],
  "removed": []
