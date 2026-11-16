@@ -41,9 +41,58 @@
  ],
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "PR Number",
+   "type": "Display Item",
+   "ui": "Selected PR Number Details",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Freeze",
+   "type": "Display Item",
+   "ui": "Freeze status of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Size Type & Container",
+   "type": "Alphanumeric",
+   "ui": "Size Type and Container of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Alphanumeric",
+   "ui": "Empty Pickup of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Empty Pickup Date for the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Alphanumeric",
+   "ui": "Full Return of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return Date",
+   "type": "Date and Time Picker",
+   "ui": "Full Return Date for the PR",
    "db": "",
    "values": ""
   }
