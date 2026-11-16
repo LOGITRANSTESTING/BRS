@@ -62,12 +62,16 @@ A BRS is written per FUNCTION, never per manual.
 2. Skip the small inline button/icon crops (anything under about 300 px wide). Only full screenshots go into the BRS.
 3. For each full screenshot, run:
    `python tools/brs_img.py unmark SRC work/brs/<manual>/<fn>/img/NN.png --donor-dir work/brs/<manual>/<fn>/pages/img --blue`
-   - This removes the blue frame (any style), the red boxes, the numbered circles, the stubs, leftover mark segments and drawn blue boxes.
+   - This removes only what the manual added: the blue frame around the screenshot, the red boxes, the numbered circles, the stubs and leftover mark segments.
+   - **The app's own elements must NEVER be removed:** blue panels and lines, blue buttons, red asterisks and red icons, grid lines and highlights. The tool guards this. Any pixel changed outside the marks' footprint is put back, and the report shows `guard_restored_px`.
+   - **Blue boxes:** `--blue` only LISTS possible drawn blue boxes (`blue_box_candidates`); it removes nothing, because the app has its own blue rectangles. Show the user each candidate. Remove one only after the user confirms it is a drawn mark and not part of the app: rerun with `--blue-box x0,y0,x1,y1` for each confirmed box.
+   - Never use `erase`, `fill` or `copy` to take away something that belongs to the app, unless the user asked for that exact edit.
    - It then repairs everything the marks covered, in this order:
-     1. Buttons and boxes are redrawn in the style of a matching element on the same screen.
-     2. The manual's own inline step crops (buttons, check boxes, icons in `--donor-dir`) are used, but only where a crop matches every surrounding pixel exactly.
-     3. Other screenshots of the same screen are used next, then matching areas elsewhere on the same screen.
-     4. Last comes row/column continuation, and only where the area is provably plain.
+     1. A similar element replaces a damaged one: the same button, box or check box, taken from the same screen, a neighbouring screenshot, or an inline crop. It is used only when it matches every pixel the mark left visible.
+     2. Otherwise the element is redrawn in the style of the most similar element on the same screen.
+     3. The manual's own inline step crops (buttons, check boxes, icons in `--donor-dir`) are used, but only where a crop matches every surrounding pixel exactly.
+     4. Other screenshots of the same screen are used next, then matching areas elsewhere on the same screen.
+     5. Last comes row/column continuation, and only where the area is provably plain.
    - If the user's original unmarked screenshots exist in `screenshots/<function>/`, add them with `--donors`. They are the best source.
    - Never invent text or icons. If a mark covered part of a label, value or icon, only a real source can fill it.
 4. The images must be 100% seamless. An image is used only when its report says `"seamless": true`.

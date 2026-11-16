@@ -3,8 +3,10 @@ neighbouring screenshots of the same screen.
 
   unmark  SRC DST [--donors F ...] [--donor-dir D] [--inline F ...] [--blue] [--keep-border]
           Remove the blue frame (any style), red boxes, numbered circles, stubs, cut-off box segments and
-          (with --blue) drawn blue boxes, then repair every covered spot seamlessly:
-            1 element rebuild from a same-style element on the same screen (layout-aware edges)
+          drawn blue boxes the user confirmed (--blue-box; --blue only lists candidates), then repair
+          every covered spot seamlessly. The app's own elements are never removed (guarded):
+            1 similar element copied whole (same screen / neighbours / step crops) - exact fit only
+            1b element rebuild from the most similar same-style element (layout-aware edges)
             2 inline step crops (small images in --donor-dir / --inline) - only where they fit exactly
             3 neighbour screenshots, then the same screen elsewhere - only exact agreement
             4 row/column continuation - only where provably plain
@@ -34,7 +36,7 @@ How neighbour filling works (same screen, different moment):
   5. Fallback: no donor good enough -> each masked pixel continues the nearest straight row/column
      (backgrounds, grid lines, panel edges), which is right for empty areas and wrong for text.
 """
-import argparse, json, sys
+import argparse, hashlib, json, sys
 from pathlib import Path
 import numpy as np, cv2
 from PIL import Image
@@ -205,7 +207,7 @@ def strip_frame(im, search=40, max_pad=16):
             j += 1
         cuts.append(j)
     t, bt, l, r = cuts
-    if not any(cuts): return im, 0
+    if not all(cuts): return im, 0   # a frame is a closed rectangle; a blue line on one side is the app's
     return im.crop((l, t, W - r, H - bt)), max(cuts)
 
 
@@ -369,6 +371,25 @@ def _dbg(i, b):
     if os.environ.get('BRS_DEBUG'): print('element', b, 'skipped at line', i, file=sys.stderr)
 
 
+def element_library(sources, exclude=None, max_n=400):
+    """Every button / input box / drop-down / check box found on the given screenshots, cut out with a
+    2 px margin. Used as whole-element donors: a damaged element is replaced only by an element that
+    matches every pixel the mark left visible (same size, border, fill, text and icons)."""
+    lib, seen = [], set()
+    for name, im in sources:
+        a = np.array(im); H, W = a.shape[:2]
+        bg = _local_bg(a, [0, 0, W - 1, H - 1])
+        for b in _elements(a, bg, min_h=10, max_h=80, min_w=10):
+            if exclude is not None and exclude[b[1]:b[3] + 1, b[0]:b[2] + 1].any(): continue
+            x0, y0, x1, y1 = max(0, b[0] - 2), max(0, b[1] - 2), min(W - 1, b[2] + 2), min(H - 1, b[3] + 2)
+            crop = a[y0:y1 + 1, x0:x1 + 1]
+            key = hashlib.sha1(crop.tobytes()).hexdigest()
+            if key in seen: continue
+            seen.add(key); lib.append(('%s @%d,%d' % (name, x0, y0), Image.fromarray(crop)))
+            if len(lib) >= max_n: return lib
+    return lib
+
+
 def rebuild_elements(c, damage):
     """Buttons / input boxes / drop downs hit by a mark are redrawn from an undamaged element of the same
     style on the same screen (e.g. Submit from Cancel, the Container box from Tare Weight).
@@ -436,25 +457,30 @@ def rebuild_elements(c, damage):
             else:
                 _dbg(5, b); continue
         x0, y0, x1, y1 = max(0, L), max(0, T), min(W - 1, R), min(H - 1, Bm); w = x1 - x0 + 1; h = y1 - y0 + 1
-        ref = min(same_h, key=lambda r: abs((r[2] - r[0] + 1) - w))
-        syn = _synth(c[ref[1]:ref[3] + 1, ref[0]:ref[2] + 1], h, w)
-        if syn is None: _dbg(61, b); continue
-        S, k = syn
+        # most similar first: same width, then closest width; the first that passes every check wins
         cur = a[y0:y1 + 1, x0:x1 + 1]; dmg = damage[y0:y1 + 1, x0:x1 + 1] > 0
-        # verify the drawn style on the element's own undamaged border band
-        band = np.zeros(dmg.shape, bool); band[:2] = band[-2:] = True; band[:, :k] = band[:, -k:] = True
-        chk = band & ~dmg
-        if chk.sum() < 8: _dbg(67, b); continue
-        err = np.abs(S[chk].astype(int) - cur[chk].astype(int)).max(1)
-        if err.mean() > 8 or np.percentile(err, 90) > 60: _dbg(69, b); continue
-        # never invent text/icons: refuse if the mark covered any part of the content area
-        inner = np.zeros(dmg.shape, bool); inner[3:-3, k:-k] = True
-        content = inner & ~dmg & (np.abs(cur.astype(int) - S.astype(int)).max(2) > 40)
-        if content.any():
-            cxs = np.where(content.any(0))[0]; cys = np.where(content.any(1))[0]
-            zone = np.zeros(dmg.shape, bool); zone[cys.min():cys.max() + 1, cxs.min():cxs.max() + 1] = True
-            core = cv2.erode(dmg.astype(np.uint8), np.ones((3, 3), np.uint8)) > 0  # the safety margin added around marks is not real damage
-            if (zone & core).any(): _dbg(6, b); continue
+        chosen = None
+        for ref in sorted(same_h, key=lambda r: abs((r[2] - r[0] + 1) - w))[:8]:
+            syn = _synth(c[ref[1]:ref[3] + 1, ref[0]:ref[2] + 1], h, w)
+            if syn is None: continue
+            S, k = syn
+            # verify the drawn style on the element's own undamaged border band
+            band = np.zeros(dmg.shape, bool); band[:2] = band[-2:] = True; band[:, :k] = band[:, -k:] = True
+            chk = band & ~dmg
+            if chk.sum() < 8: continue
+            err = np.abs(S[chk].astype(int) - cur[chk].astype(int)).max(1)
+            if err.mean() > 8 or np.percentile(err, 90) > 60: continue
+            # never invent text/icons: refuse if the mark covered any part of the content area
+            inner = np.zeros(dmg.shape, bool); inner[3:-3, k:-k] = True
+            content = inner & ~dmg & (np.abs(cur.astype(int) - S.astype(int)).max(2) > 40)
+            if content.any():
+                cxs = np.where(content.any(0))[0]; cys = np.where(content.any(1))[0]
+                zone = np.zeros(dmg.shape, bool); zone[cys.min():cys.max() + 1, cxs.min():cxs.max() + 1] = True
+                core = cv2.erode(dmg.astype(np.uint8), np.ones((3, 3), np.uint8)) > 0  # the safety margin added around marks is not real damage
+                if (zone & core).any(): _dbg(6, b); break
+            chosen = (ref, S, err); break
+        if chosen is None: _dbg(7, b); continue
+        ref, S, err = chosen
         out = cur.copy(); out[dmg] = S[dmg]
         a[y0:y1 + 1, x0:x1 + 1] = out
         covered[y0:y1 + 1, x0:x1 + 1] = 1
@@ -539,7 +565,7 @@ def clear_marks_mask(im):
     return line_fill(a, mask), mask.astype(np.uint8), circles
 
 
-def unmark(src_path, dst, screens, inline=(), blue=False, keep_border=False, min_score=0.92, ctx=40):
+def unmark(src_path, dst, screens, inline=(), blue=False, keep_border=False, min_score=0.92, ctx=40, blue_boxes=None):
     src = I.load(src_path)
     base, removed = (src, 0) if keep_border else strip_frame(src)
     a0 = np.array(base)
@@ -549,9 +575,11 @@ def unmark(src_path, dst, screens, inline=(), blue=False, keep_border=False, min
     for _ in range(3):
         rm = I.red_mask(c)
         if not rm.any(): break
-        n_, lab_, _, _ = cv2.connectedComponentsWithStats(rm)
+        n_, lab_, st_, _ = cv2.connectedComponentsWithStats(rm)
         touch = cv2.dilate(changed, np.ones((3, 3), np.uint8)) > 0
         ids = set(np.unique(lab_[touch & (rm > 0)])) - {0}
+        # only line-like pieces or specks are mark leftovers; compact red shapes (asterisks, icons) are app
+        ids = {i for i in ids if (lambda w_, h_, ar: ar <= 12 or w_ >= 3 * h_ or h_ >= 3 * w_)(st_[i][2], st_[i][3], st_[i][4])}
         if not ids: break
         extra = np.isin(lab_, list(ids)).astype(np.uint8)
         extra = cv2.dilate(extra, np.ones((3, 3), np.uint8))
@@ -561,18 +589,48 @@ def unmark(src_path, dst, screens, inline=(), blue=False, keep_border=False, min
     left = I.red_mask(c) & near
     if left.any():
         lm = cv2.dilate(left, np.ones((3, 3), np.uint8)); c = I.axis_fill(c, lm); changed |= lm
-    if blue:
+    blue_candidates = []
+    if blue:  # detection only: the app has its own blue panels/lines, so nothing blue is removed unasked
         bm = blue_box_mask(c)
-        if bm.any(): c = I.axis_fill(c, bm); changed |= bm
+        if bm.any():
+            n_, _, st2, _ = cv2.connectedComponentsWithStats(bm)
+            blue_candidates = [[int(x), int(y), int(x + w - 1), int(y + h - 1)] for x, y, w, h, _ in st2[1:]]
+    for bb in blue_boxes or []:  # user-confirmed drawn blue boxes: remove only their outline band
+        x0, y0, x1, y1 = bb; band = np.zeros(c.shape[:2], np.uint8)
+        band[max(0, y0 - 2):y1 + 3, max(0, x0 - 2):x1 + 3] = 1; band[y0 + 4:y1 - 3, x0 + 4:x1 - 3] = 0
+        r_, g_, b_ = [c[..., k].astype(int) for k in range(3)]
+        bl = ((b_ > 140) & (b_ - r_ > 80)).astype(np.uint8) & band
+        if bl.any():
+            bl = cv2.dilate(bl, np.ones((3, 3), np.uint8)) & band; c = line_fill(c, bl); changed |= bl
+    changed0 = changed.copy()
     # damaged = pixels that were under a mark AND whose surroundings are not plain (plain areas are
     # already exact after row/column continuation: background, straight panel lines)
     g = cv2.cvtColor(a0, cv2.COLOR_RGB2GRAY).astype(np.float32)
     plain_ref = cv2.cvtColor(c, cv2.COLOR_RGB2GRAY).astype(np.float32)
     texture = cv2.dilate((cv2.morphologyEx(plain_ref, cv2.MORPH_GRADIENT, np.ones((3, 3))) > 25).astype(np.uint8), np.ones((9, 9), np.uint8))
     damage = (cv2.dilate(changed, np.ones((3, 3), np.uint8)) & texture).astype(np.uint8)
-    report = {'frame_removed_px': removed, 'mark_px': int(changed.sum()), 'circles': [(int(x), int(y)) for x, y, _ in circles], 'repairs': [], 'unresolved': []}
+    report = {'blue_box_candidates': blue_candidates, 'frame_removed_px': removed, 'mark_px': int(changed.sum()), 'circles': [(int(x), int(y)) for x, y, _ in circles], 'repairs': [], 'unresolved': []}
     H, W = damage.shape
-    # 0. UI elements hit by a mark are redrawn in their own style; the plain area around is re-continued
+    # 0a. element similarity: a whole identical element (same screen elsewhere, a neighbour screenshot,
+    #     or a step crop) replaces the damaged one when it matches every pixel the mark left visible
+    allmask = (damage | cv2.dilate(changed, np.ones((3, 3), np.uint8))).astype(np.uint8)
+    lib = list(inline) + element_library([('SELF', Image.fromarray(c))], exclude=cv2.dilate(allmask, np.ones((9, 9), np.uint8))) \
+        + element_library(screens)
+    if lib:
+        n0, lab0, _, _ = cv2.connectedComponentsWithStats(cv2.dilate(damage, np.ones((5, 5), np.uint8)))
+        for i in range(1, n0):
+            comp = ((lab0 == i) & (damage > 0)).astype(np.uint8)
+            if comp.sum() < 4: continue
+            comp = (cv2.dilate(comp, np.ones((15, 15), np.uint8)) & allmask).astype(np.uint8)
+            while comp.sum() >= 4:
+                c2, info = fit_inline(c, comp, lib)
+                if not info: break
+                cov = info.pop('covered'); c = c2
+                info['method'] = 'similar element' if '@' in info['donor'] else 'inline crop'
+                ys_, xs_ = np.where(cov > 0)
+                report['repairs'].append(dict(info, box=[int(xs_.min()), int(ys_.min()), int(xs_.max()), int(ys_.max())]))
+                comp = comp & (1 - cov); damage = damage & (1 - cov); allmask = allmask & (1 - cov); changed = changed & (1 - cov)
+    # 0b. UI elements hit by a mark are redrawn in their own style; the plain area around is re-continued
     c, rebuilt, covered = rebuild_elements(c, (damage | cv2.dilate(changed, np.ones((3, 3), np.uint8))).astype(np.uint8))
     if rebuilt:
         report['repairs'] += rebuilt
@@ -604,6 +662,14 @@ def unmark(src_path, dst, screens, inline=(), blue=False, keep_border=False, min
         if continuation_ok(c, comp):
             report['repairs'].append({'method': 'continuation (plain area)', 'box': box}); continue
         report['unresolved'].append({'box': box, 'tried': info['tried'][:4]})
+    # GUARD: the app's own elements are never removed. Any pixel outside the marks' footprint that differs
+    # from the screenshot is put back, and reported.
+    allowed = cv2.dilate(changed0, np.ones((5, 5), np.uint8)) > 0
+    diff = np.abs(c.astype(int) - a0.astype(int)).max(2) > 0
+    stray = diff & ~allowed
+    if stray.any():
+        c[stray] = a0[stray]
+        report['guard_restored_px'] = int(stray.sum())
     I.save(Image.fromarray(c), dst)
     spots = [((b['box'][0] + b['box'][2]) // 2, (b['box'][1] + b['box'][3]) // 2) for b in report['repairs'] + report['unresolved']] or report['circles']
     report['check_sheet'] = I.spot_sheet(base, Image.fromarray(c), spots[:16], str(Path(dst).with_name(Path(dst).stem + '_check.png')))
@@ -640,7 +706,8 @@ def main():
         p.add_argument('--donors', nargs='*'); p.add_argument('--donor-dir')
         p.add_argument('--inline', nargs='*', help='step crops (buttons/icons) that may be placed only where they fit perfectly')
         p.add_argument('--box'); p.add_argument('--min', type=float, default=0.90)
-        p.add_argument('--blue', action='store_true'); p.add_argument('--keep-border', action='store_true')
+        p.add_argument('--blue', action='store_true', help='only REPORT possible drawn blue boxes (nothing removed)')
+        p.add_argument('--blue-box', action='append', help='x0,y0,x1,y1 of a drawn blue box the USER confirmed; only its outline is removed'); p.add_argument('--keep-border', action='store_true')
         p.add_argument('--no-fallback', action='store_true'); p.add_argument('--ctx', type=int, default=24)
         p.add_argument('--until', type=int, help='remove-rows: bottom y of the grid body')
         p.add_argument('--self', action='store_true', help='also look for a matching element elsewhere on the same screen')
@@ -664,7 +731,7 @@ def main():
         scr, inl = donor_list(a, 'both')
         me = strip_frame(I.load(a.src))[0]
         scr = sorted(scr, key=lambda t: -similarity(me, t[1]))[:6]  # the 6 closest shots of this screen
-        rep = unmark(a.src, a.dst, scr, inl, blue=a.blue, keep_border=a.keep_border, min_score=max(a.min, 0.92), ctx=max(a.ctx, 40))
+        rep = unmark(a.src, a.dst, scr, inl, blue=a.blue, blue_boxes=[I.box_arg(x) for x in (a.blue_box or [])], keep_border=a.keep_border, min_score=max(a.min, 0.92), ctx=max(a.ctx, 40))
         print(json.dumps(rep, indent=1, default=lambda o: o.item() if hasattr(o, 'item') else str(o))); return
     if not a.box: sys.exit('--box x0,y0,x1,y1 is required')
     box = I.box_arg(a.box)
