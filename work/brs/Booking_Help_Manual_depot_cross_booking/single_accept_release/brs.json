@@ -53,289 +53,205 @@
  ],
  "search": [
   {
-   "name": "PR Number",
-   "type": "Display Item",
-   "ui": "Selected PR Number Details",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Status",
-   "type": "Display Item",
-   "ui": "Status of the selected PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Freeze",
-   "type": "Display Item",
-   "ui": "Freeze status of the selected PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Size Type & Container",
-   "type": "Alphanumeric",
-   "ui": "Size Type and Container of the selected PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Empty Pickup",
-   "type": "Alphanumeric",
-   "ui": "Empty Pickup of the selected PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Empty Pickup Date",
-   "type": "Date and Time Picker",
-   "ui": "Empty Pickup Date for the PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Full Return",
-   "type": "Alphanumeric",
-   "ui": "Full Return of the selected PR",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Full Return Date",
-   "type": "Date and Time Picker",
-   "ui": "Full Return Date for the PR",
-   "db": "",
-   "values": ""
-  }
- ],
- "display": [
-  {
    "name": "Container",
    "type": "Alphanumeric",
    "ui": "Mandatory. Input Container number, it will auto populate all other required fields if information is available",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Actual Container Type",
    "type": "Alphanumeric",
    "ui": "Mandatory. Based on selected Container number Type size will auto populate",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Container Status",
    "type": "Single Select Drop Down",
    "ui": "Mandatory. Select Container Status manually from drop down list",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Actual Pickup Date",
    "type": "Date and Time Picker",
    "ui": "Input Actual Pickup date",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Actual Delivery Date",
    "type": "Date and Time Picker",
    "ui": "Input Actual Delivery date",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Actual Drop Date",
    "type": "Date and Time Picker",
    "ui": "Mandatory. Input Actual Drop date",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Tare Weight (kg)",
    "type": "Numeric",
    "ui": "Mandatory. Input Tare Weight of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Cargo Weight (kg)",
    "type": "Numeric",
    "ui": "Mandatory. Input Cargo Weight of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Gross Weight (kg)",
    "type": "Numeric",
    "ui": "Mandatory. Input Gross Weight of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Volume (CBM)",
    "type": "Numeric",
    "ui": "Mandatory. Input Volume of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Max Pay Load",
    "type": "Numeric",
    "ui": "Input Max Pay Load of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Over Weight",
    "type": "Check Box",
    "ui": "If container is over weight please select the check box",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Break Bulk",
    "type": "Check Box",
    "ui": "If container is break bulk please select the check box",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "IMCO",
    "type": "Toggle",
    "ui": "Switch on if the container is IMCO",
    "db": "",
-   "values": "On / Off",
-   "remarks": ""
+   "values": "On / Off"
   },
   {
    "name": "OOG",
    "type": "Toggle",
    "ui": "Switch on if the container is OOG",
    "db": "",
-   "values": "On / Off",
-   "remarks": ""
+   "values": "On / Off"
   },
   {
    "name": "Seal Carrier",
    "type": "Alphanumeric",
    "ui": "Input Carrier seal number of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Seal Customs",
    "type": "Alphanumeric",
    "ui": "Input Customs seal number of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Seal Customer",
    "type": "Alphanumeric",
    "ui": "Input Customer seal number of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Seal Other",
    "type": "Alphanumeric",
    "ui": "Input Other seal number of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Reefer",
    "type": "Check Box",
    "ui": "If container is reefer please select the check box",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Reefer \u00b0C",
    "type": "Numeric",
    "ui": "Input Reefer temperature of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Stowage",
    "type": "Single Select Drop Down",
    "ui": "Select Stowage manually from drop down list",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Load Status",
    "type": "Single Select Drop Down",
    "ui": "Mandatory. Select Load Status manually from drop down list",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Special Cargo",
    "type": "Single Select Drop Down",
    "ui": "Mandatory. Select Special Cargo manually from drop down list",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Damaged Remarks",
    "type": "Text Area",
    "ui": "Input Damaged Remarks of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Customer Remarks",
    "type": "Text Area",
    "ui": "Input Customer Remarks of the container",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Submit",
    "type": "Button",
    "ui": "After input all the mandatory columns value's, it should be inserted into Cargo containers & PR Details for the selected PR",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   },
   {
    "name": "Cancel",
    "type": "Button",
    "ui": "Cancelled all the input values and requery existing data",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": ""
   }
  ],
+ "display": [],
  "references": [],
  "assumptions": [],
- "search_title": "Cross Booking Depot Activity Edit Fields"
+ "search_title": "Cross Booking Depot Activity Edit Fields",
+ "drop_display": true
 }

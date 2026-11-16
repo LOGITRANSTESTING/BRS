@@ -35,6 +35,7 @@ SKELETON = {
     "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
     "display_title": "",     # optional 3.2 heading, empty = "Display Area"
+    "drop_display": False,   # true = remove the 3.2 section entirely (all rows are in 3.1)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "references": [],
     "assumptions": []
@@ -191,6 +192,19 @@ def build(spec, out):
     for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:
         if spec.get(key):
             set_par_text(doc.paragraphs[find_heading(doc, head)], spec[key])
+
+    # optional: drop the whole 3.2 section (heading + table) when all rows sit in 3.1
+    if spec.get('drop_display'):
+        h = doc.paragraphs[find_heading(doc, spec.get('display_title') or 'Display Area')]._p
+        from docx.oxml.ns import qn as _qn
+        nxt = h.getnext()
+        while nxt is not None:
+            sty = nxt.find('.//' + _qn('w:pStyle')) if nxt.tag == _qn('w:p') else None
+            if sty is not None and sty.get(_qn('w:val'), '').lower().startswith('heading'): break
+            if nxt.tag == _qn('w:sectPr'): break
+            cur, nxt = nxt, nxt.getnext()
+            cur.getparent().remove(cur)
+        h.getparent().remove(h)
 
     # document properties
     if hist and hist[0].get('author'): doc.core_properties.author = hist[0]['author']
