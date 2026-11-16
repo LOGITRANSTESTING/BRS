@@ -1,0 +1,61 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "ES-FL Fix",
+ "version": "01.01",
+ "date": "16/11/2026",
+ "history": [
+  {
+   "date": "16.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's ES-FL Fix details. This function is used to fix the ES / FL movement for a selected booking, by selecting and updating the correct booking of the selected container.",
+ "images": [
+  {
+   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/02.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/05.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/06.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}
