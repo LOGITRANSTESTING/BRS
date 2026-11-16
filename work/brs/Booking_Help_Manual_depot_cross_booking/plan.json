@@ -1,0 +1,54 @@
+{
+ "manual": "/workspaces/user-manual/.copilot/uploads/2026-11-16-936ef022/Booking_-_Help_Manual_depot_cross_booking.gui",
+ "shared_pages": [
+  "Cross Booking Depot Activity",
+  "Cross Booking Depot Activity > Cross Booking Depot Activity - Query Fields",
+  "Cross Booking Depot Activity > Cross Booking Depot Activity - Data Grid Screen",
+  "Cross Booking Depot Activity > Cross Booking Depot Activity - Data Grid Screen > How to Change Empty Return, Full Return Edit Fields"
+ ],
+ "functions": [
+  {
+   "name": "Generate Release Advise",
+   "kind": "Group",
+   "path": "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Generate Release Advise",
+   "pages": [
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Generate Release Advise",
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Generate Release Advise > How to Generate \"Generate Release Advise\""
+   ],
+   "fp": "ce06e8fdbb32a9cf",
+   "n": 1,
+   "fn": "group_generate_release_advise",
+   "status": "in progress",
+   "change": "new"
+  },
+  {
+   "name": "Voyage Update",
+   "kind": "Group",
+   "path": "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Voyage Update",
+   "pages": [
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Voyage Update",
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Group Function > Voyage Update > How to Update Voyage"
+   ],
+   "fp": "47f71d38be3cdfc4",
+   "n": 2,
+   "fn": "group_voyage_update",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Accept Release",
+   "kind": "Single",
+   "path": "Cross Booking Depot Activity > Cross Booking Depot Activity - Single Function > Accept Release",
+   "pages": [
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Single Function > Accept Release",
+    "Cross Booking Depot Activity > Cross Booking Depot Activity - Single Function > Accept Release > How to \"Accept PR Release\""
+   ],
+   "fp": "3292c44ad54bc177",
+   "n": 3,
+   "fn": "single_accept_release",
+   "status": "new",
+   "change": "new"
+  }
+ ],
+ "removed": []
+}

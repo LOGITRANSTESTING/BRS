@@ -1,0 +1,17 @@
+{
+ "blue_box_candidates": [
+  [
+   10,
+   84,
+   1470,
+   456
+  ]
+ ],
+ "frame_removed_px": 23,
+ "mark_px": 0,
+ "circles": [],
+ "repairs": [],
+ "unresolved": [],
+ "check_sheet": null,
+ "seamless": true
+}
