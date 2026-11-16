@@ -20,8 +20,11 @@
    "fp": "77e780349af04b60",
    "n": 1,
    "fn": "screen_es_fl_fix",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/brs/BRS - EMS - ES-FL Fix V_1.0.docx",
+   "done_fp": "77e780349af04b60",
+   "version": "01.01"
   }
  ],
  "removed": []
