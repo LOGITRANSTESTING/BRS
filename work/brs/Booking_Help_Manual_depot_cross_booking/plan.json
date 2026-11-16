@@ -35,8 +35,11 @@
    "fp": "47f71d38be3cdfc4",
    "n": 2,
    "fn": "group_voyage_update",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/brs/BRS - EMS - Voyage Update V_1.0.docx",
+   "done_fp": "47f71d38be3cdfc4",
+   "version": "01.01"
   },
   {
    "name": "Accept Release",
@@ -49,7 +52,7 @@
    "fp": "3292c44ad54bc177",
    "n": 3,
    "fn": "single_accept_release",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   }
  ],
