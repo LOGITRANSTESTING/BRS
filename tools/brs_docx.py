@@ -162,7 +162,13 @@ def build(spec, out):
             cp.paragraph_format.keep_with_next = True
         newp = doc.add_paragraph()  # created at the end, moved below
         if img_ppr is not None: newp._p.insert(0, copy.deepcopy(img_ppr))
-        newp.add_run().add_picture(im['file'], width=Emu(int(width)))
+        # fit inside the sample's image box (keeps caption + image on one page), then a page break like the sample
+        px = docx.image.image.Image.from_file(im['file'])
+        box_w, box_h = min(int(width), 9251950), (4700000 if k == 1 else 5201285)  # first one shares its page with the UI Design heading
+        scale = min(box_w / px.px_width, box_h / px.px_height)
+        run = newp.add_run()
+        run.add_picture(im['file'], width=Emu(int(px.px_width * scale)), height=Emu(int(px.px_height * scale)))
+        run.add_break(docx.enum.text.WD_BREAK.PAGE)
         last.addnext(newp._p); last = newp._p
 
     # features & functionalities, menu items, process flow, references, assumptions: text lists (blank = empty)
@@ -171,11 +177,13 @@ def build(spec, out):
         try: i = find_heading(doc, head)
         except KeyError: continue
         body = [p for p in body_between(doc, i) if not p._p.xpath('.//w:tbl')]
+        fmt = next((copy.deepcopy(p._p.pPr) for p in body if p.text.strip() and p._p.pPr is not None), None)
         for p in body:
             if p.text.strip() or 'graphic' in p._p.xml: remove_par(p)
         last = doc.paragraphs[i]._p
         for line in reversed(spec.get(key) or []):
             np_ = doc.add_paragraph(line)
+            if fmt is not None: np_._p.insert(0, copy.deepcopy(fmt))
             last.addnext(np_._p)
 
     # tables: events (2), search (3), display (4) - located by header text, not index

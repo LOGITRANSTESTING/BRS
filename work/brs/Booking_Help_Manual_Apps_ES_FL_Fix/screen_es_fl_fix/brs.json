@@ -1,245 +1,247 @@
 {
- "template": "template/BRS_Sample_Accept_Release.docx",
- "company": "YANG MING MARINE TRANSPORT CORP.",
- "module": "EMS",
- "function": "ES-FL Fix",
- "version": "01.01",
- "date": "16/11/2026",
- "history": [
-  {
-   "date": "16.11.2026",
-   "version": "V01.01",
-   "author": "Appsara",
-   "description": "Initial version created based on the confirmed screen designs"
-  }
- ],
- "purpose": "This document explains the purpose of EMS's ES-FL Fix details. This function is used to fix the ES / FL movement for a selected booking, by selecting and updating the correct booking of the selected container.",
- "images": [
-  {
-   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/02.png",
-   "caption": "Image I"
-  },
-  {
-   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/05.png",
-   "caption": "Image II"
-  },
-  {
-   "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/06.png",
-   "caption": "Image III"
-  }
- ],
- "features": [],
- "events": [
-  {
-   "event_type": "Button Click",
-   "description": "Swap: switches Voyage between the auto populate field and the Select Voyage Port drop down list",
-   "triggered_when": "User clicks the swap icon beside Voyage",
-   "remarks": ""
-  },
-  {
-   "event_type": "Button Click",
-   "description": "Search: queries the data based on the entered query fields and shows it in the data grid",
-   "triggered_when": "User clicks Search after entering at least one query field",
-   "remarks": ""
-  },
-  {
-   "event_type": "Button Click",
-   "description": "Reset: clears all the query fields to query with new data",
-   "triggered_when": "User clicks Reset",
-   "remarks": ""
-  },
-  {
-   "event_type": "Radio Button Click",
-   "description": "Update Gate Out / Gate In: selects the movement (Gate Out Move - ES / Gate In Move - FL) to be fixed for the record",
-   "triggered_when": "User selects Gate Out or Gate In on the queried record",
-   "remarks": ""
-  },
-  {
-   "event_type": "Button Click",
-   "description": "Submit: fixes the selected ES / FL movement for the selected booking",
-   "triggered_when": "User clicks Submit after selecting Gate Out or Gate In",
-   "remarks": "\"ES-FL Fix Updated Successfully\""
-  }
- ],
- "search": [
-  {
-   "name": "Voyage",
-   "type": "Text Item",
-   "ui": "Input Voyage, it will auto populate. The swap icon switches the field between auto populate and Select Voyage Port drop down list",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "From / To Date",
-   "type": "Date Picker",
-   "ui": "Input From and To date and time",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Pickup Reference",
-   "type": "Text Item",
-   "ui": "Input Pickup Reference",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Booking Number",
-   "type": "Text Item",
-   "ui": "Input Booking Number",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Container No.",
-   "type": "Text Item",
-   "ui": "Input Container No.",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Size Type",
-   "type": "LOV",
-   "ui": "Select Size Type from the list",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Turn in Reference",
-   "type": "Text Item",
-   "ui": "Input Turn in Reference",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Search",
-   "type": "Button",
-   "ui": "At least one query field must be entered. Query the data based on the values entered in the query fields",
-   "db": "",
-   "values": ""
-  },
-  {
-   "name": "Reset",
-   "type": "Button",
-   "ui": "Clear all the query fields to query with new data",
-   "db": "",
-   "values": ""
-  }
- ],
- "display": [
-  {
-   "name": "Total Record(s)",
-   "type": "Display Item",
-   "ui": "Number of records queried",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  },
-  {
-   "name": "Update Gate Out / Gate In",
-   "type": "Radio Button",
-   "ui": "Select Gate Out or Gate In to choose the movement to be updated for the record",
-   "db": "",
-   "values": "None / Gate Out / Gate In",
-   "remarks": "Default None"
-  },
-  {
-   "name": "Booking No",
-   "type": "Display Item",
-   "ui": "Booking Number of the queried booking",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  },
-  {
-   "name": "Container No.",
-   "type": "Display Item",
-   "ui": "Container Number of the queried booking",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  },
-  {
-   "name": "Size Type",
-   "type": "Display Item",
-   "ui": "Container Size Type of the queried booking",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  },
-  {
-   "name": "Gate Out Move Booking No",
-   "type": "Display Item",
-   "ui": "Booking Number linked to the Gate Out movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate Out Move - ES"
-  },
-  {
-   "name": "Gate Out Move Move Date",
-   "type": "Display Item",
-   "ui": "Move Date of the Gate Out movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate Out Move - ES"
-  },
-  {
-   "name": "Gate Out Move Container No.",
-   "type": "Display Item",
-   "ui": "Container Number of the Gate Out movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate Out Move - ES"
-  },
-  {
-   "name": "Gate Out Move Pickup Ref",
-   "type": "Display Item",
-   "ui": "Pickup Reference of the Gate Out movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate Out Move - ES"
-  },
-  {
-   "name": "Gate In Move Booking No",
-   "type": "Display Item",
-   "ui": "Booking Number linked to the Gate In movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate In Move - FL"
-  },
-  {
-   "name": "Gate In Move Move Date",
-   "type": "Display Item",
-   "ui": "Move Date of the Gate In movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate In Move - FL"
-  },
-  {
-   "name": "Gate In Move Container No.",
-   "type": "Display Item",
-   "ui": "Container Number of the Gate In movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate In Move - FL"
-  },
-  {
-   "name": "Gate In Move Turn-In Ref",
-   "type": "Display Item",
-   "ui": "Turn-In Reference of the Gate In movement",
-   "db": "",
-   "values": "",
-   "remarks": "Gate In Move - FL"
-  },
-  {
-   "name": "Submit",
-   "type": "Button",
-   "ui": "After selecting Gate Out or Gate In for the record, the selected ES / FL movement will be fixed for the selected booking",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  }
- ],
- "references": [],
- "assumptions": []
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "EMS",
+  "function": "ES-FL Fix",
+  "version": "01.01",
+  "date": "16/11/2026",
+  "history": [
+    {
+      "date": "16.11.2026",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of EMS's ES-FL Fix details. This function is used to fix the ES / FL movement for a selected booking, by selecting and updating the correct booking of the selected container.",
+  "images": [
+    {
+      "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/02.png",
+      "caption": "Image I"
+    },
+    {
+      "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/05.png",
+      "caption": "Image II"
+    },
+    {
+      "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/06.png",
+      "caption": "Image III"
+    }
+  ],
+  "features": [
+    "This function is used to fix the ES / FL movement for the selected bookings. The screen shows the selected booking's linked container movements of ES and FL, with the linked booking number, move date and Pickup & Turn in reference details. Here the user can select and update the correct booking for the selected container."
+  ],
+  "events": [
+    {
+      "event_type": "Button Click",
+      "description": "Swap: switches Voyage between the auto populate field and the Select Voyage Port drop down list",
+      "triggered_when": "User clicks the swap icon beside Voyage",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click",
+      "description": "Search: queries the data based on the entered query fields and shows it in the data grid",
+      "triggered_when": "User clicks Search after entering at least one query field",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click",
+      "description": "Reset: clears all the query fields to query with new data",
+      "triggered_when": "User clicks Reset",
+      "remarks": ""
+    },
+    {
+      "event_type": "Radio Button Click",
+      "description": "Update Gate Out / Gate In: selects the movement (Gate Out Move - ES / Gate In Move - FL) to be fixed for the record",
+      "triggered_when": "User selects Gate Out or Gate In on the queried record",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click",
+      "description": "Submit: fixes the selected ES / FL movement for the selected booking",
+      "triggered_when": "User clicks Submit after selecting Gate Out or Gate In",
+      "remarks": "\"ES-FL Fix Updated Successfully\""
+    }
+  ],
+  "search": [
+    {
+      "name": "Voyage",
+      "type": "Text Item",
+      "ui": "Input Voyage, it will auto populate. The swap icon switches the field between auto populate and Select Voyage Port drop down list",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "From / To Date",
+      "type": "Date Picker",
+      "ui": "Input From and To date and time",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Pickup Reference",
+      "type": "Text Item",
+      "ui": "Input Pickup Reference",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Booking Number",
+      "type": "Text Item",
+      "ui": "Input Booking Number",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Container No.",
+      "type": "Text Item",
+      "ui": "Input Container No.",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "LOV",
+      "ui": "Select Size Type from the list",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Turn in Reference",
+      "type": "Text Item",
+      "ui": "Input Turn in Reference",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Search",
+      "type": "Button",
+      "ui": "At least one query field must be entered. Query the data based on the values entered in the query fields",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Reset",
+      "type": "Button",
+      "ui": "Clear all the query fields to query with new data",
+      "db": "",
+      "values": ""
+    }
+  ],
+  "display": [
+    {
+      "name": "Total Record(s)",
+      "type": "Display Item",
+      "ui": "Number of records queried",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Update Gate Out / Gate In",
+      "type": "Radio Button",
+      "ui": "Select Gate Out or Gate In to choose the movement to be updated for the record",
+      "db": "",
+      "values": "None / Gate Out / Gate In",
+      "remarks": "Default None"
+    },
+    {
+      "name": "Booking No",
+      "type": "Display Item",
+      "ui": "Booking Number of the queried booking",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Container No.",
+      "type": "Display Item",
+      "ui": "Container Number of the queried booking",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "Display Item",
+      "ui": "Container Size Type of the queried booking",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Gate Out Move Booking No",
+      "type": "Display Item",
+      "ui": "Booking Number linked to the Gate Out movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate Out Move - ES"
+    },
+    {
+      "name": "Gate Out Move Move Date",
+      "type": "Display Item",
+      "ui": "Move Date of the Gate Out movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate Out Move - ES"
+    },
+    {
+      "name": "Gate Out Move Container No.",
+      "type": "Display Item",
+      "ui": "Container Number of the Gate Out movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate Out Move - ES"
+    },
+    {
+      "name": "Gate Out Move Pickup Ref",
+      "type": "Display Item",
+      "ui": "Pickup Reference of the Gate Out movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate Out Move - ES"
+    },
+    {
+      "name": "Gate In Move Booking No",
+      "type": "Display Item",
+      "ui": "Booking Number linked to the Gate In movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate In Move - FL"
+    },
+    {
+      "name": "Gate In Move Move Date",
+      "type": "Display Item",
+      "ui": "Move Date of the Gate In movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate In Move - FL"
+    },
+    {
+      "name": "Gate In Move Container No.",
+      "type": "Display Item",
+      "ui": "Container Number of the Gate In movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate In Move - FL"
+    },
+    {
+      "name": "Gate In Move Turn-In Ref",
+      "type": "Display Item",
+      "ui": "Turn-In Reference of the Gate In movement",
+      "db": "",
+      "values": "",
+      "remarks": "Gate In Move - FL"
+    },
+    {
+      "name": "Submit",
+      "type": "Button",
+      "ui": "After selecting Gate Out or Gate In for the record, the selected ES / FL movement will be fixed for the selected booking",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    }
+  ],
+  "references": [],
+  "assumptions": []
 }
