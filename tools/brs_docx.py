@@ -2,8 +2,8 @@
 
   python tools/brs_docx.py inspect template/BRS_Sample_Accept_Release.docx
   python tools/brs_docx.py skeleton work/brs/<fn>/brs.json            # empty spec to fill in
-  python tools/brs_docx.py build work/brs/<fn>/brs.json --out "output/brs/BRS - <Module> - <Function> V_1.0.docx"
-  python tools/brs_docx.py check "output/brs/....docx"                 # text dump to verify the result
+  python tools/brs_docx.py build work/brs/<fn>/brs.json --out "output/<Module>/BRS - <Module> - <Function> V_1.0.docx"
+  python tools/brs_docx.py check "output/<Module>/....docx"                 # text dump to verify the result
 
 The template's styles, header, footer, logo, TOC field and table formats are kept: tables are refilled by
 cloning their first data row, so every new row has the house format.
@@ -32,7 +32,10 @@ SKELETON = {
     "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],
     "features": [],          # leave empty = blank section
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
+    "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
+    "display_title": "",     # optional 3.2 heading, empty = "Display Area"
+    "drop_display": False,   # true = remove the 3.2 section entirely (all rows are in 3.1)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "references": [],
     "assumptions": []
@@ -184,6 +187,24 @@ def build(spec, out):
     tabs = [t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'UI Item Name']
     fill_table(tabs[0], spec.get('search'), ['name', 'type', 'ui', 'db', 'values'])
     fill_table(tabs[1], spec.get('display'), ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
+    # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
+    for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:
+        if spec.get(key):
+            set_par_text(doc.paragraphs[find_heading(doc, head)], spec[key])
+
+    # optional: drop the whole 3.2 section (heading + table) when all rows sit in 3.1
+    if spec.get('drop_display'):
+        h = doc.paragraphs[find_heading(doc, spec.get('display_title') or 'Display Area')]._p
+        from docx.oxml.ns import qn as _qn
+        nxt = h.getnext()
+        while nxt is not None:
+            sty = nxt.find('.//' + _qn('w:pStyle')) if nxt.tag == _qn('w:p') else None
+            if sty is not None and sty.get(_qn('w:val'), '').lower().startswith('heading'): break
+            if nxt.tag == _qn('w:sectPr'): break
+            cur, nxt = nxt, nxt.getnext()
+            cur.getparent().remove(cur)
+        h.getparent().remove(h)
 
     # document properties
     if hist and hist[0].get('author'): doc.core_properties.author = hist[0]['author']

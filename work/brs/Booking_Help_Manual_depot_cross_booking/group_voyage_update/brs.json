@@ -1,0 +1,301 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Voyage Update",
+ "version": "01.01",
+ "date": "16/11/2026",
+ "history": [
+  {
+   "date": "16.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Voyage Update details. This feature allows the user to update Load voyage, TSP voyage and Discharge voyage for the selected BL.",
+ "images": [
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/04.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/05.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/06.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/07.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/08.png",
+   "caption": "Image VI"
+  }
+ ],
+ "features": [
+  "Selected PR&Ds Booking should be in Pre Entered and Entered status."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Voyage Update screen with the selected bookings.",
+   "triggered_when": "User selects one or more bookings using the check boxes, clicks the Menu icon near Cross Booking Depot Activity and clicks Voyage Update.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click",
+   "description": "Selects all bookings under the route group (select all check box) or a single booking (individual check box) for the voyage update.",
+   "triggered_when": "User clicks the select all check box or an individual booking check box in the Voyage Update screen.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Validates the changes made in Update Routing for the selected bookings and shows the result grid.",
+   "triggered_when": "User clicks Validate after selecting bookings and filling one or more fields in Update Routing.",
+   "remarks": "\"Routing validated successfully.\""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Processes the validated changes for the selected bookings and shows the result grid. On closing the result grid the changes are applied to the data.",
+   "triggered_when": "User clicks Process after validating the changes.",
+   "remarks": "\"Routing validated successfully.\""
+  }
+ ],
+ "search": [],
+ "display": [
+  {
+   "name": "Total Booking(s)",
+   "type": "Display Item",
+   "ui": "Number of bookings selected",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Route Group Check Box",
+   "type": "Check Box",
+   "ui": "Selects all bookings under the route group",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Check Box",
+   "type": "Check Box",
+   "ui": "Selects an individual booking",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Voyage",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Allocation",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Origin",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Discharge",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Final",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "T/S Port",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Destination ETA",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "TEUs",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Download Date",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Feeder Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Feeder Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Feeder Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Create leg when not available",
+   "type": "Check Box",
+   "ui": "If the feeder leg is not available please select the check box to create a new leg in the voyage",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Load Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Load Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "TSP Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input TSP Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select TSP Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Discharge Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Discharge Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Discharge Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Allocation Voyage",
+   "type": "Auto Populate",
+   "ui": "Input Allocation Voyage, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Terminal",
+   "type": "Auto Populate",
+   "ui": "Select Load Terminal, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Destination Terminal",
+   "type": "Auto Populate",
+   "ui": "Select Destination Terminal, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": "Reflects the voyage changes"
+  },
+  {
+   "name": "Destination ETA",
+   "type": "Date and Time Picker",
+   "ui": "Input Destination ETA date and time",
+   "db": "",
+   "values": "",
+   "remarks": "Reflects the voyage changes"
+  },
+  {
+   "name": "Update Related BLs",
+   "type": "Toggle",
+   "ui": "Switch on to update all related BLs with the changes made",
+   "db": "",
+   "values": "On / Off",
+   "remarks": ""
+  },
+  {
+   "name": "Update Related Local BLs",
+   "type": "Toggle",
+   "ui": "Switch on to update all related local BLs with the changes made",
+   "db": "",
+   "values": "On / Off",
+   "remarks": ""
+  },
+  {
+   "name": "Validate",
+   "type": "Button",
+   "ui": "Validates the changes made for the selected bookings and shows the result grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Processes the validated changes for the selected bookings and shows the result grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}

@@ -1,0 +1,121 @@
+{
+ "blue_box_candidates": [],
+ "frame_removed_px": 27,
+ "mark_px": 7627,
+ "circles": [
+  [
+   1371,
+   87
+  ],
+  [
+   1199,
+   86
+  ],
+  [
+   1,
+   131
+  ]
+ ],
+ "repairs": [
+  {
+   "method": "similar element",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_Data_Grid_Screen_dec0_01.png @1387,92",
+   "at": [
+    1382,
+    91
+   ],
+   "err": 0.0,
+   "box": [
+    1382,
+    91,
+    1389,
+    103
+   ]
+  },
+  {
+   "method": "similar element",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_Data_Grid_Screen_dec0_01.png @1305,92",
+   "at": [
+    1300,
+    91
+   ],
+   "err": 0.0,
+   "box": [
+    1300,
+    91,
+    1373,
+    122
+   ]
+  },
+  {
+   "method": "similar element",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_06.png @15,140",
+   "at": [
+    10,
+    140
+   ],
+   "err": 0.0,
+   "box": [
+    10,
+    140,
+    18,
+    148
+   ]
+  },
+  {
+   "method": "element rebuilt",
+   "box": [
+    11,
+    159,
+    239,
+    186
+   ],
+   "style_from": [
+    254,
+    225,
+    482,
+    252
+   ],
+   "err": 0.75
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_Data_Grid_Screen_dec0_01.png",
+   "score": 1.0,
+   "err": 0.32,
+   "box": [
+    1174,
+    61,
+    1395,
+    133
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_06.png",
+   "score": 1.0,
+   "err": 0.06,
+   "box": [
+    1,
+    117,
+    254,
+    195
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_06.png",
+   "score": 1.0,
+   "err": 0.0,
+   "box": [
+    238,
+    151,
+    254,
+    194
+   ]
+  }
+ ],
+ "unresolved": [],
+ "check_sheet": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/img/07_check.png",
+ "seamless": true
+}

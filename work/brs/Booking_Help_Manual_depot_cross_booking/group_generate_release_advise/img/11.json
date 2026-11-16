@@ -1,0 +1,90 @@
+{
+ "blue_box_candidates": [
+  [
+   209,
+   52,
+   430,
+   85
+  ]
+ ],
+ "frame_removed_px": 24,
+ "mark_px": 19426,
+ "circles": [
+  [
+   429,
+   33
+  ],
+  [
+   8,
+   396
+  ]
+ ],
+ "repairs": [
+  {
+   "method": "similar element",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_01.png @20,675",
+   "at": [
+    24,
+    388
+   ],
+   "err": 0.0,
+   "box": [
+    24,
+    388,
+    28,
+    407
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png",
+   "score": 0.983,
+   "err": 0.0,
+   "box": [
+    203,
+    11,
+    232,
+    23
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png",
+   "score": 0.993,
+   "err": 0.0,
+   "box": [
+    203,
+    20,
+    223,
+    58
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png",
+   "score": 0.991,
+   "err": 0.0,
+   "box": [
+    408,
+    23,
+    452,
+    58
+   ]
+  },
+  {
+   "method": "neighbour",
+   "donor": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png",
+   "score": 1.0,
+   "err": 0.0,
+   "box": [
+    2,
+    339,
+    1462,
+    456
+   ]
+  }
+ ],
+ "unresolved": [],
+ "check_sheet": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/img/11_check.png",
+ "seamless": true
+}

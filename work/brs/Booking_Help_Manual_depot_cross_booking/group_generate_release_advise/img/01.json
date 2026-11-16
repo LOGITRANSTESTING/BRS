@@ -1,0 +1,129 @@
+{
+ "blue_box_candidates": [],
+ "frame_removed_px": 30,
+ "mark_px": 7886,
+ "circles": [],
+ "repairs": [
+  {
+   "method": "continuation (plain area)",
+   "box": [
+    1434,
+    263,
+    1452,
+    287
+   ]
+  },
+  {
+   "method": "continuation (plain area)",
+   "box": [
+    1756,
+    916,
+    1769,
+    940
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "box": [
+    1434,
+    265,
+    1672,
+    491
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.973 err 31.5",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.970 err 34.1",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.970 err 36.0",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.970 err 35.6"
+   ]
+  },
+  {
+   "box": [
+    308,
+    303,
+    366,
+    326
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.925 err 50.3",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.925 err 49.2",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.925 err 49.2",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.925 err 49.2"
+   ]
+  },
+  {
+   "box": [
+    618,
+    314,
+    632,
+    352
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.810",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.812",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.812",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.811"
+   ]
+  },
+  {
+   "box": [
+    631,
+    314,
+    645,
+    353
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.868",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.870",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.870",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.869"
+   ]
+  },
+  {
+   "box": [
+    861,
+    331,
+    903,
+    382
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.941 err 33.4",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.941 err 33.4",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.941 err 33.4",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.941 err 33.4"
+   ]
+  },
+  {
+   "box": [
+    573,
+    371,
+    616,
+    393
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.813",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.812",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.818",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.818"
+   ]
+  },
+  {
+   "box": [
+    1715,
+    914,
+    1751,
+    953
+   ],
+   "tried": [
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Generate_Generate_Release_Advise_bf65_02.png 0.960 err 128.8",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/How_to_Change_Empty_Return_Full_Return_Edit_Fields_1c20_07.png 0.960 err 121.8",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Cross_Booking_Depot_Activity_8efe_02.png 0.960 err 121.8",
+    "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/pages/img/Generate_Release_Advise_6c62_01.png 0.960 err 121.8"
+   ]
+  }
+ ],
+ "check_sheet": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/img/01_check.png",
+ "seamless": false,
+ "NEXT": "Not seamless yet: fix each unresolved box (fill/copy with a donor, or ask the user for an unmarked screenshot). Do not use this image until seamless is true."
+}

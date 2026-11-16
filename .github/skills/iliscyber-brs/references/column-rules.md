@@ -17,15 +17,18 @@ Columns: UI Item Name | Item Type | UI Validation | DB Validation | Possible Val
 - A panel label in front of field labels becomes a prefix when the sample does that: "VGM UOM", "VGM Status".
 
 ## Item Type (decide from the control's look)
-- Text Item: a plain input box, or a grey read-only box showing a value.
-- Date Picker: a calendar icon. A date and time pair with a clock icon is still one "Date Picker" row, unless the time has its own label.
-- Drop Down: a down-arrow at the right of the box.
-- Check Box: a small square.
-- Toggle: a pill switch. Ask the user whether to call it Toggle or Check Box.
-- Button: a clickable button (Submit, Cancel, Apply, Process).
-- LOV: a box with a magnifier or list icon that opens a lookup.
-- Text Area: a large multi-line box with a note icon (Remarks).
-- Display Item: grid column values that cannot be edited. Ask if unsure.
+These are the house item types, settled by the user on Voyage Update (depot cross booking). Use them unless a screen has something different; ask then.
+- Auto Populate: a box with a small corner mark at the bottom right and placeholder text, either "Key in three char" (for example Customer, Allocation Voyage) or "Select ..." (for example Load Terminal, Destination Terminal).
+- Single Select Drop Down: a box with a solid blue down-arrow at the right (for example Status = All).
+- Alphanumeric / Numeric: a plain empty box with no icon (for example Container No.). Alphanumeric for codes and text, Numeric for numbers only.
+- Check Box: a small square, one row for each (for example COPARN Sent, Freeze, Valid ETA, Depot Blank).
+- Date and Time Picker: a box with a calendar icon and a clock icon (dd/MM/yyyy HH:mm). A From / To pair joined by "~" under one label (for example "Empty Pickup From / To Date") is ONE row named as the label.
+- Multiselect Drop Down: an empty box with only the small corner mark at the bottom right and no placeholder text (for example Status).
+- Radio Button: a group of round options where only one can be selected (for example None / Gate Out / Gate In). One row for the group; list the options in Possible Values.
+- Toggle: a pill switch (for example Update Related BLs).
+- Display Item: a greyed-out box (read-only, for example PR Number, Status, Freeze in Accept Release Basic Information), and grid column values that cannot be edited.
+- Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row, Item Type "Auto Populate / Alphanumeric + Single Select Drop Down". The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
+- Also, when seen: Button (Submit, Cancel, Apply, Process, Validate); LOV (a box with a magnifier or list icon that opens a lookup); Text Area (a large multi-line box with a note icon, for example Remarks).
 
 ## UI Validation (short and imperative, as in the sample)
 - Editable text: "Input <what> of the container". Example: "Input Tare Weight of the container".
@@ -60,6 +63,8 @@ Columns: UI Item Name | Item Type | UI Validation | DB Validation | Possible Val
 | Cancel | Button | Cancelled all the input values and requery existing data |
 
 ## brs.json keys
+- `search_title` / `display_title` (optional): rename the 3.1 / 3.2 headings. Use it when the 3.1 part is the screen's edit header rather than query fields, for example Accept Release: "Accept Release - Container Tab".
+- `drop_display: true`: remove the whole 3.2 section. Use it when only the editing area is documented: put its rows in 3.1 (named with `search_title`) and leave out the read-only header. Example: Accept Release keeps only the Containers fields, under "Accept Release - Container Tab" (<Function> - <Tab> Tab).
 - `search` rows: name, type, ui, db, values
 - `display` rows: name, type, ui, db, values, remarks
 - `events` rows: event_type, description, triggered_when, remarks

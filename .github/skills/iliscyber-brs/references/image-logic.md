@@ -5,28 +5,44 @@
 - An image is used only when `unmark` reports `"seamless": true`, or every unresolved box has since been fixed exactly.
 - Never invent text, values or icons.
 
+## Never remove the app's elements
+- **Only the manual's additions go:** the frame, red marks, circles, stubs, and blue boxes the user confirmed.
+- **Everything that belongs to the app stays:** panels, lines, buttons, asterisks, icons, grid lines, highlights.
+- **How the tool enforces it:**
+  - Every pixel outside the marks' footprint is compared with the screenshot and put back if it differs (`guard_restored_px`).
+  - A frame is removed only when it closes on all four sides.
+  - Red leftovers are removed only when they are line-shaped or tiny pieces touching a removed mark. Compact red shapes, such as asterisks and icons, stay.
+  - Blue is removed only for boxes the user confirmed (`--blue-box`).
+
 ## What unmark removes
 - **The manual's blue frame:** the house 21/17 px border, or the older style (shadow, thin blue line, inner shadow).
 - **Mark leftovers:** red boxes, numbered circles, stubs, and short box segments a circle cut off.
-- **Drawn blue boxes** (with `--blue`).
+- **Drawn blue boxes:** only those the user confirmed, given as `--blue-box x0,y0,x1,y1`. `--blue` just lists candidates.
 
 The app's own red (asterisks, icons) and blue (bars, buttons, lines) stay. Only red pieces touching a removed mark are removed.
 
 ## How every covered spot is repaired (in this order)
-1. **Element rebuild (same screen).** A button, input box or drop-down hit by a mark is redrawn from an undamaged element of the same style and height on the same screen. Examples: the Container box from the Gross Weight box, a button from the button next to it.
+1. **Similar element, copied whole.** Every button, input box, drop-down and check box is collected into an element library. The sources are:
+   - the same screen (away from the marks);
+   - every neighbouring screenshot in `--donor-dir` / `--donors`;
+   - the manual's inline step crops.
+
+   A damaged element is replaced by a library element only where that element matches every pixel the mark left visible (border, fill, text and icons, mean difference ≤ 2.5). Only the hidden pixels are taken from it. Examples: an empty Carrier box from the empty Customs box, a Cancel button from the same Cancel button on the next screenshot, a check box from any check box of the same state.
+2. **Element rebuild (same style, same screen).** A button, input box or drop-down hit by a mark is redrawn from an undamaged element of the same style and height on the same screen. Examples: the Container box from the Gross Weight box, a button from the button next to it.
    - **Hidden edges come from the layout:**
      - elements in the same row share top and bottom;
      - elements in the same form column share left and right, so they have the same width;
      - a button's hidden end comes from the reference button's content padding.
    - **What is kept:** every pixel the mark did not touch is kept from the screenshot. Only the end caps and plain fill are drawn.
    - **When it refuses:** if the mark covered any text or icon inside the element, or the drawn style does not match the element's visible border.
-2. **Inline step crops (perfect fit only).** The manual's small crops (Submit, Process, check boxes, icons) are tried at every position over the spot.
+   - **Which reference wins:** the most similar element (same height and style, closest width) is tried first, and the first one that passes every check is used.
+3. **Inline step crops (perfect fit only).** The manual's small crops (Submit, Process, check boxes, icons) are tried at every position over the spot. This step also runs inside step 1.
    - A crop is placed only where it matches every surrounding undamaged pixel it covers: mean difference ≤ 2.5 and 99% of pixels within 24.
    - Only the damaged pixels are taken from it.
    - A crop from another zoom level never fits, so it is never used.
-3. **Neighbour screenshots of the same screen, then the same screen elsewhere.** The ring of pixels around the spot is matched, including the pop-up dimming scale. The donor must also agree with every undamaged pixel inside the spot. Only the damaged pixels are copied.
-4. **Row/column continuation.** This is accepted only when every repaired pixel continues an unbroken line or plain background on both sides. A line carrying colour wins over plain background, so panel and grid lines run unbroken.
-5. **Anything else is `unresolved`.** It is not seamless until it is fixed below.
+4. **Neighbour screenshots of the same screen, then the same screen elsewhere.** The ring of pixels around the spot is matched, including the pop-up dimming scale. The donor must also agree with every undamaged pixel inside the spot. Only the damaged pixels are copied.
+5. **Row/column continuation.** This is accepted only when every repaired pixel continues an unbroken line or plain background on both sides. A line carrying colour wins over plain background, so panel and grid lines run unbroken.
+6. **Anything else is `unresolved`.** It is not seamless until it is fixed below.
 
 ## Fixing an unresolved box
 - **`fill SRC DST --box B --donors ... [--self]`**

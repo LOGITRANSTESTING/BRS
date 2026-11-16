@@ -14,7 +14,7 @@ Reply in plain text only. When the user shares a plan, engage with it as it stan
 - **Word work:** `python tools/brs_docx.py`.
 - **Never write new Python for images or the .docx.** If a tool is missing a feature, say so and ask.
 - **Never open a .gui directly.** Use `ilis.py gui info / gui page`.
-- **Never edit the user's uploads.** Work in `work/brs/<manual>/<fn>/` (folder names come from `brs_plan.py`). The finished file goes in `output/brs/`.
+- **Never edit the user's uploads.** Work in `work/brs/<manual>/<fn>/` (folder names come from `brs_plan.py`). The finished file goes in `output/<Module>/` (the module name, for example `output/EMS/`).
 - **Template:** `template/BRS_Sample_Accept_Release.docx`, the house format. Every BRS is a copy of it.
   - **Copied byte-for-byte from the sample:** the header (Business Requirement Specification / LogiTrans Technology Pvt. Ltd.), the footer (Confidential / page number), styles, numbering, fonts and theme.
   - **Kept as in the sample:** the cover layout, logo, page setup, the History, Record of Approval and Contents pages, the heading numbering and the table formats.
@@ -44,7 +44,7 @@ A BRS is written per FUNCTION, never per manual.
 5. Spec file:
    - new function: run `python tools/brs_docx.py skeleton work/brs/<manual>/<fn>/brs.json`;
    - `update`: reuse the existing brs.json.
-6. File name: `output/brs/BRS - <Module> - <Function> V_<version>.docx`. Add " (Group)" or " (Single)" only when the same function name exists under both.
+6. File name: `output/<Module>/BRS - <Module> - <Function> V_<version>.docx`. Add " (Group)" or " (Single)" only when the same function name exists under both.
 7. When the user approves the finished document, run `python tools/brs_plan.py done "<manual>.gui" --function N --file "<docx>" --version <v>`.
 8. Ask whether to go on to the next function.
 
@@ -62,12 +62,16 @@ A BRS is written per FUNCTION, never per manual.
 2. Skip the small inline button/icon crops (anything under about 300 px wide). Only full screenshots go into the BRS.
 3. For each full screenshot, run:
    `python tools/brs_img.py unmark SRC work/brs/<manual>/<fn>/img/NN.png --donor-dir work/brs/<manual>/<fn>/pages/img --blue`
-   - This removes the blue frame (any style), the red boxes, the numbered circles, the stubs, leftover mark segments and drawn blue boxes.
+   - This removes only what the manual added: the blue frame around the screenshot, the red boxes, the numbered circles, the stubs and leftover mark segments.
+   - **The app's own elements must NEVER be removed:** blue panels and lines, blue buttons, red asterisks and red icons, grid lines and highlights. The tool guards this. Any pixel changed outside the marks' footprint is put back, and the report shows `guard_restored_px`.
+   - **Blue boxes:** `--blue` only LISTS possible drawn blue boxes (`blue_box_candidates`); it removes nothing, because the app has its own blue rectangles. Show the user each candidate. Remove one only after the user confirms it is a drawn mark and not part of the app: rerun with `--blue-box x0,y0,x1,y1` for each confirmed box.
+   - Never use `erase`, `fill` or `copy` to take away something that belongs to the app, unless the user asked for that exact edit.
    - It then repairs everything the marks covered, in this order:
-     1. Buttons and boxes are redrawn in the style of a matching element on the same screen.
-     2. The manual's own inline step crops (buttons, check boxes, icons in `--donor-dir`) are used, but only where a crop matches every surrounding pixel exactly.
-     3. Other screenshots of the same screen are used next, then matching areas elsewhere on the same screen.
-     4. Last comes row/column continuation, and only where the area is provably plain.
+     1. A similar element replaces a damaged one: the same button, box or check box, taken from the same screen, a neighbouring screenshot, or an inline crop. It is used only when it matches every pixel the mark left visible.
+     2. Otherwise the element is redrawn in the style of the most similar element on the same screen.
+     3. The manual's own inline step crops (buttons, check boxes, icons in `--donor-dir`) are used, but only where a crop matches every surrounding pixel exactly.
+     4. Other screenshots of the same screen are used next, then matching areas elsewhere on the same screen.
+     5. Last comes row/column continuation, and only where the area is provably plain.
    - If the user's original unmarked screenshots exist in `screenshots/<function>/`, add them with `--donors`. They are the best source.
    - Never invent text or icons. If a mark covered part of a label, value or icon, only a real source can fill it.
 4. The images must be 100% seamless. An image is used only when its report says `"seamless": true`.
@@ -95,7 +99,7 @@ A BRS is written per FUNCTION, never per manual.
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** BLANK.
+- **2.1 Features & Functionalities:** only the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK if the manual has none. Never put pre-conditions in Remarks or Triggered When.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
@@ -106,7 +110,7 @@ Use the rules in `references/column-rules.md`. They include the sample's own row
 Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or panel with many fields, split it into one round per tab or panel. For each round:
 1. Show the image(s) the table is read from. If it helps, add a crop of just that panel: use `ilis.py crop` on the unmarked image, or the sheet.
 2. Show the rows as plain text, one row per line: `UI Item Name | Item Type | UI Validation | DB Validation | Possible Values | Remarks`. Under each row add one line starting with "Why:". It says where each column came from:
-   - the image, the label and the icon seen (calendar = Date Picker, arrow = Drop Down, asterisk = mandatory);
+   - the image, the label and the icon seen (calendar + clock = Date and Time Picker, blue arrow = Single Select Drop Down, placeholder + corner mark = Auto Populate, empty + corner mark = Multiselect Drop Down, asterisk = mandatory);
    - the manual sentence used;
    - or "blank - not shown in the screen or the manual".
 3. List QUESTIONS for that table:
@@ -118,17 +122,27 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
    - read-only versus editable.
 4. Wait for the answers. Update the rows in brs.json, then move on.
 
+**Action-only functions** (a Group/Single function that just runs on the selected records and shows a success message, for example Generate Release Advise):
+- UI Design = only the screen with the function menu open (records selected) and the success-message screen. No Query or Data Grid images.
+- Fill only 2.2 Event Triggering's: one row for the menu click after selecting records, with the success message in Remarks. Leave 3.1 Search and 3.2 Display Area empty.
+
+**Always show the edited sheets.** After any image is unmarked, patched or rebuilt, show the review/selection sheet and a before/after crop of each repaired spot before asking anything about the images.
+
+**Ask one question at a time, each with the image or crop it is about.** Commit the crop to the previews folder and show it before asking.
+
+**Grow the house rules as documents are made.** When the user settles a new Item Type, Event Type, naming or row-split rule that is not in these files, add it straight away to `references/column-rules.md` or to this file, with the example it came from.
+
 ## Step 6 - Event Triggering's
 - One row for each button, link, checkbox or toggle in the images that makes something happen. Examples: Submit, Cancel, Process, Generate, Query/Search, Clear, Apply, Overwrite, Next/Previous, a tab click that loads data, a checkbox that enables fields.
 - Columns:
-  - **Event Type:** "Button Click", "Check Box Click", "Tab Click", "Link Click" or "On Change".
+  - **Event Type:** "Button Click", "Check Box Click", "Radio Button Click", "Menu Click" (an item in a ☰ Group/Single function menu, for example Generate Release Advise), "Tab Click", "Link Click" or "On Change".
   - **Description:** what happens. Take it from the manual's "How to" steps and from the alert or success-bar text in the images.
   - **Triggered When?:** the user action plus the precondition, for example "User clicks Submit after entering all mandatory fields".
   - **Remarks:** the message shown, quoted from the image. Otherwise blank.
 - Same Why: lines and questions as Step 5. Wait for the answers.
 
 ## Step 7 - Build and check
-1. Run `python tools/brs_docx.py build work/brs/<manual>/<fn>/brs.json --out "output/brs/BRS - <Module> - <Function> V_1.0.docx"`.
+1. Run `python tools/brs_docx.py build work/brs/<manual>/<fn>/brs.json --out "output/<Module>/BRS - <Module> - <Function> V_1.0.docx"`.
 2. Run `python tools/brs_docx.py check <out>`. Compare it with brs.json: cover, history row, blank approval, captions, row counts.
 3. References and Assumptions stay as blank headings.
 4. Tell the user where the file is, in one or two lines. On github.com, commit it in the pull request.

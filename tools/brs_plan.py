@@ -3,7 +3,7 @@
   python tools/brs_plan.py plan  "<manual>.gui"            # list functions, create/refresh the plan
   python tools/brs_plan.py show  "<manual>.gui"            # plan with status per function
   python tools/brs_plan.py export "<manual>.gui" --function N   # pages + images of function N -> work dir
-  python tools/brs_plan.py done  "<manual>.gui" --function N --file "output/brs/....docx" [--version 01.01]
+  python tools/brs_plan.py done  "<manual>.gui" --function N --file "output/<Module>/....docx" [--version 01.01]
 
 What is a function:
   - every child of a "... Group Function" / "... Single Function" page (e.g. ECOR Number Generate,
