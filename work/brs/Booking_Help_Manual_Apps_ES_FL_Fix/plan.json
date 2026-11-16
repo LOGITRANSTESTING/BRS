@@ -1,0 +1,28 @@
+{
+ "manual": "/workspaces/user-manual/.copilot/uploads/2026-11-16-936ef022/Booking_-_Help_Manual_Apps_ES-_FL_Fix.gui",
+ "shared_pages": [
+  "ES -FL Fix",
+  "ES -FL Fix > ES-FL Fix - Query Fields",
+  "ES -FL Fix > ES / FL Fix- Data Grid Screen",
+  "ES -FL Fix > ES / FL Fix- Data Grid Screen > How to fix ES-FL for selected booking"
+ ],
+ "functions": [
+  {
+   "name": "ES -FL Fix",
+   "kind": "Screen",
+   "path": "ES -FL Fix",
+   "pages": [
+    "ES -FL Fix",
+    "ES -FL Fix > ES-FL Fix - Query Fields",
+    "ES -FL Fix > ES / FL Fix- Data Grid Screen",
+    "ES -FL Fix > ES / FL Fix- Data Grid Screen > How to fix ES-FL for selected booking"
+   ],
+   "fp": "77e780349af04b60",
+   "n": 1,
+   "fn": "screen_es_fl_fix",
+   "status": "in progress",
+   "change": "new"
+  }
+ ],
+ "removed": []
+}
