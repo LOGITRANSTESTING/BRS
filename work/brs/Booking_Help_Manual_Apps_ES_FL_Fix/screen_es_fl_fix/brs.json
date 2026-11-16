@@ -39,9 +39,65 @@
  ],
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Voyage",
+   "type": "Text Item",
+   "ui": "Input Voyage, it will auto populate. The swap icon switches the field between auto populate and Select Voyage Port drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "From / To Date",
+   "type": "Date Picker",
+   "ui": "Input From and To date and time",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Pickup Reference",
+   "type": "Text Item",
+   "ui": "Input Pickup Reference",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Booking Number",
+   "type": "Text Item",
+   "ui": "Input Booking Number",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container No.",
+   "type": "Text Item",
+   "ui": "Input Container No.",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "LOV",
+   "ui": "Select Size Type from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Turn in Reference",
+   "type": "Text Item",
+   "ui": "Input Turn in Reference",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "At least one query field must be entered. Query the data based on the values entered in the query fields",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clear all the query fields to query with new data",
    "db": "",
    "values": ""
   }
