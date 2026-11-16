@@ -104,9 +104,113 @@
  ],
  "display": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Total Record(s)",
+   "type": "Display Item",
+   "ui": "Number of records queried",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Update Gate Out / Gate In",
+   "type": "Radio Button",
+   "ui": "Select Gate Out or Gate In to choose the movement to be updated for the record",
+   "db": "",
+   "values": "None / Gate Out / Gate In",
+   "remarks": "Default None"
+  },
+  {
+   "name": "Booking No",
+   "type": "Display Item",
+   "ui": "Booking Number of the queried booking",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container No.",
+   "type": "Display Item",
+   "ui": "Container Number of the queried booking",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Container Size Type of the queried booking",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Gate Out Move Booking No",
+   "type": "Display Item",
+   "ui": "Booking Number linked to the Gate Out movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate Out Move - ES"
+  },
+  {
+   "name": "Gate Out Move Move Date",
+   "type": "Display Item",
+   "ui": "Move Date of the Gate Out movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate Out Move - ES"
+  },
+  {
+   "name": "Gate Out Move Container No.",
+   "type": "Display Item",
+   "ui": "Container Number of the Gate Out movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate Out Move - ES"
+  },
+  {
+   "name": "Gate Out Move Pickup Ref",
+   "type": "Display Item",
+   "ui": "Pickup Reference of the Gate Out movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate Out Move - ES"
+  },
+  {
+   "name": "Gate In Move Booking No",
+   "type": "Display Item",
+   "ui": "Booking Number linked to the Gate In movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate In Move - FL"
+  },
+  {
+   "name": "Gate In Move Move Date",
+   "type": "Display Item",
+   "ui": "Move Date of the Gate In movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate In Move - FL"
+  },
+  {
+   "name": "Gate In Move Container No.",
+   "type": "Display Item",
+   "ui": "Container Number of the Gate In movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate In Move - FL"
+  },
+  {
+   "name": "Gate In Move Turn-In Ref",
+   "type": "Display Item",
+   "ui": "Turn-In Reference of the Gate In movement",
+   "db": "",
+   "values": "",
+   "remarks": "Gate In Move - FL"
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After selecting Gate Out or Gate In for the record, the selected ES / FL movement will be fixed for the selected booking",
    "db": "",
    "values": "",
    "remarks": ""
