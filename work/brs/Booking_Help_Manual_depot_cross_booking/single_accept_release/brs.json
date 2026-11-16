@@ -13,7 +13,7 @@
    "description": "Initial version created based on the confirmed screen designs"
   }
  ],
- "purpose": "This document explains the purpose of EMS's Accept Release details. Accept Release Function allows the user to change the PR status from Prepared to supplied or Empty or full return status.",
+ "purpose": "This document explains the purpose of EMS's Accept Release details.",
  "images": [
   {
    "file": "work/brs/Booking_Help_Manual_depot_cross_booking/single_accept_release/img/01.png",
@@ -29,6 +29,7 @@
   }
  ],
  "features": [
+  "Accept Release Function allows the user to change the PR status from Prepared to supplied or Empty or full return status.",
   "PR Status must be in \"Prepared\" status."
  ],
  "events": [
@@ -193,7 +194,7 @@
    "values": ""
   },
   {
-   "name": "Reefer \u00b0C",
+   "name": "Reefer °C",
    "type": "Numeric",
    "ui": "Input Reefer temperature of the container",
    "db": "",

@@ -13,7 +13,7 @@
    "description": "Initial version created based on the confirmed screen designs"
   }
  ],
- "purpose": "This document explains the purpose of EMS's Generate Release Advise details. This feature enables the sending of release advice notifications to both the booking customer and the depot address, via Right Fax or email.",
+ "purpose": "This document explains the purpose of EMS's Generate Release Advise details.",
  "images": [
   {
    "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_generate_release_advise/img/10.png",
@@ -25,6 +25,7 @@
   }
  ],
  "features": [
+  "This feature enables the sending of release advice notifications to both the booking customer and the depot address, via Right Fax or email.",
   "Port release should be generated, and the release advice will be generated based on whether the container is accepted or not.",
   "Both booking and PR information should be available."
  ],

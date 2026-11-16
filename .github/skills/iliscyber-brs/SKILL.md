@@ -95,11 +95,13 @@ A BRS is written per FUNCTION, never per manual.
 - **Contents:** the TOC field stays. Word refreshes it on open (updateFields is set). Tell the user to accept the "update fields" prompt, or press F9.
 
 ## Step 3 - Introduction
-- **1.1 Purpose:** one or two sentences in the house style: "This document explains the purpose of <Module>'s <Function> details." Add one clause from the manual's overview if it says what the function is for. Show it and ask if it is fine.
+- **1.1 Purpose:** only the house sentence: "This document explains the purpose of <Module>'s <Function> details." Nothing else (the function description goes in 2.1).
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** only the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK if the manual has none. Never put pre-conditions in Remarks or Triggered When.
+- **2.1 Features & Functionalities:**
+  - first item: what the function is for, one sentence from the manual's overview (as in the sample: "This Function is used to Accept the container Details Manually..."; for example Voyage Update: "This feature allows the user to update Load voyage, TSP voyage and Discharge voyage for the selected BL."). Show it and ask if it is fine.
+  - then the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). None if the manual has none. Never put pre-conditions in Remarks or Triggered When.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
