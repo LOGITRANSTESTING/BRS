@@ -1,0 +1,75 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Voyage Update",
+ "version": "01.01",
+ "date": "16/11/2026",
+ "history": [
+  {
+   "date": "16.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Voyage Update details. This feature allows the user to update Load voyage, TSP voyage and Discharge voyage for the selected BL.",
+ "images": [
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/04.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/05.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/06.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/07.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/08.png",
+   "caption": "Image VI"
+  }
+ ],
+ "features": [
+  "Selected PR&Ds Booking should be in Pre Entered and Entered status."
+ ],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}
