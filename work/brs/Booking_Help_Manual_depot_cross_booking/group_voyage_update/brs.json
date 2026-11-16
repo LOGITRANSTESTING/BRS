@@ -51,19 +51,123 @@
    "remarks": ""
   }
  ],
- "search": [
-  {
-   "name": "",
-   "type": "",
-   "ui": "",
-   "db": "",
-   "values": ""
-  }
- ],
+ "search": [],
  "display": [
   {
-   "name": "",
-   "type": "",
+   "name": "Total Booking(s)",
+   "type": "Display Item",
+   "ui": "Number of bookings selected",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Route Group Check Box",
+   "type": "Check Box",
+   "ui": "Selects all bookings under the route group",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Check Box",
+   "type": "Check Box",
+   "ui": "Selects an individual booking",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Voyage",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Allocation",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Origin",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Discharge",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Final",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "T/S Port",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Destination ETA",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "TEUs",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Download Date",
+   "type": "Display Item",
    "ui": "",
    "db": "",
    "values": "",
