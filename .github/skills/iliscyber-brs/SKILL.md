@@ -110,7 +110,7 @@ Use the rules in `references/column-rules.md`. They include the sample's own row
 Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or panel with many fields, split it into one round per tab or panel. For each round:
 1. Show the image(s) the table is read from. If it helps, add a crop of just that panel: use `ilis.py crop` on the unmarked image, or the sheet.
 2. Show the rows as plain text, one row per line: `UI Item Name | Item Type | UI Validation | DB Validation | Possible Values | Remarks`. Under each row add one line starting with "Why:". It says where each column came from:
-   - the image, the label and the icon seen (calendar + clock = Date and Time Picker, blue arrow = Single Select Drop Down, "Key in three char" + corner mark = Auto Populate, empty + corner mark = Multiselect Drop Down, asterisk = mandatory);
+   - the image, the label and the icon seen (calendar + clock = Date and Time Picker, blue arrow = Single Select Drop Down, placeholder + corner mark = Auto Populate, empty + corner mark = Multiselect Drop Down, asterisk = mandatory);
    - the manual sentence used;
    - or "blank - not shown in the screen or the manual".
 3. List QUESTIONS for that table:

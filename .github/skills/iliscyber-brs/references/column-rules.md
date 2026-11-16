@@ -18,7 +18,7 @@ Columns: UI Item Name | Item Type | UI Validation | DB Validation | Possible Val
 
 ## Item Type (decide from the control's look)
 These are the house item types, settled by the user on Voyage Update (depot cross booking). Use them unless a screen has something different; ask then.
-- Auto Populate: a box that says "Key in three char" with a small corner mark at the bottom right (for example Customer, Allocation Voyage).
+- Auto Populate: a box with a small corner mark at the bottom right and placeholder text, either "Key in three char" (for example Customer, Allocation Voyage) or "Select ..." (for example Load Terminal, Destination Terminal).
 - Single Select Drop Down: a box with a solid blue down-arrow at the right (for example Status = All).
 - Alphanumeric / Numeric: a plain empty box with no icon (for example Container No.). Alphanumeric for codes and text, Numeric for numbers only.
 - Check Box: a small square, one row for each (for example COPARN Sent, Freeze, Valid ETA, Depot Blank).
