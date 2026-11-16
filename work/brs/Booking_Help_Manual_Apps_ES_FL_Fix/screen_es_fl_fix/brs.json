@@ -31,10 +31,34 @@
  "features": [],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
+   "event_type": "Button Click",
+   "description": "Swap: switches Voyage between the auto populate field and the Select Voyage Port drop down list",
+   "triggered_when": "User clicks the swap icon beside Voyage",
    "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Search: queries the data based on the entered query fields and shows it in the data grid",
+   "triggered_when": "User clicks Search after entering at least one query field",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Reset: clears all the query fields to query with new data",
+   "triggered_when": "User clicks Reset",
+   "remarks": ""
+  },
+  {
+   "event_type": "Radio Button Click",
+   "description": "Update Gate Out / Gate In: selects the movement (Gate Out Move - ES / Gate In Move - FL) to be fixed for the record",
+   "triggered_when": "User selects Gate Out or Gate In on the queried record",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Submit: fixes the selected ES / FL movement for the selected booking",
+   "triggered_when": "User clicks Submit after selecting Gate Out or Gate In",
+   "remarks": "\"ES-FL Fix Updated Successfully\""
   }
  ],
  "search": [
