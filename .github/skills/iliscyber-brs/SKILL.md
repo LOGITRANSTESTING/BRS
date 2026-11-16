@@ -122,6 +122,10 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
    - read-only versus editable.
 4. Wait for the answers. Update the rows in brs.json, then move on.
 
+**Action-only functions** (a Group/Single function that just runs on the selected records and shows a success message, for example Generate Release Advise):
+- UI Design = only the screen with the function menu open (records selected) and the success-message screen. No Query or Data Grid images.
+- Fill only 2.2 Event Triggering's: one row for the menu click after selecting records, with the success message in Remarks. Leave 3.1 Search and 3.2 Display Area empty.
+
 **Ask one question at a time, each with the image or crop it is about.** Commit the crop to the previews folder and show it before asking.
 
 **Grow the house rules as documents are made.** When the user settles a new Item Type, Event Type, naming or row-split rule that is not in these files, add it straight away to `references/column-rules.md` or to this file, with the example it came from.
