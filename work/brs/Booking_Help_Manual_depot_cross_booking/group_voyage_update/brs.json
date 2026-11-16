@@ -13,7 +13,7 @@
    "description": "Initial version created based on the confirmed screen designs"
   }
  ],
- "purpose": "This document explains the purpose of EMS's Voyage Update details. This feature allows the user to update Load voyage, TSP voyage and Discharge voyage for the selected BL.",
+ "purpose": "This document explains the purpose of EMS's Voyage Update details.",
  "images": [
   {
    "file": "work/brs/Booking_Help_Manual_depot_cross_booking/group_voyage_update/img/01.png",
@@ -41,6 +41,7 @@
   }
  ],
  "features": [
+  "This feature allows the user to update Load voyage, TSP voyage and Discharge voyage for the selected BL.",
   "Selected PR&Ds Booking should be in Pre Entered and Entered status."
  ],
  "events": [

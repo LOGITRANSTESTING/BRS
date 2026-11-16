@@ -13,7 +13,7 @@
    "description": "Initial version created based on the confirmed screen designs"
   }
  ],
- "purpose": "This document explains the purpose of EMS's ES-FL Fix details. This function is used to fix the ES / FL movement for a selected booking, by selecting and updating the correct booking of the selected container.",
+ "purpose": "This document explains the purpose of EMS's ES-FL Fix details.",
  "images": [
   {
    "file": "work/brs/Booking_Help_Manual_Apps_ES_FL_Fix/screen_es_fl_fix/img/02.png",
@@ -28,7 +28,9 @@
    "caption": "Image III"
   }
  ],
- "features": [],
+ "features": [
+  "This function is used to fix the ES / FL movement for a selected booking, by selecting and updating the correct booking of the selected container."
+ ],
  "events": [
   {
    "event_type": "Button Click",
