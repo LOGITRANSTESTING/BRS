@@ -63,6 +63,7 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 | Cancel | Button | Cancelled all the input values and requery existing data |
 
 ## brs.json keys
+- `search_title` / `display_title` (optional): rename the 3.1 / 3.2 headings. Use it when the 3.1 part is the screen's edit header rather than query fields, for example Accept Release: "Cross Booking Depot Activity Edit Fields".
 - `search` rows: name, type, ui, db, values
 - `display` rows: name, type, ui, db, values, remarks
 - `events` rows: event_type, description, triggered_when, remarks

@@ -32,7 +32,9 @@ SKELETON = {
     "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],
     "features": [],          # leave empty = blank section
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
+    "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
+    "display_title": "",     # optional 3.2 heading, empty = "Display Area"
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "references": [],
     "assumptions": []
@@ -184,6 +186,11 @@ def build(spec, out):
     tabs = [t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'UI Item Name']
     fill_table(tabs[0], spec.get('search'), ['name', 'type', 'ui', 'db', 'values'])
     fill_table(tabs[1], spec.get('display'), ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
+    # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
+    for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:
+        if spec.get(key):
+            set_par_text(doc.paragraphs[find_heading(doc, head)], spec[key])
 
     # document properties
     if hist and hist[0].get('author'): doc.core_properties.author = hist[0]['author']
