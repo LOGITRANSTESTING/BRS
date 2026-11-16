@@ -99,7 +99,8 @@ A BRS is written per FUNCTION, never per manual.
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** only the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK if the manual has none. Never put pre-conditions in Remarks or Triggered When.
+- **2.1 Features & Functionalities:** first the purpose of the function - taken from the manual's function overview page (the page used as the function, e.g. "Voyage Update"), or written from the screens if there is none - and shown to the user for approval; then the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). No conditions in the manual = purpose only. Never put pre-conditions in Remarks or Triggered When.
+- **Page layout (UI Design):** like the sample - each image is scaled to fit the page (inside 25.7 × 14.4 cm, aspect kept), stays on the same page as its caption, and is followed by a page break, so every image has its own page and Business Process starts on a new page. `brs_docx.py build` does this; render the docx and check for caption-only or blank pages.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
