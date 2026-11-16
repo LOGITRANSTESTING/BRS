@@ -14,7 +14,7 @@ Reply in plain text only. When the user shares a plan, engage with it as it stan
 - **Word work:** `python tools/brs_docx.py`.
 - **Never write new Python for images or the .docx.** If a tool is missing a feature, say so and ask.
 - **Never open a .gui directly.** Use `ilis.py gui info / gui page`.
-- **Never edit the user's uploads.** Work in `work/brs/<manual>/<fn>/` (folder names come from `brs_plan.py`). The finished file goes in `output/brs/`.
+- **Never edit the user's uploads.** Work in `work/brs/<manual>/<fn>/` (folder names come from `brs_plan.py`). The finished file goes in `output/<Module>/` (the module name, for example `output/EMS/`).
 - **Template:** `template/BRS_Sample_Accept_Release.docx`, the house format. Every BRS is a copy of it.
   - **Copied byte-for-byte from the sample:** the header (Business Requirement Specification / LogiTrans Technology Pvt. Ltd.), the footer (Confidential / page number), styles, numbering, fonts and theme.
   - **Kept as in the sample:** the cover layout, logo, page setup, the History, Record of Approval and Contents pages, the heading numbering and the table formats.
@@ -44,7 +44,7 @@ A BRS is written per FUNCTION, never per manual.
 5. Spec file:
    - new function: run `python tools/brs_docx.py skeleton work/brs/<manual>/<fn>/brs.json`;
    - `update`: reuse the existing brs.json.
-6. File name: `output/brs/BRS - <Module> - <Function> V_<version>.docx`. Add " (Group)" or " (Single)" only when the same function name exists under both.
+6. File name: `output/<Module>/BRS - <Module> - <Function> V_<version>.docx`. Add " (Group)" or " (Single)" only when the same function name exists under both.
 7. When the user approves the finished document, run `python tools/brs_plan.py done "<manual>.gui" --function N --file "<docx>" --version <v>`.
 8. Ask whether to go on to the next function.
 
@@ -142,7 +142,7 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
 - Same Why: lines and questions as Step 5. Wait for the answers.
 
 ## Step 7 - Build and check
-1. Run `python tools/brs_docx.py build work/brs/<manual>/<fn>/brs.json --out "output/brs/BRS - <Module> - <Function> V_1.0.docx"`.
+1. Run `python tools/brs_docx.py build work/brs/<manual>/<fn>/brs.json --out "output/<Module>/BRS - <Module> - <Function> V_1.0.docx"`.
 2. Run `python tools/brs_docx.py check <out>`. Compare it with brs.json: cover, history row, blank approval, captions, row counts.
 3. References and Assumptions stay as blank headings.
 4. Tell the user where the file is, in one or two lines. On github.com, commit it in the pull request.

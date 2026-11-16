@@ -2,8 +2,8 @@
 
   python tools/brs_docx.py inspect template/BRS_Sample_Accept_Release.docx
   python tools/brs_docx.py skeleton work/brs/<fn>/brs.json            # empty spec to fill in
-  python tools/brs_docx.py build work/brs/<fn>/brs.json --out "output/brs/BRS - <Module> - <Function> V_1.0.docx"
-  python tools/brs_docx.py check "output/brs/....docx"                 # text dump to verify the result
+  python tools/brs_docx.py build work/brs/<fn>/brs.json --out "output/<Module>/BRS - <Module> - <Function> V_1.0.docx"
+  python tools/brs_docx.py check "output/<Module>/....docx"                 # text dump to verify the result
 
 The template's styles, header, footer, logo, TOC field and table formats are kept: tables are refilled by
 cloning their first data row, so every new row has the house format.
