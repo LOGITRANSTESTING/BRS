@@ -217,6 +217,110 @@
    "db": "",
    "values": "On / Off",
    "remarks": ""
+  },
+  {
+   "name": "Seal Carrier",
+   "type": "Alphanumeric",
+   "ui": "Input Carrier seal number of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Seal Customs",
+   "type": "Alphanumeric",
+   "ui": "Input Customs seal number of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Seal Customer",
+   "type": "Alphanumeric",
+   "ui": "Input Customer seal number of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Seal Other",
+   "type": "Alphanumeric",
+   "ui": "Input Other seal number of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Reefer",
+   "type": "Check Box",
+   "ui": "If container is reefer please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Reefer \u00b0C",
+   "type": "Numeric",
+   "ui": "Input Reefer temperature of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Stowage",
+   "type": "Single Select Drop Down",
+   "ui": "Select Stowage manually from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Status",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Load Status manually from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Special Cargo",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Special Cargo manually from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Damaged Remarks",
+   "type": "Text Area",
+   "ui": "Input Damaged Remarks of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Customer Remarks",
+   "type": "Text Area",
+   "ui": "Input Customer Remarks of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After input all the mandatory columns value's, it should be inserted into Cargo containers & PR Details for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Cancel",
+   "type": "Button",
+   "ui": "Cancelled all the input values and requery existing data",
+   "db": "",
+   "values": "",
+   "remarks": ""
   }
  ],
  "references": [],
