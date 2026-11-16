@@ -172,6 +172,110 @@
    "db": "",
    "values": "",
    "remarks": ""
+  },
+  {
+   "name": "Feeder Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Feeder Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Feeder Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Create leg when not available",
+   "type": "Check Box",
+   "ui": "If the feeder leg is not available please select the check box to create a new leg in the voyage",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Load Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Load Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "TSP Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input TSP Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select TSP Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Discharge Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Discharge Voyage, it will auto populate. The swap icon switches the voyage box between auto populate and alphanumeric input. Select Discharge Voyage Port from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Allocation Voyage",
+   "type": "Auto Populate",
+   "ui": "Input Allocation Voyage, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Terminal",
+   "type": "Auto Populate",
+   "ui": "Select Load Terminal, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Destination Terminal",
+   "type": "Auto Populate",
+   "ui": "Select Destination Terminal, it will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": "Reflects the voyage changes"
+  },
+  {
+   "name": "Destination ETA",
+   "type": "Date and Time Picker",
+   "ui": "Input Destination ETA date and time",
+   "db": "",
+   "values": "",
+   "remarks": "Reflects the voyage changes"
+  },
+  {
+   "name": "Update Related BLs",
+   "type": "Toggle",
+   "ui": "Switch on to update all related BLs with the changes made",
+   "db": "",
+   "values": "On / Off",
+   "remarks": ""
+  },
+  {
+   "name": "Update Related Local BLs",
+   "type": "Toggle",
+   "ui": "Switch on to update all related local BLs with the changes made",
+   "db": "",
+   "values": "On / Off",
+   "remarks": ""
+  },
+  {
+   "name": "Validate",
+   "type": "Button",
+   "ui": "Validates the changes made for the selected bookings and shows the result grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Processes the validated changes for the selected bookings and shows the result grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
   }
  ],
  "references": [],

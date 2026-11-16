@@ -26,7 +26,7 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 - Multiselect Drop Down: an empty box with only the small corner mark at the bottom right and no placeholder text (for example Status).
 - Radio Button: a group of round options where only one can be selected (for example None / Gate Out / Gate In). One row for the group; list the options in Possible Values.
 - Toggle: a pill switch (for example Update Related BLs).
-- Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row. The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
+- Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row, Item Type "Auto Populate / Alphanumeric + Single Select Drop Down". The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
 - Also, when seen: Button (Submit, Cancel, Apply, Process, Validate); LOV (a box with a magnifier or list icon that opens a lookup); Text Area (a large multi-line box with a note icon, for example Remarks); Display Item (grid column values that cannot be edited; ask if unsure).
 
 ## UI Validation (short and imperative, as in the sample)
