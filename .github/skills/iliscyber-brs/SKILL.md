@@ -118,10 +118,14 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
    - read-only versus editable.
 4. Wait for the answers. Update the rows in brs.json, then move on.
 
+**Ask one question at a time, each with the image or crop it is about.** Commit the crop to the previews folder and show it before asking.
+
+**Grow the house rules as documents are made.** When the user settles a new Item Type, Event Type, naming or row-split rule that is not in these files, add it straight away to `references/column-rules.md` or to this file, with the example it came from.
+
 ## Step 6 - Event Triggering's
 - One row for each button, link, checkbox or toggle in the images that makes something happen. Examples: Submit, Cancel, Process, Generate, Query/Search, Clear, Apply, Overwrite, Next/Previous, a tab click that loads data, a checkbox that enables fields.
 - Columns:
-  - **Event Type:** "Button Click", "Check Box Click", "Tab Click", "Link Click" or "On Change".
+  - **Event Type:** "Button Click", "Check Box Click", "Radio Button Click", "Tab Click", "Link Click" or "On Change".
   - **Description:** what happens. Take it from the manual's "How to" steps and from the alert or success-bar text in the images.
   - **Triggered When?:** the user action plus the precondition, for example "User clicks Submit after entering all mandatory fields".
   - **Remarks:** the message shown, quoted from the image. Otherwise blank.

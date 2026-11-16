@@ -21,9 +21,12 @@ Columns: UI Item Name | Item Type | UI Validation | DB Validation | Possible Val
 - Date Picker: a calendar icon. A date and time pair with a clock icon is still one "Date Picker" row, unless the time has its own label.
 - Drop Down: a down-arrow at the right of the box.
 - Check Box: a small square.
+- Radio Button: a group of round options where only one can be selected (for example None / Gate Out / Gate In). One row for the group; list the options in Possible Values.
 - Toggle: a pill switch. Ask the user whether to call it Toggle or Check Box.
 - Button: a clickable button (Submit, Cancel, Apply, Process).
-- LOV: a box with a magnifier or list icon that opens a lookup.
+- LOV: a box with a magnifier or list icon that opens a lookup. Also a "Select ..." box with a small corner mark at the bottom right instead of a down-arrow (for example Size Type on ES-FL Fix).
+- A date range shown as two date-time boxes joined by "~" under one label (for example "From / To Date") is ONE Date Picker row named as the label.
+- A field with a swap icon (⇆) that switches it between auto-populate and a drop-down is ONE row: describe the switch in UI Validation.
 - Text Area: a large multi-line box with a note icon (Remarks).
 - Display Item: grid column values that cannot be edited. Ask if unsure.
 
