@@ -17,18 +17,17 @@ Columns: UI Item Name | Item Type | UI Validation | DB Validation | Possible Val
 - A panel label in front of field labels becomes a prefix when the sample does that: "VGM UOM", "VGM Status".
 
 ## Item Type (decide from the control's look)
-- Text Item: a plain input box, or a grey read-only box showing a value.
-- Date Picker: a calendar icon. A date and time pair with a clock icon is still one "Date Picker" row, unless the time has its own label.
-- Drop Down: a down-arrow at the right of the box.
-- Check Box: a small square.
+These are the house item types, settled by the user on Voyage Update (depot cross booking). Use them unless a screen has something different; ask then.
+- Auto Populate: a box that says "Key in three char" with a small corner mark at the bottom right (for example Customer, Allocation Voyage).
+- Single Select Drop Down: a box with a solid blue down-arrow at the right (for example Status = All).
+- Alphanumeric / Numeric: a plain empty box with no icon (for example Container No.). Alphanumeric for codes and text, Numeric for numbers only.
+- Check Box: a small square, one row for each (for example COPARN Sent, Freeze, Valid ETA, Depot Blank).
+- Date and Time Picker: a box with a calendar icon and a clock icon (dd/MM/yyyy HH:mm). A From / To pair joined by "~" under one label (for example "Empty Pickup From / To Date") is ONE row named as the label.
+- Multiselect Drop Down: an empty box with only the small corner mark at the bottom right and no placeholder text (for example Status).
 - Radio Button: a group of round options where only one can be selected (for example None / Gate Out / Gate In). One row for the group; list the options in Possible Values.
-- Toggle: a pill switch. Ask the user whether to call it Toggle or Check Box.
-- Button: a clickable button (Submit, Cancel, Apply, Process).
-- LOV: a box with a magnifier or list icon that opens a lookup. Also a "Select ..." box with a small corner mark at the bottom right instead of a down-arrow (for example Size Type on ES-FL Fix).
-- A date range shown as two date-time boxes joined by "~" under one label (for example "From / To Date") is ONE Date Picker row named as the label.
-- A field with a swap icon (⇆) that switches it between auto-populate and a drop-down is ONE row: describe the switch in UI Validation.
-- Text Area: a large multi-line box with a note icon (Remarks).
-- Display Item: grid column values that cannot be edited. Ask if unsure.
+- Toggle: a pill switch (for example Update Related BLs).
+- Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row. The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
+- Also, when seen: Button (Submit, Cancel, Apply, Process, Validate); LOV (a box with a magnifier or list icon that opens a lookup); Text Area (a large multi-line box with a note icon, for example Remarks); Display Item (grid column values that cannot be edited; ask if unsure).
 
 ## UI Validation (short and imperative, as in the sample)
 - Editable text: "Input <what> of the container". Example: "Input Tare Weight of the container".
