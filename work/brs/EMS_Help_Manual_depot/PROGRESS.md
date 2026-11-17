@@ -72,3 +72,4 @@ Author: Appsara
 - 2026-11-17 fn 12 Revert To Prepared: approved and marked done (01.01). Next: fn 13 Change To Empty Return.
 - 2026-11-17 fn 13 Change To Empty Return: images built — I from twin d376_01 (gate passed); II popup, III success (frame only); IV NO TWIN, box edges from record +36 (identical +72/+108; gate passed). Awaiting image approval.
 - 2026-11-17 fn 13 Change To Empty Return: images, 2.1 (definition + 3 conditions), 2.2 (3 rows) approved; no section 3 tables (popup has no input); document built (11 pages); awaiting approval.
+- 2026-11-17 fn 13 Change To Empty Return: approved and marked done (01.01). Next: fn 14 Equipment Delink.
