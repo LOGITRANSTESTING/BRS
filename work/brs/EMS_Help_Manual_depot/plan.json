@@ -35,8 +35,11 @@
    "fp": "5fffe585d7e22d7e",
    "n": 2,
    "fn": "group_generate_release_advise",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx",
+   "done_fp": "5fffe585d7e22d7e",
+   "version": "01.01"
   },
   {
    "name": "TOPS XML",

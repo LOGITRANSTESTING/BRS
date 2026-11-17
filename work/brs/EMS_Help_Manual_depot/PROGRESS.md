@@ -16,5 +16,5 @@ Author: Appsara
 - 17.11.2026 - Fn 1 approved by user; brs_plan.py done recorded (01.01).
 - 17.11.2026 - Layout fixes (user): page breaks for History/Approval/Contents/1/3, Image I fits page with 1/1.1/1.2, images kept with captions, 2.1 indented to the 2.2 table, empty headings removed (brs_docx.py layout(), skill Step 7). Fn 1 rebuilt (8 pages) - approved by user.
 - 17.11.2026 - Fn 2 Generate Release Advise: Image I = menu step repaired from its twin (page image), gate passed; Image II = success screen, frame only. Images approved.
-- 17.11.2026 - Fn 2: 2.1 (definition + 2 conditions) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx (8 pages). Awaiting user OK.
-- NEXT: fn 2 approval -> brs_plan done; then fn 3 TOPS XML.
+- 17.11.2026 - Fn 2: 2.1 (definition + 2 conditions) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx (8 pages). Approved; brs_plan done recorded (01.01).
+- NEXT: fn 3 TOPS XML (exported).
