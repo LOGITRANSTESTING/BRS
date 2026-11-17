@@ -47,3 +47,4 @@ Author: Appsara
 - 17.11.2026 - Fn 8: user clarified: 3.1 Data Grid is read from the grid in Image II (the Containers-tab screen), not Image I. Crop img2_grid.png. NEXT: 3.1 approval.
 - 17.11.2026 - Fn 8: 3.1 Accept Release - Data Grid approved (18 rows, from Image II grid; greyed boxes = Display Item). NEXT: 3.2 Basic Information approval.
 - 17.11.2026 - Fn 8: 3.2 Accept Release - Basic Information approved (8 rows). NEXT: 3.3 Container Tab approval.
+- 17.11.2026 - Fn 8: 3.3 Accept Release - Container Tab approved (30 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Accept Release V_1.0.docx (19 pages; rendered and checked). Skill: extra_tables + Data Grid / Basic Information / Container Tab rule. Awaiting document OK.
