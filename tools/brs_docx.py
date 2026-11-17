@@ -13,7 +13,7 @@ from pathlib import Path
 
 try:
     import docx
-    from docx.shared import Emu
+    from docx.shared import Emu, Pt
 except ImportError:
     sys.exit('python-docx is missing: pip install python-docx')
 
@@ -152,7 +152,14 @@ def build(spec, out):
     img_ppr = copy.deepcopy(img_tmpl._p.pPr) if img_tmpl is not None and img_tmpl._p.pPr is not None else None
     anchor = doc.paragraphs[i]._p
     for p in body: remove_par(p)
-    width = doc.sections[0].page_width - doc.sections[0].left_margin - doc.sections[0].right_margin
+    sec = doc.sections[0]
+    width = sec.page_width - sec.left_margin - sec.right_margin
+    # page height left for body text (the header reaches about 24 pt below the top margin)
+    body_h = sec.page_height - sec.top_margin - sec.bottom_margin - Pt(24)
+    # Image I shares its page with "1. Introduction", 1.1 Purpose + text, "1.2 UI Design" and its caption
+    purpose_lines = max(1, -(-len(spec.get('purpose', '')) // 140))
+    first_reserve = Pt(34 + 28 + 15 * purpose_lines + 15 + 28 + 20 + 30)
+    other_reserve = Pt(20 + 30)  # caption + safety: caption and image always on one page
     last = anchor
     for k, im in enumerate(spec.get('images', []), 1):
         cap = copy.deepcopy(cap_xml) if cap_xml is not None else None
@@ -163,7 +170,11 @@ def build(spec, out):
             cp.paragraph_format.keep_with_next = True
         newp = doc.add_paragraph()  # created at the end, moved below
         if img_ppr is not None: newp._p.insert(0, copy.deepcopy(img_ppr))
-        newp.add_run().add_picture(im['file'], width=Emu(int(width)))
+        from PIL import Image as _Img
+        with _Img.open(im['file']) as _im: iw, ih = _im.size
+        max_h = body_h - (first_reserve if k == 1 else other_reserve)
+        w = min(int(width), int(max_h * iw / ih))
+        newp.add_run().add_picture(im['file'], width=Emu(w))
         last.addnext(newp._p); last = newp._p
 
     # features & functionalities, menu items, process flow, references, assumptions: text lists (blank = empty)
@@ -213,6 +224,8 @@ def build(spec, out):
             cur.getparent().remove(cur)
         h.getparent().remove(h)
 
+    layout(doc)
+
     # document properties
     if hist and hist[0].get('author'): doc.core_properties.author = hist[0]['author']
     doc.core_properties.title = 'BRS - %s - %s' % (spec['module'], spec['function'])
@@ -228,6 +241,59 @@ def build(spec, out):
     doc.save(out)
     keep_template_parts(tpl, out)
     print('saved', out)
+
+
+def layout(doc):
+    """House page layout: real page breaks instead of the sample's blank-line padding.
+    History, Record of Approval, Contents, 1 Introduction and 3 Column Definitions each start a new page
+    (4 and 5 follow 3). 2.1 text lines up with the 2.2 table. Empty headings are removed."""
+    from docx.oxml.ns import qn
+    body = doc.element.body
+
+    def is_blank(e):
+        if e.tag != qn('w:p') or ''.join(t.text or '' for t in e.iter(qn('w:t'))).strip(): return False
+        if any(b.get(qn('w:type')) != 'page' for b in e.iter(qn('w:br'))): return False  # old page breaks = filler
+        return not any(e.find('.//' + qn('w:' + n)) is not None for n in ('drawing', 'pict', 'object', 'fldChar', 'instrText', 'sectPr'))
+
+    def style(e):
+        s = e.find('./' + qn('w:pPr') + '/' + qn('w:pStyle'))
+        return s.get(qn('w:val')) if s is not None else ''
+
+    for p in list(doc.paragraphs):
+        if style(p._p).lower().startswith('heading') and not p.text.strip():
+            p._p.getparent().remove(p._p)
+
+    starts = [('History of Modifications', None), ('Record of Approval', None), ('Contents', None),
+              ('Introduction', 'Heading1'), ('Column Definitions', 'Heading1')]
+    for text, sty in starts:
+        p = next((p for p in doc.paragraphs if p.text.strip().lower().startswith(text.lower())
+                  and (sty is None or style(p._p) == sty)), None)
+        if p is None: continue
+        prev = p._p.getprevious()
+        while prev is not None and is_blank(prev):
+            cur, prev = prev, prev.getprevious()
+            body.remove(cur)
+        p.paragraph_format.page_break_before = True
+
+    # 2.1 text: same left/right edge as the 2.2 events table
+    try:
+        i = find_heading(doc, 'Features')
+    except KeyError:
+        return
+    tbl = next((t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'Event Type'), None)
+    if tbl is None: return
+    tp = tbl._tbl.tblPr
+    sec = doc.sections[0]
+    usable = int((sec.page_width - sec.left_margin - sec.right_margin) / 635)  # dxa
+    tw = tp.find(qn('w:tblW')); jc = tp.find(qn('w:jc')); ind = tp.find(qn('w:tblInd'))
+    if jc is not None and jc.get(qn('w:val')) == 'center' and tw is not None:
+        off = max(0, (usable - int(tw.get(qn('w:w')))) // 2)
+    else:
+        off = int(ind.get(qn('w:w'))) if ind is not None else 0
+    for p in body_between(doc, i):
+        if p.text.strip():
+            p.paragraph_format.left_indent = Emu(off * 635)
+            p.paragraph_format.right_indent = Emu(off * 635)
 
 
 KEEP = re.compile(r'^word/(header\d*|footer\d*|styles|stylesWithEffects|numbering|fontTable|webSettings)\.xml$|^word/theme/|^word/_rels/(header|footer)\d*\.xml\.rels$|^word/glossary/')

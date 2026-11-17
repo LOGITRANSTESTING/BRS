@@ -155,4 +155,12 @@ Do 3.1 Search first, then 3.2 Display Area. **An empty table is left out with it
 1. Run `python tools/brs_docx.py build work/brs/<manual>/<fn>/brs.json --out "output/<Module>/BRS - <Module> - <Function> V_1.0.docx"`.
 2. Run `python tools/brs_docx.py check <out>`. Compare it with brs.json: cover, history row, blank approval, captions, row counts.
 3. References and Assumptions stay as blank headings.
+   **Page layout (done by the build; check it in the render):**
+   - Real page breaks, no blank-line padding. History of Modifications, Record of Approval and Contents each start a new page.
+   - "1. Introduction" starts a new page. Image I is scaled down so that 1, 1.1 Purpose, 1.2 UI Design, the "Image I" caption and the image fit on that one page.
+   - Every other image fits one page together with its caption (scaled down if needed).
+   - "3. Column Definitions & Business Rules" always starts a new page; 4 References and 5 Assumptions just follow 3.
+   - 2.1 text is indented to line up with the 2.2 Event table's edges.
+   - Empty headings are removed.
+   - Check: render with `soffice --headless --convert-to pdf` and look at every page before handing it over.
 4. Tell the user where the file is, in one or two lines. On github.com, commit it in the pull request.
