@@ -154,8 +154,11 @@
    "fp": "4354b60f6dd14b6c",
    "n": 9,
    "fn": "single_acceptance_group",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Acceptance Group V_1.0.docx",
+   "done_fp": "4354b60f6dd14b6c",
+   "version": "01.01"
   },
   {
    "name": "Cancel Release",
@@ -168,7 +171,7 @@
    "fp": "ba0af1ad397d066a",
    "n": 10,
    "fn": "single_cancel_release",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {

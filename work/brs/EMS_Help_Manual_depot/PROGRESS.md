@@ -56,3 +56,4 @@ Author: Appsara
 - 17.11.2026 - Fn 9: 2.2 final (4 rows). Grid: visible columns only (user). Drafts: 3.1 Acceptance Group - Basic Information (8), 3.2 Acceptance Group - Data Grid (14). NEXT: 3.1 approval.
 - 17.11.2026 - Fn 9: 3.1 approved (8 rows). New Item Type File Upload added to column-rules. NEXT: 3.2 Data Grid approval.
 - 17.11.2026 - Fn 9: 3.2 approved (14 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Acceptance Group V_1.0.docx (13 pages, rendered and checked). Awaiting document OK.
+- 17.11.2026 - Fn 9 approved; brs_plan done recorded (01.01). Fn 10 Cancel Release (Single) exported to single_cancel_release/. NEXT: fn 10 images.
