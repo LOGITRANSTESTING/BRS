@@ -58,8 +58,16 @@
    "remarks": ""
   }
  ],
- "search_title": "",
- "search": [],
+ "search_title": "Cancel Release - Popup",
+ "search": [
+  {
+   "name": "Remark",
+   "type": "Text Area",
+   "ui": "Mandatory. The user types a valid remark for cancelling the PR",
+   "db": "",
+   "values": ""
+  }
+ ],
  "display_title": "",
  "drop_display": true,
  "display": [],

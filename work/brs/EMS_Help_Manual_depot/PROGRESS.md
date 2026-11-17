@@ -61,3 +61,4 @@ Author: Appsara
 - 2026-11-17 fn 10 Cancel Release: images I–IV approved.
 - 2026-11-17 fn 10 Cancel Release: 2.1 + 2.2 (3 rows) approved; no section 3 tables (user dropped the popup table).
 - 2026-11-17 fn 10 Cancel Release: docx built (10 pages), rendered; awaiting approval.
+- 2026-11-17 fn 10 Cancel Release: user asked to keep the popup table with Remark only; 3.1 'Cancel Release - Popup' (1 row, Mandatory) added, rebuilt (10 pages); awaiting approval.
