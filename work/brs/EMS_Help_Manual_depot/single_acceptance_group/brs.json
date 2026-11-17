@@ -29,15 +29,21 @@
   }
  ],
  "features": [
-  "Accept Release Function allows the user to change the PR status from Prepared to supplied or Empty or full return status.",
+  "Acceptance Group Function allows the user to change the PR status from Prepared to supplied or Empty or full return status.",
   "PR Status must be in \"Prepared\" status."
  ],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
+   "event_type": "Menu Click",
+   "description": "Opens the Acceptance Group screen in a new tab for the selected PR",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Acceptance Group from the single function menu",
    "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Saves the container details of the selected records",
+   "triggered_when": "User clicks Submit after entering all mandatory fields",
+   "remarks": "\"Container accepted successfully\""
   }
  ],
  "search_title": "",

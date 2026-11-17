@@ -51,3 +51,4 @@ Author: Appsara
 - 17.11.2026 - Fn 8 approved; brs_plan done recorded (01.01). Fn 9 Acceptance Group (Single) exported to single_acceptance_group/. NEXT: fn 9 images.
 - 17.11.2026 - Fn 9 Acceptance Group: Image I = menu step repaired from twin page image (gate passed, 0 px outside); II = form (b65b_03, frame only); III = success (b65b_04, frame only). Sheet + before/after in output/previews/brs_EMS_Help_Manual_depot_single_acceptance_group. Awaiting image OK.
 - 17.11.2026 - Fn 9: images approved. brs.json created. NEXT: 1.1/2.1 approval (manual's Acceptance Group definition says 'Accept Release Function ...').
+- 17.11.2026 - Fn 9: 1.1 + 2.1 approved (definition reworded to 'Acceptance Group Function ...' at user's choice; manual reused Accept Release sentence). 2.2 draft Menu Click + Submit. NEXT: 2.2 approval (Select files/Load/tab close?).
