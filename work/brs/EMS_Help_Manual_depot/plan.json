@@ -309,8 +309,11 @@
    "fp": "a9badeb1bad5c429",
    "n": 18,
    "fn": "single_vgm_details",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - VGM Details V_1.0.docx",
+   "done_fp": "a9badeb1bad5c429",
+   "version": "01.01"
   },
   {
    "name": "Cancel Group",

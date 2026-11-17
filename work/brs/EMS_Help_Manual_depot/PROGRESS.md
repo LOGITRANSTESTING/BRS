@@ -85,3 +85,4 @@ Author: Appsara
 - 2026-11-17 user: keep fn 17 Door Address Link for last; next fn 18 VGM Details.
 - 2026-11-17 fn 18 VGM Details: exported; Image I repaired from twin 22bb_01 (gate passed); Image II (no twin) Submit box rebuilt from Cancel button edges + fields box strips filled white (gate passed); Image III frame only; awaiting image approval.
 - 2026-11-17 fn 18 VGM Details: images, 2.1 (definition + 1 condition), 2.2 (4 rows), 3.1 Data Grid (18), 3.2 Basic Information (8), 3.3 VGM Details Tab (14) approved; document built (15 pages); awaiting approval.
+- 2026-11-17 fn 18 VGM Details: approved and marked done (01.01). Next: fn 19 Cancel Group (fn 17 Door Address Link kept for last).
