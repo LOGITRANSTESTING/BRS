@@ -58,26 +58,179 @@
    "remarks": "\"Container accepted successfully\""
   }
  ],
- "search_title": "",
+ "search_title": "Acceptance Group - Basic Information",
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking number of the selected PR",
    "db": "",
    "values": ""
+  },
+  {
+   "name": "Customer",
+   "type": "Display Item",
+   "ui": "Customer of the booking",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage - Port",
+   "type": "Display Item",
+   "ui": "Voyage and port of the booking",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Total Records",
+   "type": "Display Item",
+   "ui": "Count of the records in the data grid",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select files...",
+   "type": "Button",
+   "ui": "Opens a pop up to upload a file for updating containers",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Drop files here to upload",
+   "type": "File Upload",
+   "ui": "Drag and drop a file to upload",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load",
+   "type": "Button",
+   "ui": "Loads the containers and dates in the uploaded file into the data grid",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Status manually from drop down list",
+   "db": "",
+   "values": "Supplied"
   }
  ],
- "display_title": "",
+ "display_title": "Acceptance Group - Data Grid",
  "drop_display": false,
  "display": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the records are to be submitted please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": "Selects or clears every row"
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the record is to be submitted please select the check box",
    "db": "",
    "values": "",
    "remarks": ""
+  },
+  {
+   "name": "Dummy",
+   "type": "Check Box",
+   "ui": "If the container is a dummy container please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "PL Reference",
+   "type": "Display Item",
+   "ui": "PR number of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container",
+   "type": "Alphanumeric",
+   "ui": "Mandatory. Input Container number, it will auto populate all other required fields if information is available",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Type",
+   "type": "Display Item",
+   "ui": "Based on selected Container number Type size will auto populate",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Actual Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Actual Pickup date",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Actual Delivery Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Actual Delivery date",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Actual Drop Date",
+   "type": "Date and Time Picker",
+   "ui": "Mandatory. Input Actual Drop date",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Critical Cargo",
+   "type": "Display Item",
+   "ui": "Critical Cargo of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Cargo Handling",
+   "type": "Display Item",
+   "ui": "Cargo Handling of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Tare Weight",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Tare Weight of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Cargo",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Cargo Weight of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After input all the mandatory column values, it should be inserted into Cargo containers & PR Details for the selected records",
+   "db": "",
+   "values": "",
+   "remarks": "Shows \"Container accepted successfully\""
   }
  ],
  "extra_tables": [],
