@@ -26,6 +26,7 @@ Reply in plain text only. When the user shares a plan, engage with it as it stan
   - in VS Code, the tools open previews;
   - on github.com, commit it to `output/previews/brs_<manual>_<fn>/` and show it in the reply.
 - **One BRS at a time, table by table, with questions.** Never bulk-generate. The user wants to understand what goes in the document.
+- **Progress log, so a lost connection loses nothing:** keep `work/brs/<manual>/PROGRESS.md`. After every step, decision or user answer, add a dated line (function, step, what was done or decided, the next step), then commit and push it with the work files. At session start, if the log exists, read it first, tell the user where we stopped, and carry on from there.
 
 ## One BRS per function
 A BRS is written per FUNCTION, never per manual.
@@ -41,7 +42,7 @@ A BRS is written per FUNCTION, never per manual.
      - `update` = a function whose BRS was done but whose pages, or the shared pages, changed;
      - `REMOVED` = a function no longer in the manual. Ask what to do with its old BRS. Never delete anything without asking.
 2. Ask which function to start with. The default is the first `new` or `update` one. Then go one function at a time; never bulk-generate.
-3. Ask the module line for the cover once per manual (for example "Agency Booking", "EMS"). Ask the author once per session if the manual has none (see Step 2).
+3. Ask the module line for the cover once per manual (for example "Agency Booking", "EMS"). The author is always Appsara (see Step 2).
 4. Run `python tools/brs_plan.py export "<manual>.gui" --function N`. This writes that function's pages and images, plus the shared pages, to `work/brs/<manual>/<fn>/pages/`. It handles functions with the same name under Group and Single.
 5. Spec file:
    - new function: run `python tools/brs_docx.py skeleton work/brs/<manual>/<fn>/brs.json`;
@@ -99,7 +100,7 @@ A BRS is written per FUNCTION, never per manual.
   - version 01.01;
   - date = today, DD/MM/YYYY.
 - **History of Modifications:** one row: today (DD.MM.YYYY), V01.01, author, and "Initial version created based on the confirmed screen designs".
-  - **Author = the document maker.** Run `ilis.py gui info` and look for meta_author / meta_creator. If both are empty, ASK the user. Never guess. Reuse the answer for later BRS in the same session.
+  - **Author = Appsara**, always. She is the only author of every BRS. Do not read it from the manual and do not ask.
 - **Record of Approval:** left blank. The tool keeps only the Author/Auditor/Approver/Signature/Date labels.
 - **Contents:** the TOC field stays. Word refreshes it on open (updateFields is set). Tell the user to accept the "update fields" prompt, or press F9.
 

@@ -26,7 +26,7 @@ SKELETON = {
     "function": "",
     "version": "01.01",
     "date": "",  # DD/MM/YYYY, today when empty
-    "history": [{"date": "", "version": "V01.01", "author": "",
+    "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
     "purpose": "This document explains the purpose of <Module>'s <Function> details.",
     "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],

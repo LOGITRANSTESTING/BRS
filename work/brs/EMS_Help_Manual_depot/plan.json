@@ -1,0 +1,312 @@
+{
+ "manual": "/workspaces/BRS/.copilot/uploads/2026-11-17-9e540b34/EMS_-_Help_Manual_depot.gui",
+ "shared_pages": [
+  "Depot Activity",
+  "Depot Activity > Depot Activity - Query Fields",
+  "Depot Activity > Depot Activity - Data Grid Screen",
+  "Depot Activity > Depot Activity - Data Grid Screen > How to Change Empty Return, Full Return Edit Fields"
+ ],
+ "functions": [
+  {
+   "name": "Empty Return Pre Advise",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > Empty Return Pre Advise",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > Empty Return Pre Advise",
+    "Depot Activity > Depot Activity Group Function > Empty Return Pre Advise > How to Generate \"Empty Return Pre Advise\""
+   ],
+   "fp": "727195bc5dd476d5",
+   "n": 1,
+   "fn": "group_empty_return_pre_advise",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Generate Release Advise",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > Generate Release Advise",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > Generate Release Advise",
+    "Depot Activity > Depot Activity Group Function > Generate Release Advise > How to Generate \"Generate Release Advise\""
+   ],
+   "fp": "5fffe585d7e22d7e",
+   "n": 2,
+   "fn": "group_generate_release_advise",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "TOPS XML",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > TOPS XML",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > TOPS XML",
+    "Depot Activity > Depot Activity Group Function > TOPS XML > How to Generate \"TOPS XML\""
+   ],
+   "fp": "c31c806e17710e9f",
+   "n": 3,
+   "fn": "group_tops_xml",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Generate Truck Order",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > Generate Truck Order",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > Generate Truck Order",
+    "Depot Activity > Depot Activity Group Function > Generate Truck Order > How to Generate Truck Order"
+   ],
+   "fp": "6c7ff18d3698df45",
+   "n": 4,
+   "fn": "group_generate_truck_order",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Empty Container Admission",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > Empty Container Admission",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > Empty Container Admission",
+    "Depot Activity > Depot Activity Group Function > Empty Container Admission > How to process \" Empty Container Admission\""
+   ],
+   "fp": "a9238c6c43c88377",
+   "n": 5,
+   "fn": "group_empty_container_admission",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Confirmation",
+   "kind": "Group",
+   "path": "Depot Activity > Depot Activity Group Function > Confirmation",
+   "pages": [
+    "Depot Activity > Depot Activity Group Function > Confirmation",
+    "Depot Activity > Depot Activity Group Function > Confirmation > How to \"EDI COPARN & Booking Confirmation\""
+   ],
+   "fp": "62a109c5a0bc4df4",
+   "n": 6,
+   "fn": "group_confirmation",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Booking Query",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Booking Query",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Booking Query",
+    "Depot Activity > Depot Activity Single Function > Booking Query > How to view Booking Details using \"Booking Query\""
+   ],
+   "fp": "79d41885b474dde6",
+   "n": 7,
+   "fn": "single_booking_query",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Accept Release",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Accept Release",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Accept Release",
+    "Depot Activity > Depot Activity Single Function > Accept Release > How to \"Accept PR Release\""
+   ],
+   "fp": "2bd27ad40a444c86",
+   "n": 8,
+   "fn": "single_accept_release",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Acceptance Group",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Acceptance Group",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Acceptance Group",
+    "Depot Activity > Depot Activity Single Function > Acceptance Group > How to \"Acceptance Group\""
+   ],
+   "fp": "4354b60f6dd14b6c",
+   "n": 9,
+   "fn": "single_acceptance_group",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Cancel Release",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Cancel Release",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Cancel Release",
+    "Depot Activity > Depot Activity Single Function > Cancel Release > How to \"Cancel PR Release\""
+   ],
+   "fp": "ba0af1ad397d066a",
+   "n": 10,
+   "fn": "single_cancel_release",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Freeze / Unfreeze",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Freeze / Unfreeze",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Freeze / Unfreeze",
+    "Depot Activity > Depot Activity Single Function > Freeze / Unfreeze > How to \"Freeze / Unfreeze\" PR"
+   ],
+   "fp": "2b34926ddfaf8014",
+   "n": 11,
+   "fn": "single_freeze_unfreeze",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Revert To Prepared",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Revert To Prepared",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Revert To Prepared",
+    "Depot Activity > Depot Activity Single Function > Revert To Prepared > How to \"Revert PR Status to Prepared\""
+   ],
+   "fp": "ea52e35b8f690f16",
+   "n": 12,
+   "fn": "single_revert_to_prepared",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Change To Empty Return",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Change To Empty Return",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Change To Empty Return",
+    "Depot Activity > Depot Activity Single Function > Change To Empty Return > How to \"Change PR Status to Empty Return\""
+   ],
+   "fp": "76d1eef242a74a14",
+   "n": 13,
+   "fn": "single_change_to_empty_return",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Equipment Delink",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Equipment Delink",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Equipment Delink",
+    "Depot Activity > Depot Activity Single Function > Equipment Delink > How to \"Delink Container From PR\""
+   ],
+   "fp": "bebd43092c70b860",
+   "n": 14,
+   "fn": "single_equipment_delink",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Equipment Relink",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Equipment Relink",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Equipment Relink",
+    "Depot Activity > Depot Activity Single Function > Equipment Relink > How to \"Relink Container To PR\""
+   ],
+   "fp": "d8b06eca42c097fc",
+   "n": 15,
+   "fn": "single_equipment_relink",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Revert Empty Return",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Revert Empty Return",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Revert Empty Return",
+    "Depot Activity > Depot Activity Single Function > Revert Empty Return > How to \"Revert Empty Return\""
+   ],
+   "fp": "59bfd4a1b4e9bd03",
+   "n": 16,
+   "fn": "single_revert_empty_return",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Door Address Link",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Door Address Link",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Door Address Link",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Link door address to PR\"",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Delink door address from PR\"",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Edit door address from PR\"",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Delete door address from PR\"",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Generate TOPS\"",
+    "Depot Activity > Depot Activity Single Function > Door Address Link > How to \"Generate Nomination\""
+   ],
+   "fp": "5fcdfab5b4a7565d",
+   "n": 17,
+   "fn": "single_door_address_link",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "VGM Details",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > VGM Details",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > VGM Details",
+    "Depot Activity > Depot Activity Single Function > VGM Details > How to edit \"VGM Details\""
+   ],
+   "fp": "a9badeb1bad5c429",
+   "n": 18,
+   "fn": "single_vgm_details",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Cancel Group",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Cancel Group",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Cancel Group",
+    "Depot Activity > Depot Activity Single Function > Cancel Group > How to \"Cancel Group\""
+   ],
+   "fp": "97c4c164869d87b8",
+   "n": 19,
+   "fn": "single_cancel_group",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "PR More Details",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > PR More Details",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > PR More Details",
+    "Depot Activity > Depot Activity Single Function > PR More Details > How to process \"PR More Details\""
+   ],
+   "fp": "be9eb3c631409592",
+   "n": 20,
+   "fn": "single_pr_more_details",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Empty Container Load",
+   "kind": "Single",
+   "path": "Depot Activity > Depot Activity Single Function > Empty Container Load",
+   "pages": [
+    "Depot Activity > Depot Activity Single Function > Empty Container Load",
+    "Depot Activity > Depot Activity Single Function > Empty Container Load > How to process \"EQC Load\"",
+    "Depot Activity > Depot Activity Single Function > Empty Container Load > How to process \"CSV Load\""
+   ],
+   "fp": "5db64481b44cae22",
+   "n": 21,
+   "fn": "single_empty_container_load",
+   "status": "new",
+   "change": "new"
+  }
+ ],
+ "removed": []
+}
