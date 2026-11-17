@@ -18,7 +18,7 @@
    "fp": "727195bc5dd476d5",
    "n": 1,
    "fn": "group_empty_return_pre_advise",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -32,7 +32,7 @@
    "fp": "5fffe585d7e22d7e",
    "n": 2,
    "fn": "group_generate_release_advise",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -46,7 +46,7 @@
    "fp": "c31c806e17710e9f",
    "n": 3,
    "fn": "group_tops_xml",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -60,7 +60,7 @@
    "fp": "6c7ff18d3698df45",
    "n": 4,
    "fn": "group_generate_truck_order",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -74,7 +74,7 @@
    "fp": "a9238c6c43c88377",
    "n": 5,
    "fn": "group_empty_container_admission",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -88,7 +88,7 @@
    "fp": "62a109c5a0bc4df4",
    "n": 6,
    "fn": "group_confirmation",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {

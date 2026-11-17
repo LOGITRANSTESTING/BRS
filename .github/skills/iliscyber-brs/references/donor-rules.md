@@ -147,6 +147,17 @@ line, separator, fill, text, icon, check box, grid behind.
   from the same rows one record down. When a check box is hidden completely, take a whole unmarked check
   box of the same state from anywhere in the manual.
 - **Success message screen.** Frame only. The veil and the arrows are the app's and stay.
+- **Group function menu + selected record marked (Empty Return Pre Advise).** Menu: the function's page
+  image is a cropped twin of the top (exact on every untouched px; its "DIRTY" red is the app's ☰ icon).
+  Record: the other Group functions' menu screenshots, but the GRID SCROLLS while the header, scroll arrow
+  and track stay fixed. Measure the record border rows (`9dccfd`) and the header row in each screenshot
+  first: records were at 361/397 here, 362/398 in Generate Truck Order, 364/400 in Generate Release Advise,
+  header at 359 in all. So the record strips came from Truck Order at dy +1 and the scrollbar columns at dy 0.
+  A hidden row band (a 3 px line that covers the record's top edge) is NOT pinned by the judge - the untouched
+  rows around it agree at several offsets - so take the offset from the measured row pitch, then cross-check
+  the result against a second donor at its own offset (9417 px rebuilt, only the scrollbar differed).
+- **`copy` pastes the whole rectangle** even with `--marks` (only flip/recolour stay inside the marks). Over
+  a record, copy thin strips that cover only the mark lines and the circle, never a box over text.
 
 ## 9. The gate (every image, before the frame is stripped)
 `python tools/brs_judge.py gate MARKED.png REPAIRED.png [--twin UNMARKED.png]`
