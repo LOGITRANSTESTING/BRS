@@ -75,3 +75,4 @@ Author: Appsara
 - 2026-11-17 fn 13 Change To Empty Return: approved and marked done (01.01). Next: fn 14 Equipment Delink.
 - 2026-11-17 fn 14 Equipment Delink: images built — I from twin 4c07_01 (gate passed); II success (frame only). Awaiting image approval.
 - 2026-11-17 fn 14 Equipment Delink: images, 2.1, 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
+- 2026-11-17 fn 14 Equipment Delink: approved and marked done (01.01). Next: fn 15 Equipment Relink.

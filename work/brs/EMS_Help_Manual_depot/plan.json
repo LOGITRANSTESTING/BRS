@@ -239,8 +239,11 @@
    "fp": "bebd43092c70b860",
    "n": 14,
    "fn": "single_equipment_delink",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Equipment Delink V_1.0.docx",
+   "done_fp": "bebd43092c70b860",
+   "version": "01.01"
   },
   {
    "name": "Equipment Relink",
