@@ -275,6 +275,15 @@ def layout(doc):
             body.remove(cur)
         p.paragraph_format.page_break_before = True
 
+    from docx.oxml import OxmlElement
+    # filled tables (2.2 events, 3.1, 3.2): a row never splits over two pages; the header row repeats
+    for t in doc.tables:
+        if t.rows[0].cells[0].text.strip() not in ('Event Type', 'UI Item Name'): continue
+        for k, row in enumerate(t.rows):
+            trPr = row._tr.get_or_add_trPr()
+            for tag in (['w:cantSplit'] + (['w:tblHeader'] if k == 0 else [])):
+                if trPr.find(qn(tag)) is None: trPr.append(OxmlElement(tag))
+
     # 2.1 text: same left/right edge as the 2.2 events table
     try:
         i = find_heading(doc, 'Features')

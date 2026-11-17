@@ -25,4 +25,5 @@ Author: Appsara
 - 17.11.2026 - Fn 5 Empty Container Admission (opens own screen, needs 3.1/3.2). User chose images: I = menu (clean page image), II = empty screen S2 with S3 query values pasted in (dates + Activity Place), III = S5 selected+Process repaired from S4 (gate passed), IV = S6 success. Awaiting image OK.
 - 17.11.2026 - Fn 5: images approved; 1.1 + 2.1 (overview + 2 conditions) approved; 2.2 six rows approved (Menu Click, Search, Process, Excel, Refresh, Expand/Collapse). brs.json saved.
 - 17.11.2026 - Fn 5: 3.1 approved (7 rows, DB/values blank); headings: "Empty Container Admission - Query Screen" (3.1) and "Empty Container Admission - Data Grid" (3.2).
-- NEXT: fn 5 3.2 Data Grid rows, then build.
+- 17.11.2026 - Fn 5: 3.2 Data Grid approved (11 rows). Built output/EMS/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx (14 pages). brs_docx layout now: table rows cantSplit + header repeat. Awaiting document OK.
+- NEXT: fn 5 brs_plan done, then fn 6 Confirmation (exported).

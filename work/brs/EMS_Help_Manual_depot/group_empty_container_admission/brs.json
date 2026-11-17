@@ -129,7 +129,96 @@
  ],
  "display_title": "Empty Container Admission - Data Grid",
  "drop_display": false,
- "display": [],
+ "display": [
+  {
+   "name": "Total Container(s)",
+   "type": "Display Item",
+   "ui": "Count of the containers queried",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried containers are to be processed please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": "Selects or clears every row"
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the container is to be processed please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": "One or many containers can be selected"
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "Container number of the queried record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Size type of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Previous",
+   "type": "Display Item",
+   "ui": "Previous activity and place of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\", for example \"FP -\""
+  },
+  {
+   "name": "Current",
+   "type": "Display Item",
+   "ui": "Current activity, place and date of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\" with the date and time below, for example \"RE - TRALIP01, 04/03/2024 15:40\""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "Load activity, place and date of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\" with the date and time below, for example \"OF - CNSHKP09, 31/12/2023 18:28\""
+  },
+  {
+   "name": "Voyage",
+   "type": "Display Item",
+   "ui": "Voyage of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking / BL Number",
+   "type": "Display Item",
+   "ui": "Booking or BL number of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Empty in the screenshots"
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Generates a notification to Akras Logistics with the selected empty containers for customs approval",
+   "db": "",
+   "values": "",
+   "remarks": "Shows \"Empty container admission processed successfully\""
+  }
+ ],
  "references": [],
  "assumptions": []
 }

@@ -162,5 +162,6 @@ Do 3.1 Search first, then 3.2 Display Area. **An empty table is left out with it
    - "3. Column Definitions & Business Rules" always starts a new page; 4 References and 5 Assumptions just follow 3.
    - 2.1 text is indented to line up with the 2.2 Event table's edges.
    - Empty headings are removed.
+   - Table rows in 2.2, 3.1 and 3.2 never split over two pages, and the header row repeats on every continuation page (Empty Container Admission).
    - Check: render with `soffice --headless --convert-to pdf` and look at every page before handing it over.
 4. Tell the user where the file is, in one or two lines. On github.com, commit it in the pull request.

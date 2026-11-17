@@ -64,6 +64,7 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 
 ## brs.json keys
 - `search_title` / `display_title` (optional): rename the 3.1 / 3.2 headings. Use it when the 3.1 part is the screen's edit header rather than query fields, for example Accept Release: "Accept Release - Container Tab".
+- A function that opens its own screen (query panel + grid): `search_title` = "<Function> - Query Screen" and `display_title` = "<Function> - Data Grid" (Empty Container Admission). The grid's own search box/Excel/Refresh/expand arrow go in 2.2, not 3.1/3.2; Total count label, header Select All check box and row check box are rows in the Data Grid table; the action button (Process) is the last Data Grid row.
 - `drop_display: true`: remove the whole 3.2 section. Use it when only the editing area is documented: put its rows in 3.1 (named with `search_title`) and leave out the read-only header. Example: Accept Release keeps only the Containers fields, under "Accept Release - Container Tab" (<Function> - <Tab> Tab).
 - `search` rows: name, type, ui, db, values
 - `display` rows: name, type, ui, db, values, remarks
