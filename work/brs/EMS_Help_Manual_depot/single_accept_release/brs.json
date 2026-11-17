@@ -56,28 +56,222 @@
    "remarks": ""
   }
  ],
- "search_title": "",
+ "search_title": "Accept Release - Container Tab",
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Container",
+   "type": "Alphanumeric",
+   "ui": "Mandatory. Input Container number, it will auto populate all other required fields if information is available",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Actual Container Type",
+   "type": "Alphanumeric",
+   "ui": "Mandatory. Based on selected Container number Type size will auto populate",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container Status",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Container Status manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Actual Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Actual Pickup date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Actual Delivery Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Actual Delivery date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Actual Drop Date",
+   "type": "Date and Time Picker",
+   "ui": "Mandatory. Input Actual Drop date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Tare Weight (kg)",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Tare Weight of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Cargo Weight (kg)",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Cargo Weight of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Gross Weight (kg)",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Gross Weight of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Volume (CBM)",
+   "type": "Numeric",
+   "ui": "Mandatory. Input Volume of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Max Pay Load",
+   "type": "Numeric",
+   "ui": "Input Max Pay Load of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Critical Cargo",
+   "type": "Auto Populate",
+   "ui": "Disabled (greyed out). Select Critical Cargo",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Cargo Handling",
+   "type": "Auto Populate",
+   "ui": "Disabled (greyed out). Select Cargo Handling",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Over Weight",
+   "type": "Check Box",
+   "ui": "If container is over weight please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Break Bulk",
+   "type": "Check Box",
+   "ui": "If container is break bulk please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "IMCO",
+   "type": "Toggle",
+   "ui": "Switch on if the container is IMCO",
+   "db": "",
+   "values": "On / Off"
+  },
+  {
+   "name": "OOG",
+   "type": "Toggle",
+   "ui": "Switch on if the container is OOG",
+   "db": "",
+   "values": "On / Off"
+  },
+  {
+   "name": "Seal Carrier",
+   "type": "Alphanumeric",
+   "ui": "Input Carrier seal number of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Seal Customs",
+   "type": "Alphanumeric",
+   "ui": "Input Customs seal number of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Seal Customer",
+   "type": "Alphanumeric",
+   "ui": "Input Customer seal number of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Seal Other",
+   "type": "Alphanumeric",
+   "ui": "Input Other seal number of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reefer",
+   "type": "Check Box",
+   "ui": "If container is reefer please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reefer °C",
+   "type": "Numeric",
+   "ui": "Input Reefer temperature of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Stowage",
+   "type": "Single Select Drop Down",
+   "ui": "Select Stowage manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load Status",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Load Status manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Special Cargo",
+   "type": "Single Select Drop Down",
+   "ui": "Mandatory. Select Special Cargo manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Damaged Remarks",
+   "type": "Text Area",
+   "ui": "Input Damaged Remarks of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Customer Remarks",
+   "type": "Text Area",
+   "ui": "Input Customer Remarks of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After input all the mandatory columns value's, it should be inserted into Cargo containers & PR Details for the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Cancel",
+   "type": "Button",
+   "ui": "Cancelled all the input values and requery existing data",
    "db": "",
    "values": ""
   }
  ],
  "display_title": "",
- "drop_display": false,
- "display": [
-  {
-   "name": "",
-   "type": "",
-   "ui": "",
-   "db": "",
-   "values": "",
-   "remarks": ""
-  }
- ],
+ "drop_display": true,
+ "display": [],
  "references": [],
  "assumptions": []
 }
