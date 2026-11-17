@@ -52,8 +52,11 @@
    "fp": "c31c806e17710e9f",
    "n": 3,
    "fn": "group_tops_xml",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - TOPS XML V_1.0.docx",
+   "done_fp": "c31c806e17710e9f",
+   "version": "01.01"
   },
   {
    "name": "Generate Truck Order",
