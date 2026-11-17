@@ -59,3 +59,5 @@ Author: Appsara
 - 17.11.2026 - Fn 9 approved; brs_plan done recorded (01.01). Fn 10 Cancel Release (Single) exported to single_cancel_release/. NEXT: fn 10 images.
 - 2026-11-17 fn 10 Cancel Release: images built — I: 20fa_01 repaired from twin 6726_01 (gate passed); II: 20fa_02 popup (frame only); III: 20fa_03 success (frame only); IV: 20fa_04 NO TWIN, red box replaced part-by-part from plain border runs on the same row (gate passed, 0 outside). Awaiting image approval.
 - 2026-11-17 fn 10 Cancel Release: images I–IV approved.
+- 2026-11-17 fn 10 Cancel Release: 2.1 + 2.2 (3 rows) approved; no section 3 tables (user dropped the popup table).
+- 2026-11-17 fn 10 Cancel Release: docx built (10 pages), rendered; awaiting approval.

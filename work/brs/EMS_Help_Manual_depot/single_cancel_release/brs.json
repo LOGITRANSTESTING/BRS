@@ -1,0 +1,69 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Cancel Release",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Cancel Release details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_release/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_release/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_release/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_release/img/04.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "Cancel Release Function allows the user to cancel PR.",
+  "Booking Status should be Entered or Completed.",
+  "PR status should be Prepared or Supplied status.",
+  "If the PR has already been transferred to TOPS or the PR Key is linked with an Address, Cancel PR Release will not be allowed."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Cancel Release (PR Number) popup asking \"Do you want to Cancel the PR request?\" with a remark box",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Cancel Release from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Cancels the PR and the Status changes to Cancelled. Message: \"Port release cancelled successfully\"",
+   "triggered_when": "User enters a valid remark and clicks Ok",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Closes the popup without cancelling the PR",
+   "triggered_when": "User clicks Cancel on the popup",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
