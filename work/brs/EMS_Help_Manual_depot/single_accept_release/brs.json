@@ -68,7 +68,7 @@
   {
    "name": "Select All (header check box)",
    "type": "Check Box",
-   "ui": "If all the queried PRs are to be selected please select the check box",
+   "ui": "If all the queried PRs are to be selected please select the check box. Greyed out while Accept Release is open",
    "db": "",
    "values": ""
   },
@@ -89,7 +89,7 @@
   {
    "name": "PR Number",
    "type": "Display Item",
-   "ui": "PR number of the queried record. The Menu icon near the PR Number opens the single function menu",
+   "ui": "PR number of the queried record. The Menu icon near the PR Number is greyed out while Accept Release is open",
    "db": "",
    "values": ""
   },
@@ -130,8 +130,8 @@
   },
   {
    "name": "Empty Pickup",
-   "type": "Auto Populate",
-   "ui": "Overwrite the Empty Pickup depot of the PR",
+   "type": "Display Item",
+   "ui": "Empty Pickup depot of the PR. Greyed out while Accept Release is open",
    "db": "",
    "values": ""
   },
@@ -158,8 +158,8 @@
   },
   {
    "name": "Full Return",
-   "type": "Auto Populate",
-   "ui": "Overwrite the Full Return depot of the PR",
+   "type": "Display Item",
+   "ui": "Full Return depot of the PR. Greyed out while Accept Release is open",
    "db": "",
    "values": ""
   },
@@ -172,8 +172,8 @@
   },
   {
    "name": "Turn in Reference",
-   "type": "Alphanumeric",
-   "ui": "Overwrite the Turn in Reference of the PR",
+   "type": "Display Item",
+   "ui": "Turn in Reference of the PR. Greyed out while Accept Release is open",
    "db": "",
    "values": ""
   },
