@@ -292,7 +292,8 @@ def layout(doc):
         off = int(ind.get(qn('w:w'))) if ind is not None else 0
     for p in body_between(doc, i):
         if p.text.strip():
-            p.paragraph_format.left_indent = Emu(off * 635)
+            sub = 360 if re.match(r'^[a-z]\) ', p.text.strip()) else 0  # a) b) ... sub-conditions sit one step in
+            p.paragraph_format.left_indent = Emu((off + sub) * 635)
             p.paragraph_format.right_indent = Emu(off * 635)
 
 

@@ -109,7 +109,7 @@ A BRS is written per FUNCTION, never per manual.
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** first the manual's definition of the function (its overview page sentence, worded as in the manual, for example Empty Return Pre Advise: "This feature allows the user to generate Pre Advice FCL file for Empty Return PR/Containers."), then the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK only if the manual has neither. Never put pre-conditions in Remarks or Triggered When.
+- **2.1 Features & Functionalities:** first the manual's definition of the function (its overview page sentence, worded as in the manual, for example Empty Return Pre Advise: "This feature allows the user to generate Pre Advice FCL file for Empty Return PR/Containers."), then the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK only if the manual has neither. Never put pre-conditions in Remarks or Triggered When. Nested sub-conditions: the parent condition is one line, then each sub-condition is its own line labelled a), b), c)..., which the builder indents one step further (Generate Truck Order). Replace the export's stray "&D" marks with double quotes.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
