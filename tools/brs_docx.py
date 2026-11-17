@@ -38,6 +38,7 @@ SKELETON = {
     "drop_display": False,   # true = remove the 3.2 section entirely (all rows are in 3.1)
                              # 3.1 / 3.2 with no filled rows are always removed (heading + table)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
+    "extra_tables": [],      # optional 3.3, 3.4 ...: [{"title": "...", "rows": [display-style rows]}], after 3.2
     "references": [],
     "assumptions": []
 }
@@ -199,6 +200,26 @@ def build(spec, out):
     tabs = [t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'UI Item Name']
     fill_table(tabs[0], spec.get('search'), ['name', 'type', 'ui', 'db', 'values'])
     fill_table(tabs[1], spec.get('display'), ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
+    # extra_tables: 3.3, 3.4 ... cloned from the 3.2 heading + table (same style, same 6 columns)
+    from docx.oxml.ns import qn as _q
+    extras = [x for x in (spec.get('extra_tables') or []) if any(any(str(v).strip() for v in r.values()) for r in x.get('rows') or [])]
+    if extras:
+        h = doc.paragraphs[find_heading(doc, 'Display Area')]._p
+        part, nxt = [h], h.getnext()
+        while nxt is not None and nxt.tag != _q('w:sectPr'):
+            sty = nxt.find('.//' + _q('w:pStyle')) if nxt.tag == _q('w:p') else None
+            if sty is not None and sty.get(_q('w:val'), '').lower().startswith('heading'): break
+            part.append(nxt); nxt = nxt.getnext()
+        last = part[-1]
+        for x in extras:
+            for e in part:
+                c = copy.deepcopy(e); last.addnext(c); last = c
+                if e is h:
+                    set_par_text(docx.text.paragraph.Paragraph(c, doc.paragraphs[0]._parent), x.get('title') or '')
+                elif c.tag == _q('w:tbl'):
+                    fill_table(docx.table.Table(c, doc.paragraphs[0]._parent), x['rows'],
+                               ['name', 'type', 'ui', 'db', 'values', 'remarks'])
 
     # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
     for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:

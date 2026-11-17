@@ -43,3 +43,4 @@ Author: Appsara
 - 17.11.2026 - Fn 8: images I-IV approved. brs.json created (module EMS – Depot Activity, purpose, 4 images, 2.1 draft: definition + 1 condition). NEXT: 2.1 approval.
 - 17.11.2026 - Fn 8: 1.1 + 2.1 approved. 2.2 draft: Menu Click, Submit, Cancel (as the cross-booking Accept Release). NEXT: 2.2 approval.
 - 17.11.2026 - Fn 8: 2.2 approved (Menu Click, Submit, Cancel; Prev/Next and tabs left out as cross-booking). 3.1 'Accept Release - Container Tab' draft: cross-booking rows + Critical Cargo, Cargo Handling (new on this screen); drop_display. NEXT: 3.1 approval.
+- 17.11.2026 - Fn 8: user wants 3 tables: 3.1 Accept Release - Data Grid, 3.2 Accept Release - Basic Information, 3.3 Accept Release - Container Tab; Critical Cargo + Cargo Handling = Display Item. User approved extending brs_docx.py: new spec key extra_tables (3.3+ cloned from 3.2). Drafts in brs.json (18 / 8 / 30 rows). NEXT: 3.1 Data Grid approval.
