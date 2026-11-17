@@ -86,8 +86,11 @@
    "fp": "a9238c6c43c88377",
    "n": 5,
    "fn": "group_empty_container_admission",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx",
+   "done_fp": "a9238c6c43c88377",
+   "version": "01.01"
   },
   {
    "name": "Confirmation",
