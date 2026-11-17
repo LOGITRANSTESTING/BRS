@@ -49,3 +49,4 @@ Author: Appsara
 - 17.11.2026 - Fn 8: 3.2 Accept Release - Basic Information approved (8 rows). NEXT: 3.3 Container Tab approval.
 - 17.11.2026 - Fn 8: 3.3 Accept Release - Container Tab approved (30 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Accept Release V_1.0.docx (19 pages; rendered and checked). Skill: extra_tables + Data Grid / Basic Information / Container Tab rule. Awaiting document OK.
 - 17.11.2026 - Fn 8 approved; brs_plan done recorded (01.01). Fn 9 Acceptance Group (Single) exported to single_acceptance_group/. NEXT: fn 9 images.
+- 17.11.2026 - Fn 9 Acceptance Group: Image I = menu step repaired from twin page image (gate passed, 0 px outside); II = form (b65b_03, frame only); III = success (b65b_04, frame only). Sheet + before/after in output/previews/brs_EMS_Help_Manual_depot_single_acceptance_group. Awaiting image OK.
