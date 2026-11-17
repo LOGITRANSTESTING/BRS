@@ -17,39 +17,48 @@
  "images": [
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/01.png",
-   "caption": "Image I"
+   "caption": "Image I",
+   "section": "Freeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/02.png",
-   "caption": "Image II"
+   "caption": "Image II",
+   "section": "Freeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/03.png",
-   "caption": "Image III"
+   "caption": "Image III",
+   "section": "Freeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/04.png",
-   "caption": "Image IV"
+   "caption": "Image IV",
+   "section": "Freeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/05.png",
-   "caption": "Image V"
+   "caption": "Image V",
+   "section": "Unfreeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/06.png",
-   "caption": "Image VI"
+   "caption": "Image VI",
+   "section": "Unfreeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/07.png",
-   "caption": "Image VII"
+   "caption": "Image VII",
+   "section": "Unfreeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/08.png",
-   "caption": "Image VIII"
+   "caption": "Image VIII",
+   "section": "Unfreeze"
   },
   {
    "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/09.png",
-   "caption": "Image IX"
+   "caption": "Image IX",
+   "section": "Unfreeze"
   }
  ],
  "features": [

@@ -29,7 +29,7 @@ SKELETON = {
     "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
     "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
-    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],
+    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes
     "features": [],          # leave empty = blank section
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
     "search_title": "",      # optional 3.1 heading, empty = "Search"
@@ -162,7 +162,21 @@ def build(spec, out):
     first_reserve = Pt(34 + 28 + 15 * purpose_lines + 15 + 28 + 20 + 30)
     other_reserve = Pt(20 + 30)  # caption + safety: caption and image always on one page
     last = anchor
+    cur_sec = None
     for k, im in enumerate(spec.get('images', []), 1):
+        if im.get('section') and im['section'] != cur_sec:
+            cur_sec = im['section']
+            hp = doc.add_paragraph(cur_sec, style=next(st for st in doc.styles if st.style_id == 'Heading3'))
+            hp.paragraph_format.keep_with_next = True
+            # same numbering list as "1.2 UI Design", one level down (1.2.1, 1.2.2 ...)
+            ui_num = doc.paragraphs[i]._p.pPr.numPr if doc.paragraphs[i]._p.pPr is not None else None
+            if ui_num is not None:
+                num = copy.deepcopy(ui_num)
+                from docx.oxml.ns import qn as _qn
+                num.find(_qn('w:ilvl')).set(_qn('w:val'), '2')
+                hp._p.get_or_add_pPr().append(num)
+            last.addnext(hp._p); last = hp._p
+            if k == 1: first_reserve += Pt(28)
         cap = copy.deepcopy(cap_xml) if cap_xml is not None else None
         if cap is not None:
             last.addnext(cap); last = cap
