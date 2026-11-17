@@ -54,3 +54,4 @@ Author: Appsara
 - 17.11.2026 - Fn 9: 1.1 + 2.1 approved (definition reworded to 'Acceptance Group Function ...' at user's choice; manual reused Accept Release sentence). 2.2 draft Menu Click + Submit. NEXT: 2.2 approval (Select files/Load/tab close?).
 - 17.11.2026 - Fn 9: 2.2 = Menu Click, Select files... (opens upload pop up for updating containers), Load (loads containers + dates from file into grid), Submit; no tab-close row (user). NEXT: confirm 2.2, then 3.x.
 - 17.11.2026 - Fn 9: 2.2 final (4 rows). Grid: visible columns only (user). Drafts: 3.1 Acceptance Group - Basic Information (8), 3.2 Acceptance Group - Data Grid (14). NEXT: 3.1 approval.
+- 17.11.2026 - Fn 9: 3.1 approved (8 rows). New Item Type File Upload added to column-rules. NEXT: 3.2 Data Grid approval.
