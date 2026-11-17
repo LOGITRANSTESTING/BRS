@@ -65,3 +65,17 @@ The app's own red (asterisks, icons) and blue (bars, buttons, lines) stay. Only 
 
 ## Debugging
 Set `BRS_DEBUG=1` to see why an element was not rebuilt. The number printed is the rule that refused it.
+
+## Choosing donors
+How to choose where each hidden pixel comes from (twin, part swaps, letters, flip/recolour, recipes) is in
+`donor-rules.md`. The repair order above is what `unmark` tries by itself; for a marked screenshot with no
+twin, follow `donor-rules.md` with `brs_judge.py judge` and `brs_img.py copy`, then `brs_judge.py gate`.
+
+## Flip and recolour
+`copy SRC DST --from-box B --to x,y [--donor D] --flip h|v|hv --recolor FROM:TO[,FROM:TO] --marks MARKED.png [--approved]`
+- Without `--approved` it writes only `DST_proposal.png` (before | after). Show it to the user.
+- With `--approved` (after the user's yes) it places the piece, only inside the marked area of MARKED.png.
+- Copy boxes include their last row and column.
+
+## Measurement tool
+`python tools/brs_judge.py marks | scan | judge | gate` never changes an image. See its `-h`.

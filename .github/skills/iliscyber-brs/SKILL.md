@@ -10,7 +10,9 @@ Use this skill when the user asks for a BRS or Business Requirement Specificatio
 Reply in plain text only. When the user shares a plan, engage with it as it stands.
 
 ## Workspace rules
-- **Image work:** `python tools/ilis.py` (house toolkit) and `python tools/brs_img.py` (BRS image tools).
+- **Image work:** `python tools/ilis.py` (house toolkit), `python tools/brs_img.py` (BRS image tools) and `python tools/brs_judge.py` (measurement only: marks, scan, judge, gate).
+- **Donor rules:** read `references/donor-rules.md` before unmarking anything. It is the user's settled method: damage first, part swaps, per-part judging, recipes, and the gate.
+- **Flip / recolour:** `brs_img.py copy --flip / --recolor` only writes a proposal. Show it, and pass `--approved` only after the user says yes to that piece. It works only inside the marked area (`--marks`).
 - **Word work:** `python tools/brs_docx.py`.
 - **Never write new Python for images or the .docx.** If a tool is missing a feature, say so and ask.
 - **Never open a .gui directly.** Use `ilis.py gui info / gui page`.
@@ -60,8 +62,15 @@ A BRS is written per FUNCTION, never per manual.
 ## Step 1 - Images (UI Design)
 1. The pages and images are already in `work/brs/<manual>/<fn>/pages/` (from `brs_plan.py export`). Each .md says whether it is `shared` or `function`.
 2. Skip the small inline button/icon crops (anything under about 300 px wide). Only full screenshots go into the BRS.
-3. For each full screenshot, run:
-   `python tools/brs_img.py unmark SRC work/brs/<manual>/<fn>/img/NN.png --donor-dir work/brs/<manual>/<fn>/pages/img --blue`
+3. Sort the screenshots first: `python tools/brs_judge.py scan work/brs/<manual>/<fn>/pages/img`.
+   - **unmarked:** `python tools/brs_img.py unmark SRC img/NN.png --blue` with NO donors (under a second).
+   - **twin:** `unmark SRC img/NN.png --donors <the twin> --blue`, then run the gate.
+   - **NO TWIN:** do not rely on `unmark`. Build it part by part as in `references/donor-rules.md`
+     (`brs_judge.py judge` per damaged part, `brs_img.py copy` for each swap), run
+     `python tools/brs_judge.py gate MARKED REPAIRED`, then strip the frame with `unmark REPAIRED img/NN.png`.
+   - Never pass `--donor-dir` for the whole folder: it costs about 45 seconds per image and picks wrong donors.
+   The older single command, still valid for a twin or a simple mark:
+   `python tools/brs_img.py unmark SRC work/brs/<manual>/<fn>/img/NN.png --donors <1-3 named donors> --blue`
    - This removes only what the manual added: the blue frame around the screenshot, the red boxes, the numbered circles, the stubs and leftover mark segments.
    - **The app's own elements must NEVER be removed:** blue panels and lines, blue buttons, red asterisks and red icons, grid lines and highlights. The tool guards this. Any pixel changed outside the marks' footprint is put back, and the report shows `guard_restored_px`.
    - **Blue boxes:** `--blue` only LISTS possible drawn blue boxes (`blue_box_candidates`); it removes nothing, because the app has its own blue rectangles. Show the user each candidate. Remove one only after the user confirms it is a drawn mark and not part of the app: rerun with `--blue-box x0,y0,x1,y1` for each confirmed box.
@@ -73,8 +82,8 @@ A BRS is written per FUNCTION, never per manual.
      4. Other screenshots of the same screen are used next, then matching areas elsewhere on the same screen.
      5. Last comes row/column continuation, and only where the area is provably plain.
    - If the user's original unmarked screenshots exist in `screenshots/<function>/`, add them with `--donors`. They are the best source.
-   - Never invent text or icons. If a mark covered part of a label, value or icon, only a real source can fill it.
-4. The images must be 100% seamless. An image is used only when its report says `"seamless": true`.
+   - Never invent text or icons. If a mark covered part of a label, value or icon, only a real source can fill it: a clean copy of the same element, or real letters from the letter library (`ilis.py learn / write`, see donor-rules section 6). Visible letter pixels are always kept.
+4. The images must be 100% seamless. An image is used only when its report says `"seamless": true` AND `brs_judge.py gate` passes (0 pixels changed outside the marked area, no mark lines left) AND an enlarged crop of every repaired spot looks right. `"seamless": true` alone has been wrong.
    - If not, fix each `unresolved` box with the tools in `references/image-logic.md`.
    - If none of them can do it exactly, show the user the `_check.png` and ask for an unmarked screenshot of that screen, naming the screen and the spot.
    - Never put a smudged or guessed image in the BRS.
