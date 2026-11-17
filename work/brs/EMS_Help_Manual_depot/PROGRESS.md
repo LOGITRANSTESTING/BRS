@@ -94,3 +94,4 @@ Author: Appsara
 - 2026-11-17 fn 20 PR More Details: per user, Image I redone (auto red mask had caught text fringes, leaving artifacts and losing the separator); now copied from twin over box geometry + badge disk only (gate passed), matches user's reference.
 - 2026-11-17 fn 20 PR More Details: 2.1 (3 lines), 2.2 (Menu Click/Process/Close), 3.1 Data Grid (17 rows) approved; built 'BRS - EMS - Depot Activity - PR More Details V_1.0.docx' (11 pages); awaiting approval.
 - 2026-11-17 fn 20 PR More Details: approved, marked done (01.01). Next: fn 21 Empty Container Load; fn 17 Door Address Link last.
+- 2026-11-17 fn 21 Empty Container Load: exported to single_empty_container_load/ (pages: overview 7705, How to EQC Load d5aa, How to CSV Load e3f0). scan: 7705_01, d5aa_03, e3f0_03 unmarked; d5aa_01, d5aa_02, e3f0_01, e3f0_02 NO TWIN. User: EQC Load and CSV Load are sub functions, each a separate BRS file. NEXT: confirm file names, then EQC Load images.
