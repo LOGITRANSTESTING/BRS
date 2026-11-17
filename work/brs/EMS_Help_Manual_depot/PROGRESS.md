@@ -65,3 +65,4 @@ Author: Appsara
 - 2026-11-17 fn 10 Cancel Release: approved and marked done (01.01). Next: fn 11 Freeze / Unfreeze.
 - 2026-11-17 fn 11 Freeze / Unfreeze: 9 images built — I from twin 03fd_01 (gate passed); II,III,VI,VII,VIII frame only; IV,V,IX NO TWIN red boxes rebuilt part-by-part (hidden separators x116/x436 restored from sep column 556, plain from col 439; gates passed). brs.json drafted. Awaiting image approval.
 - 2026-11-17 fn 11 Freeze / Unfreeze: images I–IX approved; user asked for 1.2.1 Freeze (I–IV) and 1.2.2 Unfreeze (V–IX) under UI Design in manual order. Added per-image "section" to brs_docx.py (Heading 3 on UI Design's numbering list) + SKILL.md note; rebuilt (13 pages).
+- 2026-11-17 fn 11 Freeze / Unfreeze: 2.1 (definition + 2 conditions), 2.2 (4 rows), 3.1 Popup (Remark only) approved; document built (13 pages); awaiting approval.
