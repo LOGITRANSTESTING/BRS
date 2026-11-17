@@ -30,4 +30,5 @@ Author: Appsara
 - 17.11.2026 - Fn 6 Confirmation: Image I = menu step repaired from twin page image (gate passed, 0 px from twin); Image II = success screen, frame only. Awaiting image OK.
 - 17.11.2026 - Fn 6: images, 2.1 (overview only, no conditions), 2.2 Menu Click approved. Built output/EMS/BRS - EMS - Depot Activity - Confirmation V_1.0.docx. Awaiting document OK.
 - 17.11.2026 - Fn 6 approved; brs_plan done recorded. Fn 7 Booking Query (Single) exported to single_booking_query/.
-- NEXT: fn 7 Booking Query - read pages, images.
+- 17.11.2026 - Fn 7 Booking Query: Image I = menu step repaired from twin page image (gate passed); Image II = Booking Query screen (unmarked, frame only). Awaiting image OK.
+- NEXT: fn 7 image approval, then 2.1/2.2/3.x.
