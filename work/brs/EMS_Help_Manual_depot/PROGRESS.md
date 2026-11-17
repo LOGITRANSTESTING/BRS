@@ -77,3 +77,4 @@ Author: Appsara
 - 2026-11-17 fn 14 Equipment Delink: images, 2.1, 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
 - 2026-11-17 fn 14 Equipment Delink: approved and marked done (01.01). Next: fn 15 Equipment Relink.
 - 2026-11-17 fn 15 Equipment Relink: images built — I from twin 633e_01 (gate passed); II success (frame only; grey right/top line is the app panel edge). Awaiting image approval.
+- 2026-11-17 fn 15 Equipment Relink: images, 2.1 (definition + 2 conditions), 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
