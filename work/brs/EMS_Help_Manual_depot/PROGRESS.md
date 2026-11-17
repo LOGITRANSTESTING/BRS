@@ -41,3 +41,4 @@ Author: Appsara
 - 17.11.2026 - Fn 8: user will upload a clean Accept Release success screenshot (to screenshots/Accept Release/ on brs-skill-update) to replace Image III. NEXT: replace img/03.png, re-sheet, image approval, then 2.1/2.2/3.x.
 - 17.11.2026 - Fn 8: user uploaded clean success screenshot (screenshots/Accept Release/success.png): grid aligned (4 rows both sides). unmark --blue: frame only, 0 mark px, no blue-box candidates, seamless. Replaced img/03.png (1497x664); sheet rebuilt. ▶▶▶▶ arrows are the app's own (not a mark), kept. NEXT: image approval, then 2.1/2.2/3.x.
 - 17.11.2026 - Fn 8: images I-IV approved. brs.json created (module EMS – Depot Activity, purpose, 4 images, 2.1 draft: definition + 1 condition). NEXT: 2.1 approval.
+- 17.11.2026 - Fn 8: 1.1 + 2.1 approved. 2.2 draft: Menu Click, Submit, Cancel (as the cross-booking Accept Release). NEXT: 2.2 approval.

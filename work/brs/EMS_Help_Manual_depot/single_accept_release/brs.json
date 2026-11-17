@@ -38,9 +38,21 @@
  ],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
+   "event_type": "Menu Click",
+   "description": "Opens the Accept Release - Container section in the same tab for the selected PR",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Accept Release from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Saves the container details for the selected PR and changes the PR Status into Full Return, Empty Return or Supplied",
+   "triggered_when": "User clicks Submit after entering all mandatory fields",
+   "remarks": "\"Depot Activity : Container accepted successfully\""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Cancels all the input values and requeries the existing data",
+   "triggered_when": "User clicks Cancel",
    "remarks": ""
   }
  ],
