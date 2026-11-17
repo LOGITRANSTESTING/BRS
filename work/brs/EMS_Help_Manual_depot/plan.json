@@ -69,8 +69,11 @@
    "fp": "6c7ff18d3698df45",
    "n": 4,
    "fn": "group_generate_truck_order",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Generate Truck Order V_1.0.docx",
+   "done_fp": "6c7ff18d3698df45",
+   "version": "01.01"
   },
   {
    "name": "Empty Container Admission",
