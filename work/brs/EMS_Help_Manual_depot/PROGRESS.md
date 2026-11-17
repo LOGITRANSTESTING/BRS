@@ -34,4 +34,6 @@ Author: Appsara
 - 17.11.2026 - Fn 7: images approved; 2.1 overview only; 2.2 seven rows (Menu Click, section Tab Click, Expand All, Collapse All, Refresh, Show Less, Show More); 3.x left empty (read-only screen, user choice). Built output/EMS/BRS - EMS - Depot Activity - Booking Query V_1.0.docx. Awaiting document OK.
 - 17.11.2026 - Fn 7 approved; brs_plan done recorded. Fn 8 Accept Release (Single) exported to single_accept_release/.
 - 17.11.2026 - Fn 8 Accept Release: Image I = menu step repaired from twin (gate passed); II = container entered (Containers tab); III = success; IV = status changed to Full Return. Awaiting image OK.
-- NEXT: fn 8 image approval, then 2.1/2.2/3.x (Accept Release - Container Tab, as the house sample).
+- Output re-organised at the user's request: Group functions (fn 1-6) in output/EMS/Depot Activity - Group/, Single functions (fn 7 Booking Query, fn 8 Accept Release onward) in output/EMS/Depot Activity - Single/. plan.json paths updated.
+- Fn 8 note: Image II (container form) unmark lists one blue_box candidate 7,349-1490,426 - this is the app's own Basic Information panel border, NOT a mark; nothing removed.
+- NEXT (user on break): fn 8 image approval (sheet in output/previews/brs_EMS_Help_Manual_depot_single_accept_release/), then 2.1/2.2/3.x (Accept Release - Container Tab, as the house sample). Build to output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Accept Release V_1.0.docx.

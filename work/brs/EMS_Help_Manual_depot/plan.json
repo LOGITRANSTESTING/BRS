@@ -20,7 +20,7 @@
    "fn": "group_empty_return_pre_advise",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Empty Return Pre Advise V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - Empty Return Pre Advise V_1.0.docx",
    "done_fp": "727195bc5dd476d5",
    "version": "01.01"
   },
@@ -37,7 +37,7 @@
    "fn": "group_generate_release_advise",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx",
    "done_fp": "5fffe585d7e22d7e",
    "version": "01.01"
   },
@@ -54,7 +54,7 @@
    "fn": "group_tops_xml",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - TOPS XML V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - TOPS XML V_1.0.docx",
    "done_fp": "c31c806e17710e9f",
    "version": "01.01"
   },
@@ -71,7 +71,7 @@
    "fn": "group_generate_truck_order",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Generate Truck Order V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - Generate Truck Order V_1.0.docx",
    "done_fp": "6c7ff18d3698df45",
    "version": "01.01"
   },
@@ -88,7 +88,7 @@
    "fn": "group_empty_container_admission",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx",
    "done_fp": "a9238c6c43c88377",
    "version": "01.01"
   },
@@ -105,7 +105,7 @@
    "fn": "group_confirmation",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Confirmation V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Group/BRS - EMS - Depot Activity - Confirmation V_1.0.docx",
    "done_fp": "62a109c5a0bc4df4",
    "version": "01.01"
   },
@@ -122,7 +122,7 @@
    "fn": "single_booking_query",
    "status": "done",
    "change": "new",
-   "file": "output/EMS/BRS - EMS - Depot Activity - Booking Query V_1.0.docx",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Booking Query V_1.0.docx",
    "done_fp": "79d41885b474dde6",
    "version": "01.01"
   },
