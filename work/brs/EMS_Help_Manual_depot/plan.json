@@ -171,8 +171,11 @@
    "fp": "ba0af1ad397d066a",
    "n": 10,
    "fn": "single_cancel_release",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Cancel Release V_1.0.docx",
+   "done_fp": "ba0af1ad397d066a",
+   "version": "01.01"
   },
   {
    "name": "Freeze / Unfreeze",
