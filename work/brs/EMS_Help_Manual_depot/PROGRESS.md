@@ -28,4 +28,5 @@ Author: Appsara
 - 17.11.2026 - Fn 5: 3.2 Data Grid approved (11 rows). Built output/EMS/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx (14 pages). brs_docx layout now: table rows cantSplit + header repeat. Awaiting document OK.
 - 17.11.2026 - Fn 5 approved; brs_plan done recorded.
 - 17.11.2026 - Fn 6 Confirmation: Image I = menu step repaired from twin page image (gate passed, 0 px from twin); Image II = success screen, frame only. Awaiting image OK.
-- NEXT: fn 6 image approval, then 2.1/2.2.
+- 17.11.2026 - Fn 6: images, 2.1 (overview only, no conditions), 2.2 Menu Click approved. Built output/EMS/BRS - EMS - Depot Activity - Confirmation V_1.0.docx. Awaiting document OK.
+- NEXT: fn 6 brs_plan done, then fn 7 (export first: brs_plan.py export --function 7).
