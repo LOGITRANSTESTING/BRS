@@ -188,8 +188,11 @@
    "fp": "2b34926ddfaf8014",
    "n": 11,
    "fn": "single_freeze_unfreeze",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Freeze - Unfreeze V_1.0.docx",
+   "done_fp": "2b34926ddfaf8014",
+   "version": "01.01"
   },
   {
    "name": "Revert To Prepared",
