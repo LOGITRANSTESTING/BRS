@@ -41,6 +41,18 @@
   },
   {
    "event_type": "Button Click",
+   "description": "Opens a pop up to upload a file for updating containers",
+   "triggered_when": "User clicks Select files...",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Loads the containers and dates in the uploaded file into the data grid",
+   "triggered_when": "User clicks Load after selecting a file",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
    "description": "Saves the container details of the selected records",
    "triggered_when": "User clicks Submit after entering all mandatory fields",
    "remarks": "\"Container accepted successfully\""
