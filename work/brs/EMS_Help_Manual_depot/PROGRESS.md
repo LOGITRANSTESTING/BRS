@@ -90,3 +90,4 @@ Author: Appsara
 - 2026-11-17 fn 19 Cancel Group: per user, Image II Yes button edge sharpened (focus halo removed, 1px edge).
 - 2026-11-17 fn 19 Cancel Group: 2.1 (4 lines) and 2.2 (Menu Click/Yes/No) approved; no section 3 tables; built 'BRS - EMS - Depot Activity - Cancel Group V_1.0.docx' (10 pages); awaiting approval.
 - 2026-11-17 fn 19 Cancel Group: approved by user, marked done (01.01). Extra: separate copy of Image I with blue frame border kept saved at output/previews/brs_EMS_Help_Manual_depot_single_cancel_group/cancel_group_menu_blue_border.png (doc unchanged).
+- 2026-11-17 fn 20 PR More Details: exported. Image I repaired from twin f726_01 (gate passed). Image II (no twin): Process box/badge 6 from Image III un-dimmed (x/0.6, 1px shift), checkbox box/badge 5 from rows 72px below (gate passed). Image III frame only; awaiting image approval.
