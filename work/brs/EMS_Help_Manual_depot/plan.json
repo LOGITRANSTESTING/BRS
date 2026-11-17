@@ -256,8 +256,11 @@
    "fp": "d8b06eca42c097fc",
    "n": 15,
    "fn": "single_equipment_relink",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Equipment Relink V_1.0.docx",
+   "done_fp": "d8b06eca42c097fc",
+   "version": "01.01"
   },
   {
    "name": "Revert Empty Return",
