@@ -58,3 +58,4 @@ Author: Appsara
 - 17.11.2026 - Fn 9: 3.2 approved (14 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Acceptance Group V_1.0.docx (13 pages, rendered and checked). Awaiting document OK.
 - 17.11.2026 - Fn 9 approved; brs_plan done recorded (01.01). Fn 10 Cancel Release (Single) exported to single_cancel_release/. NEXT: fn 10 images.
 - 2026-11-17 fn 10 Cancel Release: images built — I: 20fa_01 repaired from twin 6726_01 (gate passed); II: 20fa_02 popup (frame only); III: 20fa_03 success (frame only); IV: 20fa_04 NO TWIN, red box replaced part-by-part from plain border runs on the same row (gate passed, 0 outside). Awaiting image approval.
+- 2026-11-17 fn 10 Cancel Release: images I–IV approved.
