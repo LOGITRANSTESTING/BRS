@@ -105,11 +105,11 @@ A BRS is written per FUNCTION, never per manual.
 - **Contents:** the TOC field stays. Word refreshes it on open (updateFields is set). Tell the user to accept the "update fields" prompt, or press F9.
 
 ## Step 3 - Introduction
-- **1.1 Purpose:** one or two sentences in the house style: "This document explains the purpose of <Module>'s <Function> details." Add one clause from the manual's overview if it says what the function is for. Show it and ask if it is fine.
+- **1.1 Purpose:** always exactly one sentence, nothing added: "This document explains the purpose of <Module>'s <Screen> <Function> details." Only the function name changes from BRS to BRS. Example: "This document explains the purpose of EMS's Depot Activity Accept Release details." The manual's overview/definition of the function does NOT go here; it goes in 2.1.
 - **1.2 UI Design:** the approved images.
 
 ## Step 4 - Business Process
-- **2.1 Features & Functionalities:** only the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK if the manual has none. Never put pre-conditions in Remarks or Triggered When.
+- **2.1 Features & Functionalities:** first the manual's definition of the function (its overview page sentence, worded as in the manual, for example Empty Return Pre Advise: "This feature allows the user to generate Pre Advice FCL file for Empty Return PR/Containers."), then the manual's pre-defined conditions, one item per condition, worded as in the manual (for example Generate Release Advise: "Port release should be generated…", "Both booking and PR information should be available."). BLANK only if the manual has neither. Never put pre-conditions in Remarks or Triggered When.
 - **2.2 Event Triggering's (if any):** see Step 6.
 - **2.3 Menu Items:** BLANK.
 - **2.4 Business Process Flow:** BLANK.
@@ -117,7 +117,7 @@ A BRS is written per FUNCTION, never per manual.
 ## Step 5 - Column Definitions & Business Rules (table by table)
 Use the rules in `references/column-rules.md`. They include the sample's own rows as examples.
 
-Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or panel with many fields, split it into one round per tab or panel. For each round:
+Do 3.1 Search first, then 3.2 Display Area. **An empty table is left out with its heading:** `brs_docx.py build` drops 3.1 / 3.2 when it has no filled rows; the "3 Column Definitions & Business Rules" heading always stays (settled on Empty Return Pre Advise). If the Display Area has a tab or panel with many fields, split it into one round per tab or panel. For each round:
 1. Show the image(s) the table is read from. If it helps, add a crop of just that panel: use `ilis.py crop` on the unmarked image, or the sheet.
 2. Show the rows as plain text, one row per line: `UI Item Name | Item Type | UI Validation | DB Validation | Possible Values | Remarks`. Under each row add one line starting with "Why:". It says where each column came from:
    - the image, the label and the icon seen (calendar + clock = Date and Time Picker, blue arrow = Single Select Drop Down, placeholder + corner mark = Auto Populate, empty + corner mark = Multiselect Drop Down, asterisk = mandatory);
@@ -134,7 +134,7 @@ Do 3.1 Search first, then 3.2 Display Area. If the Display Area has a tab or pan
 
 **Action-only functions** (a Group/Single function that just runs on the selected records and shows a success message, for example Generate Release Advise):
 - UI Design = only the screen with the function menu open (records selected) and the success-message screen. No Query or Data Grid images.
-- Fill only 2.2 Event Triggering's: one row for the menu click after selecting records, with the success message in Remarks. Leave 3.1 Search and 3.2 Display Area empty.
+- Fill only 2.2 Event Triggering's: one row for the menu click after selecting records, with the success message in Remarks, and 2.1 as usual (definition + pre-defined conditions). Leave `search` and `display` empty: the 3.1 and 3.2 headings are then left out.
 
 **Always show the edited sheets.** After any image is unmarked, patched or rebuilt, show the review/selection sheet and a before/after crop of each repaired spot before asking anything about the images.
 

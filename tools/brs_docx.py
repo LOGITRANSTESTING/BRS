@@ -28,7 +28,7 @@ SKELETON = {
     "date": "",  # DD/MM/YYYY, today when empty
     "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
-    "purpose": "This document explains the purpose of <Module>'s <Function> details.",
+    "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
     "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],
     "features": [],          # leave empty = blank section
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
@@ -36,6 +36,7 @@ SKELETON = {
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
     "display_title": "",     # optional 3.2 heading, empty = "Display Area"
     "drop_display": False,   # true = remove the 3.2 section entirely (all rows are in 3.1)
+                             # 3.1 / 3.2 with no filled rows are always removed (heading + table)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "references": [],
     "assumptions": []
@@ -193,10 +194,16 @@ def build(spec, out):
         if spec.get(key):
             set_par_text(doc.paragraphs[find_heading(doc, head)], spec[key])
 
-    # optional: drop the whole 3.2 section (heading + table) when all rows sit in 3.1
-    if spec.get('drop_display'):
-        h = doc.paragraphs[find_heading(doc, spec.get('display_title') or 'Display Area')]._p
-        from docx.oxml.ns import qn as _qn
+    # drop the 3.1 / 3.2 section (heading + table) when it has no filled rows, or when asked
+    # (drop_display: all rows sit in 3.1). The 3 "Column Definitions" heading always stays.
+    def has_rows(rows):
+        return any(any(str(v).strip() for v in r.values()) for r in (rows or []))
+    from docx.oxml.ns import qn as _qn
+    for key, title, flag in [('search', spec.get('search_title') or 'Search', 'drop_search'),
+                             ('display', spec.get('display_title') or 'Display Area', 'drop_display')]:
+        if not (spec.get(flag) or not has_rows(spec.get(key))):
+            continue
+        h = doc.paragraphs[find_heading(doc, title)]._p
         nxt = h.getnext()
         while nxt is not None:
             sty = nxt.find('.//' + _qn('w:pStyle')) if nxt.tag == _qn('w:p') else None
