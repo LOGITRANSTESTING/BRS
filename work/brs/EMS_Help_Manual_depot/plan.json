@@ -103,8 +103,11 @@
    "fp": "62a109c5a0bc4df4",
    "n": 6,
    "fn": "group_confirmation",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Confirmation V_1.0.docx",
+   "done_fp": "62a109c5a0bc4df4",
+   "version": "01.01"
   },
   {
    "name": "Booking Query",
@@ -117,7 +120,7 @@
    "fp": "79d41885b474dde6",
    "n": 7,
    "fn": "single_booking_query",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
