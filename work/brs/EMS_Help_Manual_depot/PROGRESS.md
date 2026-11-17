@@ -79,3 +79,4 @@ Author: Appsara
 - 2026-11-17 fn 15 Equipment Relink: images built — I from twin 633e_01 (gate passed); II success (frame only; grey right/top line is the app panel edge). Awaiting image approval.
 - 2026-11-17 fn 15 Equipment Relink: images, 2.1 (definition + 2 conditions), 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
 - 2026-11-17 fn 15 Equipment Relink: approved and marked done (01.01). Next: fn 16 Revert Empty Return.
+- 2026-11-17 fn 16 Revert Empty Return: exported; Image I repaired from twin d387_01 (gate passed); Image II frame only; Image III (no twin) box x114-366 y357-388 rebuilt from plain col x400 + separator col x435 (gate passed); awaiting image approval.
