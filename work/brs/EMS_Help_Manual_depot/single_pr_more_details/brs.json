@@ -1,0 +1,184 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "PR More Details",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity PR More Details details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_pr_more_details/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_pr_more_details/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_pr_more_details/img/03.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [
+  "PR More Details Function allows the user to view and process the Port Releases belonging to the selected PR group.",
+  "The user should select one or more records before clicking Process.",
+  "On processing, a result popup shows the success or error message for each record."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the PR More Details screen in a new tab listing the releases of the selected PR group",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks PR More Details [TR] from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Process",
+   "description": "Processes the selected records and shows the PR More Details result popup with Code, Description and Solution for each record",
+   "triggered_when": "User selects records and clicks Process",
+   "remarks": "At least one record should be selected."
+  },
+  {
+   "event_type": "Close (×)",
+   "description": "Closes the result popup",
+   "triggered_when": "User clicks × on the PR More Details popup",
+   "remarks": ""
+  }
+ ],
+ "search_title": "PR More Details - Data Grid",
+ "search": [
+  {
+   "name": "PR Group (header)",
+   "type": "Display Item",
+   "ui": "PR group of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "User",
+   "type": "Display Item",
+   "ui": "Logged-in user",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage - Vessel",
+   "type": "Display Item",
+   "ui": "Voyage and vessel of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Processes the selected records",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the records are to be selected please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the record is to be processed please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Release No",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "PR Group",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the release",
+   "db": "",
+   "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze"
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup Location Name",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup Date",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "dd/MM/yyyy HH:mm"
+  },
+  {
+   "name": "Full Return",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return Date",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "dd/MM/yyyy HH:mm"
+  },
+  {
+   "name": "Loading Type",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Stuffing Place",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
