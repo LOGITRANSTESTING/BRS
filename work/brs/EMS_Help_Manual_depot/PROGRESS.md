@@ -23,4 +23,5 @@ Author: Appsara
 - 17.11.2026 - Fn 4: images approved; 2.1 approved (definition + 7 conditions, item 7 sub-conditions as a) to i) lines); 2.2 Menu Click row approved. Built output/EMS/BRS - EMS - Depot Activity - Generate Truck Order V_1.0.docx (9 pages); a)-i) lines indented one step (brs_docx layout). Awaiting document OK.
 - 17.11.2026 - Fn 4 approved; brs_plan done recorded.
 - 17.11.2026 - Fn 5 Empty Container Admission (opens own screen, needs 3.1/3.2). User chose images: I = menu (clean page image), II = empty screen S2 with S3 query values pasted in (dates + Activity Place), III = S5 selected+Process repaired from S4 (gate passed), IV = S6 success. Awaiting image OK.
-- NEXT: fn 5 image approval, then 1.1, 2.1, 2.2, 3.1 Search, 3.2 Display.
+- 17.11.2026 - Fn 5: images approved; 1.1 + 2.1 (overview + 2 conditions) approved; 2.2 six rows approved (Menu Click, Search, Process, Excel, Refresh, Expand/Collapse). brs.json saved.
+- NEXT: fn 5 3.1 Search (query panel), then 3.2 Display (grid).
