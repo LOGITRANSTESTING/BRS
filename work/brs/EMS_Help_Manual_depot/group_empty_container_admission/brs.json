@@ -75,9 +75,59 @@
    "remarks": ""
   }
  ],
- "search_title": "",
- "search": [],
- "display_title": "",
+ "search_title": "Empty Container Admission - Query Screen",
+ "search": [
+  {
+   "name": "From / To Date",
+   "type": "Date Picker",
+   "ui": "Mandatory. Input From and To date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage",
+   "type": "Auto Populate / Alphanumeric",
+   "ui": "Input Voyage. The ⇆ switches the box between Auto Populate (Key in three char) and Alphanumeric",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container No.",
+   "type": "Alphanumeric",
+   "ui": "Input Container No.",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Activity Place",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Key in five char and select Activity Place from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Activity",
+   "type": "Auto Populate",
+   "ui": "Select Activity from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Previous Activity",
+   "type": "Auto Populate",
+   "ui": "Select Previous Activity from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries the containers based on the query fields",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "Empty Container Admission - Data Grid",
  "drop_display": false,
  "display": [],
  "references": [],
