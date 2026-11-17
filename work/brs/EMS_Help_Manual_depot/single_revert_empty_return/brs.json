@@ -1,0 +1,52 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Revert Empty Return",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Revert Empty Return details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_empty_return/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_empty_return/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_empty_return/img/03.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [
+  "Revert Empty Return Function allows the user to change the status of Port Release from Empty Return to previous status.",
+  "PR status should be \"Empty Return\".",
+  "Container linked to a B/L is not allowed; the user should delink the container from the B/L first."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Reverts the PR status from Empty Return to its previous status. Message: \"Empty Return container status reverted successfully\"",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Revert Empty Return from the single function menu",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
