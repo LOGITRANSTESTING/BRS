@@ -138,7 +138,7 @@ Do 3.1 Search first, then 3.2 Display Area. **An empty table is left out with it
 
 **Always show the edited sheets.** After any image is unmarked, patched or rebuilt, show the review/selection sheet and a before/after crop of each repaired spot before asking anything about the images.
 
-**Ask one question at a time, each with the image or crop it is about.** Commit the crop to the previews folder and show it before asking.
+**Ask one question at a time, each with the image or crop it is about.** Commit the crop to the previews folder and show it before asking. Put the proposed text or rows (with their Why: lines) INSIDE the ask_user question itself: text written before the question is not shown to the user (Generate Truck Order 2.2).
 
 **Grow the house rules as documents are made.** When the user settles a new Item Type, Event Type, naming or row-split rule that is not in these files, add it straight away to `references/column-rules.md` or to this file, with the example it came from.
 
