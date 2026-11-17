@@ -93,3 +93,4 @@ Author: Appsara
 - 2026-11-17 fn 20 PR More Details: exported. Image I repaired from twin f726_01 (gate passed). Image II (no twin): Process box/badge 6 from Image III un-dimmed (x/0.6, 1px shift), checkbox box/badge 5 from rows 72px below (gate passed). Image III frame only; awaiting image approval.
 - 2026-11-17 fn 20 PR More Details: per user, Image I redone (auto red mask had caught text fringes, leaving artifacts and losing the separator); now copied from twin over box geometry + badge disk only (gate passed), matches user's reference.
 - 2026-11-17 fn 20 PR More Details: 2.1 (3 lines), 2.2 (Menu Click/Process/Close), 3.1 Data Grid (17 rows) approved; built 'BRS - EMS - Depot Activity - PR More Details V_1.0.docx' (11 pages); awaiting approval.
+- 2026-11-17 fn 20 PR More Details: approved, marked done (01.01). Next: fn 21 Empty Container Load; fn 17 Door Address Link last.

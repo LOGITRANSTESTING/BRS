@@ -343,8 +343,11 @@
    "fp": "be9eb3c631409592",
    "n": 20,
    "fn": "single_pr_more_details",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - PR More Details V_1.0.docx",
+   "done_fp": "be9eb3c631409592",
+   "version": "01.01"
   },
   {
    "name": "Empty Container Load",
