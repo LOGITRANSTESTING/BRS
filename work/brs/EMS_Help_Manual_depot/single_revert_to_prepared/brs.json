@@ -1,0 +1,76 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Revert To Prepared",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Revert To Prepared details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_to_prepared/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_to_prepared/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_to_prepared/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_revert_to_prepared/img/04.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "Revert To Prepared Function allows the user to change the status of Port Release to Prepared.",
+  "PR status should be \"Supplied\" or \"Full Return\".",
+  "If the Container is linked to a B/L, this option is not allowed."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Revert to Prepared (PR Number) popup asking \"Do you want to Revert the PR?\" with a remark box",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Revert to Prepared from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Reverts the PR and the Status changes to Prepared. Message: \"Port release prepared successfully\"",
+   "triggered_when": "User enters a valid remark and clicks Ok",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Closes the popup without changing the PR",
+   "triggered_when": "User clicks Cancel on the popup",
+   "remarks": ""
+  }
+ ],
+ "search_title": "Revert To Prepared - Popup",
+ "search": [
+  {
+   "name": "Remark",
+   "type": "Text Area",
+   "ui": "Mandatory. The user types a valid remark for reverting the PR to Prepared",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
