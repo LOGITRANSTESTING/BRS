@@ -33,4 +33,5 @@ Author: Appsara
 - 17.11.2026 - Fn 7 Booking Query: Image I = menu step repaired from twin page image (gate passed); Image II = Booking Query screen (unmarked, frame only). Awaiting image OK.
 - 17.11.2026 - Fn 7: images approved; 2.1 overview only; 2.2 seven rows (Menu Click, section Tab Click, Expand All, Collapse All, Refresh, Show Less, Show More); 3.x left empty (read-only screen, user choice). Built output/EMS/BRS - EMS - Depot Activity - Booking Query V_1.0.docx. Awaiting document OK.
 - 17.11.2026 - Fn 7 approved; brs_plan done recorded. Fn 8 Accept Release (Single) exported to single_accept_release/.
-- NEXT: fn 8 Accept Release - read pages, images.
+- 17.11.2026 - Fn 8 Accept Release: Image I = menu step repaired from twin (gate passed); II = container entered (Containers tab); III = success; IV = status changed to Full Return. Awaiting image OK.
+- NEXT: fn 8 image approval, then 2.1/2.2/3.x (Accept Release - Container Tab, as the house sample).
