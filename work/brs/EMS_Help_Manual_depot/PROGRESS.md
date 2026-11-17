@@ -18,4 +18,5 @@ Author: Appsara
 - 17.11.2026 - Fn 2 Generate Release Advise: Image I = menu step repaired from its twin (page image), gate passed; Image II = success screen, frame only. Images approved.
 - 17.11.2026 - Fn 2: 2.1 (definition + 2 conditions) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx (8 pages). Approved; brs_plan done recorded (01.01).
 - 17.11.2026 - Fn 3 TOPS XML: user chose the page image (6-item menu) for Image I; no twin, rebuilt by part swaps from the Generate Release Advise page image (menu at +3,-35 cut around letters; Generate Truck Order item at +3,-3; left shadow +3,-5; check box column +3,-3) and same-screen shadow/margin; gate passed. Image II = success screen, frame only.
-- NEXT: fn 3 images approval, then 2.1/2.2.
+- 17.11.2026 - Fn 3: 2.1 (definition + 1 condition) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - TOPS XML V_1.0.docx (8 pages). Awaiting user OK.
+- NEXT: fn 3 approval -> brs_plan done; then fn 4 Generate Truck Order.
