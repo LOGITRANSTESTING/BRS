@@ -13,4 +13,5 @@ Author: Appsara
 - 17.11.2026 - Donor rules: added the scrolling-grid recipe and the copy-whole-rectangle warning.
 - 17.11.2026 - Images I/II approved. Settled: Purpose is always "This document explains the purpose of EMS's Depot Activity <Function> details." only; the manual's definition goes first in 2.1; empty 3.1/3.2 are left out with their headings, heading 3 stays (brs_docx.py extended, skill updated). Module set to "EMS – Depot Activity" (cover: ILISCyber – EMS – Depot Activity).
 - 17.11.2026 - Fn 1 built: output/EMS/BRS - EMS - Depot Activity - Empty Return Pre Advise V_1.0.docx (2.1 two items, 2.2 one Menu Click row approved).
-- NEXT: user approval of the fn 1 docx -> brs_plan.py done --function 1 --version 01.01; then function 2 Generate Release Advise.
+- 17.11.2026 - Fn 1 approved by user; brs_plan.py done recorded (01.01).
+- NEXT: function 2 Generate Release Advise (already exported; menu image donors known).

@@ -18,8 +18,11 @@
    "fp": "727195bc5dd476d5",
    "n": 1,
    "fn": "group_empty_return_pre_advise",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Empty Return Pre Advise V_1.0.docx",
+   "done_fp": "727195bc5dd476d5",
+   "version": "01.01"
   },
   {
    "name": "Generate Release Advise",
