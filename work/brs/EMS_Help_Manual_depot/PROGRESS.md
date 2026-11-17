@@ -63,3 +63,4 @@ Author: Appsara
 - 2026-11-17 fn 10 Cancel Release: docx built (10 pages), rendered; awaiting approval.
 - 2026-11-17 fn 10 Cancel Release: user asked to keep the popup table with Remark only; 3.1 'Cancel Release - Popup' (1 row, Mandatory) added, rebuilt (10 pages); awaiting approval.
 - 2026-11-17 fn 10 Cancel Release: approved and marked done (01.01). Next: fn 11 Freeze / Unfreeze.
+- 2026-11-17 fn 11 Freeze / Unfreeze: 9 images built — I from twin 03fd_01 (gate passed); II,III,VI,VII,VIII frame only; IV,V,IX NO TWIN red boxes rebuilt part-by-part (hidden separators x116/x436 restored from sep column 556, plain from col 439; gates passed). brs.json drafted. Awaiting image approval.

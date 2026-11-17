@@ -1,0 +1,102 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Freeze / Unfreeze",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Freeze / Unfreeze details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/04.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/05.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/06.png",
+   "caption": "Image VI"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/07.png",
+   "caption": "Image VII"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/08.png",
+   "caption": "Image VIII"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_freeze_unfreeze/img/09.png",
+   "caption": "Image IX"
+  }
+ ],
+ "features": [
+  "Freeze / Unfreeze Function allows the user to update the status of Port Release to Freeze and Un-Freeze.",
+  "For Freeze: \"Freeze\" column should be \"No\".",
+  "For Unfreeze: \"Freeze\" column should be \"Freeze\"."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Freeze / Unfreeze (PR Number) popup asking \"Do you want to Freeze the PR request?\" or \"Do you want to Unfreeze the PR request?\" with a remark box",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Freeze / Unfreeze from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Freezes the PR and the Freeze column changes to Freeze. Message: \"Port release freezed successfully\"",
+   "triggered_when": "Freeze column is No; user enters a valid remark and clicks Ok",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Unfreezes the PR and the Freeze column changes to No. Message: \"Port release unfreezed successfully\"",
+   "triggered_when": "Freeze column is Freeze; user enters a valid remark and clicks Ok",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Closes the popup without changing the PR",
+   "triggered_when": "User clicks Cancel on the popup",
+   "remarks": ""
+  }
+ ],
+ "search_title": "Freeze / Unfreeze - Popup",
+ "search": [
+  {
+   "name": "Remark",
+   "type": "Text Area",
+   "ui": "Mandatory. The user types a valid remark for freezing or unfreezing the PR",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}

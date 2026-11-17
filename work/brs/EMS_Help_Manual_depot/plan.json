@@ -188,7 +188,7 @@
    "fp": "2b34926ddfaf8014",
    "n": 11,
    "fn": "single_freeze_unfreeze",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -202,7 +202,7 @@
    "fp": "ea52e35b8f690f16",
    "n": 12,
    "fn": "single_revert_to_prepared",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
