@@ -120,8 +120,11 @@
    "fp": "79d41885b474dde6",
    "n": 7,
    "fn": "single_booking_query",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Depot Activity - Booking Query V_1.0.docx",
+   "done_fp": "79d41885b474dde6",
+   "version": "01.01"
   },
   {
    "name": "Accept Release",
@@ -134,7 +137,7 @@
    "fp": "2bd27ad40a444c86",
    "n": 8,
    "fn": "single_accept_release",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
