@@ -1,0 +1,69 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Change To Empty Return",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Change To Empty Return details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_change_to_empty_return/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_change_to_empty_return/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_change_to_empty_return/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_change_to_empty_return/img/04.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "Sometimes detention charges are applicable to containers returned by the customer which were already released to them; the user can use \"Change To Empty Return\" to convert the container to Empty Return status and calculate these charges.",
+  "PR status should be \"Supplied\" or \"Full Return\".",
+  "PR status should not be \"Prepared\" or \"Empty Return\".",
+  "If the Container is linked to a B/L, the process will return an error, so the user should delink the container from the B/L."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Change to Empty Return (PR Number) popup asking \"Do you want to update the container as empty return?\"",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Change to Empty Return from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Changes the PR Status to Empty Return. Message: \"Empty return status changed successfully\"",
+   "triggered_when": "User clicks Ok",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Closes the popup without changing the PR",
+   "triggered_when": "User clicks Cancel on the popup",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
