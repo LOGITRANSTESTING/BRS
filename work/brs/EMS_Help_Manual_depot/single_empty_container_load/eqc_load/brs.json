@@ -61,11 +61,203 @@
    "remarks": ""
   }
  ],
- "search_title": "",
- "search": [],
- "display_title": "",
- "drop_display": true,
- "display": [],
+ "search_title": "EQC Load - Query Screen",
+ "search": [
+  {
+   "name": "EQC Load - Booking Number (title)",
+   "type": "Display Item",
+   "ui": "Booking Number of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load Voyage",
+   "type": "Auto Populate",
+   "ui": "Select Load Voyage (key in three char)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container Size / Type",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Based on selected PR, Container Size / Type will auto populate",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Depot",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Based on selected PR, Depot will auto populate",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Activity",
+   "type": "Multiselect Drop Down",
+   "ui": "Mandatory. Select Activity manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container Number",
+   "type": "Alphanumeric",
+   "ui": "Input Container Number",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load Status",
+   "type": "Single Select Drop Down",
+   "ui": "Select Load Status manually from drop down list",
+   "db": "",
+   "values": "Empty"
+  },
+  {
+   "name": "Load Port",
+   "type": "Auto Populate",
+   "ui": "Select Load Port (key in three char)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Discharge Port",
+   "type": "Auto Populate",
+   "ui": "Select Discharge Port (key in three char)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clears the query fields of the EQC Load pop up",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "EQC Load - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the records are to be selected please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the container is to be loaded please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container Number",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Last Activity",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "RE",
+   "remarks": ""
+  },
+  {
+   "name": "Move Date",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "dd/MM/yyyy HH:mm",
+   "remarks": ""
+  },
+  {
+   "name": "Place",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Depot",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Status",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "Empty",
+   "remarks": ""
+  },
+  {
+   "name": "Load Port",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Discharge Port",
+   "type": "Display Item",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Requested",
+   "type": "Display Item",
+   "ui": "Requested quantity of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Supplied",
+   "type": "Display Item",
+   "ui": "Supplied quantity of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Remaining",
+   "type": "Display Item",
+   "ui": "Remaining quantity of the selected PR (Requested − Supplied)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After selecting the records, the selected containers should be loaded for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": "Success message \"Selected containers loaded successfully\""
+  }
+ ],
  "extra_tables": [],
  "references": [],
  "assumptions": []

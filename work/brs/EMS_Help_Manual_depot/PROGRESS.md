@@ -104,3 +104,6 @@ Author: Appsara
 - 2026-11-18 fn 21 EQC Load: Images I-III approved. NEXT: brs.json skeleton + 2.1.
 - 2026-11-18 fn 21 EQC Load: brs.json created (cover, purpose, images). NEXT: 2.1.
 - 2026-11-18 fn 21 EQC Load: 2.1 blank (manual has no definition/conditions) and 2.2 five events approved. NEXT: 3.1 query fields.
+- 2026-11-18 fn 21 EQC Load: 3.1 Query Screen (10 rows) approved, Activity values blank. NEXT: 3.2 Data Grid.
+- 2026-11-18 fn 21 EQC Load: 3.2 Data Grid (15 rows, no pager rows) approved. NEXT: build/check/render.
+- 2026-11-18 fn 21 EQC Load: BRS built, checked and rendered (13 pages) -> output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - EQC Load V_1.0.docx. Waiting for approval.
