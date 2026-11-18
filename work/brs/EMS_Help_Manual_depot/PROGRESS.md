@@ -123,3 +123,4 @@ Author: Appsara
 - 2026-11-18: Fn17 Image V (718b_02) repaired (cell donors, Submit from repaired III at +3,0, Delink box from row 2 dy+36 / header dx-40), gate passed, stripped to dal/img/05.png 1534x884; preview committed.
 - 2026-11-18: Image V approved.
 - 2026-11-18: Image VI (e53f_02): no donor has the Alert; Yes right half + dimmed page fixed by plain copies; flipped left-half piece proposed (preview img6_yes_flip_proposal.png).
+- 2026-11-18: Image VI flip approved and applied; gate passed; stripped to dal/img/06.png 1534x884; preview committed.
