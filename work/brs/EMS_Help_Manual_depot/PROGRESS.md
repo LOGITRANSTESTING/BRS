@@ -113,3 +113,4 @@ Author: Appsara
 - 2026-11-18 CSV Load: Image II repaired (box 5 upload row + box 6 Load button: per-row donor runs from csv_load_popup_blank @241,164, genuine Book1.csv tops/descenders and TRIST kept, below-popup circle px from same-row 999999; gate 0/0); stripped I-III to 1534x884 (box 13,10). Sheet made. NEXT: approval.
 - 2026-11-18 CSV Load: images approved; brs.json skeleton (function CSV Load, purpose, 3 images). NEXT: 2.1/2.2.
 - 2026-11-18 CSV Load: 2.1 blank (approved); 2.2 six events (approved). NEXT: 3.1 table.
+- 2026-11-18 CSV Load: 3.1 File Upload (4 rows) and 3.2 Data Grid (5 rows) approved; BRS built + checked + rendered (12 pages). NEXT: BRS approval.

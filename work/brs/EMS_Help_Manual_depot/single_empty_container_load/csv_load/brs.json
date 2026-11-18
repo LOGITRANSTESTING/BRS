@@ -67,11 +67,81 @@
    "remarks": ""
   }
  ],
- "search_title": "",
- "search": [],
- "display_title": "",
+ "search_title": "CSV Load - File Upload",
+ "search": [
+  {
+   "name": "CSV Load - Booking Number (title)",
+   "type": "Display Item",
+   "ui": "Booking Number of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "File Upload",
+   "type": "File Upload",
+   "ui": "Uploads the selected CSV file and shows the file name with its upload status. The file must have the columns (1. Container Number | 2. YM Container Size/Type | 3. Partner Container Size/Type)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select files...",
+   "type": "Button",
+   "ui": "Opens the file browser to choose the CSV file to upload",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Remove ×",
+   "type": "Button",
+   "ui": "Removes the uploaded file",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "CSV Load - Data Grid",
  "drop_display": false,
- "display": [],
+ "display": [
+  {
+   "name": "Container Number",
+   "type": "Display Item",
+   "ui": "Container Number read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "YM Container Size/Type",
+   "type": "Display Item",
+   "ui": "YM Container Size/Type read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Partner Container Size/Type",
+   "type": "Display Item",
+   "ui": "Partner Container Size/Type read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load",
+   "type": "Button",
+   "ui": "After uploading the file, the containers in the grid should be loaded for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": "Success message \"Containers from the selected file loaded successfully\""
+  },
+  {
+   "name": "Clear",
+   "type": "Button",
+   "ui": "Clears the uploaded file and the container grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
  "extra_tables": [],
  "references": [],
  "assumptions": []
