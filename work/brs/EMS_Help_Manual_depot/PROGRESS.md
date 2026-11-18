@@ -134,3 +134,4 @@ Author: Appsara
 - 2026-11-18 Fn17 DAL: final BRS approved; brs_plan done (Fn 17, 01.01). House rules added (no sub-sections option, keep loading indicator, merged Submit row, Text Area/Date Picker looks). All functions done.
 - 2026-11-18 Output reorganised: the 4 loose output/EMS docs moved to output/EMS/Cross Booking Depot Activity/; plan.json paths updated.
 - 2026-11-18 ES-FL Fix doc moved to output/EMS/ES-FL Fix/. Deleted manuals/EMS_-_Help_Manual_depot.gui (user request; all 21 functions done).
+- 2026-11-18 Added user manuals for next work: manuals/EMS_-_Help_Manual_Import_depot.gui, EMS-_Help_Manual_truck_order_generation.gui, ILISCyber_Container_Stock_Entry.gui.
