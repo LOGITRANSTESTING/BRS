@@ -44,7 +44,15 @@
    "caption": "Image VII"
   }
  ],
- "features": [],
+ "features": [
+  "Door Address Link is used by the user to link/de-link Door Address to each PR in a Booking request.",
+  "The Booking to be saved with one or more Requirement Details.",
+  "The Booking status be in Entered Status or Entry Complete Status.",
+  "For Link:",
+  "a) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as Y then Valid PR with status other than cancelled should exist.",
+  "b) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as N then Valid PR with status other than cancelled should exist and also Transport by to be C - Carrier.",
+  "For Delink and Delete: Door address should be linked to PR number."
+ ],
  "events": [
   {
    "event_type": "",
