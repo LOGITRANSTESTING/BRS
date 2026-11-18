@@ -10,3 +10,4 @@
 - 2026-11-18 Fn10: 3.2 approved (28 rows, same as DAL). Next: 3.3.
 - 2026-11-18 Fn10: 3.3 approved (14 rows, PR grid). Building docx.
 - 2026-11-18 Fn10: built output/EMS/Import Depot Activity - Single/BRS - EMS - Import Depot Activity - Door Address Change V_1.0.docx (24 pages, check clean). Awaiting document OK.
+- 2026-11-18 Fn10 Door Address Change: approved; brs_plan done (01.01). Next: choose next function (1-9 to do).
