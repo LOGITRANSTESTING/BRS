@@ -6,3 +6,4 @@
 - 2026-11-18 Fn10: images approved; brs.json skeleton with cover (EMS – Import Depot Activity / Door Address Change, 01.01, Appsara), purpose, images I-VII. Next: 2.1.
 - 2026-11-18 Fn10: 2.1 approved (5 items, same as DAL). Next: 2.2.
 - 2026-11-18 Fn10: 2.2 approved (11 rows; Menu Click = Door Address Change on BL; no Generate Nomination). Next: section 3 layout.
+- 2026-11-18 Fn10: section 3 layout = DAL layout (titles 'Door Address Change - ...'); 3.3 to follow PR grid (user). 3.1 approved row by row (9 rows, same as DAL, title row renamed). Next: 3.2 row by row.

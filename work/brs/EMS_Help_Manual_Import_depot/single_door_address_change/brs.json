@@ -121,17 +121,73 @@
    "remarks": "\"TOPS Generated for selected Port Release(s) Successfully.\""
   }
  ],
- "search_title": "",
+ "search_title": "Door Address Change - Header Information",
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking Number of the selected PR",
    "db": "",
    "values": ""
+  },
+  {
+   "name": "Shipper",
+   "type": "Display Item",
+   "ui": "Shipper of the selected booking",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage - Terminal",
+   "type": "Display Item",
+   "ui": "Voyage and terminal of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Door Address Change (title)",
+   "type": "Display Item",
+   "ui": "Name of the current single function",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Orgin",
+   "type": "Display Item",
+   "ui": "Origin of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "Load port of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Discharge",
+   "type": "Display Item",
+   "ui": "Discharge port of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Final",
+   "type": "Display Item",
+   "ui": "Final destination of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transport By",
+   "type": "Display Item",
+   "ui": "Transport By (haulage mode) of the selected PR",
+   "db": "",
+   "values": "Merchant / C - Carrier"
   }
  ],
- "display_title": "",
+ "display_title": "Door Address Change - Address Details",
  "drop_display": false,
  "display": [
   {
@@ -143,7 +199,12 @@
    "remarks": ""
   }
  ],
- "extra_tables": [],
+ "extra_tables": [
+  {
+   "title": "Door Address Change - Data Grid",
+   "rows": []
+  }
+ ],
  "references": [],
  "assumptions": []
 }
