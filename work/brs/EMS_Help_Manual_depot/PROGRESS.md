@@ -114,3 +114,4 @@ Author: Appsara
 - 2026-11-18 CSV Load: images approved; brs.json skeleton (function CSV Load, purpose, 3 images). NEXT: 2.1/2.2.
 - 2026-11-18 CSV Load: 2.1 blank (approved); 2.2 six events (approved). NEXT: 3.1 table.
 - 2026-11-18 CSV Load: 3.1 File Upload (4 rows) and 3.2 Data Grid (5 rows) approved; BRS built + checked + rendered (12 pages). NEXT: BRS approval.
+- 2026-11-18 Fn 21 Empty Container Load: CSV Load BRS approved; brs_plan.py done recorded (EQC Load + CSV Load, 01.01). NEXT: Fn 17 Door Address Link (last).
