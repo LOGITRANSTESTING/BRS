@@ -111,3 +111,4 @@ Author: Appsara
 - 2026-11-18 fn 21 CSV Load: Image I (e3f0_01) repaired - submenu from screenshots/CSV Load/menu_csv_load.png (offset 240,761), menu shadows from the approved EQC Image I (+1,+1 / +1,0), gate PASSED 0 outside. Waiting for approval.
 - 2026-11-18 fn 21 CSV Load: Image I approved. NEXT: Image II.
 - 2026-11-18 CSV Load: Image II repaired (box 5 upload row + box 6 Load button: per-row donor runs from csv_load_popup_blank @241,164, genuine Book1.csv tops/descenders and TRIST kept, below-popup circle px from same-row 999999; gate 0/0); stripped I-III to 1534x884 (box 13,10). Sheet made. NEXT: approval.
+- 2026-11-18 CSV Load: images approved; brs.json skeleton (function CSV Load, purpose, 3 images). NEXT: 2.1/2.2.
