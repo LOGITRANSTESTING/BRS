@@ -94,3 +94,4 @@ Author: Appsara
 - 2026-11-17 fn 20 PR More Details: per user, Image I redone (auto red mask had caught text fringes, leaving artifacts and losing the separator); now copied from twin over box geometry + badge disk only (gate passed), matches user's reference.
 - 2026-11-17 fn 20 PR More Details: 2.1 (3 lines), 2.2 (Menu Click/Process/Close), 3.1 Data Grid (17 rows) approved; built 'BRS - EMS - Depot Activity - PR More Details V_1.0.docx' (11 pages); awaiting approval.
 - 2026-11-17 fn 20 PR More Details: approved, marked done (01.01). Next: fn 21 Empty Container Load; fn 17 Door Address Link last.
+- 2026-11-18 Reset PR #4 to 5ab11d0 per user (old head 57c21cf kept on branch backup/brs-skill-update-57c21cf); fn 21 Empty Container Load restarted from scratch. Re-exported to single_empty_container_load/; scan: 7705_01, d5aa_03, e3f0_03 unmarked; d5aa_01, d5aa_02, e3f0_01, e3f0_02 NO TWIN. Source sheet in previews. NEXT: ask user one BRS or separate EQC/CSV BRS files.
