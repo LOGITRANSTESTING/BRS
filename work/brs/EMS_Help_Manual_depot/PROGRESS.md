@@ -121,3 +121,5 @@ Author: Appsara
 - 2026-11-18: Fn17 Door Address Link Image III (421c_04) repaired (cell donors + Submit rebuild + Link-box shift copies), gate passed, stripped to dal/img/03.png 1534x884; preview committed for approval.
 - 2026-11-18: Image III approved.
 - 2026-11-18: Fn17 Image V (718b_02) repaired (cell donors, Submit from repaired III at +3,0, Delink box from row 2 dy+36 / header dx-40), gate passed, stripped to dal/img/05.png 1534x884; preview committed.
+- 2026-11-18: Image V approved.
+- 2026-11-18: Image VI (e53f_02): no donor has the Alert; Yes right half + dimmed page fixed by plain copies; flipped left-half piece proposed (preview img6_yes_flip_proposal.png).
