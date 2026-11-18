@@ -8,3 +8,5 @@
 - 2026-11-18 Fn10: 2.2 approved (11 rows; Menu Click = Door Address Change on BL; no Generate Nomination). Next: section 3 layout.
 - 2026-11-18 Fn10: section 3 layout = DAL layout (titles 'Door Address Change - ...'); 3.3 to follow PR grid (user). 3.1 approved row by row (9 rows, same as DAL, title row renamed). Next: 3.2 row by row.
 - 2026-11-18 Fn10: 3.2 approved (28 rows, same as DAL). Next: 3.3.
+- 2026-11-18 Fn10: 3.3 approved (14 rows, PR grid). Building docx.
+- 2026-11-18 Fn10: built output/EMS/Import Depot Activity - Single/BRS - EMS - Import Depot Activity - Door Address Change V_1.0.docx (24 pages, check clean). Awaiting document OK.

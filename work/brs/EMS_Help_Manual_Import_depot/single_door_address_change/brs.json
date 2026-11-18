@@ -390,7 +390,106 @@
  "extra_tables": [
   {
    "title": "Door Address Change - Data Grid",
-   "rows": []
+   "rows": [
+    {
+     "name": "Total Port Release(s)",
+     "type": "Display Item",
+     "ui": "Count of the port releases queried, with the count per status",
+     "db": "",
+     "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze"
+    },
+    {
+     "name": "Select All (header check box)",
+     "type": "Check Box",
+     "ui": "If all the queried PRs are to be selected please select the check box. Greyed out while editing",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Check Box (row)",
+     "type": "Check Box",
+     "ui": "If the PR is to be selected please select the check box",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Link Indicator (link icon)",
+     "type": "Display Item",
+     "ui": "Shows a link icon when a door address is linked to the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Link",
+     "type": "Check Box",
+     "ui": "If the PR is to be linked to the door address please select the check box. Enabled in Add/Edit mode",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Delink",
+     "type": "Check Box",
+     "ui": "If the PR is to be delinked from the door address please select the check box. Enabled only for linked PRs in Edit mode",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "PR Number",
+     "type": "Display Item",
+     "ui": "PR Number of the booking",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Size Type",
+     "type": "Display Item",
+     "ui": "Container size type of the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Container",
+     "type": "Display Item",
+     "ui": "Container number attached to the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Position From / To Date",
+     "type": "Date and Time Picker",
+     "ui": "Input Position From and To date and time for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Pickup Date",
+     "type": "Date and Time Picker",
+     "ui": "Input Pickup date and time for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Load Reference",
+     "type": "Alphanumeric",
+     "ui": "Input Load Reference for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Haulier Instruction",
+     "type": "Text Area",
+     "ui": "Input Haulier Instruction for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Transporter Instruction",
+     "type": "Text Area",
+     "ui": "Input Transporter Instruction for the PR",
+     "db": "",
+     "values": ""
+    }
+   ]
   }
  ],
  "references": [],
