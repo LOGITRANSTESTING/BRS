@@ -128,3 +128,4 @@ Author: Appsara
 - 2026-11-18: all 7 DAL images approved (IV keeps app loading indicator).
 - 2026-11-18: DAL brs.json skeleton (7 images) + 2.1 approved (definition, 2 common conditions, For Link a/b config, For Delink and Delete).
 - 2026-11-18: DAL 1.2 no sections (user); 2.2 approved, 12 events (Submit merged for Link/Delink/Edit).
+- 2026-11-18 Fn17 DAL: section 3 layout approved (3.1 Header Information, 3.2 Address Details, 3.3 Data Grid in extra_tables). 3.1 approved: 9 Display Item rows (Shipper, Voyage - Terminal kept as proposed).
