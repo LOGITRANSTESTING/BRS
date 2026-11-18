@@ -103,3 +103,4 @@ Author: Appsara
 - 2026-11-18 fn 21 EQC Load: Image II repaired (Submit badge 6 + check-box badge 5, same-screen/blank-popup copies, gate PASSED 0 outside), frame stripped to the Image I box 13,10-1546,893; Image III unmarked (frame only). Sheet + img2 before/after in output/previews/brs_EMS_Help_Manual_depot_single_eqc_load/. Waiting for image approval.
 - 2026-11-18 fn 21 EQC Load: Images I-III approved. NEXT: brs.json skeleton + 2.1.
 - 2026-11-18 fn 21 EQC Load: brs.json created (cover, purpose, images). NEXT: 2.1.
+- 2026-11-18 fn 21 EQC Load: 2.1 blank (manual has no definition/conditions) and 2.2 five events approved. NEXT: 3.1 query fields.

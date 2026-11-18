@@ -29,7 +29,38 @@
   }
  ],
  "features": [],
- "events": [],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the EQC Load pop up screen for the selected PR",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Empty Container Load >> EQC Load",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click",
+   "description": "Selects the container records to be loaded; the header check box selects all records",
+   "triggered_when": "User selects the check box of one or more container records in the pop up grid",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Reset)",
+   "description": "Clears the query fields of the EQC Load pop up",
+   "triggered_when": "User clicks Reset",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Submit)",
+   "description": "Loads the selected containers to the PR. A success or error message is shown",
+   "triggered_when": "User clicks Submit after selecting records",
+   "remarks": "\"Selected containers loaded successfully\""
+  },
+  {
+   "event_type": "Button Click (Close ×)",
+   "description": "Closes the EQC Load pop up",
+   "triggered_when": "User clicks × on the pop up title bar",
+   "remarks": ""
+  }
+ ],
  "search_title": "",
  "search": [],
  "display_title": "",
