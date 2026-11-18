@@ -107,3 +107,7 @@ Author: Appsara
 - 2026-11-18 fn 21 EQC Load: 3.1 Query Screen (10 rows) approved, Activity values blank. NEXT: 3.2 Data Grid.
 - 2026-11-18 fn 21 EQC Load: 3.2 Data Grid (15 rows, no pager rows) approved. NEXT: build/check/render.
 - 2026-11-18 fn 21 EQC Load: BRS built, checked and rendered (13 pages) -> output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - EQC Load V_1.0.docx. Waiting for approval.
+- 2026-11-18 fn 21 EQC Load BRS approved. NEXT: CSV Load images.
+- 2026-11-18 fn 21 CSV Load: Image I (e3f0_01) repaired - submenu from screenshots/CSV Load/menu_csv_load.png (offset 240,761), menu shadows from the approved EQC Image I (+1,+1 / +1,0), gate PASSED 0 outside. Waiting for approval.
+- 2026-11-18 fn 21 CSV Load: Image I approved. NEXT: Image II.
+- 2026-11-18 CSV Load: Image II repaired (box 5 upload row + box 6 Load button: per-row donor runs from csv_load_popup_blank @241,164, genuine Book1.csv tops/descenders and TRIST kept, below-popup circle px from same-row 999999; gate 0/0); stripped I-III to 1534x884 (box 13,10). Sheet made. NEXT: approval.
