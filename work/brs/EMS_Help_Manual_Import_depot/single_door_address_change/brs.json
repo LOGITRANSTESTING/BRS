@@ -191,12 +191,200 @@
  "drop_display": false,
  "display": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Shipper Code",
+   "type": "Single Select Drop Down",
+   "ui": "Select Shipper Code manually from drop down list",
    "db": "",
-   "values": "",
-   "remarks": ""
+   "values": "Shipper code-name list"
+  },
+  {
+   "name": "Shipper Name",
+   "type": "Alphanumeric",
+   "ui": "Mandatory. Based on selected Shipper Code, Shipper Name will auto populate; can be edited",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Address",
+   "type": "Text Area",
+   "ui": "Mandatory. Input door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Country",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Select Country of the door address",
+   "db": "",
+   "values": "e.g. Belgium"
+  },
+  {
+   "name": "State",
+   "type": "Auto Populate",
+   "ui": "Select State of the door address",
+   "db": "",
+   "values": "e.g. BE-BE"
+  },
+  {
+   "name": "City",
+   "type": "Alphanumeric",
+   "ui": "Input City of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Zip Code",
+   "type": "Alphanumeric",
+   "ui": "Input Zip Code of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Telephone",
+   "type": "Alphanumeric",
+   "ui": "Input Telephone of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Email",
+   "type": "Alphanumeric",
+   "ui": "Input Email of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Fax",
+   "type": "Alphanumeric",
+   "ui": "Input Fax of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Contact",
+   "type": "Alphanumeric",
+   "ui": "Input Contact of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Collection Point",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Select Collection Point of the door address",
+   "db": "",
+   "values": "e.g. BEWLB-WILLEBROEK"
+  },
+  {
+   "name": "Return Date",
+   "type": "Date Picker",
+   "ui": "Input Return date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Position From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Position From and To date and time",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Pickup date and time",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Communication Mode",
+   "type": "Single Select Drop Down",
+   "ui": "Select Communication Mode manually from drop down list",
+   "db": "",
+   "values": "Email"
+  },
+  {
+   "name": "Communication Number",
+   "type": "Alphanumeric",
+   "ui": "Input Communication Number",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Special Info",
+   "type": "Text Area",
+   "ui": "Input special information",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Land Mark",
+   "type": "Alphanumeric",
+   "ui": "Input Land Mark of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transporter Code",
+   "type": "Auto Populate",
+   "ui": "Key in three char and select Transporter Code",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Load Reference",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transporter Instruction",
+   "type": "Text Area",
+   "ui": "Input Transporter Instruction",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Haulier Instruction",
+   "type": "Text Area",
+   "ui": "Input Haulier Instruction",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Add",
+   "type": "Button",
+   "ui": "Opens the address fields to add a new door address for the selected PRs",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Edit",
+   "type": "Button",
+   "ui": "Enables the address fields and Link/Delink check boxes for editing",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Delete",
+   "type": "Button",
+   "ui": "Deletes the door address of the selected PRs after confirmation",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After input all the mandatory column values, saves the address and links/delinks it to the selected PRs",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Cancel",
+   "type": "Button",
+   "ui": "Cancelled all the input values and requery existing data",
+   "db": "",
+   "values": ""
   }
  ],
  "extra_tables": [
