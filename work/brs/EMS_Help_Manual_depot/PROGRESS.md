@@ -127,3 +127,4 @@ Author: Appsara
 - 2026-11-18: Image VI approved. Final 7-image sheet committed for approval (final_images_sheet.png).
 - 2026-11-18: all 7 DAL images approved (IV keeps app loading indicator).
 - 2026-11-18: DAL brs.json skeleton (7 images) + 2.1 approved (definition, 2 common conditions, For Link a/b config, For Delink and Delete).
+- 2026-11-18: DAL 1.2 no sections (user); 2.2 approved, 12 events (Submit merged for Link/Delink/Edit).

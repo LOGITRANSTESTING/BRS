@@ -55,10 +55,76 @@
  ],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
+   "event_type": "Menu Click",
+   "description": "Opens the Door Address Link screen of the selected PR in a new tab",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks \"Door Address Link\"",
    "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Add)",
+   "description": "Displays the Address fields to enter a door address",
+   "triggered_when": "User clicks Add",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Link)",
+   "description": "Selects the record to be linked to the door address",
+   "triggered_when": "User clicks the check box in the Link column after entering the address details",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Edit)",
+   "description": "Enables the address fields for editing and the Delink column",
+   "triggered_when": "User clicks Edit",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Delink)",
+   "description": "Selects the linked record to be delinked",
+   "triggered_when": "User clicks the check box in the Delink column after clicking Edit",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Submit)",
+   "description": "Saves the door address. Link: links the door address to the selected PR Numbers; the Link column is disabled and the link icon is shown. Delink: delinks the door address from the selected PR Numbers; the Delink column is disabled and the link icon is removed. Edit: saves the edited address details",
+   "triggered_when": "User clicks Submit after selecting records in the Link column, selecting records in the Delink column, or editing the address fields",
+   "remarks": "Link: \"Door Address has been added Successfully!\"; Delink: \"PR Delinked to Door Address Successfully.\"; Edit: \"Record has been updated successfully\""
+  },
+  {
+   "event_type": "Button Click (Cancel)",
+   "description": "Cancels the add/edit and keeps the saved door address",
+   "triggered_when": "User clicks Cancel while adding or editing",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Delete)",
+   "description": "Shows the confirmation alert",
+   "triggered_when": "User clicks Delete after selecting records with the row check boxes",
+   "remarks": "\"Are you sure you want to delete this record?\""
+  },
+  {
+   "event_type": "Button Click (Yes)",
+   "description": "Deletes the door address of the selected records; the deleted record is removed",
+   "triggered_when": "User clicks Yes in the confirmation alert",
+   "remarks": "\"Door Address has been deleted Successfully!\""
+  },
+  {
+   "event_type": "Button Click (No)",
+   "description": "Closes the alert without deleting",
+   "triggered_when": "User clicks No in the confirmation alert",
+   "remarks": ""
+  },
+  {
+   "event_type": "Menu Click (Generate TOPS)",
+   "description": "Generates TOPS for the selected Port Releases",
+   "triggered_when": "User selects records and clicks the ☰ menu on the tab >> Generate TOPS",
+   "remarks": "\"TOPS Generated for selected Port Release(s) Successfully.\""
+  },
+  {
+   "event_type": "Menu Click (Generate Nomination)",
+   "description": "Generates Nomination for the selected Port Releases",
+   "triggered_when": "User selects records and clicks the ☰ menu on the tab >> Generate Nomination",
+   "remarks": "\"Nomination Generated for selected Port Release(s) Successfully.\""
   }
  ],
  "search_title": "",
