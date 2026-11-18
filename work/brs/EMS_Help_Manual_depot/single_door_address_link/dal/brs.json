@@ -1,0 +1,89 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Door Address Link",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Door Address Link details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/04.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/05.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/06.png",
+   "caption": "Image VI"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/07.png",
+   "caption": "Image VII"
+  }
+ ],
+ "features": [
+  "Door Address Link is used by the user to link/de-link Door Address to each PR in a Booking request.",
+  "The Booking to be saved with one or more Requirement Details.",
+  "The Booking status be in Entered Status or Entry Complete Status.",
+  "For Link:",
+  "a) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as Y then Valid PR with status other than cancelled should exist.",
+  "b) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as N then Valid PR with status other than cancelled should exist and also Transport by to be C - Carrier.",
+  "For Delink and Delete: Door address should be linked to PR number."
+ ],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
