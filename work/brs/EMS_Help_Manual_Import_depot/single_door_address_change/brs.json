@@ -1,0 +1,81 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Import Depot Activity",
+ "function": "Door Address Change",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Import Depot Activity Door Address Change details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/04.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/05.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/06.png",
+   "caption": "Image VI"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_door_address_change/img/07.png",
+   "caption": "Image VII"
+  }
+ ],
+ "features": [],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
