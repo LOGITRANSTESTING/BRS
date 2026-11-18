@@ -119,3 +119,5 @@ Author: Appsara
 - 2026-11-18 Fn 17: one BRS (Door Address Link). Images approved: I 421c_01, II 421c_02, III 421c_04, IV 421c_06, V 718b_02, VI e53f_02, VII 8caa_02. NEXT: Image I repair.
 - 2026-11-18 Fn 17 Image I (421c_01): unmark found exact neighbour a0b8_01 (err 0) for box 3 + badge; gate 0/0; stripped to dal/img/01.png 1534x884. Awaiting approval.
 - 2026-11-18: Fn17 Door Address Link Image III (421c_04) repaired (cell donors + Submit rebuild + Link-box shift copies), gate passed, stripped to dal/img/03.png 1534x884; preview committed for approval.
+- 2026-11-18: Image III approved.
+- 2026-11-18: Fn17 Image V (718b_02) repaired (cell donors, Submit from repaired III at +3,0, Delink box from row 2 dy+36 / header dx-40), gate passed, stripped to dal/img/05.png 1534x884; preview committed.
