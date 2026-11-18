@@ -117,7 +117,7 @@ A BRS is written per FUNCTION, never per manual.
 ## Step 5 - Column Definitions & Business Rules (table by table)
 Use the rules in `references/column-rules.md`. They include the sample's own rows as examples.
 
-**UI Design sub-sections:** when the manual splits a function into flows (for example Freeze / Unfreeze), give each image a `"section"` ("Freeze", "Unfreeze"); `brs_docx.py build` adds a 1.2.1, 1.2.2 ... heading when the section changes, and the images keep the manual's order (settled on Freeze / Unfreeze).
+**UI Design sub-sections:** when the manual splits a function into flows (for example Freeze / Unfreeze), give each image a `"section"` ("Freeze", "Unfreeze"); `brs_docx.py build` adds a 1.2.1, 1.2.2 ... heading when the section changes, and the images keep the manual's order (settled on Freeze / Unfreeze). Ask first: the user can choose plain Image I, II ... with no sub-sections even when the manual has flows (settled on Door Address Link). Keep the app's own loading indicator (for example "▶▶▶▶") in an image; it is part of the original screenshot, not a mark (settled on Door Address Link).
 
 Do 3.1 Search first, then 3.2 Display Area. **More than two tables:** put 3.3, 3.4 ... in `extra_tables` (`[{"title": ..., "rows": [display-style rows]}]`); `brs_docx.py build` clones the 3.2 heading + table for each, after 3.2. A single function that opens a form below the grid (Accept Release, EMS Depot Activity): 3.1 "<Function> - Data Grid" (the grid as shown on the form screen; boxes greyed out while the form is open are Display Item), 3.2 "<Function> - Basic Information", 3.3 "<Function> - Container Tab" (or the open tab's name). **An empty table is left out with its heading:** `brs_docx.py build` drops 3.1 / 3.2 when it has no filled rows; the "3 Column Definitions & Business Rules" heading always stays (settled on Empty Return Pre Advise). If the Display Area has a tab or panel with many fields, split it into one round per tab or panel. For each round:
 1. Show the image(s) the table is read from. If it helps, add a crop of just that panel: use `ilis.py crop` on the unmarked image, or the sheet.
@@ -151,6 +151,7 @@ Do 3.1 Search first, then 3.2 Display Area. **More than two tables:** put 3.3, 3
   - **Description:** what happens. Take it from the manual's "How to" steps and from the alert or success-bar text in the images.
   - **Triggered When?:** the user action plus the precondition, for example "User clicks Submit after entering all mandatory fields".
   - **Remarks:** the message shown, quoted from the image. Otherwise blank.
+- One button used by several flows (for example Submit for Link, Delink and Edit) can be ONE row: start each part of Description and Remarks with the flow name ("Link: ... Delink: ... Edit: ...") and quote each flow's message (settled on Door Address Link).
 - Same Why: lines and questions as Step 5. Wait for the answers.
 
 ## Step 7 - Build and check

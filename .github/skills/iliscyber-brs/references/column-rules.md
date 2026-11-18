@@ -29,6 +29,7 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 - File Upload: a "Drop files here to upload" area next to a "Select files..." button (for example Acceptance Group). One row for the drop area; Select files... and Load are Button rows.
 - Display Item: a greyed-out box (read-only, for example PR Number, Status, Freeze in Accept Release Basic Information), and grid column values that cannot be edited.
 - Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row, Item Type "Auto Populate / Alphanumeric + Single Select Drop Down". The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
+- Text Area also covers a large multi-line box with no icon (for example Address), and Date Picker a box with only a calendar icon (dd/MM/yyyy, for example Return Date) (settled on Door Address Link).
 - Also, when seen: Button (Submit, Cancel, Apply, Process, Validate); LOV (a box with a magnifier or list icon that opens a lookup); Text Area (a large multi-line box with a note icon, for example Remarks).
 
 ## UI Validation (short and imperative, as in the sample)
