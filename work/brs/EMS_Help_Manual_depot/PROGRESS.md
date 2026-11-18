@@ -132,3 +132,4 @@ Author: Appsara
 - 2026-11-18 Fn17 DAL: 3.2 Address Details approved (28 rows, buttons last).
 - 2026-11-18 Fn17 DAL: 3.3 Data Grid approved (14 rows, no further columns).
 - 2026-11-18 Fn17 DAL: final BRS approved; brs_plan done (Fn 17, 01.01). House rules added (no sub-sections option, keep loading indicator, merged Submit row, Text Area/Date Picker looks). All functions done.
+- 2026-11-18 Output reorganised: the 4 loose output/EMS docs moved to output/EMS/Cross Booking Depot Activity/; plan.json paths updated.
