@@ -116,3 +116,4 @@ Author: Appsara
 - 2026-11-18 CSV Load: 3.1 File Upload (4 rows) and 3.2 Data Grid (5 rows) approved; BRS built + checked + rendered (12 pages). NEXT: BRS approval.
 - 2026-11-18 Fn 21 Empty Container Load: CSV Load BRS approved; brs_plan.py done recorded (EQC Load + CSV Load, 01.01). NEXT: Fn 17 Door Address Link (last).
 - 2026-11-18 Fn 17 Door Address Link started: exported to single_door_address_link/ (main page + 6 how-tos: Link, Delink, Edit, Delete, Generate TOPS, Generate Nomination; 24 images, 2 are 29x22 link icons). Marked: 421c_01/03/04/07, 718b_01/02/05, ef6e_01/02/03, e53f_01/02, 8caa_01, e9a5_01; unmarked: a0b8_01, 421c_02/06, 718b_04, ef6e_04, e53f_03, 8caa_02, e9a5_02. Source sheet in previews. NEXT: ask one BRS or several.
+- 2026-11-18 Fn 17: one BRS (Door Address Link). Images approved: I 421c_01, II 421c_02, III 421c_04, IV 421c_06, V 718b_02, VI e53f_02, VII 8caa_02. NEXT: Image I repair.
