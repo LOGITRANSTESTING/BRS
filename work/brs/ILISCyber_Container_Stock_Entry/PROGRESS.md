@@ -19,3 +19,4 @@ Branch brs-container-stock-entry. 1 Screen function.
 - 19/11/2026 - Screen / Step 1 Image X: proposal (divider continued, row kept at visible size) declined; partial image given to the user to edit (Image_X_partial_fullsize.png / _cropped.png). Next: take the user's edited strip, gate, crop.
 - 19/11/2026 - Screen / Step 1 Images IX (frame crop), X (Downloads pop-up: divider continued, row kept at visible size, shadow column; gate passed; user approved the proposal), XI (Excel, frame crop 5,5,1415,287 + 9x9 corners) saved to img/09-11. Next: IX/XI OK, then XIII (f8f3_05), XV (c486_05).
 - 19/11/2026 - Screen / Step 1 Images IX, X, XI approved by the user. Next: XIII (f8f3_05), XV (c486_05).
+- 19/11/2026 - Screen / Step 1 Images XIII (PR Status box) and XV (Stock box): lines on plain white, filled from adjacent white of the same image; gates passed; img/13, img/15 saved. Full sheet made. Next: user OK on the sheet, then Step 2 (module line).
