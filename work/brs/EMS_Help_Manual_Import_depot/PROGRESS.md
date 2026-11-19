@@ -36,3 +36,4 @@
 - 2026-11-19 Fn5 Empty Return Pre Advice docx approved; done. User asked to add Display Area fields to Fn4 (data updated in the grid).
 - 2026-11-19 Fn4 revisit: user asked for Display Area; chose full visible grid (B), icon names DG/OOG/Reefer/Merchant Haulage/SOC (user-chosen guesses); 21 rows approved; docx rebuilt (10 pages), check passed. Awaiting docx approval.
 - 2026-11-19 Fn4 updated docx approved.
+- 2026-11-19 Fn6 Empty Return Advice - GR: exported; I a534_01 (clean menu), II ca3d_07 (report loading screen; frame 1550x898 cropped 4,3,1537,889 -> 1534x887), III ca3d_08 (success); ca3d_06 dropped (gate-verified twin of 01 + marks). No repairs.
