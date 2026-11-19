@@ -21,3 +21,4 @@
 - Fn2 images approved; brs.json created (header, purpose, 5 images).
 - Fn2 2.1 approved (Option B: name corrected, 2 lines); 2.2 approved (7 events).
 - Fn2 3.1 Query Screen (5 rows) and 3.2 Data Grid (11 rows) approved; docx built (14 pages, check clean, author Appsara).
+- Fn2 ECOR Number Regenerate approved and marked done.

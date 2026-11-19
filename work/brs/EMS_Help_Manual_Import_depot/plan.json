@@ -34,8 +34,10 @@
    "fp": "f8f1477441a337d9",
    "n": 2,
    "fn": "group_ecor_number_regenerate",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity - Group/BRS - EMS - Import Depot Activity - ECOR Number Regenerate V_1.0.docx",
+   "done_fp": "f8f1477441a337d9"
   },
   {
    "name": "ECOR Number Update",
