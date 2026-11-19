@@ -152,6 +152,7 @@ Do 3.1 Search first, then 3.2 Display Area. **More than two tables:** put 3.3, 3
   - **Triggered When?:** the user action plus the precondition, for example "User clicks Submit after entering all mandatory fields".
   - **Remarks:** the message shown, quoted from the image. Otherwise blank.
 - One button used by several flows (for example Submit for Link, Delink and Edit) can be ONE row: start each part of Description and Remarks with the flow name ("Link: ... Delink: ... Edit: ...") and quote each flow's message (settled on Door Address Link).
+- **Events split like the UI Design:** when the images have sections, the user may want 2.2 split the same way. Give each event a `"section"` (same names as the image sections); `brs_docx.py build` then writes a 2.2.1, 2.2.2 ... heading and its own events table per section (settled on Container Redelivery).
 - Same Why: lines and questions as Step 5. Wait for the answers.
 
 ## Step 7 - Build and check
