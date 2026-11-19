@@ -158,12 +158,40 @@
    "remarks": ""
   }
  ],
- "search_title": "",
+ "search_title": "Container Stock Entry - Query Screen",
  "search": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Container Type",
+   "type": "Single Select Drop Down",
+   "ui": "Select Container Type manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Depot",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Depot and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Stock",
+   "type": "Single Select Drop Down",
+   "ui": "Select Stock manually from drop down list",
+   "db": "",
+   "values": "Physical / Auto"
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries the data based on the entered query fields and shows it in the data grid",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clears the query fields at once to query with new data",
    "db": "",
    "values": ""
   }
