@@ -359,16 +359,152 @@
       "values": ""
     }
   ],
-  "display_title": "",
+  "display_title": "Offhire Instruct - Data Grid",
   "drop_display": false,
   "display": [
     {
-      "name": "",
-      "type": "",
-      "ui": "",
+      "name": "Total Record(s)",
+      "type": "Display Item",
+      "ui": "Number of containers listed in the grid",
       "db": "",
       "values": "",
       "remarks": ""
+    },
+    {
+      "name": "Select All",
+      "type": "Check Box",
+      "ui": "If all containers are to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": "Header check box"
+    },
+    {
+      "name": "Select",
+      "type": "Check Box",
+      "ui": "If the container is to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": "Row check box"
+    },
+    {
+      "name": "Container Number",
+      "type": "Display Item",
+      "ui": "Container number of the offhire instruction",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Container History Arrangement icon",
+      "type": "Icon",
+      "ui": "Opens the Container History Arrangement pop-up for the container",
+      "db": "",
+      "values": "",
+      "remarks": "Shown next to the container number where history exists"
+    },
+    {
+      "name": "Size Type",
+      "type": "Display Item",
+      "ui": "Size type of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Current Activity",
+      "type": "Display Item",
+      "ui": "Current activity of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Current Date",
+      "type": "Display Item",
+      "ui": "Date of the current activity",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Current Location",
+      "type": "Display Item",
+      "ui": "Current location of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Lease Term",
+      "type": "Display Item",
+      "ui": "Lease term of the container",
+      "db": "",
+      "values": "S / L / M / O",
+      "remarks": ""
+    },
+    {
+      "name": "Redelv.Term",
+      "type": "Display Item",
+      "ui": "Redelivery term of the container",
+      "db": "",
+      "values": "S / L / M / O",
+      "remarks": ""
+    },
+    {
+      "name": "Lessor",
+      "type": "Display Item",
+      "ui": "Lessor of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Lessor Ref.",
+      "type": "Display Item",
+      "ui": "Lessor reference of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Voyage",
+      "type": "Display Item",
+      "ui": "Voyage of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Expire Date",
+      "type": "Display Item",
+      "ui": "Lease expire date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "ETA",
+      "type": "Display Item",
+      "ui": "ETA of the voyage",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "DPP Coverage",
+      "type": "Display Item",
+      "ui": "DPP coverage of the container",
+      "db": "",
+      "values": "FULL / 100",
+      "remarks": ""
+    },
+    {
+      "name": "Process",
+      "type": "Button",
+      "ui": "Processes the selected containers for offhire",
+      "db": "",
+      "values": "",
+      "remarks": "Success: \"Container has processed successfully\""
     }
   ],
   "extra_tables": [],
