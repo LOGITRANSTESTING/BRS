@@ -507,7 +507,69 @@
       "remarks": "Success: \"Container has processed successfully\""
     }
   ],
-  "extra_tables": [],
+  "extra_tables": [
+    {
+      "title": "Offhire Instruct - Container History Arrangement",
+      "rows": [
+        {
+          "name": "Container Number",
+          "type": "Display Item",
+          "ui": "Container number of the selected container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelv. Ind.",
+          "type": "Display Item",
+          "ui": "Redelivery indicator of the container",
+          "db": "",
+          "values": "Y / N",
+          "remarks": ""
+        },
+        {
+          "name": "Redelv. Date",
+          "type": "Display Item",
+          "ui": "Redelivery date of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelv. Place",
+          "type": "Display Item",
+          "ui": "Redelivery place of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Turn in Reference",
+          "type": "Display Item",
+          "ui": "Turn in reference of the redelivery",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Instruction Number",
+          "type": "Display Item",
+          "ui": "Instruction number of the redelivery",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Close (X)",
+          "type": "Button",
+          "ui": "Closes the Container History Arrangement pop-up",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        }
+      ]
+    }
+  ],
   "references": [],
   "assumptions": []
 }
