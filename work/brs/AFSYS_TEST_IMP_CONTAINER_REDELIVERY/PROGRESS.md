@@ -23,3 +23,4 @@ Sections: Floating icon (1-2), Offhire Instruct (3-9), Pre Sales Instruct (10-13
 - 2026-11-19 Container Redelivery: 3.1 Offhire Instruct - Search approved (20 rows). Next: 3.2 Offhire Instruct - Data Grid.
 - 2026-11-19 Container Redelivery: 3.2 Offhire Instruct - Data Grid approved (18 rows). Next: 3.3 Container History Arrangement pop-up.
 - 2026-11-19 Container Redelivery: 3.3 Container History Arrangement approved (7 rows). Next: 3.4 Pre sales Instruct - Search.
+- 2026-11-19 Container Redelivery: 3.4 Pre sales Instruct - Search approved (copy of 3.1). Next: 3.5 Pre sales Instruct - Data Grid.
