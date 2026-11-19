@@ -1,0 +1,46 @@
+{
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "EMS – Import Depot Activity",
+  "function": "XML Interface",
+  "version": "01.01",
+  "date": "",
+  "history": [
+    {
+      "date": "",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of EMS's Import Depot Activity XML Interface details.",
+  "images": [
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_xml_interface/img/01.png",
+      "caption": "Image I"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_xml_interface/img/02.png",
+      "caption": "Image II"
+    }
+  ],
+  "features": [
+    "This function allows the user to generate XML Interface."
+  ],
+  "events": [
+    {
+      "event_type": "Menu Click",
+      "description": "Generates the XML Interface for the selected BL records.",
+      "triggered_when": "User selects one or more BL records using the check boxes, clicks the ☰ icon at Voyage level in Depot Activity and selects \"XML Interface\".",
+      "remarks": "\"XML Interface generated successfully.\""
+    }
+  ],
+  "search_title": "",
+  "search": [],
+  "display_title": "",
+  "drop_display": false,
+  "display": [],
+  "extra_tables": [],
+  "references": [],
+  "assumptions": []
+}
