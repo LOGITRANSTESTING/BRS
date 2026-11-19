@@ -18,8 +18,10 @@
    "fp": "734ae6cf13dac52c",
    "n": 1,
    "fn": "group_ecor_number_generate",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": null,
+   "done_fp": "734ae6cf13dac52c"
   },
   {
    "name": "ECOR Number Regenerate",

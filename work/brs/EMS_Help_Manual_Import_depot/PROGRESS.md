@@ -16,3 +16,4 @@
 - Fn1 images approved; brs.json created (header, purpose, 5 images).
 - Fn1 2.1 approved (1 line); 2.2 approved (7 events; grid search & tab close dropped by user).
 - Fn1 3.1 Query Screen (5 rows) and 3.2 Data Grid (11 rows) approved; docx built (14 pages, check clean, author Appsara).
+- Fn1 ECOR Number Generate approved and marked done.
