@@ -14,3 +14,5 @@
 - I: 99d0_01 repaired. Checkbox mark from df47_01 (exact). Menu box and circle inside the menu from the user's clean crop image-2.png (offset 17,2, exact on the menu). Menu glow on the right and the row under the menu from image-2. "Freeze" header under the circle from f5ee_01 (-2,1). Gate passed. 22 tinted px are the header font's ClearType edges.
 - II: 99d0_02 (success toast "Truck order RF generated successfully"), frame cropped.
 - Rework (user feedback "lines should be aligned"): Image I now from the user's screenshot image-4.png (clean menu, first-row line fixed by the user). The value "0" was replaced with "279" from 99d0_01 (same position, exact label match). The checkbox mark was removed from df47_01 (-1,1). 533 transparent px on row 188 (the user's erase) became white. The gate's 672 "outside" = 139 digit px + those 533.
+- Fn4 docx approved, done (8 pages). Image I with blue border saved for the user: output/previews/brs_EMS_Help_Manual_truck_order_generation_group_truck_order_rf/Truck_Order_RF_Image_I_with_border.png
+- All 4 Truck Order Generation functions done.

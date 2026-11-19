@@ -68,8 +68,10 @@
    "fp": "6d786118eb2be489",
    "n": 4,
    "fn": "group_truck_order_rf",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Truck Order Generation/BRS - EMS - Truck Order Generation - Truck Order RF V_1.0.docx",
+   "done_fp": "6d786118eb2be489"
   }
  ],
  "removed": []
