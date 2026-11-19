@@ -49,3 +49,4 @@
 - 2026-11-19 Fn9 ECOR Number Cancellation (Single): exported; I bbd2_01 (clean twin of f986_04; 7 'outside' px pure red), II bbd2_02 (clean capture of f986_09 state), III bbd2_03 (= f986_10, gate passed), IV f986_11 repaired (BL box: white same-screen strips; Search box: Reset button donor dx+76, 0 diffs on 394 known px); f986_12 dropped (= III without toast). Gate 0/0, no tint in changed px. Awaiting image approval.
 - 2026-11-19 Fn9: images I-IV, 2.1 (1 line, Generation->Cancellation), 2.2 (6 events), 3.1 Query (7), 3.2 Data Grid (11) approved; docx built (14 pages), awaiting approval.
 - 2026-11-19 Fn9 ECOR Number Cancellation (Single) docx approved; done. Import Depot manual complete.
+- 2026-11-19 Merged output/EMS/Import Depot Activity - Group and - Single into output/EMS/Import Depot Activity (10 docs); plan.json paths updated.
