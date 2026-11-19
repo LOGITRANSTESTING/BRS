@@ -1,0 +1,138 @@
+{
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "Agency Booking",
+  "function": "",
+  "version": "01.01",
+  "date": "",
+  "history": [
+    {
+      "date": "",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
+  "images": [
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/01.png",
+      "caption": "Image I",
+      "section": "Offhire Instruct - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/02.png",
+      "caption": "Image II",
+      "section": "Offhire Instruct - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/03.png",
+      "caption": "Image III",
+      "section": "Offhire Instruct - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/04.png",
+      "caption": "Image IV",
+      "section": "Offhire Instruct - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/05.png",
+      "caption": "Image V",
+      "section": "Offhire Instruct - Container History Arrangement"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/06.png",
+      "caption": "Image VI",
+      "section": "Offhire Instruct - Container History Arrangement"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/07.png",
+      "caption": "Image VII",
+      "section": "Pre sales Instruct"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/08.png",
+      "caption": "Image VIII",
+      "section": "Pre sales Instruct"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/09.png",
+      "caption": "Image IX",
+      "section": "Pre sales Instruct"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/10.png",
+      "caption": "Image X",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/11.png",
+      "caption": "Image XI",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/12.png",
+      "caption": "Image XII",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/13.png",
+      "caption": "Image XIII",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/14.png",
+      "caption": "Image XIV",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/15.png",
+      "caption": "Image XV",
+      "section": "Arrange - Process"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/16.png",
+      "caption": "Image XVI",
+      "section": "Arrange - Delete"
+    },
+    {
+      "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/17.png",
+      "caption": "Image XVII",
+      "section": "Arrange - Delete"
+    }
+  ],
+  "features": [],
+  "events": [
+    {
+      "event_type": "",
+      "description": "",
+      "triggered_when": "",
+      "remarks": ""
+    }
+  ],
+  "search_title": "",
+  "search": [
+    {
+      "name": "",
+      "type": "",
+      "ui": "",
+      "db": "",
+      "values": ""
+    }
+  ],
+  "display_title": "",
+  "drop_display": false,
+  "display": [
+    {
+      "name": "",
+      "type": "",
+      "ui": "",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    }
+  ],
+  "extra_tables": [],
+  "references": [],
+  "assumptions": []
+}
