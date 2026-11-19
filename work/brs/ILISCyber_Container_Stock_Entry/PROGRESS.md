@@ -23,3 +23,4 @@ Branch brs-container-stock-entry. 1 Screen function.
 - 19/11/2026 - Screen / Step 1 all 15 images approved by the user. Next: Step 2 - module line for the cover, then brs.json skeleton.
 - 19/11/2026 - Screen / Step 2: module EMS (user). brs.json skeleton filled: cover (EMS, Container Stock Entry, 01.01, 19/11/2026), history row (Appsara), purpose, 15 images with the approved 1.2.1-1.2.6 sections. Next: Step 4 - 2.1 Features (definition + pre-conditions).
 - 19/11/2026 - Screen / Step 4: 2.1 approved (2 overview sentences + condition 'EQC Reserved Cannot be greater than EQC Available'). Next: 2.2 events.
+- 19/11/2026 - Screen / Step 6: 2.2 approved, 10 rows (Search, Reset, Edit, Add, Delete, Save, Re-Build, Booking Details, Stock on change, PR Status on change). Next: 3.1 Search (query fields).

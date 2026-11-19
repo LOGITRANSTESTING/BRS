@@ -98,9 +98,63 @@
  ],
  "events": [
   {
-   "event_type": "",
-   "description": "",
-   "triggered_when": "",
+   "event_type": "Button Click",
+   "description": "Search: queries the data based on the entered query fields and shows it in the data grid",
+   "triggered_when": "User clicks Search after entering the query fields",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Reset: clears the query fields at once to query with new data",
+   "triggered_when": "User clicks Reset",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Edit: makes the EQC Reserved column editable and shows the Add and Save buttons",
+   "triggered_when": "User clicks Edit after querying data",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Add: adds an additional record to enter Container Type, Depot and EQC Reserved",
+   "triggered_when": "User clicks Add after clicking Edit",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Delete: deletes the newly added record",
+   "triggered_when": "User clicks the delete icon of a newly added record",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Save: Edit: saves the edited data and updates the value in EQC Reserved. Add: saves the added data and the new data is added",
+   "triggered_when": "User clicks Save after editing EQC Reserved or entering the new record; EQC Reserved cannot be greater than EQC Available",
+   "remarks": "Record has been updated successfully"
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Re-Build: processes the Re-Build Details",
+   "triggered_when": "User clicks the Re-Build icon after querying data",
+   "remarks": "Rebuild Successfully"
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Booking Details: opens the Booking Details screen; if data is available, an Excel file with the Booking details is downloaded automatically",
+   "triggered_when": "User clicks the Booking Details icon of a record",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change",
+   "description": "Stock: Auto shows the Auto Stock data (view only, not editable); Physical shows the physical stock data",
+   "triggered_when": "User selects Auto or Physical in the Stock drop down",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change",
+   "description": "PR Status: Supplied shows the bookings with Supplied PR status; Prepared shows the bookings with Prepared status",
+   "triggered_when": "User selects Supplied or Prepared in the PR Status drop down of the Booking Details screen",
    "remarks": ""
   }
  ],
