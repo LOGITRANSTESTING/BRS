@@ -44,3 +44,4 @@
 - 2026-11-19 Fn7 2.1 (1 line), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
 - 2026-11-19 Fn7 XML Interface docx approved; done.
 - 2026-11-19 Fn8 Empty Depot Assignment (Single): exported; I 41a4_01 (clean twin of 1f94_04; gate's 2 'outside' px are pure-red mark px), II 41a4_02 (clean capture of the 1f94_05 success state); 1f94_04/05 dropped. No repairs.
+- 2026-11-19 Fn8: images, 2.1 (2 lines), 2.2 (1 Menu Click), 3.1 Data Grid (21 rows reused from Fn4) approved; docx built (10 pages), awaiting approval.
