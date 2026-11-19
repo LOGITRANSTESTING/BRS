@@ -17,3 +17,4 @@
 - Fn1 2.1 approved (1 line); 2.2 approved (7 events; grid search & tab close dropped by user).
 - Fn1 3.1 Query Screen (5 rows) and 3.2 Data Grid (11 rows) approved; docx built (14 pages, check clean, author Appsara).
 - Fn1 ECOR Number Generate approved and marked done.
+- Fn2 ECOR Number Regenerate exported. Images: I e221_01 (clean twin of c424_02), II c424_04 repaired (gate: 59 px flagged = red-tinted fringe of Search box), III c424_12 repaired (donor c424_10, split offsets since button 1px wider; gate passed), IV c424_10, V c424_13; c424_09 dropped (duplicate state). Previews committed, awaiting approval.
