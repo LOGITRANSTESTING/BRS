@@ -52,8 +52,10 @@
    "fp": "7d1a9d8a22fac3b6",
    "n": 3,
    "fn": "group_truck_order_preview",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Truck Order Generation/BRS - EMS - Truck Order Generation - Truck Order Preview V_1.0.docx",
+   "done_fp": "7d1a9d8a22fac3b6"
   },
   {
    "name": "Truck Order RF",
