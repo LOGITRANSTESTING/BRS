@@ -144,13 +144,6 @@
       "description": "Opens the Container History Arrangement pop-up with that container's redelivery history",
       "triggered_when": "User clicks the Container History Arrangement icon next to a container number in the grid",
       "remarks": ""
-    },
-    {
-      "section": "Offhire Instruct",
-      "event_type": "Button Click (Excel)",
-      "description": "Downloads the grid data to Excel",
-      "triggered_when": "User clicks the Excel icon",
-      "remarks": ""
     }
   ],
   "search_title": "",
