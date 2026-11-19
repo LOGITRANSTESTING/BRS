@@ -46,3 +46,4 @@
 - 2026-11-19 Fn8 Empty Depot Assignment (Single): exported; I 41a4_01 (clean twin of 1f94_04; gate's 2 'outside' px are pure-red mark px), II 41a4_02 (clean capture of the 1f94_05 success state); 1f94_04/05 dropped. No repairs.
 - 2026-11-19 Fn8: images, 2.1 (2 lines), 2.2 (1 Menu Click), 3.1 Data Grid (21 rows reused from Fn4) approved; docx built (10 pages), awaiting approval.
 - 2026-11-19 Fn8 Empty Depot Assignment (Single) docx approved; done.
+- 2026-11-19 Fn9 ECOR Number Cancellation (Single): exported; I bbd2_01 (clean twin of f986_04; 7 'outside' px pure red), II bbd2_02 (clean capture of f986_09 state), III bbd2_03 (= f986_10, gate passed), IV f986_11 repaired (BL box: white same-screen strips; Search box: Reset button donor dx+76, 0 diffs on 394 known px); f986_12 dropped (= III without toast). Gate 0/0, no tint in changed px. Awaiting image approval.
