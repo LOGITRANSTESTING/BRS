@@ -30,8 +30,11 @@
    "fp": "e910a558397b2477",
    "n": 1,
    "fn": "screen_container_stock_entry",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/BRS - EMS - Container Stock Entry V_1.0.docx",
+   "done_fp": "e910a558397b2477",
+   "version": "01.01"
   }
  ],
  "removed": []
