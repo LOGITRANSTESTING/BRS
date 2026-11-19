@@ -1,0 +1,212 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Import Depot Activity",
+ "function": "ECOR Number Cancellation (Single)",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Import Depot Activity ECOR Number Cancellation (Single) details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_ecor_number_cancellation/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_ecor_number_cancellation/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_ecor_number_cancellation/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/single_ecor_number_cancellation/img/04.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "ECOR Number Cancellation function is used to remove the ECOR Number assigned to a container."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the ECOR Number Cancellation screen in a new tab",
+   "triggered_when": "User clicks the ☰ icon on the BL record in Depot Activity and selects \"ECOR Number Cancellation\"",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Search)",
+   "description": "Queries the records matching the query parameters and lists them in the grid, with the count in Total Record(s)",
+   "triggered_when": "User enters the query parameters (Discharge Voyage, BL Number, Container) and clicks Search",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Reset)",
+   "description": "Clears the query fields and the grid",
+   "triggered_when": "User clicks Reset",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Select All)",
+   "description": "Selects or deselects all records in the grid",
+   "triggered_when": "User clicks the select-all check box in the grid header",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Row)",
+   "description": "Selects or deselects the individual record",
+   "triggered_when": "User clicks the check box of a record",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Process)",
+   "description": "Cancels (removes) the ECOR Numbers of the selected records; the cancelled records are removed from the grid",
+   "triggered_when": "User selects one or more records and clicks Process",
+   "remarks": "\"ECOR Number Cancelled successfully.\""
+  }
+ ],
+ "search_title": "ECOR Number Cancellation - Query Screen",
+ "search": [
+  {
+   "name": "Discharge Voyage",
+   "type": "Auto Populate / Alphanumeric",
+   "ui": "Input Discharge Voyage. The ⇆ switches the box between Auto Populate (Key in three char) and Alphanumeric",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Discharge Voyage (port call drop down)",
+   "type": "Single Select Drop Down",
+   "ui": "Select the discharge port call of the entered voyage",
+   "db": "",
+   "values": "Terminal code - date & time (e.g. BEANRP02-18/12/2025 19:00)"
+  },
+  {
+   "name": "Vessel",
+   "type": "Display Item",
+   "ui": "Vessel of the entered voyage, auto populated (greyed)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "BL Number",
+   "type": "LOV",
+   "ui": "Input or select the BL Number to filter the records",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container",
+   "type": "Alphanumeric",
+   "ui": "Input the Container number to filter the records",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries the records based on the query fields",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clears the query fields and the grid",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "ECOR Number Cancellation - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Total Record(s)",
+   "type": "Display Item",
+   "ui": "Count of the records queried",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried records are to be processed please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the record is to be processed please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Display",
+   "type": "Display Item",
+   "ui": "Indicates (✓) that the record is displayed/eligible for ECOR Number cancellation",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage",
+   "type": "Display Item",
+   "ui": "Voyage of the record",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "BL Number",
+   "type": "Display Item",
+   "ui": "BL number of the record",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "Container number of the record",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Size type of the container",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Customer",
+   "type": "Display Item",
+   "ui": "Customer of the BL",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "ECOR Number",
+   "type": "Display Item",
+   "ui": "Current ECOR number of the container (to be cancelled)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Cancels the ECOR Numbers of the selected records",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
