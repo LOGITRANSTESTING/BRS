@@ -818,6 +818,171 @@
           "remarks": "Success: \"Container has processed successfully\""
         }
       ]
+    },
+    {
+      "title": "Arrange - Search",
+      "rows": [
+        {
+          "name": "Offhire Instruct / Pre sales Instruct / Arrange",
+          "type": "Radio Button",
+          "ui": "Select the instruction type",
+          "db": "",
+          "values": "Offhire Instruct / Pre sales Instruct / Arrange",
+          "remarks": ""
+        },
+        {
+          "name": "HQ Instruct Port/ Place",
+          "type": "Auto Populate",
+          "ui": "Input HQ Instruct Port/ Place",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Instruction Number",
+          "type": "Alphanumeric",
+          "ui": "Input Instruction Number",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Container",
+          "type": "Alphanumeric",
+          "ui": "Input Container number",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Current Location",
+          "type": "Auto Populate",
+          "ui": "Input Current Location (key in five char)",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "On Voyage",
+          "type": "Auto Populate",
+          "ui": "Input On Voyage (key in two char)",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Lessor",
+          "type": "Auto Populate",
+          "ui": "Input Lessor (key in two char)",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Size",
+          "type": "Single Select Drop Down",
+          "ui": "Select Size manually from drop down list",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Size Type",
+          "type": "Auto Populate",
+          "ui": "Select Size Type",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Last Activity",
+          "type": "Auto Populate",
+          "ui": "Select Last Activity",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Expire Date",
+          "type": "Date Picker",
+          "ui": "Input Expire date",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "DPP Coverage",
+          "type": "Alphanumeric",
+          "ui": "Input DPP Coverage",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Current Move",
+          "type": "Auto Populate",
+          "ui": "Select Current Move",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Container Prefix",
+          "type": "Alphanumeric",
+          "ui": "Input Container Prefix",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Place",
+          "type": "Auto Populate",
+          "ui": "Input Redelivery Place (key in five char)",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Assign By",
+          "type": "Auto Populate",
+          "ui": "Input Assign By (key in three char)",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Date",
+          "type": "Date Picker",
+          "ui": "Input Redelivery date",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "To be Updated",
+          "type": "Check Box",
+          "ui": "If only containers to be updated are needed please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Search",
+          "type": "Button",
+          "ui": "Query the containers based on the input values",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Reset",
+          "type": "Button",
+          "ui": "Clear all the input values",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        }
+      ]
     }
   ],
   "references": [],
