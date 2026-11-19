@@ -98,8 +98,10 @@
    "fp": "6300ccd489f7acbd",
    "n": 6,
    "fn": "group_empty_return_advice_gr",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity - Group/BRS - EMS - Import Depot Activity - Empty Return Advice - GR V_1.0.docx",
+   "done_fp": "6300ccd489f7acbd"
   },
   {
    "name": "XML Interface",
