@@ -1,0 +1,47 @@
+{
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "EMS – Import Depot Activity",
+  "function": "Empty Return Advice - GR",
+  "version": "01.01",
+  "date": "",
+  "history": [
+    {
+      "date": "",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of EMS's Import Depot Activity Empty Return Advice - GR details.",
+  "images": [
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_empty_return_advice_gr/img/01.png",
+      "caption": "Image I"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_empty_return_advice_gr/img/02.png",
+      "caption": "Image II"
+    }
+  ],
+  "features": [
+    "This function allows the user to generate Empty Return Advice right fax for Greece Location only.",
+    "Empty Return Location cannot be Empty"
+  ],
+  "events": [
+    {
+      "event_type": "Menu Click",
+      "description": "Generates the Empty Return Advice for the selected BL records and shows it as a PDF.",
+      "triggered_when": "User selects one or more BL records using the check boxes, clicks the ☰ icon at Voyage level in Depot Activity and selects \"Empty Return Advice-GR\".",
+      "remarks": "\"Empty Return Advice GR Generated successfully.\""
+    }
+  ],
+  "search_title": "",
+  "search": [],
+  "display_title": "",
+  "drop_display": false,
+  "display": [],
+  "extra_tables": [],
+  "references": [],
+  "assumptions": []
+}

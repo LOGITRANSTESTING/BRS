@@ -38,3 +38,4 @@
 - 2026-11-19 Fn4 updated docx approved.
 - 2026-11-19 Fn6 Empty Return Advice - GR: exported; I a534_01 (clean menu), II ca3d_07 (report loading screen; frame 1550x898 cropped 4,3,1537,889 -> 1534x887), III ca3d_08 (success); ca3d_06 dropped (gate-verified twin of 01 + marks). No repairs.
 - 2026-11-19 Fn6 images: user kept only I (a534_01) and III (ca3d_08); loading screen ca3d_07 dropped; now I-II.
+- 2026-11-19 Fn6 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
