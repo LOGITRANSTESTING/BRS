@@ -31,7 +31,7 @@ SKELETON = {
     "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
     "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes
     "features": [],          # leave empty = blank section
-    "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
+    "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],  # optional "section": one 2.2.x heading + table per section
     "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
     "display_title": "",     # optional 3.2 heading, empty = "Display Area"
@@ -206,11 +206,42 @@ def build(spec, out):
             last.addnext(np_._p)
 
     # tables: events (2), search (3), display (4) - located by header text, not index
+    from docx.oxml.ns import qn as _qn_ev
+
     def table_with(header):
         for t in doc.tables:
             if [c.text.strip() for c in t.rows[0].cells][:len(header)] == header: return t
         raise KeyError(header)
-    fill_table(table_with(['Event Type', 'Description']), spec.get('events'), ['event_type', 'description', 'triggered_when', 'remarks'])
+    ev_keys = ['event_type', 'description', 'triggered_when', 'remarks']
+    ev_tbl = table_with(['Event Type', 'Description'])
+    events = spec.get('events') or []
+    if any(e.get('section') for e in events):
+        # one 2.2.x heading + table per event "section", in first-seen order (Container Redelivery)
+        groups = []
+        for e in events:
+            if not groups or groups[-1][0] != e.get('section', ''): groups.append((e.get('section', ''), []))
+            groups[-1][1].append(e)
+        ev_xml = copy.deepcopy(ev_tbl._tbl)
+        h22 = doc.paragraphs[find_heading(doc, 'Event Trigger')]
+        h_num = h22._p.pPr.numPr if h22._p.pPr is not None else None
+        h3 = next(st for st in doc.styles if st.style_id == 'Heading3')
+        before = ev_tbl._tbl
+        for g, (title, rows) in enumerate(groups):
+            tbl = ev_tbl._tbl if g == 0 else copy.deepcopy(ev_xml)
+            hp = doc.add_paragraph(title, style=h3)
+            hp.paragraph_format.keep_with_next = True
+            if h_num is not None:
+                num = copy.deepcopy(h_num)
+                num.find(_qn_ev('w:ilvl')).set(_qn_ev('w:val'), '2')
+                hp._p.get_or_add_pPr().append(num)
+            if g == 0:
+                before.addprevious(hp._p)
+            else:
+                before.addnext(hp._p); hp._p.addnext(tbl)
+            fill_table(docx.table.Table(tbl, doc.paragraphs[0]._parent), rows, ev_keys)
+            before = tbl
+    else:
+        fill_table(ev_tbl, events, ev_keys)
     tabs = [t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'UI Item Name']
     fill_table(tabs[0], spec.get('search'), ['name', 'type', 'ui', 'db', 'values'])
     fill_table(tabs[1], spec.get('display'), ['name', 'type', 'ui', 'db', 'values', 'remarks'])
