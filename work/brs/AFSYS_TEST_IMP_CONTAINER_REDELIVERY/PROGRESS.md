@@ -28,3 +28,4 @@ Sections: Floating icon (1-2), Offhire Instruct (3-9), Pre Sales Instruct (10-13
 - 2026-11-19 Container Redelivery: 3.6 Arrange - Search approved (copy of 3.1). Next: 3.7 Arrange - Data Grid (Apply fields + grid + Process/Delete).
 - 2026-11-19 Container Redelivery: 3.7 Arrange - Data Grid approved (21 rows). All tables done. Next: build, check, render.
 - 2026-11-19 Container Redelivery: built output/EMS/BRS - EMS - Import Depot Activity - Container Redelivery V_1.0.docx (39 pages), check + render OK. Next: user approval, PR, brs_plan done.
+- 2026-11-19 Container Redelivery: approved by user; PR #7 merged to main.
