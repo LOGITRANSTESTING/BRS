@@ -40,3 +40,4 @@
 - 2026-11-19 Fn6 images: user kept only I (a534_01) and III (ca3d_08); loading screen ca3d_07 dropped; now I-II.
 - 2026-11-19 Fn6 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
 - 2026-11-19 Fn6 Empty Return Advice - GR docx approved; done.
+- 2026-11-19 Fn7 XML Interface: exported; images unmarked; frame 1559x889 cropped 13,9,1546,879 -> 1534x871; I f244_01 (menu), II 90eb_07 (success, spinner kept); 90eb_06 dropped (identical to f244_01).
