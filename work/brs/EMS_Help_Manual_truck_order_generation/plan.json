@@ -36,8 +36,10 @@
    "fp": "aa6841cfb738e6c4",
    "n": 2,
    "fn": "group_truck_order_summary_rf",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Truck Order Generation/BRS - EMS - Truck Order Generation - Truck Order Summary RF V_1.0.docx",
+   "done_fp": "aa6841cfb738e6c4"
   },
   {
    "name": "Truck Order Preview",

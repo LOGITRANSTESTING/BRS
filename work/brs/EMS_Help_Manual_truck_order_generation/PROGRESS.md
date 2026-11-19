@@ -5,3 +5,4 @@
 - 2026-11-19 Fn1: user supplied success screenshot (Image II, toast 'Truck order summary generated successfully', frame stripped, no marks); Remarks updated; docx 8 pages approved; done. Next: Fn2 Truck Order Summary RF.
 - 2026-11-19 Fn2 Truck Order Summary RF: I b098_01 (clean twin of 64e8_01), II 64e8_02 (unmarked success). No repairs. Awaiting image approval.
 - 2026-11-19 Fn2: 2.1 (2 lines verbatim), 2.2 (1 Menu Click), no section 3 approved; docx built, awaiting approval.
+- 2026-11-19 Fn2 Truck Order Summary RF docx approved; done. Next: Fn3 Truck Order Preview.
