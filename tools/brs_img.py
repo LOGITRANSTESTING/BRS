@@ -23,6 +23,10 @@ neighbouring screenshots of the same screen.
   copy    SRC DST --from-box x0,y0,x1,y1 --to x,y [--donor D]
           Deterministic copy of a known-good element (e.g. the left end of the Cancel button onto the
           smudged left end of Submit, or a field edge from the field below). No --donor = same screen.
+          --flip h|v|hv mirrors the piece; --recolor FROM:TO[,..] swaps exact colours in it. Both make
+          a piece that is no longer a plain copy, so they only write DST_proposal.png (before | after)
+          until the user approves that piece; then re-run with --approved. They need --marks MARKED.png
+          (the original marked screenshot) and are placed ONLY inside its marked area.
   sheet   FILES ... --out sheet.png [--labels "Image I,Image II"]
 
 How neighbour filling works (same screen, different moment):
@@ -700,6 +704,10 @@ def main():
     p = sp.add_parser('copy'); p.add_argument('src'); p.add_argument('dst')
     p.add_argument('--from-box', required=True, help='x0,y0,x1,y1 in the donor (or in SRC with no --donor)')
     p.add_argument('--to', required=True, help='x,y top-left in SRC'); p.add_argument('--donor')
+    p.add_argument('--flip', choices=['h', 'v', 'hv'], help='mirror the piece (h = left-right, v = top-bottom) before placing it')
+    p.add_argument('--recolor', help='FROM:TO[,FROM:TO] hex colours; pixels of exactly FROM become TO (e.g. f7f7f7:99ccff)')
+    p.add_argument('--approved', action='store_true', help='apply a flipped/recoloured piece. Without it only a preview is written. Pass it ONLY after the user approved this exact piece')
+    p.add_argument('--marks', help='the original MARKED screenshot (same size as SRC). Required with --flip/--recolor: the piece is placed only inside its marked area')
     for c in ('unmark', 'fill', 'rank', 'remove-rows'):
         p = sp.add_parser(c); p.add_argument('src')
         if c != 'rank': p.add_argument('dst')
@@ -718,8 +726,44 @@ def main():
     if a.cmd == 'copy':
         src = I.load(a.src); d = I.load(a.donor) if a.donor else src
         fb = I.box_arg(a.from_box); x, y = [int(v) for v in a.to.split(',')]
-        out = src.copy(); out.paste(d.crop((fb[0], fb[1], fb[2] + 1, fb[3] + 1)), (x, y)); I.save(out, a.dst)
-        print('copied %s -> (%d,%d) into %s' % (fb, x, y, a.dst)); return
+        piece = d.crop((fb[0], fb[1], fb[2] + 1, fb[3] + 1)).convert('RGB')
+        changed = []
+        if a.flip:
+            if 'h' in a.flip: piece = piece.transpose(Image.FLIP_LEFT_RIGHT)
+            if 'v' in a.flip: piece = piece.transpose(Image.FLIP_TOP_BOTTOM)
+            changed.append('flip ' + a.flip)
+        if a.recolor:
+            arr = np.asarray(piece).copy()
+            for pair in a.recolor.split(','):
+                f, t = [c.strip().lstrip('#') for c in pair.split(':')]
+                fc = np.array([int(f[i:i + 2], 16) for i in (0, 2, 4)]); tc = [int(t[i:i + 2], 16) for i in (0, 2, 4)]
+                hit = (np.abs(arr.astype(int) - fc).max(2) == 0); arr[hit] = tc
+                changed.append('recolor %s->%s (%d px)' % (f, t, int(hit.sum())))
+            piece = Image.fromarray(arr)
+        out = src.copy(); out.paste(piece, (x, y))
+        if changed:
+            # A flipped/recoloured piece may only touch the marked area: every pixel outside the marks'
+            # footprint (red boxes, circles, stubs of the ORIGINAL marked screenshot) stays as in SRC.
+            if not a.marks: sys.exit('--flip/--recolor need --marks MARKED.png (the original marked screenshot, same size as SRC): the piece is placed only inside the marked area')
+            mk = I.load(a.marks)
+            if mk.size != src.size: sys.exit('--marks image is %s but SRC is %s: they must be the same screenshot' % (mk.size, src.size))
+            mask = clear_marks_mask(mk)[1] > 0
+            box_m = np.zeros(mask.shape, bool); box_m[y:y + piece.height, x:x + piece.width] = True
+            inside = int((mask & box_m).sum()); skipped = int((~mask & box_m).sum())
+            if inside == 0: sys.exit('the piece does not touch the marked area: nothing to do')
+            o = np.array(out.convert('RGB')); s = np.array(src.convert('RGB')); o[~mask] = s[~mask]; out = Image.fromarray(o)
+            changed.append('marked area only: %d px placed, %d px outside the marks left untouched' % (inside, skipped))
+        if changed and not a.approved:
+            # A flipped or recoloured piece is not a plain copy of real pixels: show it, change nothing.
+            pad = 24; bx = (max(0, x - pad), max(0, y - pad), min(src.width, x + piece.width + pad), min(src.height, y + piece.height + pad))
+            z = 4; b4 = src.crop(bx).convert('RGB'); a4 = out.crop(bx).convert('RGB')
+            b4 = b4.resize((b4.width * z, b4.height * z), Image.NEAREST); a4 = a4.resize((a4.width * z, a4.height * z), Image.NEAREST)
+            sheet = Image.new('RGB', (b4.width + a4.width + 12, b4.height), 'white'); sheet.paste(b4, (0, 0)); sheet.paste(a4, (b4.width + 12, 0))
+            prop = str(Path(a.dst).with_name(Path(a.dst).stem + '_proposal.png')); sheet.save(prop)
+            print('NEEDS APPROVAL (%s): nothing written to %s. Before | after preview: %s' % ('; '.join(changed), a.dst, prop))
+            print('Show the preview to the user. Re-run with --approved only after the user says yes to this piece.'); return
+        I.save(out, a.dst)
+        print('copied %s -> (%d,%d) into %s%s' % (fb, x, y, a.dst, (' [' + '; '.join(changed) + ', approved by user]') if changed else '')); return
     if a.cmd == 'sheet':
         print(I.preview(a.files, a.out, a.labels.split(',') if a.labels else None)); return
     if a.cmd == 'rank':

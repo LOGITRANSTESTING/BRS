@@ -1,0 +1,61 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Generate Truck Order",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Generate Truck Order details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_generate_truck_order/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_generate_truck_order/img/02.png",
+   "caption": "Image II"
+  }
+ ],
+ "features": [
+  "This feature allows the user to generate truck order.",
+  "When Haulage information cargo common is available for the PR and its value is ‘N’ then Transporter mode should be ‘C-Carrier’.",
+  "Position date cannot be blank.",
+  "Pickup date cannot be blank.",
+  "Rightfax record is inserted with right fax type as \"TRUCK_ORDER\". The communication is got from Transporter master for the Haulier code (Email or Fax).",
+  "PR should have been generated for the Booking.",
+  "For agency not in \"ESCDM\" or \"CRAGS\" and AFSYS_TRK_ORD_QRY_CRITRIA_REQ config is set, then query the PR only when its linked to a valid mode.",
+  "For agency not in \"ESCDM\" or \"CRAGS\" and AFSYS_TRK_ORD_QRY_CRITRIA_REQ config is set, then query the PR only on below said conditions.",
+  "a) If container is available then Container seal should exists, the only PR can query.",
+  "b) When Transport mode is ‘Not Applicable’ and ‘HAULAGE_INFO’ cargo common available for the booking then only PR can query.",
+  "c) When Transport mode is Blank and ‘HAULAGE_INFO’ cargo common available for the booking then only PR can query,",
+  "d) When Transport mode parameter is set as ‘Not Applicable’ and Truck check box in parameter is set as Y then if PL’s Transport mode is ‘Truck round trip’ and address is not linked to PR then only PR can query.",
+  "e) When Transport mode parameter is set as ‘Not Applicable’ and Truck check box in parameter is set as N then if PL’s Transport mode is ‘Truck round trip’ and address is linked to PR then only PR can query.",
+  "f) When Transport mode parameter is set as ‘Truck Round Trip’ and Truck check box in parameter is set as N then if PL’s Transport mode is ‘Not Appicable’ and address is not linked to PR then only PR can query.",
+  "g) When Transport mode parameter is set as ‘Truck Round Trip’ and Truck check box in parameter is set as Y then if PL’s Transport mode is ‘Not Appicable’ and address is linked to PR then only PR can query.",
+  "h) When Transport mode parameter is set as Blank and Truck check box in parameter is set as N then if PL’s Transport mode is either of \"Not Applicable\"/\"Truck round trip\" and address is not linked to PR then only PR can query.",
+  "i) When Transport mode parameter is set as Blank and Truck check box in parameter is set as Y then if PL’s Transport mode is either of \"Not Applicable\"/\"Truck round trip\" and address is linked to PR then only PR can query."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Generates the truck order for the selected bookings.",
+   "triggered_when": "User selects one or more bookings using the check boxes, clicks the Menu icon near Depot Activity and clicks Generate Truck Order.",
+   "remarks": "\"Generate truck order successfully\""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "references": [],
+ "assumptions": []
+}

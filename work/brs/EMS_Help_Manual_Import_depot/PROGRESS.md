@@ -1,0 +1,52 @@
+# PROGRESS - EMS Help Manual Import depot
+
+- 2026-11-18 Plan: 10 functions (Group 1-7: ECOR Number Generate, ECOR Number Regenerate, ECOR Number Update, Empty Depot Assignment, Empty Return Pre Advice, Empty Return Advice - GR, XML Interface; Single 8-10: Empty Depot Assignment, ECOR Number Cancellation, Door Address Change). Next: choose start function and cover module line.
+- 2026-11-18 Fn10 Door Address Change (Single): exported. Module line "EMS – Import Depot Activity" approved. Finding: only deb0_04 (=8745_01, menu) and deb0_05 (empty Door Address Change screen, BL/Container grid) are Import screens; all other How-to screenshots (Link 06/08/09, Delink, Edit, Delete, TOPS) are pixel-identical to Depot Activity Door Address Link images. Asking user which images to use.
+- 2026-11-18 Fn10 images: user said use the manual's screenshots as they are. I=deb0_04, II=deb0_05 (2px frame cropped 3,3,1536,880; rounded corner arcs filled from same-row white; app popup menu/header bar kept). III-VII = approved DAL repaired images (sources pixel-identical: deb0_06, deb0_08, 6231_02, ea00_02, 2d9c_02). Sheet shown, awaiting OK.
+- 2026-11-18 Fn10: images approved; brs.json skeleton with cover (EMS – Import Depot Activity / Door Address Change, 01.01, Appsara), purpose, images I-VII. Next: 2.1.
+- 2026-11-18 Fn10: 2.1 approved (5 items, same as DAL). Next: 2.2.
+- 2026-11-18 Fn10: 2.2 approved (11 rows; Menu Click = Door Address Change on BL; no Generate Nomination). Next: section 3 layout.
+- 2026-11-18 Fn10: section 3 layout = DAL layout (titles 'Door Address Change - ...'); 3.3 to follow PR grid (user). 3.1 approved row by row (9 rows, same as DAL, title row renamed). Next: 3.2 row by row.
+- 2026-11-18 Fn10: 3.2 approved (28 rows, same as DAL). Next: 3.3.
+- 2026-11-18 Fn10: 3.3 approved (14 rows, PR grid). Building docx.
+- 2026-11-18 Fn10: built output/EMS/Import Depot Activity - Single/BRS - EMS - Import Depot Activity - Door Address Change V_1.0.docx (24 pages, check clean). Awaiting document OK.
+- 2026-11-18 Fn10 Door Address Change: approved; brs_plan done (01.01). Next: choose next function (1-9 to do).
+- 2026-11-19 Fn1 ECOR Number Generate (Group): exported; function screenshots fb78_01, 96b1_10, 96b1_13 unmarked; 96b1_02, 04, 09, 12 marked (NO TWIN). Next: review images.
+- Fn1 images: I fb78_01 (clean twin of 96b1_02), II 96b1_04 repaired (gate: 1 px flagged at 25,157 = mark-red line pixel missed by mask), III 96b1_12 repaired, IV 96b1_10, V 96b1_13; 96b1_09 dropped (duplicate of 12); frames stripped. Previews committed, awaiting approval.
+- Fn1 images approved; brs.json created (header, purpose, 5 images).
+- Fn1 2.1 approved (1 line); 2.2 approved (7 events; grid search & tab close dropped by user).
+- Fn1 3.1 Query Screen (5 rows) and 3.2 Data Grid (11 rows) approved; docx built (14 pages, check clean, author Appsara).
+- Fn1 ECOR Number Generate approved and marked done.
+- Fn2 ECOR Number Regenerate exported. Images: I e221_01 (clean twin of c424_02), II c424_04 repaired (gate: 59 px flagged = red-tinted fringe of Search box), III c424_12 repaired (donor c424_10, split offsets since button 1px wider; gate passed), IV c424_10, V c424_13; c424_09 dropped (duplicate state). Previews committed, awaiting approval.
+- Fn2 images approved; brs.json created (header, purpose, 5 images).
+- Fn2 2.1 approved (Option B: name corrected, 2 lines); 2.2 approved (7 events).
+- Fn2 3.1 Query Screen (5 rows) and 3.2 Data Grid (11 rows) approved; docx built (14 pages, check clean, author Appsara).
+- Fn2 ECOR Number Regenerate approved and marked done.
+- 2026-11-19 Fn3 ECOR Number Update: exported; images I 7d33_01, II c14e_04 repaired (donor 7d33_01 + same-screen), III c14e_12 repaired (donor c14e_10 @2,0 EXACT), IV c14e_10, V c14e_13 (spinner kept); 09 dropped (Check List step, covered by IV). Gates passed 0/0. Awaiting image approval.
+- 2026-11-19 Fn3 images I-V approved.
+- 2026-11-19 Fn3 2.1 (B corrected), 2.2 (7), 3.1 (7), 3.2 (11) approved; docx built (15 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn3 ECOR Number Update docx approved; done.
+- 2026-11-19 Fn4 Empty Depot Assignment (Group): exported; I 8616_01 (clean menu), II 51bf_07 repaired (same-screen row shift +108, exact); 51bf_06 dropped (gate-verified twin of 01 plus marks). Awaiting image approval.
+- 2026-11-19 Fn4 images I-II approved.
+- 2026-11-19 Fn4 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 tables approved; docx built (8 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn4 Empty Depot Assignment (Group) docx approved; done.
+- 2026-11-19 Fn5 Empty Return Pre Advice: exported; I 672b_01 (clean menu), II 07fd_07 (clean, spinner kept); 07fd_06 dropped (twin of 01 + marks; gate's 2 'outside' px are pure-red mark px at (150-151,252)).
+- 2026-11-19 Fn5 images I-II approved.
+- 2026-11-19 Fn5 2.1 (A as manual), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
+- 2026-11-19 Fn5 Empty Return Pre Advice docx approved; done. User asked to add Display Area fields to Fn4 (data updated in the grid).
+- 2026-11-19 Fn4 revisit: user asked for Display Area; chose full visible grid (B), icon names DG/OOG/Reefer/Merchant Haulage/SOC (user-chosen guesses); 21 rows approved; docx rebuilt (10 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn4 updated docx approved.
+- 2026-11-19 Fn6 Empty Return Advice - GR: exported; I a534_01 (clean menu), II ca3d_07 (report loading screen; frame 1550x898 cropped 4,3,1537,889 -> 1534x887), III ca3d_08 (success); ca3d_06 dropped (gate-verified twin of 01 + marks). No repairs.
+- 2026-11-19 Fn6 images: user kept only I (a534_01) and III (ca3d_08); loading screen ca3d_07 dropped; now I-II.
+- 2026-11-19 Fn6 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
+- 2026-11-19 Fn6 Empty Return Advice - GR docx approved; done.
+- 2026-11-19 Fn7 XML Interface: exported; images unmarked; frame 1559x889 cropped 13,9,1546,879 -> 1534x871; I f244_01 (menu), II 90eb_07 (success, spinner kept); 90eb_06 dropped (identical to f244_01).
+- 2026-11-19 Fn7 2.1 (1 line), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
+- 2026-11-19 Fn7 XML Interface docx approved; done.
+- 2026-11-19 Fn8 Empty Depot Assignment (Single): exported; I 41a4_01 (clean twin of 1f94_04; gate's 2 'outside' px are pure-red mark px), II 41a4_02 (clean capture of the 1f94_05 success state); 1f94_04/05 dropped. No repairs.
+- 2026-11-19 Fn8: images, 2.1 (2 lines), 2.2 (1 Menu Click), 3.1 Data Grid (21 rows reused from Fn4) approved; docx built (10 pages), awaiting approval.
+- 2026-11-19 Fn8 Empty Depot Assignment (Single) docx approved; done.
+- 2026-11-19 Fn9 ECOR Number Cancellation (Single): exported; I bbd2_01 (clean twin of f986_04; 7 'outside' px pure red), II bbd2_02 (clean capture of f986_09 state), III bbd2_03 (= f986_10, gate passed), IV f986_11 repaired (BL box: white same-screen strips; Search box: Reset button donor dx+76, 0 diffs on 394 known px); f986_12 dropped (= III without toast). Gate 0/0, no tint in changed px. Awaiting image approval.
+- 2026-11-19 Fn9: images I-IV, 2.1 (1 line, Generation->Cancellation), 2.2 (6 events), 3.1 Query (7), 3.2 Data Grid (11) approved; docx built (14 pages), awaiting approval.
+- 2026-11-19 Fn9 ECOR Number Cancellation (Single) docx approved; done. Import Depot manual complete.
+- 2026-11-19 Merged output/EMS/Import Depot Activity - Group and - Single into output/EMS/Import Depot Activity (10 docs); plan.json paths updated.

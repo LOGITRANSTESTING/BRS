@@ -1,0 +1,379 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "VGM Details",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity VGM Details details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_vgm_details/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_vgm_details/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_vgm_details/img/03.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [
+  "VGM Details Function allows the user to edit the VGM Details.",
+  "PR Status must be in \"Prepared\" status."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the VGM Details section in the same tab for the selected PR",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks VGM Details from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Saves the VGM details for the selected PR",
+   "triggered_when": "User clicks Submit after entering all mandatory fields",
+   "remarks": "\"VGM Details updated successfully\""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Cancels all the input values and requeries the existing data",
+   "triggered_when": "User clicks Cancel",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click",
+   "description": "Shows the VGM history of the selected PR",
+   "triggered_when": "User clicks VGM History",
+   "remarks": ""
+  }
+ ],
+ "search_title": "VGM Details - Data Grid",
+ "search": [
+  {
+   "name": "Total Port Release(s)",
+   "type": "Display Item",
+   "ui": "Count of the port releases queried, with the count per status",
+   "db": "",
+   "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze"
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried PRs are to be selected please select the check box. Greyed out while VGM Details is open",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the PR is to be selected please select the check box",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "View (eye icon)",
+   "type": "Button",
+   "ui": "",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "PR Number",
+   "type": "Display Item",
+   "ui": "PR number of the queried record. The Menu icon near the PR Number is greyed out while VGM Details is open",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the PR",
+   "db": "",
+   "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze"
+  },
+  {
+   "name": "Freeze",
+   "type": "Display Item",
+   "ui": "Freeze status of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking number of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Size type of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "Container number of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Display Item",
+   "ui": "Empty Pickup depot of the PR. Greyed out while VGM Details is open",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup Date",
+   "type": "Display Item",
+   "ui": "Empty pickup date and time of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Collection",
+   "type": "Display Item",
+   "ui": "Collection of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Position Date",
+   "type": "Display Item",
+   "ui": "Position date of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Display Item",
+   "ui": "Full Return depot of the PR. Greyed out while VGM Details is open",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return Date",
+   "type": "Display Item",
+   "ui": "Full return date and time of the PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Turn in Reference",
+   "type": "Display Item",
+   "ui": "Turn in Reference of the PR. Greyed out while VGM Details is open",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Actual Full Return Date",
+   "type": "Display Item",
+   "ui": "Actual full return date and time of the PR",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "VGM Details - Basic Information",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "PR Number",
+   "type": "Display Item",
+   "ui": "PR number of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Freeze",
+   "type": "Display Item",
+   "ui": "Freeze status of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type & Container",
+   "type": "Display Item",
+   "ui": "Size type and container type of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Display Item",
+   "ui": "Empty Pickup depot of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Empty Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Empty Pickup date",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Display Item",
+   "ui": "Full Return depot of the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Full Return date",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [
+  {
+   "title": "VGM Details - VGM Details Tab",
+   "rows": [
+    {
+     "name": "UOM",
+     "type": "Single Select Drop Down",
+     "ui": "Select UOM manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Measurement",
+     "type": "Numeric",
+     "ui": "Mandatory. Input Measurement of the container",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Weight Method",
+     "type": "Single Select Drop Down",
+     "ui": "Select Weight Method manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Signature",
+     "type": "Alphanumeric",
+     "ui": "Input Signature",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Status",
+     "type": "Single Select Drop Down",
+     "ui": "Select Status manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Ascertain Date",
+     "type": "Date and Time Picker",
+     "ui": "Input Ascertain date",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Responsible Party",
+     "type": "Text Area",
+     "ui": "Input Responsible Party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Source",
+     "type": "Single Select Drop Down",
+     "ui": "Select Source manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Addresses",
+     "type": "Text Area",
+     "ui": "Input Addresses",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Document Reference",
+     "type": "Text Area",
+     "ui": "Input Document Reference",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Remarks",
+     "type": "Text Area",
+     "ui": "Input Remarks",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Submit",
+     "type": "Button",
+     "ui": "After input all the mandatory columns value's, it should be updated into VGM Details for the selected PR",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Cancel",
+     "type": "Button",
+     "ui": "Cancelled all the input values and requery existing data",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "VGM History",
+     "type": "Button",
+     "ui": "Shows the VGM history of the selected PR",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}

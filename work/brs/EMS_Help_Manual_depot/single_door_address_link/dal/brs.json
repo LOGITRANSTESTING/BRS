@@ -1,0 +1,503 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Door Address Link",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Door Address Link details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/04.png",
+   "caption": "Image IV"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/05.png",
+   "caption": "Image V"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/06.png",
+   "caption": "Image VI"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_door_address_link/dal/img/07.png",
+   "caption": "Image VII"
+  }
+ ],
+ "features": [
+  "Door Address Link is used by the user to link/de-link Door Address to each PR in a Booking request.",
+  "The Booking to be saved with one or more Requirement Details.",
+  "The Booking status be in Entered Status or Entry Complete Status.",
+  "For Link:",
+  "a) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as Y then Valid PR with status other than cancelled should exist.",
+  "b) When config ADDRESS_LINK_FOR_NON_DOOR_REQ is set as N then Valid PR with status other than cancelled should exist and also Transport by to be C - Carrier.",
+  "For Delink and Delete: Door address should be linked to PR number."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Door Address Link screen of the selected PR in a new tab",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks \"Door Address Link\"",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Add)",
+   "description": "Displays the Address fields to enter a door address",
+   "triggered_when": "User clicks Add",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Link)",
+   "description": "Selects the record to be linked to the door address",
+   "triggered_when": "User clicks the check box in the Link column after entering the address details",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Edit)",
+   "description": "Enables the address fields for editing and the Delink column",
+   "triggered_when": "User clicks Edit",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Delink)",
+   "description": "Selects the linked record to be delinked",
+   "triggered_when": "User clicks the check box in the Delink column after clicking Edit",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Submit)",
+   "description": "Saves the door address. Link: links the door address to the selected PR Numbers; the Link column is disabled and the link icon is shown. Delink: delinks the door address from the selected PR Numbers; the Delink column is disabled and the link icon is removed. Edit: saves the edited address details",
+   "triggered_when": "User clicks Submit after selecting records in the Link column, selecting records in the Delink column, or editing the address fields",
+   "remarks": "Link: \"Door Address has been added Successfully!\"; Delink: \"PR Delinked to Door Address Successfully.\"; Edit: \"Record has been updated successfully\""
+  },
+  {
+   "event_type": "Button Click (Cancel)",
+   "description": "Cancels the add/edit and keeps the saved door address",
+   "triggered_when": "User clicks Cancel while adding or editing",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Delete)",
+   "description": "Shows the confirmation alert",
+   "triggered_when": "User clicks Delete after selecting records with the row check boxes",
+   "remarks": "\"Are you sure you want to delete this record?\""
+  },
+  {
+   "event_type": "Button Click (Yes)",
+   "description": "Deletes the door address of the selected records; the deleted record is removed",
+   "triggered_when": "User clicks Yes in the confirmation alert",
+   "remarks": "\"Door Address has been deleted Successfully!\""
+  },
+  {
+   "event_type": "Button Click (No)",
+   "description": "Closes the alert without deleting",
+   "triggered_when": "User clicks No in the confirmation alert",
+   "remarks": ""
+  },
+  {
+   "event_type": "Menu Click (Generate TOPS)",
+   "description": "Generates TOPS for the selected Port Releases",
+   "triggered_when": "User selects records and clicks the ☰ menu on the tab >> Generate TOPS",
+   "remarks": "\"TOPS Generated for selected Port Release(s) Successfully.\""
+  },
+  {
+   "event_type": "Menu Click (Generate Nomination)",
+   "description": "Generates Nomination for the selected Port Releases",
+   "triggered_when": "User selects records and clicks the ☰ menu on the tab >> Generate Nomination",
+   "remarks": "\"Nomination Generated for selected Port Release(s) Successfully.\""
+  }
+ ],
+ "search_title": "Door Address Link - Header Information",
+ "search": [
+  {
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking Number of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Shipper",
+   "type": "Display Item",
+   "ui": "Shipper of the selected booking",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage - Terminal",
+   "type": "Display Item",
+   "ui": "Voyage and terminal of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Door Address Link (title)",
+   "type": "Display Item",
+   "ui": "Name of the current single function",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Orgin",
+   "type": "Display Item",
+   "ui": "Origin of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "Load port of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Discharge",
+   "type": "Display Item",
+   "ui": "Discharge port of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Final",
+   "type": "Display Item",
+   "ui": "Final destination of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transport By",
+   "type": "Display Item",
+   "ui": "Transport By (haulage mode) of the selected PR",
+   "db": "",
+   "values": "Merchant / C - Carrier"
+  }
+ ],
+ "display_title": "Door Address Link - Address Details",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Shipper Code",
+   "type": "Single Select Drop Down",
+   "ui": "Select Shipper Code manually from drop down list",
+   "db": "",
+   "values": "Shipper code-name list"
+  },
+  {
+   "name": "Shipper Name",
+   "type": "Alphanumeric",
+   "ui": "Mandatory. Based on selected Shipper Code, Shipper Name will auto populate; can be edited",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Address",
+   "type": "Text Area",
+   "ui": "Mandatory. Input door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Country",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Select Country of the door address",
+   "db": "",
+   "values": "e.g. Belgium"
+  },
+  {
+   "name": "State",
+   "type": "Auto Populate",
+   "ui": "Select State of the door address",
+   "db": "",
+   "values": "e.g. BE-BE"
+  },
+  {
+   "name": "City",
+   "type": "Alphanumeric",
+   "ui": "Input City of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Zip Code",
+   "type": "Alphanumeric",
+   "ui": "Input Zip Code of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Telephone",
+   "type": "Alphanumeric",
+   "ui": "Input Telephone of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Email",
+   "type": "Alphanumeric",
+   "ui": "Input Email of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Fax",
+   "type": "Alphanumeric",
+   "ui": "Input Fax of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Contact",
+   "type": "Alphanumeric",
+   "ui": "Input Contact of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Collection Point",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Select Collection Point of the door address",
+   "db": "",
+   "values": "e.g. BEWLB-WILLEBROEK"
+  },
+  {
+   "name": "Return Date",
+   "type": "Date Picker",
+   "ui": "Input Return date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Position From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Position From and To date and time",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Pickup date and time",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Communication Mode",
+   "type": "Single Select Drop Down",
+   "ui": "Select Communication Mode manually from drop down list",
+   "db": "",
+   "values": "Email"
+  },
+  {
+   "name": "Communication Number",
+   "type": "Alphanumeric",
+   "ui": "Input Communication Number",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Special Info",
+   "type": "Text Area",
+   "ui": "Input special information",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Land Mark",
+   "type": "Alphanumeric",
+   "ui": "Input Land Mark of the door address",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transporter Code",
+   "type": "Auto Populate",
+   "ui": "Key in three char and select Transporter Code",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Load Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Load Reference",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transporter Instruction",
+   "type": "Text Area",
+   "ui": "Input Transporter Instruction",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Haulier Instruction",
+   "type": "Text Area",
+   "ui": "Input Haulier Instruction",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Add",
+   "type": "Button",
+   "ui": "Opens the address fields to add a new door address for the selected PRs",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Edit",
+   "type": "Button",
+   "ui": "Enables the address fields and Link/Delink check boxes for editing",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Delete",
+   "type": "Button",
+   "ui": "Deletes the door address of the selected PRs after confirmation",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "After input all the mandatory column values, saves the address and links/delinks it to the selected PRs",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Cancel",
+   "type": "Button",
+   "ui": "Cancelled all the input values and requery existing data",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "extra_tables": [
+  {
+   "title": "Door Address Link - Data Grid",
+   "rows": [
+    {
+     "name": "Total Port Release(s)",
+     "type": "Display Item",
+     "ui": "Count of the port releases queried, with the count per status",
+     "db": "",
+     "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze"
+    },
+    {
+     "name": "Select All (header check box)",
+     "type": "Check Box",
+     "ui": "If all the queried PRs are to be selected please select the check box. Greyed out while editing",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Check Box (row)",
+     "type": "Check Box",
+     "ui": "If the PR is to be selected please select the check box",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Link Indicator (link icon)",
+     "type": "Display Item",
+     "ui": "Shows a link icon when a door address is linked to the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Link",
+     "type": "Check Box",
+     "ui": "If the PR is to be linked to the door address please select the check box. Enabled in Add/Edit mode",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Delink",
+     "type": "Check Box",
+     "ui": "If the PR is to be delinked from the door address please select the check box. Enabled only for linked PRs in Edit mode",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "PR Number",
+     "type": "Display Item",
+     "ui": "PR Number of the booking",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Size Type",
+     "type": "Display Item",
+     "ui": "Container size type of the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Container",
+     "type": "Display Item",
+     "ui": "Container number attached to the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Position From / To Date",
+     "type": "Date and Time Picker",
+     "ui": "Input Position From and To date and time for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Pickup Date",
+     "type": "Date and Time Picker",
+     "ui": "Input Pickup date and time for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Load Reference",
+     "type": "Alphanumeric",
+     "ui": "Input Load Reference for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Haulier Instruction",
+     "type": "Text Area",
+     "ui": "Input Haulier Instruction for the PR",
+     "db": "",
+     "values": ""
+    },
+    {
+     "name": "Transporter Instruction",
+     "type": "Text Area",
+     "ui": "Input Transporter Instruction for the PR",
+     "db": "",
+     "values": ""
+    }
+   ]
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}

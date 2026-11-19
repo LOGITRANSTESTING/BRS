@@ -1,0 +1,177 @@
+{
+ "manual": "manuals/EMS_-_Help_Manual_Import_depot.gui",
+ "shared_pages": [
+  "Import Depot Activity",
+  "Import Depot Activity > Import Depot Activity - Query Fields",
+  "Import Depot Activity > Import Depot Activity - Data Grid Screen",
+  "Import Depot Activity > Import Depot Activity - Data Grid Screen > How to Change data using Edit Fields"
+ ],
+ "functions": [
+  {
+   "name": "ECOR Number Generate",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Generate",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Generate",
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Generate > How to Generate ECOR Number"
+   ],
+   "fp": "734ae6cf13dac52c",
+   "n": 1,
+   "fn": "group_ecor_number_generate",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - ECOR Number Generate V_1.0.docx",
+   "done_fp": "734ae6cf13dac52c"
+  },
+  {
+   "name": "ECOR Number Regenerate",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Regenerate",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Regenerate",
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Regenerate > How to Regenerate ECOR Number"
+   ],
+   "fp": "f8f1477441a337d9",
+   "n": 2,
+   "fn": "group_ecor_number_regenerate",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - ECOR Number Regenerate V_1.0.docx",
+   "done_fp": "f8f1477441a337d9"
+  },
+  {
+   "name": "ECOR Number Update",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Update",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Update",
+    "Import Depot Activity > Import Depot Activity Group Function > ECOR Number Update > How to update ECOR Number"
+   ],
+   "fp": "33549e1b2ddae632",
+   "n": 3,
+   "fn": "group_ecor_number_update",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - ECOR Number Update V_1.0.docx",
+   "done_fp": "33549e1b2ddae632"
+  },
+  {
+   "name": "Empty Depot Assignment",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > Empty Depot Assignment",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Depot Assignment",
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Depot Assignment > How to process Empty Depot Assignment"
+   ],
+   "fp": "ec7f2caff3bfd219",
+   "n": 4,
+   "fn": "group_empty_depot_assignment",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - Empty Depot Assignment (Group) V_1.0.docx",
+   "done_fp": "ec7f2caff3bfd219"
+  },
+  {
+   "name": "Empty Return Pre Advice",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > Empty Return Pre Advice",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Return Pre Advice",
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Return Pre Advice > How to Generate Empty Return Pre Advise"
+   ],
+   "fp": "1d73fec73ffecc13",
+   "n": 5,
+   "fn": "group_empty_return_pre_advice",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - Empty Return Pre Advice V_1.0.docx",
+   "done_fp": "1d73fec73ffecc13"
+  },
+  {
+   "name": "Empty Return Advice - GR",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > Empty Return Advice - GR",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Return Advice - GR",
+    "Import Depot Activity > Import Depot Activity Group Function > Empty Return Advice - GR > How to Generate Empty Return Advice"
+   ],
+   "fp": "6300ccd489f7acbd",
+   "n": 6,
+   "fn": "group_empty_return_advice_gr",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - Empty Return Advice - GR V_1.0.docx",
+   "done_fp": "6300ccd489f7acbd"
+  },
+  {
+   "name": "XML Interface",
+   "kind": "Group",
+   "path": "Import Depot Activity > Import Depot Activity Group Function > XML Interface",
+   "pages": [
+    "Import Depot Activity > Import Depot Activity Group Function > XML Interface",
+    "Import Depot Activity > Import Depot Activity Group Function > XML Interface > How to Generate XML Interface"
+   ],
+   "fp": "1c33f544cc1d3e76",
+   "n": 7,
+   "fn": "group_xml_interface",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - XML Interface V_1.0.docx",
+   "done_fp": "1c33f544cc1d3e76"
+  },
+  {
+   "name": "Empty Depot Assignment",
+   "kind": "Single",
+   "path": "Import Depot Activity > Depot Activity Single Function > Empty Depot Assignment",
+   "pages": [
+    "Import Depot Activity > Depot Activity Single Function > Empty Depot Assignment",
+    "Import Depot Activity > Depot Activity Single Function > Empty Depot Assignment > How to process Empty Depot Assignment"
+   ],
+   "fp": "acda6419c2193595",
+   "n": 8,
+   "fn": "single_empty_depot_assignment",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - Empty Depot Assignment (Single) V_1.0.docx",
+   "done_fp": "acda6419c2193595"
+  },
+  {
+   "name": "ECOR Number Cancellation",
+   "kind": "Single",
+   "path": "Import Depot Activity > Depot Activity Single Function > ECOR Number Cancellation",
+   "pages": [
+    "Import Depot Activity > Depot Activity Single Function > ECOR Number Cancellation",
+    "Import Depot Activity > Depot Activity Single Function > ECOR Number Cancellation > How to Cancel ECOR Number"
+   ],
+   "fp": "ea1f2644752a3806",
+   "n": 9,
+   "fn": "single_ecor_number_cancellation",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - ECOR Number Cancellation (Single) V_1.0.docx",
+   "done_fp": "ea1f2644752a3806"
+  },
+  {
+   "name": "Door Address Change",
+   "kind": "Single",
+   "path": "Import Depot Activity > Depot Activity Single Function > Door Address Change",
+   "pages": [
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change",
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change > How to \"Link door address to PR\"",
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change > How to \"Delink door address from PR\"",
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change > How to \"Edit door address from PR\"",
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change > How to \"Delete door address from PR\"",
+    "Import Depot Activity > Depot Activity Single Function > Door Address Change > How to \"Generate TOPS\""
+   ],
+   "fp": "bc24a70fce8571f6",
+   "n": 10,
+   "fn": "single_door_address_change",
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity/BRS - EMS - Import Depot Activity - Door Address Change V_1.0.docx",
+   "done_fp": "bc24a70fce8571f6",
+   "version": "01.01"
+  }
+ ],
+ "removed": []
+}

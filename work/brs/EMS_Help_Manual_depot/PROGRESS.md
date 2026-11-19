@@ -1,0 +1,137 @@
+# BRS progress - EMS - Help Manual depot
+
+Manual: manuals/EMS_-_Help_Manual_depot.gui (copy of the user's upload)
+Plan: work/brs/EMS_Help_Manual_depot/plan.json (21 functions, all new)
+Branch: brs-skill-update (PR #4)
+Author: Appsara
+
+## Log
+- 17.11.2026 - Skill updated from brs_skill_update-1.zip; author fixed to Appsara; progress log rule added.
+- 17.11.2026 - Ran brs_plan.py plan on the manual: 6 Group + 15 Single functions, all new.
+- 17.11.2026 - Cover module line: "ILISCyber - EMS - Depot Activity". Starting function 1 (Group) Empty Return Pre Advise; exported to group_empty_return_pre_advise/pages.
+- 17.11.2026 - Fn 1 images built: img/01.png = menu step (How_to_..._91e2_01): menu area from page image ab64_01 (twin), record strips from ../group_generate_truck_order Generate_Truck_Order_d619_01 at dy+1 (rows 361-363, 391-393, circle x21-52, x1504), scrollbar x1505-1508 at dy0; gate 0 outside, only app ☰ icon red left. img/02.png = success screen (91e2_02), frame only. Sheet + before/after in output/previews/brs_EMS_Help_Manual_depot_group_empty_return_pre_advise/. Functions 2-6 also exported (used as donors).
+- 17.11.2026 - Donor rules: added the scrolling-grid recipe and the copy-whole-rectangle warning.
+- 17.11.2026 - Images I/II approved. Settled: Purpose is always "This document explains the purpose of EMS's Depot Activity <Function> details." only; the manual's definition goes first in 2.1; empty 3.1/3.2 are left out with their headings, heading 3 stays (brs_docx.py extended, skill updated). Module set to "EMS – Depot Activity" (cover: ILISCyber – EMS – Depot Activity).
+- 17.11.2026 - Fn 1 built: output/EMS/BRS - EMS - Depot Activity - Empty Return Pre Advise V_1.0.docx (2.1 two items, 2.2 one Menu Click row approved).
+- 17.11.2026 - Fn 1 approved by user; brs_plan.py done recorded (01.01).
+- 17.11.2026 - Layout fixes (user): page breaks for History/Approval/Contents/1/3, Image I fits page with 1/1.1/1.2, images kept with captions, 2.1 indented to the 2.2 table, empty headings removed (brs_docx.py layout(), skill Step 7). Fn 1 rebuilt (8 pages) - approved by user.
+- 17.11.2026 - Fn 2 Generate Release Advise: Image I = menu step repaired from its twin (page image), gate passed; Image II = success screen, frame only. Images approved.
+- 17.11.2026 - Fn 2: 2.1 (definition + 2 conditions) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - Generate Release Advise V_1.0.docx (8 pages). Approved; brs_plan done recorded (01.01).
+- 17.11.2026 - Fn 3 TOPS XML: user chose the page image (6-item menu) for Image I; no twin, rebuilt by part swaps from the Generate Release Advise page image (menu at +3,-35 cut around letters; Generate Truck Order item at +3,-3; left shadow +3,-5; check box column +3,-3) and same-screen shadow/margin; gate passed. Image II = success screen, frame only.
+- 17.11.2026 - Fn 3: 2.1 (definition + 1 condition) and 2.2 (1 Menu Click row) approved; built output/EMS/BRS - EMS - Depot Activity - TOPS XML V_1.0.docx (8 pages). Approved; brs_plan done recorded (01.01).
+- 17.11.2026 - Fn 4 Generate Truck Order: Image I = menu step repaired from its twin (page image), gate passed with 0 px differing from the twin; Image II = success screen, frame only. Awaiting image OK.
+- 17.11.2026 - Fn 4: images approved; 2.1 approved (definition + 7 conditions, item 7 sub-conditions as a) to i) lines); 2.2 Menu Click row approved. Built output/EMS/BRS - EMS - Depot Activity - Generate Truck Order V_1.0.docx (9 pages); a)-i) lines indented one step (brs_docx layout). Awaiting document OK.
+- 17.11.2026 - Fn 4 approved; brs_plan done recorded.
+- 17.11.2026 - Fn 5 Empty Container Admission (opens own screen, needs 3.1/3.2). User chose images: I = menu (clean page image), II = empty screen S2 with S3 query values pasted in (dates + Activity Place), III = S5 selected+Process repaired from S4 (gate passed), IV = S6 success. Awaiting image OK.
+- 17.11.2026 - Fn 5: images approved; 1.1 + 2.1 (overview + 2 conditions) approved; 2.2 six rows approved (Menu Click, Search, Process, Excel, Refresh, Expand/Collapse). brs.json saved.
+- 17.11.2026 - Fn 5: 3.1 approved (7 rows, DB/values blank); headings: "Empty Container Admission - Query Screen" (3.1) and "Empty Container Admission - Data Grid" (3.2).
+- 17.11.2026 - Fn 5: 3.2 Data Grid approved (11 rows). Built output/EMS/BRS - EMS - Depot Activity - Empty Container Admission V_1.0.docx (14 pages). brs_docx layout now: table rows cantSplit + header repeat. Awaiting document OK.
+- 17.11.2026 - Fn 5 approved; brs_plan done recorded.
+- 17.11.2026 - Fn 6 Confirmation: Image I = menu step repaired from twin page image (gate passed, 0 px from twin); Image II = success screen, frame only. Awaiting image OK.
+- 17.11.2026 - Fn 6: images, 2.1 (overview only, no conditions), 2.2 Menu Click approved. Built output/EMS/BRS - EMS - Depot Activity - Confirmation V_1.0.docx. Awaiting document OK.
+- 17.11.2026 - Fn 6 approved; brs_plan done recorded. Fn 7 Booking Query (Single) exported to single_booking_query/.
+- 17.11.2026 - Fn 7 Booking Query: Image I = menu step repaired from twin page image (gate passed); Image II = Booking Query screen (unmarked, frame only). Awaiting image OK.
+- 17.11.2026 - Fn 7: images approved; 2.1 overview only; 2.2 seven rows (Menu Click, section Tab Click, Expand All, Collapse All, Refresh, Show Less, Show More); 3.x left empty (read-only screen, user choice). Built output/EMS/BRS - EMS - Depot Activity - Booking Query V_1.0.docx. Awaiting document OK.
+- 17.11.2026 - Fn 7 approved; brs_plan done recorded. Fn 8 Accept Release (Single) exported to single_accept_release/.
+- 17.11.2026 - Fn 8 Accept Release: Image I = menu step repaired from twin (gate passed); II = container entered (Containers tab); III = success; IV = status changed to Full Return. Awaiting image OK.
+- Output re-organised at the user's request: Group functions (fn 1-6) in output/EMS/Depot Activity - Group/, Single functions (fn 7 Booking Query, fn 8 Accept Release onward) in output/EMS/Depot Activity - Single/. plan.json paths updated.
+- Fn 8 note: Image II (container form) unmark lists one blue_box candidate 7,349-1490,426 - this is the app's own Basic Information panel border, NOT a mark; nothing removed.
+- NEXT (user on break): fn 8 image approval (sheet in output/previews/brs_EMS_Help_Manual_depot_single_accept_release/), then 2.1/2.2/3.x (Accept Release - Container Tab, as the house sample). Build to output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Accept Release V_1.0.docx.
+- 17.11.2026 - Fn 8: user flagged Image III. Checked: img/03.png = manual's How_to_Accept_PR_Release_07c5_04 exactly (frame only); the grid glitch (left frozen columns 4 rows vs right part 9 rows, ▶▶▶▶ loading arrows) is in the manual's own screenshot (captured mid-refresh), not a repair. Crop: output/previews/brs_EMS_Help_Manual_depot_single_accept_release/img3_grid.png. NEXT: user decides - new clean screenshot / drop Image III / keep.
+- 17.11.2026 - Fn 8: user will upload a clean Accept Release success screenshot (to screenshots/Accept Release/ on brs-skill-update) to replace Image III. NEXT: replace img/03.png, re-sheet, image approval, then 2.1/2.2/3.x.
+- 17.11.2026 - Fn 8: user uploaded clean success screenshot (screenshots/Accept Release/success.png): grid aligned (4 rows both sides). unmark --blue: frame only, 0 mark px, no blue-box candidates, seamless. Replaced img/03.png (1497x664); sheet rebuilt. ▶▶▶▶ arrows are the app's own (not a mark), kept. NEXT: image approval, then 2.1/2.2/3.x.
+- 17.11.2026 - Fn 8: images I-IV approved. brs.json created (module EMS – Depot Activity, purpose, 4 images, 2.1 draft: definition + 1 condition). NEXT: 2.1 approval.
+- 17.11.2026 - Fn 8: 1.1 + 2.1 approved. 2.2 draft: Menu Click, Submit, Cancel (as the cross-booking Accept Release). NEXT: 2.2 approval.
+- 17.11.2026 - Fn 8: 2.2 approved (Menu Click, Submit, Cancel; Prev/Next and tabs left out as cross-booking). 3.1 'Accept Release - Container Tab' draft: cross-booking rows + Critical Cargo, Cargo Handling (new on this screen); drop_display. NEXT: 3.1 approval.
+- 17.11.2026 - Fn 8: user wants 3 tables: 3.1 Accept Release - Data Grid, 3.2 Accept Release - Basic Information, 3.3 Accept Release - Container Tab; Critical Cargo + Cargo Handling = Display Item. User approved extending brs_docx.py: new spec key extra_tables (3.3+ cloned from 3.2). Drafts in brs.json (18 / 8 / 30 rows). NEXT: 3.1 Data Grid approval.
+- 17.11.2026 - Fn 8: user clarified: 3.1 Data Grid is read from the grid in Image II (the Containers-tab screen), not Image I. Crop img2_grid.png. NEXT: 3.1 approval.
+- 17.11.2026 - Fn 8: 3.1 Accept Release - Data Grid approved (18 rows, from Image II grid; greyed boxes = Display Item). NEXT: 3.2 Basic Information approval.
+- 17.11.2026 - Fn 8: 3.2 Accept Release - Basic Information approved (8 rows). NEXT: 3.3 Container Tab approval.
+- 17.11.2026 - Fn 8: 3.3 Accept Release - Container Tab approved (30 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Accept Release V_1.0.docx (19 pages; rendered and checked). Skill: extra_tables + Data Grid / Basic Information / Container Tab rule. Awaiting document OK.
+- 17.11.2026 - Fn 8 approved; brs_plan done recorded (01.01). Fn 9 Acceptance Group (Single) exported to single_acceptance_group/. NEXT: fn 9 images.
+- 17.11.2026 - Fn 9 Acceptance Group: Image I = menu step repaired from twin page image (gate passed, 0 px outside); II = form (b65b_03, frame only); III = success (b65b_04, frame only). Sheet + before/after in output/previews/brs_EMS_Help_Manual_depot_single_acceptance_group. Awaiting image OK.
+- 17.11.2026 - Fn 9: images approved. brs.json created. NEXT: 1.1/2.1 approval (manual's Acceptance Group definition says 'Accept Release Function ...').
+- 17.11.2026 - Fn 9: 1.1 + 2.1 approved (definition reworded to 'Acceptance Group Function ...' at user's choice; manual reused Accept Release sentence). 2.2 draft Menu Click + Submit. NEXT: 2.2 approval (Select files/Load/tab close?).
+- 17.11.2026 - Fn 9: 2.2 = Menu Click, Select files... (opens upload pop up for updating containers), Load (loads containers + dates from file into grid), Submit; no tab-close row (user). NEXT: confirm 2.2, then 3.x.
+- 17.11.2026 - Fn 9: 2.2 final (4 rows). Grid: visible columns only (user). Drafts: 3.1 Acceptance Group - Basic Information (8), 3.2 Acceptance Group - Data Grid (14). NEXT: 3.1 approval.
+- 17.11.2026 - Fn 9: 3.1 approved (8 rows). New Item Type File Upload added to column-rules. NEXT: 3.2 Data Grid approval.
+- 17.11.2026 - Fn 9: 3.2 approved (14 rows). Built output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - Acceptance Group V_1.0.docx (13 pages, rendered and checked). Awaiting document OK.
+- 17.11.2026 - Fn 9 approved; brs_plan done recorded (01.01). Fn 10 Cancel Release (Single) exported to single_cancel_release/. NEXT: fn 10 images.
+- 2026-11-17 fn 10 Cancel Release: images built — I: 20fa_01 repaired from twin 6726_01 (gate passed); II: 20fa_02 popup (frame only); III: 20fa_03 success (frame only); IV: 20fa_04 NO TWIN, red box replaced part-by-part from plain border runs on the same row (gate passed, 0 outside). Awaiting image approval.
+- 2026-11-17 fn 10 Cancel Release: images I–IV approved.
+- 2026-11-17 fn 10 Cancel Release: 2.1 + 2.2 (3 rows) approved; no section 3 tables (user dropped the popup table).
+- 2026-11-17 fn 10 Cancel Release: docx built (10 pages), rendered; awaiting approval.
+- 2026-11-17 fn 10 Cancel Release: user asked to keep the popup table with Remark only; 3.1 'Cancel Release - Popup' (1 row, Mandatory) added, rebuilt (10 pages); awaiting approval.
+- 2026-11-17 fn 10 Cancel Release: approved and marked done (01.01). Next: fn 11 Freeze / Unfreeze.
+- 2026-11-17 fn 11 Freeze / Unfreeze: 9 images built — I from twin 03fd_01 (gate passed); II,III,VI,VII,VIII frame only; IV,V,IX NO TWIN red boxes rebuilt part-by-part (hidden separators x116/x436 restored from sep column 556, plain from col 439; gates passed). brs.json drafted. Awaiting image approval.
+- 2026-11-17 fn 11 Freeze / Unfreeze: images I–IX approved; user asked for 1.2.1 Freeze (I–IV) and 1.2.2 Unfreeze (V–IX) under UI Design in manual order. Added per-image "section" to brs_docx.py (Heading 3 on UI Design's numbering list) + SKILL.md note; rebuilt (13 pages).
+- 2026-11-17 fn 11 Freeze / Unfreeze: 2.1 (definition + 2 conditions), 2.2 (4 rows), 3.1 Popup (Remark only) approved; document built (13 pages); awaiting approval.
+- 2026-11-17 fn 11 Freeze / Unfreeze: approved and marked done (01.01). Single folder on PR #4 now has Booking Query, Accept Release, Acceptance Group, Cancel Release, Freeze / Unfreeze (kept on branch per user). Next: fn 12 Revert To Prepared (exported; c335_01 twin, 02/03 unmarked, 04 NO TWIN).
+- 2026-11-17 fn 12 Revert To Prepared: images built — I from twin 10ac_01 (gate passed); II popup, III success (frame only); IV NO TWIN, red box edges copied from record +36 px (identical across +36/+72/+108; gate passed). Awaiting image approval.
+- 2026-11-17 fn 12 Revert To Prepared: images, 2.1, 2.2 (3 rows), 3.1 Popup (Remark) approved; document built (11 pages); awaiting approval.
+- 2026-11-17 fn 12 Revert To Prepared: approved and marked done (01.01). Next: fn 13 Change To Empty Return.
+- 2026-11-17 fn 13 Change To Empty Return: images built — I from twin d376_01 (gate passed); II popup, III success (frame only); IV NO TWIN, box edges from record +36 (identical +72/+108; gate passed). Awaiting image approval.
+- 2026-11-17 fn 13 Change To Empty Return: images, 2.1 (definition + 3 conditions), 2.2 (3 rows) approved; no section 3 tables (popup has no input); document built (11 pages); awaiting approval.
+- 2026-11-17 fn 13 Change To Empty Return: approved and marked done (01.01). Next: fn 14 Equipment Delink.
+- 2026-11-17 fn 14 Equipment Delink: images built — I from twin 4c07_01 (gate passed); II success (frame only). Awaiting image approval.
+- 2026-11-17 fn 14 Equipment Delink: images, 2.1, 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
+- 2026-11-17 fn 14 Equipment Delink: approved and marked done (01.01). Next: fn 15 Equipment Relink.
+- 2026-11-17 fn 15 Equipment Relink: images built — I from twin 633e_01 (gate passed); II success (frame only; grey right/top line is the app panel edge). Awaiting image approval.
+- 2026-11-17 fn 15 Equipment Relink: images, 2.1 (definition + 2 conditions), 2.2 (1 row) approved; no section 3 tables; document built (8 pages); awaiting approval.
+- 2026-11-17 fn 15 Equipment Relink: approved and marked done (01.01). Next: fn 16 Revert Empty Return.
+- 2026-11-17 fn 16 Revert Empty Return: exported; Image I repaired from twin d387_01 (gate passed); Image II frame only; Image III (no twin) box x114-366 y357-388 rebuilt from plain col x400 + separator col x435 (gate passed); awaiting image approval.
+- 2026-11-17 fn 16 Revert Empty Return: images, 2.1 (definition + 2 conditions), 2.2 (1 row) approved; no section 3 tables; document built (9 pages); awaiting approval.
+- 2026-11-17 fn 16 Revert Empty Return: approved and marked done (01.01). Next: fn 17 Door Address Link.
+- 2026-11-17 user: keep fn 17 Door Address Link for last; next fn 18 VGM Details.
+- 2026-11-17 fn 18 VGM Details: exported; Image I repaired from twin 22bb_01 (gate passed); Image II (no twin) Submit box rebuilt from Cancel button edges + fields box strips filled white (gate passed); Image III frame only; awaiting image approval.
+- 2026-11-17 fn 18 VGM Details: images, 2.1 (definition + 1 condition), 2.2 (4 rows), 3.1 Data Grid (18), 3.2 Basic Information (8), 3.3 VGM Details Tab (14) approved; document built (15 pages); awaiting approval.
+- 2026-11-17 fn 18 VGM Details: approved and marked done (01.01). Next: fn 19 Cancel Group (fn 17 Door Address Link kept for last).
+- 2026-11-17 fn 19 Cancel Group: exported; def image 523b_01 is not a twin (Cancel Release highlighted). Image I: highlighted item rebuilt from def's highlighted row (dy -288) + same-position def for shadow/next item (gate passed). Image II: Yes button border/glow rebuilt by distance model (max err 5 vs visible ring), dialog corner mirrored from right corner (gate passed). Image III frame only; awaiting image approval.
+- 2026-11-17 fn 19 Cancel Group: per user, Image II Yes button edge sharpened (focus halo removed, 1px edge).
+- 2026-11-17 fn 19 Cancel Group: 2.1 (4 lines) and 2.2 (Menu Click/Yes/No) approved; no section 3 tables; built 'BRS - EMS - Depot Activity - Cancel Group V_1.0.docx' (10 pages); awaiting approval.
+- 2026-11-17 fn 19 Cancel Group: approved by user, marked done (01.01). Extra: separate copy of Image I with blue frame border kept saved at output/previews/brs_EMS_Help_Manual_depot_single_cancel_group/cancel_group_menu_blue_border.png (doc unchanged).
+- 2026-11-17 fn 20 PR More Details: exported. Image I repaired from twin f726_01 (gate passed). Image II (no twin): Process box/badge 6 from Image III un-dimmed (x/0.6, 1px shift), checkbox box/badge 5 from rows 72px below (gate passed). Image III frame only; awaiting image approval.
+- 2026-11-17 fn 20 PR More Details: per user, Image I redone (auto red mask had caught text fringes, leaving artifacts and losing the separator); now copied from twin over box geometry + badge disk only (gate passed), matches user's reference.
+- 2026-11-17 fn 20 PR More Details: 2.1 (3 lines), 2.2 (Menu Click/Process/Close), 3.1 Data Grid (17 rows) approved; built 'BRS - EMS - Depot Activity - PR More Details V_1.0.docx' (11 pages); awaiting approval.
+- 2026-11-17 fn 20 PR More Details: approved, marked done (01.01). Next: fn 21 Empty Container Load; fn 17 Door Address Link last.
+- 2026-11-18 Reset PR #4 to 5ab11d0 per user (old head 57c21cf kept on branch backup/brs-skill-update-57c21cf); fn 21 Empty Container Load restarted from scratch. Re-exported to single_empty_container_load/; scan: 7705_01, d5aa_03, e3f0_03 unmarked; d5aa_01, d5aa_02, e3f0_01, e3f0_02 NO TWIN. Source sheet in previews. NEXT: ask user one BRS or separate EQC/CSV BRS files.
+- 2026-11-18 fn 21: user re-confirmed two BRS files: 'BRS - EMS - Depot Activity - EQC Load V_1.0.docx' and 'BRS - EMS - Depot Activity - CSV Load V_1.0.docx' (output/EMS/Depot Activity - Single/). EQC first. EQC Image I (d5aa_01): one red box over the highlighted 'EQC Load' sub item x486-716 y813-855 + badge 3 at (701,839); red at (1421,872) is the app's logo. e3f0_01 not an exact donor (1 px shift, 9-150 px differ per part). User's pre-reset menu refs (backup branch) judged: text area EXACT, edges 20-113 px off (other session). NEXT: ask whether to reuse the pre-reset donor screenshots.
+- 2026-11-18 fn 21: user will supply new menu images for EQC Load and CSV Load Image I (pre-reset refs not restored); blank pop-up screens to follow if needed. NEXT: wait for the user's menu images, then repair EQC Image I.
+- 2026-11-18 fn 21: user supplied blank pop-up donors: screenshots/EQC Load/eqc_load_popup_blank.png (1094x710) and screenshots/CSV Load/csv_load_popup_blank.png (752x589); menu refs menu_eqc_load.png / menu_csv_load.png restored from backup (user: those two work).
+- 2026-11-18 fn 21 EQC Image I (d5aa_01): built part by part into eqc_load/img1_repaired.png. Top line/separator/left line/highlight + white under the circle from menu_eqc_load.png at (-215,-781) (horizontal structures exact); top-right corner + shadow fade from e3f0_01 at (+1,+1); right border/shadow straight part from the same screen rows 862-874. Gate: only 18 px 'outside' = pure ff0000 mark pixels (x703-705, y817-822) missed by the footprint; nothing else outside changed; 0 mark lines left. Frame stripped -> eqc_load/img/01.png (1534x884). Awaiting image approval. NEXT: EQC Image II (d5aa_02) with eqc_load_popup_blank.png.
+- 2026-11-18 fn 21 EQC Image I approved. NEXT: Image II.
+- 2026-11-18 fn 21 EQC Load: Image II repaired (Submit badge 6 + check-box badge 5, same-screen/blank-popup copies, gate PASSED 0 outside), frame stripped to the Image I box 13,10-1546,893; Image III unmarked (frame only). Sheet + img2 before/after in output/previews/brs_EMS_Help_Manual_depot_single_eqc_load/. Waiting for image approval.
+- 2026-11-18 fn 21 EQC Load: Images I-III approved. NEXT: brs.json skeleton + 2.1.
+- 2026-11-18 fn 21 EQC Load: brs.json created (cover, purpose, images). NEXT: 2.1.
+- 2026-11-18 fn 21 EQC Load: 2.1 blank (manual has no definition/conditions) and 2.2 five events approved. NEXT: 3.1 query fields.
+- 2026-11-18 fn 21 EQC Load: 3.1 Query Screen (10 rows) approved, Activity values blank. NEXT: 3.2 Data Grid.
+- 2026-11-18 fn 21 EQC Load: 3.2 Data Grid (15 rows, no pager rows) approved. NEXT: build/check/render.
+- 2026-11-18 fn 21 EQC Load: BRS built, checked and rendered (13 pages) -> output/EMS/Depot Activity - Single/BRS - EMS - Depot Activity - EQC Load V_1.0.docx. Waiting for approval.
+- 2026-11-18 fn 21 EQC Load BRS approved. NEXT: CSV Load images.
+- 2026-11-18 fn 21 CSV Load: Image I (e3f0_01) repaired - submenu from screenshots/CSV Load/menu_csv_load.png (offset 240,761), menu shadows from the approved EQC Image I (+1,+1 / +1,0), gate PASSED 0 outside. Waiting for approval.
+- 2026-11-18 fn 21 CSV Load: Image I approved. NEXT: Image II.
+- 2026-11-18 CSV Load: Image II repaired (box 5 upload row + box 6 Load button: per-row donor runs from csv_load_popup_blank @241,164, genuine Book1.csv tops/descenders and TRIST kept, below-popup circle px from same-row 999999; gate 0/0); stripped I-III to 1534x884 (box 13,10). Sheet made. NEXT: approval.
+- 2026-11-18 CSV Load: images approved; brs.json skeleton (function CSV Load, purpose, 3 images). NEXT: 2.1/2.2.
+- 2026-11-18 CSV Load: 2.1 blank (approved); 2.2 six events (approved). NEXT: 3.1 table.
+- 2026-11-18 CSV Load: 3.1 File Upload (4 rows) and 3.2 Data Grid (5 rows) approved; BRS built + checked + rendered (12 pages). NEXT: BRS approval.
+- 2026-11-18 Fn 21 Empty Container Load: CSV Load BRS approved; brs_plan.py done recorded (EQC Load + CSV Load, 01.01). NEXT: Fn 17 Door Address Link (last).
+- 2026-11-18 Fn 17 Door Address Link started: exported to single_door_address_link/ (main page + 6 how-tos: Link, Delink, Edit, Delete, Generate TOPS, Generate Nomination; 24 images, 2 are 29x22 link icons). Marked: 421c_01/03/04/07, 718b_01/02/05, ef6e_01/02/03, e53f_01/02, 8caa_01, e9a5_01; unmarked: a0b8_01, 421c_02/06, 718b_04, ef6e_04, e53f_03, 8caa_02, e9a5_02. Source sheet in previews. NEXT: ask one BRS or several.
+- 2026-11-18 Fn 17: one BRS (Door Address Link). Images approved: I 421c_01, II 421c_02, III 421c_04, IV 421c_06, V 718b_02, VI e53f_02, VII 8caa_02. NEXT: Image I repair.
+- 2026-11-18 Fn 17 Image I (421c_01): unmark found exact neighbour a0b8_01 (err 0) for box 3 + badge; gate 0/0; stripped to dal/img/01.png 1534x884. Awaiting approval.
+- 2026-11-18: Fn17 Door Address Link Image III (421c_04) repaired (cell donors + Submit rebuild + Link-box shift copies), gate passed, stripped to dal/img/03.png 1534x884; preview committed for approval.
+- 2026-11-18: Image III approved.
+- 2026-11-18: Fn17 Image V (718b_02) repaired (cell donors, Submit from repaired III at +3,0, Delink box from row 2 dy+36 / header dx-40), gate passed, stripped to dal/img/05.png 1534x884; preview committed.
+- 2026-11-18: Image V approved.
+- 2026-11-18: Image VI (e53f_02): no donor has the Alert; Yes right half + dimmed page fixed by plain copies; flipped left-half piece proposed (preview img6_yes_flip_proposal.png).
+- 2026-11-18: Image VI flip approved and applied; gate passed; stripped to dal/img/06.png 1534x884; preview committed.
+- 2026-11-18: Image VI approved. Final 7-image sheet committed for approval (final_images_sheet.png).
+- 2026-11-18: all 7 DAL images approved (IV keeps app loading indicator).
+- 2026-11-18: DAL brs.json skeleton (7 images) + 2.1 approved (definition, 2 common conditions, For Link a/b config, For Delink and Delete).
+- 2026-11-18: DAL 1.2 no sections (user); 2.2 approved, 12 events (Submit merged for Link/Delink/Edit).
+- 2026-11-18 Fn17 DAL: section 3 layout approved (3.1 Header Information, 3.2 Address Details, 3.3 Data Grid in extra_tables). 3.1 approved: 9 Display Item rows (Shipper, Voyage - Terminal kept as proposed).
+- 2026-11-18 Fn17 DAL: 3.2 Address Details approved (28 rows, buttons last).
+- 2026-11-18 Fn17 DAL: 3.3 Data Grid approved (14 rows, no further columns).
+- 2026-11-18 Fn17 DAL: final BRS approved; brs_plan done (Fn 17, 01.01). House rules added (no sub-sections option, keep loading indicator, merged Submit row, Text Area/Date Picker looks). All functions done.
+- 2026-11-18 Output reorganised: the 4 loose output/EMS docs moved to output/EMS/Cross Booking Depot Activity/; plan.json paths updated.
+- 2026-11-18 ES-FL Fix doc moved to output/EMS/ES-FL Fix/. Deleted manuals/EMS_-_Help_Manual_depot.gui (user request; all 21 functions done).
+- 2026-11-18 Added user manuals for next work: manuals/EMS_-_Help_Manual_Import_depot.gui, EMS-_Help_Manual_truck_order_generation.gui, ILISCyber_Container_Stock_Entry.gui.

@@ -26,8 +26,10 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 - Multiselect Drop Down: an empty box with only the small corner mark at the bottom right and no placeholder text (for example Status).
 - Radio Button: a group of round options where only one can be selected (for example None / Gate Out / Gate In). One row for the group; list the options in Possible Values.
 - Toggle: a pill switch (for example Update Related BLs).
+- File Upload: a "Drop files here to upload" area next to a "Select files..." button (for example Acceptance Group). One row for the drop area; Select files... and Load are Button rows.
 - Display Item: a greyed-out box (read-only, for example PR Number, Status, Freeze in Accept Release Basic Information), and grid column values that cannot be edited.
 - Swap voyage field (⇆ + two boxes, for example Voyage, Load Voyage): ONE row, Item Type "Auto Populate / Alphanumeric + Single Select Drop Down". The ⇆ switches only the second box between Auto Populate ("Key in three char") and Alphanumeric (plain box). The third box ("Select ... Voyage Port") is always a Single Select Drop Down. Describe this in UI Validation.
+- Text Area also covers a large multi-line box with no icon (for example Address), and Date Picker a box with only a calendar icon (dd/MM/yyyy, for example Return Date) (settled on Door Address Link).
 - Also, when seen: Button (Submit, Cancel, Apply, Process, Validate); LOV (a box with a magnifier or list icon that opens a lookup); Text Area (a large multi-line box with a note icon, for example Remarks).
 
 ## UI Validation (short and imperative, as in the sample)
@@ -64,6 +66,7 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 
 ## brs.json keys
 - `search_title` / `display_title` (optional): rename the 3.1 / 3.2 headings. Use it when the 3.1 part is the screen's edit header rather than query fields, for example Accept Release: "Accept Release - Container Tab".
+- A function that opens its own screen (query panel + grid): `search_title` = "<Function> - Query Screen" and `display_title` = "<Function> - Data Grid" (Empty Container Admission). The grid's own search box/Excel/Refresh/expand arrow go in 2.2, not 3.1/3.2; Total count label, header Select All check box and row check box are rows in the Data Grid table; the action button (Process) is the last Data Grid row.
 - `drop_display: true`: remove the whole 3.2 section. Use it when only the editing area is documented: put its rows in 3.1 (named with `search_title`) and leave out the read-only header. Example: Accept Release keeps only the Containers fields, under "Accept Release - Container Tab" (<Function> - <Tab> Tab).
 - `search` rows: name, type, ui, db, values
 - `display` rows: name, type, ui, db, values, remarks

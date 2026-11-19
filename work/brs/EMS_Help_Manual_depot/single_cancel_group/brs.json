@@ -1,0 +1,65 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Cancel Group",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Cancel Group details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_group/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_group/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_cancel_group/img/03.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [
+  "Cancel Group Function allows the user to cancel all PR belonging to a group.",
+  "Booking Status should be \"Entered\" or \"Completed\".",
+  "PR status should be \"Prepared\" or \"Supplied\".",
+  "If the PR is already transferred to TOPS or the PR Key is linked with an Address, cancelling is not allowed."
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens an Alert: \"Do you want to Cancel all the Releases under this group, which are not accepted?\"",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Cancel Group from the single function menu",
+   "remarks": ""
+  },
+  {
+   "event_type": "Yes",
+   "description": "Cancels all the PRs under the group which are not accepted. Message: \"Port release cancelled successfully\"",
+   "triggered_when": "User clicks Yes on the Alert",
+   "remarks": ""
+  },
+  {
+   "event_type": "No",
+   "description": "Closes the Alert without cancelling",
+   "triggered_when": "User clicks No on the Alert",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": true,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}

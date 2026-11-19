@@ -1,0 +1,224 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "Empty Container Admission",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity Empty Container Admission details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_empty_container_admission/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_empty_container_admission/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_empty_container_admission/img/03.png",
+   "caption": "Image III"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/group_empty_container_admission/img/04.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "Each container gate out need permission, so the user can use Empty Container Admission to generate a notification to Akras Logistics with selected empty containers for customs approval.",
+  "Last activity should be DE / RE / EA",
+  "Previous Activity should be OE or OF"
+ ],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the Empty Container Admission screen in a new tab next to Depot Activity.",
+   "triggered_when": "User clicks the Menu icon near Depot Activity and clicks Empty Container Admission.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Search)",
+   "description": "Queries the containers matching the query fields and lists them in the grid, with the total in Total Container(s).",
+   "triggered_when": "User enters From / To Date and Activity Place (mandatory), plus any optional fields, and clicks Search.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Process)",
+   "description": "Generates a notification to Akras Logistics with the selected empty containers for customs approval.",
+   "triggered_when": "User selects one or more containers using the check boxes and clicks Process.",
+   "remarks": "\"Empty container admission processed successfully\""
+  },
+  {
+   "event_type": "Button Click (Excel)",
+   "description": "Exports the containers listed in the grid to an Excel file.",
+   "triggered_when": "User clicks the Excel icon after querying containers.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Refresh)",
+   "description": "Reloads the grid with the latest data for the current query.",
+   "triggered_when": "User clicks the Refresh icon.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Expand / Collapse)",
+   "description": "Shows or hides the query fields panel.",
+   "triggered_when": "User clicks the arrow at the right of the search box.",
+   "remarks": ""
+  }
+ ],
+ "search_title": "Empty Container Admission - Query Screen",
+ "search": [
+  {
+   "name": "From / To Date",
+   "type": "Date Picker",
+   "ui": "Mandatory. Input From and To date",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage",
+   "type": "Auto Populate / Alphanumeric",
+   "ui": "Input Voyage. The ⇆ switches the box between Auto Populate (Key in three char) and Alphanumeric",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container No.",
+   "type": "Alphanumeric",
+   "ui": "Input Container No.",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Activity Place",
+   "type": "Auto Populate",
+   "ui": "Mandatory. Key in five char and select Activity Place from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Activity",
+   "type": "Auto Populate",
+   "ui": "Select Activity from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Previous Activity",
+   "type": "Auto Populate",
+   "ui": "Select Previous Activity from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries the containers based on the query fields",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "Empty Container Admission - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Total Container(s)",
+   "type": "Display Item",
+   "ui": "Count of the containers queried",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried containers are to be processed please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": "Selects or clears every row"
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the container is to be processed please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": "One or many containers can be selected"
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "Container number of the queried record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Size type of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Previous",
+   "type": "Display Item",
+   "ui": "Previous activity and place of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\", for example \"FP -\""
+  },
+  {
+   "name": "Current",
+   "type": "Display Item",
+   "ui": "Current activity, place and date of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\" with the date and time below, for example \"RE - TRALIP01, 04/03/2024 15:40\""
+  },
+  {
+   "name": "Load",
+   "type": "Display Item",
+   "ui": "Load activity, place and date of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Shown as \"<Activity> - <Place>\" with the date and time below, for example \"OF - CNSHKP09, 31/12/2023 18:28\""
+  },
+  {
+   "name": "Voyage",
+   "type": "Display Item",
+   "ui": "Voyage of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking / BL Number",
+   "type": "Display Item",
+   "ui": "Booking or BL number of the container",
+   "db": "",
+   "values": "",
+   "remarks": "Empty in the screenshots"
+  },
+  {
+   "name": "Process",
+   "type": "Button",
+   "ui": "Generates a notification to Akras Logistics with the selected empty containers for customs approval",
+   "db": "",
+   "values": "",
+   "remarks": "Shows \"Empty container admission processed successfully\""
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}

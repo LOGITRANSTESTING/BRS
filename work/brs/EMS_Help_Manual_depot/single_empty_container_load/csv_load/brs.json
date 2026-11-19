@@ -1,0 +1,148 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS – Depot Activity",
+ "function": "CSV Load",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Depot Activity CSV Load details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_empty_container_load/csv_load/img/01.png",
+   "caption": "Image I"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_empty_container_load/csv_load/img/02.png",
+   "caption": "Image II"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_depot/single_empty_container_load/csv_load/img/03.png",
+   "caption": "Image III"
+  }
+ ],
+ "features": [],
+ "events": [
+  {
+   "event_type": "Menu Click",
+   "description": "Opens the CSV Load pop up screen for the selected PR",
+   "triggered_when": "User clicks the Menu icon near the desired PR Number and clicks Empty Container Load >> CSV Load",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Select files...)",
+   "description": "Opens the file browser. The selected file is uploaded, its upload status is shown, and its containers are listed in the grid",
+   "triggered_when": "User clicks Select files... and chooses a CSV file",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Remove ×)",
+   "description": "Removes the uploaded file",
+   "triggered_when": "User clicks × next to the uploaded file name",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Load)",
+   "description": "Loads the containers from the uploaded file to the PR. A success or error message is shown",
+   "triggered_when": "User clicks Load after uploading a file",
+   "remarks": "\"Containers from the selected file loaded successfully\""
+  },
+  {
+   "event_type": "Button Click (Clear)",
+   "description": "Clears the uploaded file and the container grid",
+   "triggered_when": "User clicks Clear",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Close ×)",
+   "description": "Closes the CSV Load pop up",
+   "triggered_when": "User clicks × on the pop up title bar",
+   "remarks": ""
+  }
+ ],
+ "search_title": "CSV Load - File Upload",
+ "search": [
+  {
+   "name": "CSV Load - Booking Number (title)",
+   "type": "Display Item",
+   "ui": "Booking Number of the selected PR",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "File Upload",
+   "type": "File Upload",
+   "ui": "Uploads the selected CSV file and shows the file name with its upload status. The file must have the columns (1. Container Number | 2. YM Container Size/Type | 3. Partner Container Size/Type)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select files...",
+   "type": "Button",
+   "ui": "Opens the file browser to choose the CSV file to upload",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Remove ×",
+   "type": "Button",
+   "ui": "Removes the uploaded file",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "CSV Load - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Container Number",
+   "type": "Display Item",
+   "ui": "Container Number read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "YM Container Size/Type",
+   "type": "Display Item",
+   "ui": "YM Container Size/Type read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Partner Container Size/Type",
+   "type": "Display Item",
+   "ui": "Partner Container Size/Type read from the uploaded file",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load",
+   "type": "Button",
+   "ui": "After uploading the file, the containers in the grid should be loaded for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": "Success message \"Containers from the selected file loaded successfully\""
+  },
+  {
+   "name": "Clear",
+   "type": "Button",
+   "ui": "Clears the uploaded file and the container grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}

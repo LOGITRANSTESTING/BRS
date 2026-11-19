@@ -13,7 +13,7 @@ from pathlib import Path
 
 try:
     import docx
-    from docx.shared import Emu
+    from docx.shared import Emu, Pt
 except ImportError:
     sys.exit('python-docx is missing: pip install python-docx')
 
@@ -26,17 +26,19 @@ SKELETON = {
     "function": "",
     "version": "01.01",
     "date": "",  # DD/MM/YYYY, today when empty
-    "history": [{"date": "", "version": "V01.01", "author": "",
+    "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
-    "purpose": "This document explains the purpose of <Module>'s <Function> details.",
-    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],
+    "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
+    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes
     "features": [],          # leave empty = blank section
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],
     "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
     "display_title": "",     # optional 3.2 heading, empty = "Display Area"
     "drop_display": False,   # true = remove the 3.2 section entirely (all rows are in 3.1)
+                             # 3.1 / 3.2 with no filled rows are always removed (heading + table)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
+    "extra_tables": [],      # optional 3.3, 3.4 ...: [{"title": "...", "rows": [display-style rows]}], after 3.2
     "references": [],
     "assumptions": []
 }
@@ -151,9 +153,30 @@ def build(spec, out):
     img_ppr = copy.deepcopy(img_tmpl._p.pPr) if img_tmpl is not None and img_tmpl._p.pPr is not None else None
     anchor = doc.paragraphs[i]._p
     for p in body: remove_par(p)
-    width = doc.sections[0].page_width - doc.sections[0].left_margin - doc.sections[0].right_margin
+    sec = doc.sections[0]
+    width = sec.page_width - sec.left_margin - sec.right_margin
+    # page height left for body text (the header reaches about 24 pt below the top margin)
+    body_h = sec.page_height - sec.top_margin - sec.bottom_margin - Pt(24)
+    # Image I shares its page with "1. Introduction", 1.1 Purpose + text, "1.2 UI Design" and its caption
+    purpose_lines = max(1, -(-len(spec.get('purpose', '')) // 140))
+    first_reserve = Pt(34 + 28 + 15 * purpose_lines + 15 + 28 + 20 + 30)
+    other_reserve = Pt(20 + 30)  # caption + safety: caption and image always on one page
     last = anchor
+    cur_sec = None
     for k, im in enumerate(spec.get('images', []), 1):
+        if im.get('section') and im['section'] != cur_sec:
+            cur_sec = im['section']
+            hp = doc.add_paragraph(cur_sec, style=next(st for st in doc.styles if st.style_id == 'Heading3'))
+            hp.paragraph_format.keep_with_next = True
+            # same numbering list as "1.2 UI Design", one level down (1.2.1, 1.2.2 ...)
+            ui_num = doc.paragraphs[i]._p.pPr.numPr if doc.paragraphs[i]._p.pPr is not None else None
+            if ui_num is not None:
+                num = copy.deepcopy(ui_num)
+                from docx.oxml.ns import qn as _qn
+                num.find(_qn('w:ilvl')).set(_qn('w:val'), '2')
+                hp._p.get_or_add_pPr().append(num)
+            last.addnext(hp._p); last = hp._p
+            if k == 1: first_reserve += Pt(28)
         cap = copy.deepcopy(cap_xml) if cap_xml is not None else None
         if cap is not None:
             last.addnext(cap); last = cap
@@ -162,7 +185,11 @@ def build(spec, out):
             cp.paragraph_format.keep_with_next = True
         newp = doc.add_paragraph()  # created at the end, moved below
         if img_ppr is not None: newp._p.insert(0, copy.deepcopy(img_ppr))
-        newp.add_run().add_picture(im['file'], width=Emu(int(width)))
+        from PIL import Image as _Img
+        with _Img.open(im['file']) as _im: iw, ih = _im.size
+        max_h = body_h - (first_reserve if k == 1 else other_reserve)
+        w = min(int(width), int(max_h * iw / ih))
+        newp.add_run().add_picture(im['file'], width=Emu(w))
         last.addnext(newp._p); last = newp._p
 
     # features & functionalities, menu items, process flow, references, assumptions: text lists (blank = empty)
@@ -188,15 +215,41 @@ def build(spec, out):
     fill_table(tabs[0], spec.get('search'), ['name', 'type', 'ui', 'db', 'values'])
     fill_table(tabs[1], spec.get('display'), ['name', 'type', 'ui', 'db', 'values', 'remarks'])
 
+    # extra_tables: 3.3, 3.4 ... cloned from the 3.2 heading + table (same style, same 6 columns)
+    from docx.oxml.ns import qn as _q
+    extras = [x for x in (spec.get('extra_tables') or []) if any(any(str(v).strip() for v in r.values()) for r in x.get('rows') or [])]
+    if extras:
+        h = doc.paragraphs[find_heading(doc, 'Display Area')]._p
+        part, nxt = [h], h.getnext()
+        while nxt is not None and nxt.tag != _q('w:sectPr'):
+            sty = nxt.find('.//' + _q('w:pStyle')) if nxt.tag == _q('w:p') else None
+            if sty is not None and sty.get(_q('w:val'), '').lower().startswith('heading'): break
+            part.append(nxt); nxt = nxt.getnext()
+        last = part[-1]
+        for x in extras:
+            for e in part:
+                c = copy.deepcopy(e); last.addnext(c); last = c
+                if e is h:
+                    set_par_text(docx.text.paragraph.Paragraph(c, doc.paragraphs[0]._parent), x.get('title') or '')
+                elif c.tag == _q('w:tbl'):
+                    fill_table(docx.table.Table(c, doc.paragraphs[0]._parent), x['rows'],
+                               ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
     # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
     for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:
         if spec.get(key):
             set_par_text(doc.paragraphs[find_heading(doc, head)], spec[key])
 
-    # optional: drop the whole 3.2 section (heading + table) when all rows sit in 3.1
-    if spec.get('drop_display'):
-        h = doc.paragraphs[find_heading(doc, spec.get('display_title') or 'Display Area')]._p
-        from docx.oxml.ns import qn as _qn
+    # drop the 3.1 / 3.2 section (heading + table) when it has no filled rows, or when asked
+    # (drop_display: all rows sit in 3.1). The 3 "Column Definitions" heading always stays.
+    def has_rows(rows):
+        return any(any(str(v).strip() for v in r.values()) for r in (rows or []))
+    from docx.oxml.ns import qn as _qn
+    for key, title, flag in [('search', spec.get('search_title') or 'Search', 'drop_search'),
+                             ('display', spec.get('display_title') or 'Display Area', 'drop_display')]:
+        if not (spec.get(flag) or not has_rows(spec.get(key))):
+            continue
+        h = doc.paragraphs[find_heading(doc, title)]._p
         nxt = h.getnext()
         while nxt is not None:
             sty = nxt.find('.//' + _qn('w:pStyle')) if nxt.tag == _qn('w:p') else None
@@ -205,6 +258,8 @@ def build(spec, out):
             cur, nxt = nxt, nxt.getnext()
             cur.getparent().remove(cur)
         h.getparent().remove(h)
+
+    layout(doc)
 
     # document properties
     if hist and hist[0].get('author'): doc.core_properties.author = hist[0]['author']
@@ -221,6 +276,69 @@ def build(spec, out):
     doc.save(out)
     keep_template_parts(tpl, out)
     print('saved', out)
+
+
+def layout(doc):
+    """House page layout: real page breaks instead of the sample's blank-line padding.
+    History, Record of Approval, Contents, 1 Introduction and 3 Column Definitions each start a new page
+    (4 and 5 follow 3). 2.1 text lines up with the 2.2 table. Empty headings are removed."""
+    from docx.oxml.ns import qn
+    body = doc.element.body
+
+    def is_blank(e):
+        if e.tag != qn('w:p') or ''.join(t.text or '' for t in e.iter(qn('w:t'))).strip(): return False
+        if any(b.get(qn('w:type')) != 'page' for b in e.iter(qn('w:br'))): return False  # old page breaks = filler
+        return not any(e.find('.//' + qn('w:' + n)) is not None for n in ('drawing', 'pict', 'object', 'fldChar', 'instrText', 'sectPr'))
+
+    def style(e):
+        s = e.find('./' + qn('w:pPr') + '/' + qn('w:pStyle'))
+        return s.get(qn('w:val')) if s is not None else ''
+
+    for p in list(doc.paragraphs):
+        if style(p._p).lower().startswith('heading') and not p.text.strip():
+            p._p.getparent().remove(p._p)
+
+    starts = [('History of Modifications', None), ('Record of Approval', None), ('Contents', None),
+              ('Introduction', 'Heading1'), ('Column Definitions', 'Heading1')]
+    for text, sty in starts:
+        p = next((p for p in doc.paragraphs if p.text.strip().lower().startswith(text.lower())
+                  and (sty is None or style(p._p) == sty)), None)
+        if p is None: continue
+        prev = p._p.getprevious()
+        while prev is not None and is_blank(prev):
+            cur, prev = prev, prev.getprevious()
+            body.remove(cur)
+        p.paragraph_format.page_break_before = True
+
+    from docx.oxml import OxmlElement
+    # filled tables (2.2 events, 3.1, 3.2): a row never splits over two pages; the header row repeats
+    for t in doc.tables:
+        if t.rows[0].cells[0].text.strip() not in ('Event Type', 'UI Item Name'): continue
+        for k, row in enumerate(t.rows):
+            trPr = row._tr.get_or_add_trPr()
+            for tag in (['w:cantSplit'] + (['w:tblHeader'] if k == 0 else [])):
+                if trPr.find(qn(tag)) is None: trPr.append(OxmlElement(tag))
+
+    # 2.1 text: same left/right edge as the 2.2 events table
+    try:
+        i = find_heading(doc, 'Features')
+    except KeyError:
+        return
+    tbl = next((t for t in doc.tables if t.rows[0].cells[0].text.strip() == 'Event Type'), None)
+    if tbl is None: return
+    tp = tbl._tbl.tblPr
+    sec = doc.sections[0]
+    usable = int((sec.page_width - sec.left_margin - sec.right_margin) / 635)  # dxa
+    tw = tp.find(qn('w:tblW')); jc = tp.find(qn('w:jc')); ind = tp.find(qn('w:tblInd'))
+    if jc is not None and jc.get(qn('w:val')) == 'center' and tw is not None:
+        off = max(0, (usable - int(tw.get(qn('w:w')))) // 2)
+    else:
+        off = int(ind.get(qn('w:w'))) if ind is not None else 0
+    for p in body_between(doc, i):
+        if p.text.strip():
+            sub = 360 if re.match(r'^[a-z]\) ', p.text.strip()) else 0  # a) b) ... sub-conditions sit one step in
+            p.paragraph_format.left_indent = Emu((off + sub) * 635)
+            p.paragraph_format.right_indent = Emu(off * 635)
 
 
 KEEP = re.compile(r'^word/(header\d*|footer\d*|styles|stylesWithEffects|numbering|fontTable|webSettings)\.xml$|^word/theme/|^word/_rels/(header|footer)\d*\.xml\.rels$|^word/glossary/')

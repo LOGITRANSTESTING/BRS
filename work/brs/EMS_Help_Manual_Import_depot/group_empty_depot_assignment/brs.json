@@ -1,0 +1,216 @@
+{
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "EMS – Import Depot Activity",
+  "function": "Empty Depot Assignment",
+  "version": "01.01",
+  "date": "",
+  "history": [
+    {
+      "date": "",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of EMS's Import Depot Activity Empty Depot Assignment details.",
+  "images": [
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_empty_depot_assignment/img/01.png",
+      "caption": "Image I"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_empty_depot_assignment/img/02.png",
+      "caption": "Image II"
+    }
+  ],
+  "features": [
+    "Empty Depot Assignment allows the user to assign/update Empty depot for a BL according to the Empty Pickup and Return setup.",
+    "Selected PR container should not be in Prepared, Cancelled or Freeze status."
+  ],
+  "events": [
+    {
+      "event_type": "Menu Click",
+      "description": "Assigns/updates the Empty depot of the selected BL records according to the Empty Pickup and Return setup.",
+      "triggered_when": "User selects one or more BL records using the check boxes, clicks the ☰ icon at Voyage level in Depot Activity and selects \"Empty Depot Assignment\".",
+      "remarks": "\"Empty Depot Assignment Generated successfully.\""
+    }
+  ],
+  "search_title": "",
+  "search": [],
+  "display_title": "Import Depot Activity - Data Grid",
+  "drop_display": false,
+  "display": [
+    {
+      "name": "Total Container(s)",
+      "type": "Display Item",
+      "ui": "Count of the containers queried",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Select All (header check box)",
+      "type": "Check Box",
+      "ui": "If all the queried records are to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Check Box (row)",
+      "type": "Check Box",
+      "ui": "If the record is to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "BL Number",
+      "type": "Display Item",
+      "ui": "BL number of the record. The ☰ opens the single functions menu of the BL",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "Display Item",
+      "ui": "Size type of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Container",
+      "type": "Display Item",
+      "ui": "Container number of the record",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "AVANTITA",
+      "type": "Check Box",
+      "ui": "If the container is AVANTITA please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "BCTN",
+      "type": "Check Box",
+      "ui": "If the container is BCTN please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Full Pickup",
+      "type": "Auto Populate",
+      "ui": "Input Full Pickup depot of the container (Key in five char)",
+      "db": "",
+      "values": "e.g. BEANRP02",
+      "remarks": "Updated by Empty Depot Assignment as per the Empty Pickup and Return setup"
+    },
+    {
+      "name": "Full Pickup Date",
+      "type": "Display Item",
+      "ui": "Full pickup date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Delivery Point",
+      "type": "Display Item",
+      "ui": "Delivery point of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Delivery Date",
+      "type": "Display Item",
+      "ui": "Delivery date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Empty Return",
+      "type": "Auto Populate",
+      "ui": "Input Empty Return depot of the container (Key in five char)",
+      "db": "",
+      "values": "e.g. BEANRP01",
+      "remarks": "Updated by Empty Depot Assignment as per the Empty Pickup and Return setup"
+    },
+    {
+      "name": "Empty Return Date",
+      "type": "Display Item",
+      "ui": "Empty return date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Turn in Reference",
+      "type": "Alphanumeric",
+      "ui": "Input Turn in Reference of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Actual Full Return Date",
+      "type": "Display Item",
+      "ui": "Actual full return date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "DG (🔥)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is DG",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "OOG (⊞)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is OOG",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Reefer (❄)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is Reefer",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Merchant Haulage (🚚)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is Merchant Haulage",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "SOC",
+      "type": "Display Item",
+      "ui": "Indicates if the container is SOC",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    }
+  ],
+  "extra_tables": [],
+  "references": [],
+  "assumptions": []
+}
