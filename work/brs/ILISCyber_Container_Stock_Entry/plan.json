@@ -1,0 +1,38 @@
+{
+ "manual": "manuals/ILISCyber_Container_Stock_Entry.gui",
+ "shared_pages": [
+  "Container Stock Entry",
+  "Container Stock Entry > Container Stock Entry - Query Fields",
+  "Container Stock Entry > Container Stock Entry - Data Grid Screen",
+  "Container Stock Entry > How to Edit EQC reserved data",
+  "Container Stock Entry > How to add records in Container Stock Entry",
+  "Container Stock Entry > How to view Auto - Stock Data",
+  "Container Stock Entry > How to View list of Booking Numbers that is linked to a stock type",
+  "Container Stock Entry > How to View list of Booking Numbers that is linked to a stock type > How to view Booking Numbers with \"Supplied\" PR Status",
+  "Container Stock Entry > How to Process Re-Build details"
+ ],
+ "functions": [
+  {
+   "name": "Container Stock Entry",
+   "kind": "Screen",
+   "path": "Container Stock Entry",
+   "pages": [
+    "Container Stock Entry",
+    "Container Stock Entry > Container Stock Entry - Query Fields",
+    "Container Stock Entry > Container Stock Entry - Data Grid Screen",
+    "Container Stock Entry > How to Edit EQC reserved data",
+    "Container Stock Entry > How to add records in Container Stock Entry",
+    "Container Stock Entry > How to view Auto - Stock Data",
+    "Container Stock Entry > How to View list of Booking Numbers that is linked to a stock type",
+    "Container Stock Entry > How to View list of Booking Numbers that is linked to a stock type > How to view Booking Numbers with \"Supplied\" PR Status",
+    "Container Stock Entry > How to Process Re-Build details"
+   ],
+   "fp": "e910a558397b2477",
+   "n": 1,
+   "fn": "screen_container_stock_entry",
+   "status": "in progress",
+   "change": "new"
+  }
+ ],
+ "removed": []
+}
