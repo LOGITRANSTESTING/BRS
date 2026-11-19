@@ -21,3 +21,4 @@ Branch brs-container-stock-entry. 1 Screen function.
 - 19/11/2026 - Screen / Step 1 Images IX, X, XI approved by the user. Next: XIII (f8f3_05), XV (c486_05).
 - 19/11/2026 - Screen / Step 1 Images XIII (PR Status box) and XV (Stock box): lines on plain white, filled from adjacent white of the same image; gates passed; img/13, img/15 saved. Full sheet made. Next: user OK on the sheet, then Step 2 (module line).
 - 19/11/2026 - Screen / Step 1 all 15 images approved by the user. Next: Step 2 - module line for the cover, then brs.json skeleton.
+- 19/11/2026 - Screen / Step 2: module EMS (user). brs.json skeleton filled: cover (EMS, Container Stock Entry, 01.01, 19/11/2026), history row (Appsara), purpose, 15 images with the approved 1.2.1-1.2.6 sections. Next: Step 4 - 2.1 Features (definition + pre-conditions).

@@ -1,0 +1,128 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Container Stock Entry",
+ "version": "01.01",
+ "date": "19/11/2026",
+ "history": [
+  {
+   "date": "19.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Container Stock Entry details.",
+ "images": [
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/01.png",
+   "caption": "Image I",
+   "section": "Query & Data Grid"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/02.png",
+   "caption": "Image II",
+   "section": "Query & Data Grid"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/03.png",
+   "caption": "Image III",
+   "section": "Query & Data Grid"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/04.png",
+   "caption": "Image IV",
+   "section": "Edit EQC Reserved"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/05.png",
+   "caption": "Image V",
+   "section": "Edit EQC Reserved"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/06.png",
+   "caption": "Image VI",
+   "section": "Add Record"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/07.png",
+   "caption": "Image VII",
+   "section": "Add Record"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/08.png",
+   "caption": "Image VIII",
+   "section": "Add Record"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/09.png",
+   "caption": "Image IX",
+   "section": "Re-Build"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/10.png",
+   "caption": "Image X",
+   "section": "Booking Details"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/11.png",
+   "caption": "Image XI",
+   "section": "Booking Details"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/12.png",
+   "caption": "Image XII",
+   "section": "Booking Details"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/13.png",
+   "caption": "Image XIII",
+   "section": "Booking Details"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/14.png",
+   "caption": "Image XIV",
+   "section": "Auto Stock"
+  },
+  {
+   "file": "work/brs/ILISCyber_Container_Stock_Entry/screen_container_stock_entry/img/15.png",
+   "caption": "Image XV",
+   "section": "Auto Stock"
+  }
+ ],
+ "features": [],
+ "events": [
+  {
+   "event_type": "",
+   "description": "",
+   "triggered_when": "",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "",
+   "type": "",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
