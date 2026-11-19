@@ -214,13 +214,6 @@
       "description": "Deletes the selected arranged containers",
       "triggered_when": "User clicks Delete after selecting one or more containers",
       "remarks": "\"Container Deleted Successfully\""
-    },
-    {
-      "section": "Arrange",
-      "event_type": "Button Click (CSV Load)",
-      "description": "Loads container arrangement data from a CSV file",
-      "triggered_when": "User clicks CSV Load",
-      "remarks": ""
     }
   ],
   "search_title": "",
