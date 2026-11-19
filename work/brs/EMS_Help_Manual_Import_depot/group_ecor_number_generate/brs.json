@@ -83,11 +83,125 @@
       "remarks": "\"ECOR Number generated Successfully\""
     }
   ],
-  "search_title": "",
-  "search": [],
-  "display_title": "",
+  "search_title": "ECOR Number Generate - Query Screen",
+  "search": [
+    {
+      "name": "Discharge Voyage",
+      "type": "Auto Populate / Alphanumeric",
+      "ui": "Input Discharge Voyage. The ⇆ switches the box between Auto Populate (Key in three char) and Alphanumeric",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Discharge Voyage (port call drop down)",
+      "type": "Single Select Drop Down",
+      "ui": "Select the discharge port call of the entered voyage",
+      "db": "",
+      "values": "Terminal code - date & time (e.g. BEANRP02-18/12/2025 19:00)"
+    },
+    {
+      "name": "Vessel",
+      "type": "Display Item",
+      "ui": "Vessel of the entered voyage, auto populated (greyed)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Search",
+      "type": "Button",
+      "ui": "Queries the records based on the query fields",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Reset",
+      "type": "Button",
+      "ui": "Clears the query fields and the grid",
+      "db": "",
+      "values": ""
+    }
+  ],
+  "display_title": "ECOR Number Generate - Data Grid",
   "drop_display": false,
-  "display": [],
+  "display": [
+    {
+      "name": "Total Record(s)",
+      "type": "Display Item",
+      "ui": "Count of the records queried",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Select All (header check box)",
+      "type": "Check Box",
+      "ui": "If all the queried records are to be processed please select the check box",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Check Box (row)",
+      "type": "Check Box",
+      "ui": "If the record is to be processed please select the check box",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Voyage",
+      "type": "Display Item",
+      "ui": "Voyage of the record",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "BL Number",
+      "type": "Display Item",
+      "ui": "BL number of the record",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Container",
+      "type": "Display Item",
+      "ui": "Container number of the record",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "Display Item",
+      "ui": "Size type of the container",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Customer",
+      "type": "Display Item",
+      "ui": "Customer of the BL",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "ECOR Number",
+      "type": "Display Item",
+      "ui": "ECOR number of the container, filled once generated",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Check List",
+      "type": "Button",
+      "ui": "Validates whether ECOR Numbers can be generated for the selected records",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Generate",
+      "type": "Button",
+      "ui": "Generates ECOR Numbers for the selected records",
+      "db": "",
+      "values": ""
+    }
+  ],
   "extra_tables": [],
   "references": [],
   "assumptions": []
