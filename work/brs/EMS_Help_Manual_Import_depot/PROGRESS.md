@@ -14,3 +14,4 @@
 - 2026-11-19 Fn1 ECOR Number Generate (Group): exported; function screenshots fb78_01, 96b1_10, 96b1_13 unmarked; 96b1_02, 04, 09, 12 marked (NO TWIN). Next: review images.
 - Fn1 images: I fb78_01 (clean twin of 96b1_02), II 96b1_04 repaired (gate: 1 px flagged at 25,157 = mark-red line pixel missed by mask), III 96b1_12 repaired, IV 96b1_10, V 96b1_13; 96b1_09 dropped (duplicate of 12); frames stripped. Previews committed, awaiting approval.
 - Fn1 images approved; brs.json created (header, purpose, 5 images).
+- Fn1 2.1 approved (1 line); 2.2 approved (7 events; grid search & tab close dropped by user).
