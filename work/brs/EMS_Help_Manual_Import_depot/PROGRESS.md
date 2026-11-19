@@ -30,3 +30,4 @@
 - 2026-11-19 Fn4 images I-II approved.
 - 2026-11-19 Fn4 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 tables approved; docx built (8 pages), check passed. Awaiting docx approval.
 - 2026-11-19 Fn4 Empty Depot Assignment (Group) docx approved; done.
+- 2026-11-19 Fn5 Empty Return Pre Advice: exported; I 672b_01 (clean menu), II 07fd_07 (clean, spinner kept); 07fd_06 dropped (twin of 01 + marks; gate's 2 'outside' px are pure-red mark px at (150-151,252)).
