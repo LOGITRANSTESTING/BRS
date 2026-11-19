@@ -38,9 +38,178 @@
   ],
   "search_title": "",
   "search": [],
-  "display_title": "",
+  "display_title": "Import Depot Activity - Data Grid",
   "drop_display": false,
-  "display": [],
+  "display": [
+    {
+      "name": "Total Container(s)",
+      "type": "Display Item",
+      "ui": "Count of the containers queried",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Select All (header check box)",
+      "type": "Check Box",
+      "ui": "If all the queried records are to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Check Box (row)",
+      "type": "Check Box",
+      "ui": "If the record is to be processed please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "BL Number",
+      "type": "Display Item",
+      "ui": "BL number of the record. The ☰ opens the single functions menu of the BL",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "Display Item",
+      "ui": "Size type of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Container",
+      "type": "Display Item",
+      "ui": "Container number of the record",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "AVANTITA",
+      "type": "Check Box",
+      "ui": "If the container is AVANTITA please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "BCTN",
+      "type": "Check Box",
+      "ui": "If the container is BCTN please select the check box",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Full Pickup",
+      "type": "Auto Populate",
+      "ui": "Input Full Pickup depot of the container (Key in five char)",
+      "db": "",
+      "values": "e.g. BEANRP02",
+      "remarks": "Updated by Empty Depot Assignment as per the Empty Pickup and Return setup"
+    },
+    {
+      "name": "Full Pickup Date",
+      "type": "Display Item",
+      "ui": "Full pickup date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Delivery Point",
+      "type": "Display Item",
+      "ui": "Delivery point of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Delivery Date",
+      "type": "Display Item",
+      "ui": "Delivery date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Empty Return",
+      "type": "Auto Populate",
+      "ui": "Input Empty Return depot of the container (Key in five char)",
+      "db": "",
+      "values": "e.g. BEANRP01",
+      "remarks": "Updated by Empty Depot Assignment as per the Empty Pickup and Return setup"
+    },
+    {
+      "name": "Empty Return Date",
+      "type": "Display Item",
+      "ui": "Empty return date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Turn in Reference",
+      "type": "Alphanumeric",
+      "ui": "Input Turn in Reference of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Actual Full Return Date",
+      "type": "Display Item",
+      "ui": "Actual full return date of the container",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "DG (🔥)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is DG",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "OOG (⊞)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is OOG",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Reefer (❄)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is Reefer",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "Merchant Haulage (🚚)",
+      "type": "Display Item",
+      "ui": "Indicates if the container is Merchant Haulage",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    },
+    {
+      "name": "SOC",
+      "type": "Display Item",
+      "ui": "Indicates if the container is SOC",
+      "db": "",
+      "values": "",
+      "remarks": ""
+    }
+  ],
   "extra_tables": [],
   "references": [],
   "assumptions": []
