@@ -26,3 +26,4 @@ Branch brs-container-stock-entry. 1 Screen function.
 - 19/11/2026 - Screen / Step 6: 2.2 approved, 10 rows (Search, Reset, Edit, Add, Delete, Save, Re-Build, Booking Details, Stock on change, PR Status on change). Next: 3.1 Search (query fields).
 - 19/11/2026 - Screen / Step 5: 3.1 Query Screen approved, 5 rows; Container Type = Single Select Drop Down (user). Next: 3.2 Data Grid.
 - 19/11/2026 - Screen / Step 5: 3.2 Data Grid (Physical) approved, 20 rows; cut-off last column left out (user). Next: 3.3 Auto Stock grid, 3.4 Booking Details grid.
+- 19/11/2026 - Screen / Step 5: 3.3 Auto Stock - Data Grid approved, 8 rows. Next: 3.4 Booking Details grid.

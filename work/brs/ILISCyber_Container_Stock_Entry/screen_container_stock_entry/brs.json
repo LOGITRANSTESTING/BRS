@@ -360,7 +360,77 @@
    "remarks": ""
   }
  ],
- "extra_tables": [],
+ "extra_tables": [
+  {
+   "title": "Auto Stock - Data Grid",
+   "rows": [
+    {
+     "name": "Total Record(s)",
+     "type": "Display Item",
+     "ui": "Total number of records queried",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Container Type",
+     "type": "Display Item",
+     "ui": "Container Type of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "Depot",
+     "type": "Display Item",
+     "ui": "Depot of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "P/R Available",
+     "type": "Display Item",
+     "ui": "P/R Available of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "PR Reserved",
+     "type": "Display Item",
+     "ui": "PR Reserved of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "PR Supplied",
+     "type": "Display Item",
+     "ui": "PR Supplied of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "Available For Release",
+     "type": "Display Item",
+     "ui": "Available For Release of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    },
+    {
+     "name": "Available For Depot",
+     "type": "Display Item",
+     "ui": "Available For Depot of the record",
+     "db": "",
+     "values": "",
+     "remarks": "View only, not editable"
+    }
+   ]
+  }
+ ],
  "references": [],
  "assumptions": []
 }
