@@ -733,6 +733,91 @@
           "remarks": ""
         }
       ]
+    },
+    {
+      "title": "Pre sales Instruct - Data Grid",
+      "rows": [
+        {
+          "name": "Total Record(s)",
+          "type": "Display Item",
+          "ui": "Number of containers listed in the grid",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Select All",
+          "type": "Check Box",
+          "ui": "If all containers are to be processed please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": "Header check box"
+        },
+        {
+          "name": "Select",
+          "type": "Check Box",
+          "ui": "If the container is to be processed please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": "Row check box"
+        },
+        {
+          "name": "Container Number",
+          "type": "Display Item",
+          "ui": "Container number of the pre sales instruction",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Size Type",
+          "type": "Display Item",
+          "ui": "Size type of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Last Activity",
+          "type": "Display Item",
+          "ui": "Last activity of the container",
+          "db": "",
+          "values": "CR",
+          "remarks": ""
+        },
+        {
+          "name": "Move Date",
+          "type": "Display Item",
+          "ui": "Date of the last move",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Current Location",
+          "type": "Display Item",
+          "ui": "Current location of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "From Load Port",
+          "type": "Display Item",
+          "ui": "Load port the container came from",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Process",
+          "type": "Button",
+          "ui": "Processes the selected containers for pre sales",
+          "db": "",
+          "values": "",
+          "remarks": "Success: \"Container has processed successfully\""
+        }
+      ]
     }
   ],
   "references": [],
