@@ -7,3 +7,4 @@
 - 2026-11-19 Fn2: 2.1 (2 lines verbatim), 2.2 (1 Menu Click), no section 3 approved; docx built, awaiting approval.
 - 2026-11-19 Fn2 Truck Order Summary RF docx approved; done. Next: Fn3 Truck Order Preview.
 - 2026-11-19 Fn3 Truck Order Preview: I df47_01 (clean twin of 99d3_01), II 99d3_02 (ITB004 Truck Order PDF, unmarked, kept as-is 1000x811). No repairs. Awaiting image approval.
+- 2026-11-19 Fn3: 2.1 (3 lines; note 'Summary'->'Preview'), 2.2 (1 Menu Click, PDF remark), no section 3 approved; docx built, awaiting approval.
