@@ -9,3 +9,7 @@
 - 2026-11-19 Fn3 Truck Order Preview: I df47_01 (clean twin of 99d3_01), II 99d3_02 (ITB004 Truck Order PDF, unmarked, kept as-is 1000x811). No repairs. Awaiting image approval.
 - 2026-11-19 Fn3: 2.1 (3 lines; note 'Summary'->'Preview'), 2.2 (1 Menu Click, PDF remark), no section 3 approved; docx built, awaiting approval.
 - 2026-11-19 Fn3 Truck Order Preview docx approved; done. Next: Fn4 Truck Order RF.
+
+## Fn4 Truck Order RF — images
+- I: 99d0_01 repaired. Checkbox mark from df47_01 (exact). Menu box and circle inside the menu from the user's clean crop image-2.png (offset 17,2, exact on the menu). Menu glow on the right and the row under the menu from image-2. "Freeze" header under the circle from f5ee_01 (-2,1). Gate passed. 22 tinted px are the header font's ClearType edges.
+- II: 99d0_02 (success toast "Truck order RF generated successfully"), frame cropped.
