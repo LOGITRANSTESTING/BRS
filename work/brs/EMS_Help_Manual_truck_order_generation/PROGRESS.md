@@ -1,3 +1,5 @@
 # PROGRESS - EMS Help Manual Truck Order Generation
 - 2026-11-19 Session start: plan shows 4 Group functions (Truck Order Summary, Truck Order Summary RF, Truck Order Preview, Truck Order RF), all new. Module line: EMS (same as other EMS manuals). Branch brs-truck-order-generation. Next: export Fn1.
 - 2026-11-19 Fn1 Truck Order Summary: exported; I a773_01 (clean twin of marked 836c_01, no repair), frame stripped 1534x871. Awaiting image approval.
+- 2026-11-19 Fn1: user asked about the success image. The manual has none for Truck Order Summary (only Summary RF/RF toasts, text 'Truck order summary RF generated successfully'). Decision: keep 1 image for now; user will send the success screenshot later, then add Image II + Remarks and rebuild. Fn1 docx pending. Fn2-4 exported.
+- 2026-11-19 Fn1: user supplied success screenshot (Image II, toast 'Truck order summary generated successfully', frame stripped, no marks); Remarks updated; docx 8 pages approved; done. Next: Fn2 Truck Order Summary RF.

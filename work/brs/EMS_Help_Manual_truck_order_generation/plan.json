@@ -20,8 +20,10 @@
    "fp": "465528ed4ea4acab",
    "n": 1,
    "fn": "group_truck_order_summary",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Truck Order Generation/BRS - EMS - Truck Order Generation - Truck Order Summary V_1.0.docx",
+   "done_fp": "465528ed4ea4acab"
   },
   {
    "name": "Truck Order Summary RF",
@@ -34,7 +36,7 @@
    "fp": "aa6841cfb738e6c4",
    "n": 2,
    "fn": "group_truck_order_summary_rf",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -48,7 +50,7 @@
    "fp": "7d1a9d8a22fac3b6",
    "n": 3,
    "fn": "group_truck_order_preview",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   },
   {
@@ -62,7 +64,7 @@
    "fp": "6d786118eb2be489",
    "n": 4,
    "fn": "group_truck_order_rf",
-   "status": "new",
+   "status": "in progress",
    "change": "new"
   }
  ],
