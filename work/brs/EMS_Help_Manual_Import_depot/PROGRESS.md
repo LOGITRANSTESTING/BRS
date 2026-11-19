@@ -35,3 +35,4 @@
 - 2026-11-19 Fn5 2.1 (A as manual), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
 - 2026-11-19 Fn5 Empty Return Pre Advice docx approved; done. User asked to add Display Area fields to Fn4 (data updated in the grid).
 - 2026-11-19 Fn4 revisit: user asked for Display Area; chose full visible grid (B), icon names DG/OOG/Reefer/Merchant Haulage/SOC (user-chosen guesses); 21 rows approved; docx rebuilt (10 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn4 updated docx approved.
