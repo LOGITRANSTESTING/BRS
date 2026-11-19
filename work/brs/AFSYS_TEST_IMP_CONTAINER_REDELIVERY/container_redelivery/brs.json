@@ -144,6 +144,34 @@
       "description": "Opens the Container History Arrangement pop-up with that container's redelivery history",
       "triggered_when": "User clicks the Container History Arrangement icon next to a container number in the grid",
       "remarks": ""
+    },
+    {
+      "section": "Pre sales Instruct",
+      "event_type": "Radio Button Click",
+      "description": "Shows the Pre sales Instruct query fields",
+      "triggered_when": "User selects the Pre sales Instruct radio button",
+      "remarks": ""
+    },
+    {
+      "section": "Pre sales Instruct",
+      "event_type": "Button Click (Search)",
+      "description": "Lists the containers matching the query fields in the grid",
+      "triggered_when": "User clicks Search after entering the query fields",
+      "remarks": ""
+    },
+    {
+      "section": "Pre sales Instruct",
+      "event_type": "Button Click (Reset)",
+      "description": "Clears all query fields",
+      "triggered_when": "User clicks Reset",
+      "remarks": ""
+    },
+    {
+      "section": "Pre sales Instruct",
+      "event_type": "Button Click (Process)",
+      "description": "Processes the selected containers for pre sales",
+      "triggered_when": "User clicks Process after selecting one or more containers",
+      "remarks": "\"Container has processed successfully\""
     }
   ],
   "search_title": "",
