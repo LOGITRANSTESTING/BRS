@@ -1,0 +1,49 @@
+{
+  "template": "template/BRS_Sample_Accept_Release.docx",
+  "company": "YANG MING MARINE TRANSPORT CORP.",
+  "module": "EMS – Import Depot Activity",
+  "function": "ECOR Number Regenerate",
+  "version": "01.01",
+  "date": "",
+  "history": [
+    {
+      "date": "",
+      "version": "V01.01",
+      "author": "Appsara",
+      "description": "Initial version created based on the confirmed screen designs"
+    }
+  ],
+  "purpose": "This document explains the purpose of EMS's Import Depot Activity ECOR Number Regenerate details.",
+  "images": [
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_ecor_number_regenerate/img/01.png",
+      "caption": "Image I"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_ecor_number_regenerate/img/02.png",
+      "caption": "Image II"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_ecor_number_regenerate/img/03.png",
+      "caption": "Image III"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_ecor_number_regenerate/img/04.png",
+      "caption": "Image IV"
+    },
+    {
+      "file": "work/brs/EMS_Help_Manual_Import_depot/group_ecor_number_regenerate/img/05.png",
+      "caption": "Image V"
+    }
+  ],
+  "features": [],
+  "events": [],
+  "search_title": "",
+  "search": [],
+  "display_title": "",
+  "drop_display": false,
+  "display": [],
+  "extra_tables": [],
+  "references": [],
+  "assumptions": []
+}
