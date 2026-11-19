@@ -104,9 +104,52 @@
   "features": [],
   "events": [
     {
-      "event_type": "",
-      "description": "",
-      "triggered_when": "",
+      "section": "Offhire Instruct",
+      "event_type": "Menu Click",
+      "description": "Opens the Container Redelivery screen from Depot Activity",
+      "triggered_when": "User selects Container Redelivery from the Depot Activity side panel",
+      "remarks": ""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Radio Button Click",
+      "description": "Shows the Offhire Instruct query fields",
+      "triggered_when": "User selects the Offhire Instruct radio button",
+      "remarks": ""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Button Click (Search)",
+      "description": "Lists the containers matching the query fields in the grid",
+      "triggered_when": "User clicks Search after entering the query fields",
+      "remarks": ""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Button Click (Reset)",
+      "description": "Clears all query fields",
+      "triggered_when": "User clicks Reset",
+      "remarks": ""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Button Click (Process)",
+      "description": "Processes the selected containers for offhire",
+      "triggered_when": "User clicks Process after selecting one or more containers",
+      "remarks": "\"Container has processed successfully\""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Icon Click (Container History Arrangement icon)",
+      "description": "Opens the Container History Arrangement pop-up with that container's redelivery history",
+      "triggered_when": "User clicks the Container History Arrangement icon next to a container number in the grid",
+      "remarks": ""
+    },
+    {
+      "section": "Offhire Instruct",
+      "event_type": "Button Click (Excel)",
+      "description": "Downloads the grid data to Excel",
+      "triggered_when": "User clicks the Excel icon",
       "remarks": ""
     }
   ],

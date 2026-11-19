@@ -15,3 +15,4 @@ Sections: Floating icon (1-2), Offhire Instruct (3-9), Pre Sales Instruct (10-13
 - 2026-11-19 Container Redelivery: cover set - function 'Import Depot Activity - Container Redelivery', EMS, 01.01, 19/11/2026; purpose sentence set. Next: 2.1 Features.
 - 2026-11-19 Container Redelivery: 2.1 left blank (user). Next: 2.2 events proposal.
 - 2026-11-19 Container Redelivery: user wants 2.2 split like UI Design; brs_docx.py now supports events 'section' (2.2.x heading + table each), tested. Next: propose events per section, starting with Offhire Instruct - Process.
+- 2026-11-19 Container Redelivery: 2.2 split per radio button (Offhire Instruct / Pre sales Instruct / Arrange). Offhire rows saved; icon named 'Container History Arrangement icon', Event Type Icon Click. Excel row pending confirmation.
