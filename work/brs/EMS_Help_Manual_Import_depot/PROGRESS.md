@@ -42,3 +42,4 @@
 - 2026-11-19 Fn6 Empty Return Advice - GR docx approved; done.
 - 2026-11-19 Fn7 XML Interface: exported; images unmarked; frame 1559x889 cropped 13,9,1546,879 -> 1534x871; I f244_01 (menu), II 90eb_07 (success, spinner kept); 90eb_06 dropped (identical to f244_01).
 - 2026-11-19 Fn7 2.1 (1 line), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
+- 2026-11-19 Fn7 XML Interface docx approved; done.

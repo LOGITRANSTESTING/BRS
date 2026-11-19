@@ -114,8 +114,10 @@
    "fp": "1c33f544cc1d3e76",
    "n": 7,
    "fn": "group_xml_interface",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity - Group/BRS - EMS - Import Depot Activity - XML Interface V_1.0.docx",
+   "done_fp": "1c33f544cc1d3e76"
   },
   {
    "name": "Empty Depot Assignment",
