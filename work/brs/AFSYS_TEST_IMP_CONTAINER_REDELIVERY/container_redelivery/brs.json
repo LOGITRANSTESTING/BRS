@@ -983,6 +983,179 @@
           "remarks": ""
         }
       ]
+    },
+    {
+      "title": "Arrange - Data Grid",
+      "rows": [
+        {
+          "name": "Total Record(s)",
+          "type": "Display Item",
+          "ui": "Number of containers listed in the grid",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Place (check box)",
+          "type": "Check Box",
+          "ui": "If Redelivery Place is to be applied please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Place",
+          "type": "Auto Populate",
+          "ui": "Input Redelivery Place to apply",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Date (check box)",
+          "type": "Check Box",
+          "ui": "If Redelivery Date is to be applied please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Date",
+          "type": "Date Picker",
+          "ui": "Input Redelivery date to apply",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Turn in Reference (check box)",
+          "type": "Check Box",
+          "ui": "If Turn in Reference is to be applied please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Turn in Reference",
+          "type": "Alphanumeric",
+          "ui": "Input Turn in Reference to apply",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Apply",
+          "type": "Button",
+          "ui": "Applies the ticked values to the selected containers after the overwrite confirmation",
+          "db": "",
+          "values": "",
+          "remarks": "Alert \"Do you want to Overwrite ?\" (OK / Cancel)"
+        },
+        {
+          "name": "Select All",
+          "type": "Check Box",
+          "ui": "If all containers are to be selected please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": "Header check box"
+        },
+        {
+          "name": "Select",
+          "type": "Check Box",
+          "ui": "If the container is to be selected please select the check box",
+          "db": "",
+          "values": "",
+          "remarks": "Row check box"
+        },
+        {
+          "name": "Container Number",
+          "type": "Display Item",
+          "ui": "Container number of the arrangement",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Instruction Number",
+          "type": "Display Item",
+          "ui": "Instruction number of the arrangement",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Lessor",
+          "type": "Display Item",
+          "ui": "Lessor of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Expire Date",
+          "type": "Display Item",
+          "ui": "Lease expire date of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Redelivery Place",
+          "type": "Display Item",
+          "ui": "Redelivery place of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Date",
+          "type": "Display Item",
+          "ui": "Redelivery date of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Turn in Reference",
+          "type": "Display Item",
+          "ui": "Turn in reference of the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Assign By",
+          "type": "Display Item",
+          "ui": "User who assigned the arrangement",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Linked BL",
+          "type": "Display Item",
+          "ui": "BL linked to the container",
+          "db": "",
+          "values": "",
+          "remarks": ""
+        },
+        {
+          "name": "Process",
+          "type": "Button",
+          "ui": "Processes the selected arranged containers",
+          "db": "",
+          "values": "",
+          "remarks": "Success \"Container has processed successfully\""
+        },
+        {
+          "name": "Delete",
+          "type": "Button",
+          "ui": "Deletes the selected arranged containers",
+          "db": "",
+          "values": "",
+          "remarks": "Success \"Container Deleted Successfully\""
+        }
+      ]
     }
   ],
   "references": [],
