@@ -33,3 +33,4 @@
 - 2026-11-19 Fn5 Empty Return Pre Advice: exported; I 672b_01 (clean menu), II 07fd_07 (clean, spinner kept); 07fd_06 dropped (twin of 01 + marks; gate's 2 'outside' px are pure-red mark px at (150-151,252)).
 - 2026-11-19 Fn5 images I-II approved.
 - 2026-11-19 Fn5 2.1 (A as manual), 2.2 (1 Menu Click), no section 3 approved; docx built, check passed. Awaiting docx approval.
+- 2026-11-19 Fn5 Empty Return Pre Advice docx approved; done. User asked to add Display Area fields to Fn4 (data updated in the grid).
