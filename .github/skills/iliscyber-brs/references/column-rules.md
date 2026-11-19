@@ -71,3 +71,5 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 - `search` rows: name, type, ui, db, values
 - `display` rows: name, type, ui, db, values, remarks
 - `events` rows: event_type, description, triggered_when, remarks
+
+- Event Type "Icon Click (<icon name>)": a grid icon that opens a pop-up, named as the pop-up's title, e.g. "Icon Click (Container History Arrangement icon)" (settled on Container Redelivery). 2.2 may be split per radio button selection (2.2.1 Offhire Instruct, 2.2.2 Pre sales Instruct, 2.2.3 Arrange) via the events "section" key.
