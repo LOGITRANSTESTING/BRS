@@ -36,8 +36,54 @@
       "caption": "Image V"
     }
   ],
-  "features": [],
-  "events": [],
+  "features": [
+    "ECOR Number Regenerate function is used to regenerate ECOR Number.",
+    "If the ECOR number of a container has a certain value, then after regeneration, the ECOR number will remain the same."
+  ],
+  "events": [
+    {
+      "event_type": "Menu Click",
+      "description": "Opens the ECOR Number Regenerate screen in a new tab",
+      "triggered_when": "User clicks the ☰ icon at Voyage level in Depot Activity and selects \"ECOR Number Regenerate\"",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click (Search)",
+      "description": "Queries the records matching the query parameters and lists them in the grid, with the count in Total Record(s)",
+      "triggered_when": "User selects the Discharge Voyage and clicks Search",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click (Reset)",
+      "description": "Clears the query fields and the grid",
+      "triggered_when": "User clicks Reset",
+      "remarks": ""
+    },
+    {
+      "event_type": "Check Box Click (Select All)",
+      "description": "Selects or deselects all records in the grid",
+      "triggered_when": "User clicks the select-all check box in the grid header",
+      "remarks": ""
+    },
+    {
+      "event_type": "Check Box Click (Row)",
+      "description": "Selects or deselects the individual record",
+      "triggered_when": "User clicks the check box of a record",
+      "remarks": ""
+    },
+    {
+      "event_type": "Button Click (Check List)",
+      "description": "Validates whether ECOR Numbers can be regenerated for the selected records",
+      "triggered_when": "User selects one or more records and clicks Check List",
+      "remarks": "\"No Errors Found - ECOR Number can be Re-Generated\""
+    },
+    {
+      "event_type": "Button Click (Regenerate)",
+      "description": "Regenerates ECOR Numbers for the selected records; an existing ECOR Number remains the same",
+      "triggered_when": "User selects one or more records and clicks Regenerate",
+      "remarks": "\"ECOR Number Re-generated successfully.\""
+    }
+  ],
   "search_title": "",
   "search": [],
   "display_title": "",

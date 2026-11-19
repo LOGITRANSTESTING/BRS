@@ -19,3 +19,4 @@
 - Fn1 ECOR Number Generate approved and marked done.
 - Fn2 ECOR Number Regenerate exported. Images: I e221_01 (clean twin of c424_02), II c424_04 repaired (gate: 59 px flagged = red-tinted fringe of Search box), III c424_12 repaired (donor c424_10, split offsets since button 1px wider; gate passed), IV c424_10, V c424_13; c424_09 dropped (duplicate state). Previews committed, awaiting approval.
 - Fn2 images approved; brs.json created (header, purpose, 5 images).
+- Fn2 2.1 approved (Option B: name corrected, 2 lines); 2.2 approved (7 events).
