@@ -1,19 +1,19 @@
 {
   "template": "template/BRS_Sample_Accept_Release.docx",
   "company": "YANG MING MARINE TRANSPORT CORP.",
-  "module": "Agency Booking",
-  "function": "",
+  "module": "EMS",
+  "function": "Import Depot Activity - Container Redelivery",
   "version": "01.01",
-  "date": "",
+  "date": "19/11/2026",
   "history": [
     {
-      "date": "",
+      "date": "19.11.2026",
       "version": "V01.01",
       "author": "Appsara",
       "description": "Initial version created based on the confirmed screen designs"
     }
   ],
-  "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
+  "purpose": "This document explains the purpose of EMS's Import Depot Activity - Container Redelivery details.",
   "images": [
     {
       "file": "work/brs/AFSYS_TEST_IMP_CONTAINER_REDELIVERY/container_redelivery/img/01.png",
