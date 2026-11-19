@@ -91,7 +91,11 @@
    "section": "Auto Stock"
   }
  ],
- "features": [],
+ "features": [
+  "Container Stock Entry allows the user to maintain the container type wise stock entry per depot.",
+  "The screen has provision to update the stock as per EDI’s received from depot – Update inventory option.",
+  "EQC Reserved Cannot be greater than EQC Available"
+ ],
  "events": [
   {
    "event_type": "",
