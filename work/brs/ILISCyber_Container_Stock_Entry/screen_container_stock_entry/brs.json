@@ -196,13 +196,165 @@
    "values": ""
   }
  ],
- "display_title": "",
+ "display_title": "Container Stock Entry - Data Grid",
  "drop_display": false,
  "display": [
   {
-   "name": "",
-   "type": "",
-   "ui": "",
+   "name": "Total Record(s)",
+   "type": "Display Item",
+   "ui": "Total number of records queried",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Edit",
+   "type": "Button",
+   "ui": "Makes the EQC Reserved column editable and shows the Add, Save and Cancel buttons",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Details",
+   "type": "Button",
+   "ui": "Opens the Booking Details screen; if data is available, an Excel file with the Booking details is downloaded automatically",
+   "db": "",
+   "values": "",
+   "remarks": "Icon in the first column"
+  },
+  {
+   "name": "Re-Build",
+   "type": "Button",
+   "ui": "Processes the Re-Build Details of the record",
+   "db": "",
+   "values": "",
+   "remarks": "Icon in the second column"
+  },
+  {
+   "name": "Delete",
+   "type": "Button",
+   "ui": "Deletes the newly added record",
+   "db": "",
+   "values": "",
+   "remarks": "Shown only on a newly added record"
+  },
+  {
+   "name": "Container Type",
+   "type": "Display Item / Single Select Drop Down",
+   "ui": "Mandatory. Container Type of the record; for a new record select Container Type manually from drop down list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Priority",
+   "type": "Display Item",
+   "ui": "Mandatory. Priority of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Depot",
+   "type": "Display Item / Auto Populate",
+   "ui": "Mandatory. Depot of the record; for a new record key in the Depot and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "EQC Available",
+   "type": "Display Item",
+   "ui": "Mandatory. EQC Available of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "EQC Reserved",
+   "type": "Numeric",
+   "ui": "Mandatory. Input EQC Reserved of the record",
+   "db": "",
+   "values": "",
+   "remarks": "EQC Reserved cannot be greater than EQC Available"
+  },
+  {
+   "name": "Available For PR",
+   "type": "Display Item",
+   "ui": "Available For PR of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "P/R Reserved In 14 days",
+   "type": "Display Item",
+   "ui": "P/R Reserved In 14 days of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "P/R Reserved In 21 days",
+   "type": "Display Item",
+   "ui": "P/R Reserved In 21 days of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "P/R Reserved In 28 days",
+   "type": "Display Item",
+   "ui": "P/R Reserved In 28 days of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "P/R Reserved After 28 days",
+   "type": "Display Item",
+   "ui": "P/R Reserved After 28 days of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "P/R Reserved Available",
+   "type": "Display Item",
+   "ui": "P/R Reserved Available of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Total",
+   "type": "Display Item",
+   "ui": "Total of each numeric column",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Add",
+   "type": "Button",
+   "ui": "Adds an additional record to enter Container Type, Depot and EQC Reserved",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Save",
+   "type": "Button",
+   "ui": "Saves the edited or added data",
+   "db": "",
+   "values": "",
+   "remarks": "Record has been updated successfully"
+  },
+  {
+   "name": "Cancel",
+   "type": "Button",
+   "ui": "Cancelled all the input values and requery existing data",
    "db": "",
    "values": "",
    "remarks": ""
