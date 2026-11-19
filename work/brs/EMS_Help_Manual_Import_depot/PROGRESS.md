@@ -26,3 +26,4 @@
 - 2026-11-19 Fn3 images I-V approved.
 - 2026-11-19 Fn3 2.1 (B corrected), 2.2 (7), 3.1 (7), 3.2 (11) approved; docx built (15 pages), check passed. Awaiting docx approval.
 - 2026-11-19 Fn3 ECOR Number Update docx approved; done.
+- 2026-11-19 Fn4 Empty Depot Assignment (Group): exported; I 8616_01 (clean menu), II 51bf_07 repaired (same-screen row shift +108, exact); 51bf_06 dropped (gate-verified twin of 01 plus marks). Awaiting image approval.
