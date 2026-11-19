@@ -1,0 +1,70 @@
+{
+ "manual": "manuals/EMS-_Help_Manual_truck_order_generation.gui",
+ "shared_pages": [
+  "Truck Order Generation",
+  "Truck Order Generation > Truck Order Generation",
+  "Truck Order Generation > Truck Order Generation > Truck Order Generation - Query Fields",
+  "Truck Order Generation > Truck Order Generation > Truck Order Generation - Data Grid Screen",
+  "Truck Order Generation > Truck Order Generation > Truck Order Generation - Data Grid Screen > How to Change Empty Return, Full Return Edit Fields",
+  "Truck Order Generation > Truck Order Generation > Truck Order Generation - Data Grid Screen > How to Submit & COPARN"
+ ],
+ "functions": [
+  {
+   "name": "Truck Order Summary",
+   "kind": "Group",
+   "path": "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary",
+   "pages": [
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary",
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary > How to Generate \"Truck Order Summary\""
+   ],
+   "fp": "465528ed4ea4acab",
+   "n": 1,
+   "fn": "group_truck_order_summary",
+   "status": "in progress",
+   "change": "new"
+  },
+  {
+   "name": "Truck Order Summary RF",
+   "kind": "Group",
+   "path": "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary RF",
+   "pages": [
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary RF",
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Summary RF > How to Generate \"Truck Order Summary RF\""
+   ],
+   "fp": "aa6841cfb738e6c4",
+   "n": 2,
+   "fn": "group_truck_order_summary_rf",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Truck Order Preview",
+   "kind": "Group",
+   "path": "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Preview",
+   "pages": [
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Preview",
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order Preview > How to Generate \"Truck Order Preview\""
+   ],
+   "fp": "7d1a9d8a22fac3b6",
+   "n": 3,
+   "fn": "group_truck_order_preview",
+   "status": "new",
+   "change": "new"
+  },
+  {
+   "name": "Truck Order RF",
+   "kind": "Group",
+   "path": "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order RF",
+   "pages": [
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order RF",
+    "Truck Order Generation > Truck Order Generation > Truck Order Generation Group Function > Truck Order RF > How to Generate \"Truck Order RF\""
+   ],
+   "fp": "6d786118eb2be489",
+   "n": 4,
+   "fn": "group_truck_order_rf",
+   "status": "new",
+   "change": "new"
+  }
+ ],
+ "removed": []
+}
