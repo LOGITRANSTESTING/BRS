@@ -20,3 +20,4 @@ Sections: Floating icon (1-2), Offhire Instruct (3-9), Pre Sales Instruct (10-13
 - 2026-11-19 Container Redelivery: Pre sales Instruct events approved (4 rows). Next: Arrange events.
 - 2026-11-19 Container Redelivery: Arrange events approved (7 rows incl. CSV Load). 2.2 done. Next: 3.x tables - Offhire Instruct query fields first.
 - 2026-11-19 Container Redelivery: CSV Load event removed from Arrange (user). Section 3 layout: split per radio button (Search + Data Grid each). Next: 3.1 Offhire Instruct - Search rows.
+- 2026-11-19 Container Redelivery: 3.1 Offhire Instruct - Search approved (20 rows). Next: 3.2 Offhire Instruct - Data Grid.

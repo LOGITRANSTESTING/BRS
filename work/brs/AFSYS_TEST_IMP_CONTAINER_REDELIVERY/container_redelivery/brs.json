@@ -216,12 +216,145 @@
       "remarks": "\"Container Deleted Successfully\""
     }
   ],
-  "search_title": "",
+  "search_title": "Offhire Instruct - Search",
   "search": [
     {
-      "name": "",
-      "type": "",
-      "ui": "",
+      "name": "Offhire Instruct / Pre sales Instruct / Arrange",
+      "type": "Radio Button",
+      "ui": "Select the instruction type",
+      "db": "",
+      "values": "Offhire Instruct / Pre sales Instruct / Arrange"
+    },
+    {
+      "name": "HQ Instruct Port/ Place",
+      "type": "Auto Populate",
+      "ui": "Input HQ Instruct Port/ Place",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Instruction Number",
+      "type": "Alphanumeric",
+      "ui": "Input Instruction Number",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Container",
+      "type": "Alphanumeric",
+      "ui": "Input Container number",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Current Location",
+      "type": "Auto Populate",
+      "ui": "Input Current Location (key in five char)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "On Voyage",
+      "type": "Auto Populate",
+      "ui": "Input On Voyage (key in two char)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Lessor",
+      "type": "Auto Populate",
+      "ui": "Input Lessor (key in two char)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Size",
+      "type": "Single Select Drop Down",
+      "ui": "Select Size manually from drop down list",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Size Type",
+      "type": "Auto Populate",
+      "ui": "Select Size Type",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Last Activity",
+      "type": "Auto Populate",
+      "ui": "Select Last Activity",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Expire Date",
+      "type": "Date Picker",
+      "ui": "Input Expire date",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "DPP Coverage",
+      "type": "Alphanumeric",
+      "ui": "Input DPP Coverage",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Current Move",
+      "type": "Auto Populate",
+      "ui": "Select Current Move",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Container Prefix",
+      "type": "Alphanumeric",
+      "ui": "Input Container Prefix",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Redelivery Place",
+      "type": "Auto Populate",
+      "ui": "Input Redelivery Place (key in five char)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Assign By",
+      "type": "Auto Populate",
+      "ui": "Input Assign By (key in three char)",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Redelivery Date",
+      "type": "Date Picker",
+      "ui": "Input Redelivery date",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "To be Updated",
+      "type": "Check Box",
+      "ui": "If only containers to be updated are needed please select the check box",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Search",
+      "type": "Button",
+      "ui": "Query the containers based on the input values",
+      "db": "",
+      "values": ""
+    },
+    {
+      "name": "Reset",
+      "type": "Button",
+      "ui": "Clear all the input values",
       "db": "",
       "values": ""
     }
