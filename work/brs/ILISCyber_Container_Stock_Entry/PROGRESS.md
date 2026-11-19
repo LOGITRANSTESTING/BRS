@@ -27,3 +27,4 @@ Branch brs-container-stock-entry. 1 Screen function.
 - 19/11/2026 - Screen / Step 5: 3.1 Query Screen approved, 5 rows; Container Type = Single Select Drop Down (user). Next: 3.2 Data Grid.
 - 19/11/2026 - Screen / Step 5: 3.2 Data Grid (Physical) approved, 20 rows; cut-off last column left out (user). Next: 3.3 Auto Stock grid, 3.4 Booking Details grid.
 - 19/11/2026 - Screen / Step 5: 3.3 Auto Stock - Data Grid approved, 8 rows. Next: 3.4 Booking Details grid.
+- 19/11/2026 - Screen / Step 5: 3.4 Booking Details - Data Grid approved, 16 rows. Step 7: built output/EMS/BRS - EMS - Container Stock Entry V_1.0.docx; check OK (row counts 10/5/20/8/16). Next: render check, user OK, brs_plan done, PR.

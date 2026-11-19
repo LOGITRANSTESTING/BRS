@@ -429,6 +429,139 @@
      "remarks": "View only, not editable"
     }
    ]
+  },
+  {
+   "title": "Booking Details - Data Grid",
+   "rows": [
+    {
+     "name": "Total Record(s)",
+     "type": "Display Item",
+     "ui": "Total number of booking records queried",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "PR Status",
+     "type": "Single Select Drop Down",
+     "ui": "Select PR Status manually from drop down list",
+     "db": "",
+     "values": "Prepared / Supplied",
+     "remarks": ""
+    },
+    {
+     "name": "Port (Pickup)",
+     "type": "Display Item",
+     "ui": "Port (Pickup) of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Container Type",
+     "type": "Display Item",
+     "ui": "Container Type of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Request Qty",
+     "type": "Display Item",
+     "ui": "Request Qty of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Quantity",
+     "type": "Display Item",
+     "ui": "Quantity of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Voyage",
+     "type": "Display Item",
+     "ui": "Voyage of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "ETD",
+     "type": "Display Item",
+     "ui": "ETD of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "S/O Number",
+     "type": "Display Item",
+     "ui": "S/O Number of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Date",
+     "type": "Display Item",
+     "ui": "Date of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port (Return)",
+     "type": "Display Item",
+     "ui": "Port (Return) of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Shipper",
+     "type": "Display Item",
+     "ui": "Shipper of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Destination",
+     "type": "Display Item",
+     "ui": "Destination of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Stuffing",
+     "type": "Display Item",
+     "ui": "Stuffing of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Search",
+     "type": "Button",
+     "ui": "Queries the booking details based on the selected PR Status",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Close",
+     "type": "Button",
+     "ui": "Closes the Booking Details screen",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ],
  "references": [],
