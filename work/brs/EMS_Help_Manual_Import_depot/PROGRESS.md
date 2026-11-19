@@ -29,3 +29,4 @@
 - 2026-11-19 Fn4 Empty Depot Assignment (Group): exported; I 8616_01 (clean menu), II 51bf_07 repaired (same-screen row shift +108, exact); 51bf_06 dropped (gate-verified twin of 01 plus marks). Awaiting image approval.
 - 2026-11-19 Fn4 images I-II approved.
 - 2026-11-19 Fn4 2.1 (2 lines), 2.2 (1 Menu Click), no section 3 tables approved; docx built (8 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn4 Empty Depot Assignment (Group) docx approved; done.
