@@ -25,3 +25,4 @@
 - 2026-11-19 Fn3 ECOR Number Update: exported; images I 7d33_01, II c14e_04 repaired (donor 7d33_01 + same-screen), III c14e_12 repaired (donor c14e_10 @2,0 EXACT), IV c14e_10, V c14e_13 (spinner kept); 09 dropped (Check List step, covered by IV). Gates passed 0/0. Awaiting image approval.
 - 2026-11-19 Fn3 images I-V approved.
 - 2026-11-19 Fn3 2.1 (B corrected), 2.2 (7), 3.1 (7), 3.2 (11) approved; docx built (15 pages), check passed. Awaiting docx approval.
+- 2026-11-19 Fn3 ECOR Number Update docx approved; done.

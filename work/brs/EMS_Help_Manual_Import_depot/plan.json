@@ -50,8 +50,10 @@
    "fp": "33549e1b2ddae632",
    "n": 3,
    "fn": "group_ecor_number_update",
-   "status": "in progress",
-   "change": "new"
+   "status": "done",
+   "change": "new",
+   "file": "output/EMS/Import Depot Activity - Group/BRS - EMS - Import Depot Activity - ECOR Number Update V_1.0.docx",
+   "done_fp": "33549e1b2ddae632"
   },
   {
    "name": "Empty Depot Assignment",
