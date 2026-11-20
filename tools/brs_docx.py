@@ -23,14 +23,15 @@ SKELETON = {
     "template": DEFAULT_TEMPLATE,
     "company": "YANG MING MARINE TRANSPORT CORP.",
     "module": "Agency Booking",
+    "module_line": "",       # optional exact cover line, empty = "ILISCyber – <module>" (DCSA eBK: "DCSA – eBK Process")
     "function": "",
     "version": "01.01",
     "date": "",  # DD/MM/YYYY, today when empty
     "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
     "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
-    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes
-    "features": [],          # leave empty = blank section
+    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes; an entry without "file" = sub-heading only (+ optional "text")
+    "features": [],          # leave empty = blank section; {"section": "X"} adds a 2.1.x sub-title
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],  # optional "section": one 2.2.x heading + table per section
     "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
@@ -39,6 +40,8 @@ SKELETON = {
                              # 3.1 / 3.2 with no filled rows are always removed (heading + table)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "extra_tables": [],      # optional 3.3, 3.4 ...: [{"title": "...", "rows": [display-style rows]}], after 3.2
+    "tables": [],            # optional per-function 3.x / 3.x.y: [{"title", "level": 2|3, "text", "rows"}]; replaces 3.1/3.2
+    "possible_values_column": False,  # tables only: add "Possible Values" after "Editable" (DCSA template); rows get "editable"
     "references": [],
     "assumptions": []
 }
@@ -122,7 +125,7 @@ def build(spec, out):
     # cover (first non-empty Normal paragraphs, in the sample's order)
     cover = [p for p in P[:20] if p.text.strip()]
     date = spec.get('date') or datetime.date.today().strftime('%d/%m/%Y')
-    vals = [spec.get('company', cover[0].text.strip()), 'ILISCyber – ' + spec['module'],
+    vals = [spec.get('company', cover[0].text.strip()), spec.get('module_line') or 'ILISCyber – ' + spec['module'],
             'Business Requirement Specification', spec['function'], 'Version ' + spec.get('version', '01.01'), date]
     for p, v in zip(cover[:6], vals):
         set_par_text(p, v)
@@ -177,6 +180,11 @@ def build(spec, out):
                 hp._p.get_or_add_pPr().append(num)
             last.addnext(hp._p); last = hp._p
             if k == 1: first_reserve += Pt(28)
+        if not im.get('file'):
+            # heading-only entry: a function without a screen design keeps its 1.2.x sub-title
+            if im.get('text'):
+                tp = doc.add_paragraph(im['text']); last.addnext(tp._p); last = tp._p
+            continue
         cap = copy.deepcopy(cap_xml) if cap_xml is not None else None
         if cap is not None:
             last.addnext(cap); last = cap
@@ -200,10 +208,21 @@ def build(spec, out):
         body = [p for p in body_between(doc, i) if not p._p.xpath('.//w:tbl')]
         for p in body:
             if p.text.strip() or 'graphic' in p._p.xml: remove_par(p)
-        last = doc.paragraphs[i]._p
-        for line in reversed(spec.get(key) or []):
-            np_ = doc.add_paragraph(line)
-            last.addnext(np_._p)
+        hpar = doc.paragraphs[i]
+        last = hpar._p
+        for line in spec.get(key) or []:
+            if isinstance(line, dict) and line.get('section'):
+                # {"section": "View Request"} = 2.1.x sub-title, same numbering list one level down
+                np_ = doc.add_paragraph(line['section'], style=next(st for st in doc.styles if st.style_id == 'Heading3'))
+                np_.paragraph_format.keep_with_next = True
+                hnum = hpar._p.pPr.numPr if hpar._p.pPr is not None else None
+                if hnum is not None:
+                    from docx.oxml.ns import qn as _qn
+                    num = copy.deepcopy(hnum); num.find(_qn('w:ilvl')).set(_qn('w:val'), '2')
+                    np_._p.get_or_add_pPr().append(num)
+            else:
+                np_ = doc.add_paragraph(line)
+            last.addnext(np_._p); last = np_._p
 
     # tables: events (2), search (3), display (4) - located by header text, not index
     from docx.oxml.ns import qn as _qn_ev
@@ -265,6 +284,51 @@ def build(spec, out):
                 elif c.tag == _q('w:tbl'):
                     fill_table(docx.table.Table(c, doc.paragraphs[0]._parent), x['rows'],
                                ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
+    # tables: per-function 3.x headings with 3.x.y tables (UC BRS), cloned from the 3.2 heading + table.
+    # [{"title": "View Request"}, {"title": "Basic Information", "level": 3, "rows": [...]},
+    #  {"title": "Meta Query", "text": "No screen design available"}]. Leave search/display empty so 3.1/3.2 drop.
+    if spec.get('tables'):
+        h = doc.paragraphs[find_heading(doc, 'Display Area')]._p
+        tbl = h.getnext()
+        while tbl is not None and tbl.tag != _q('w:tbl'): tbl = tbl.getnext()
+        h_xml, t_xml = copy.deepcopy(h), copy.deepcopy(tbl)
+        keys = ['name', 'type', 'ui', 'db', 'values', 'remarks']
+        if spec.get('possible_values_column'):
+            # DCSA template: ... | Editable | Remarks -> ... | Editable | Possible Values | Remarks (same table width)
+            widths = [1860, 1750, 2713, 1300, 1000, 2400, 3257]
+            grid = t_xml.find(_q('w:tblGrid'))
+            gc = grid.findall(_q('w:gridCol')); grid.insert(list(grid).index(gc[4]) + 1, copy.deepcopy(gc[4]))
+            for g, w in zip(grid.findall(_q('w:gridCol')), widths): g.set(_q('w:w'), str(w))
+            for ri, tr in enumerate(t_xml.findall(_q('w:tr'))):
+                tcs = tr.findall(_q('w:tc'))
+                if len(tcs) < 6: continue
+                nc = copy.deepcopy(tcs[4]); tcs[4].addnext(nc)
+                if ri == 0:
+                    set_cell(docx.table._Cell(nc, None), 'Possible Values')
+                for tc, w in zip(tr.findall(_q('w:tc')), widths):
+                    tw = tc.find('.//' + _q('w:tcW'))
+                    if tw is not None: tw.set(_q('w:w'), str(w))
+            keys = ['name', 'type', 'ui', 'db', 'editable', 'values', 'remarks']
+        last = tbl
+        while last.getnext() is not None and last.getnext().tag == _q('w:p') and not last.getnext().xpath('string(.)').strip() \
+                and last.getnext().find('.//' + _q('w:pStyle')) is None:
+            last = last.getnext()
+        for x in spec['tables']:
+            hc = copy.deepcopy(h_xml); last.addnext(hc); last = hc
+            hp = docx.text.paragraph.Paragraph(hc, doc.paragraphs[0]._parent)
+            set_par_text(hp, x.get('title') or '')
+            hp.paragraph_format.keep_with_next = True
+            if x.get('level') == 3:
+                hc.pPr.find(_q('w:pStyle')).set(_q('w:val'), 'Heading3')
+                ilvl = hc.pPr.find('.//' + _q('w:ilvl'))
+                if ilvl is not None: ilvl.set(_q('w:val'), '2')
+            if x.get('text'):
+                tp = doc.add_paragraph(x['text']); last.addnext(tp._p); last = tp._p
+            if x.get('rows'):
+                tc = copy.deepcopy(t_xml); last.addnext(tc); last = tc
+                fill_table(docx.table.Table(tc, doc.paragraphs[0]._parent), x['rows'], keys)
+                sp = doc.add_paragraph(); last.addnext(sp._p); last = sp._p
 
     # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
     for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:

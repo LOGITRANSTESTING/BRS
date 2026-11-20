@@ -1,0 +1,2519 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC1 - Booking Request Submit",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "20.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Booking Request Submit function.",
+ "images": [
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_2.png",
+   "caption": "Image II"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_3.png",
+   "caption": "Image III"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_4.png",
+   "caption": "Image IV"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_5.png",
+   "caption": "Image V"
+  },
+  {
+   "section": "View Customer Request Data (Meta Query)"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_1.png",
+   "caption": "Image VI"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_2.png",
+   "caption": "Image VII"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_3.png",
+   "caption": "Image VIII"
+  },
+  {
+   "section": "Validate QC",
+   "file": "work/brs/DCSA eBK/uc1/src/4_1.png",
+   "caption": "Image IX"
+  },
+  {
+   "section": "Validate QC",
+   "file": "work/brs/DCSA eBK/uc1/src/4_2.png",
+   "caption": "Image X"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_1.png",
+   "caption": "Image XI"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_2.png",
+   "caption": "Image XII"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_3.png",
+   "caption": "Image XIII"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_4.png",
+   "caption": "Image XIV"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_1.png",
+   "caption": "Image XV"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_2.png",
+   "caption": "Image XVI"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_3.png",
+   "caption": "Image XVII"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_4.png",
+   "caption": "Image XVIII"
+  },
+  {
+   "section": "Communication History",
+   "file": "work/brs/DCSA eBK/uc1/src/7_1.png",
+   "caption": "Image XIX"
+  },
+  {
+   "section": "Communication History",
+   "file": "work/brs/DCSA eBK/uc1/src/7_2.png",
+   "caption": "Image XX"
+  },
+  {
+   "section": "Timeline",
+   "file": "work/brs/DCSA eBK/uc1/src/8_1.png",
+   "caption": "Image XXI"
+  },
+  {
+   "section": "Timeline",
+   "file": "work/brs/DCSA eBK/uc1/src/8_2.png",
+   "caption": "Image XXII"
+  }
+ ],
+ "features": [
+  {
+   "section": "View Request"
+  },
+  "The “View Request” option in DCSA Booking Activity allows the agency user to view the booking request “Received” from the customers. By default, the agency user can only view the booking request details and cannot amend the information shown on the screen.",
+  "When the user clicks the “View Request” option, the system navigates to the next page, which shows the information of the selected DCSA request ID. The view screen has the following sections:",
+  "•\tBasic Information",
+  "•\tSailing",
+  "•\tCargo & Containers",
+  "•\tParties & Addresses",
+  "•\tCommunication History",
+  {
+   "section": "View Customer Request Data (Meta Query)"
+  },
+  "The “View Customer Request Data (Meta Query)” option in DCSA Booking Activity allows the agency user to view the booking request details as originally submitted by the customer, taken from the Temp 3 (Intermediate) process.",
+  "The data is shown read-only, so the agency user can compare the original customer request with the data held in the eBK interface tables.",
+  {
+   "section": "Edit Request"
+  },
+  "The “Edit Request” option in DCSA Booking Activity allows the agency user to amend the booking request details. Amendments are allowed until the request is accepted by the respective agency.",
+  "When the user clicks the “Edit Request” option, the system opens another tab page with the selected booking request information. The agency user can amend the details and “Submit” the booking information.",
+  "Once a booking has been generated against the request, the agency user can no longer make any changes to the DCSA booking request.",
+  {
+   "section": "Validate QC"
+  },
+  "The “Validate QC” option in DCSA Booking Activity allows the agency user to run the 2nd level QC check, Global restrictions and General restrictions as a separate process, before the booking request is converted into an actual booking.",
+  "The 2nd level QC check validates the following items:",
+  "Basic Information",
+  "•\tLoad Port / Discharge Port (Conditional) – validated against Port Master.",
+  "•\tReceipt Type / Delivery Type (Mandatory) – CY, D, F, L, CFS or T.",
+  "•\tDoor Pickup Address (Conditional) – required for a door move.",
+  "•\tPickup Date – must be earlier than the gate close date.",
+  "•\tPayment Mode (Mandatory) – Prepaid / Collect.",
+  "•\tPayment Location (Mandatory) – validated against Location Master. If it is blank, the system automatically uses the POR or POD, depending on the payment mode.",
+  "•\tAllocation Voyage (Conditional) – validated against Voyage Master and cannot be blank.",
+  "•\tCargo Call Type (Conditional) – raise an error if no ‘CG’ call type is found for BT_FROM / BT_TO under BT_UNKNOWN_VOYAGE. This check does not apply to Feeder voyages.",
+  "Cargo",
+  "•\tHS Code – must be a valid HS code from Commodity Master.",
+  "•\tCommodity Group (Conditional) – mandatory for USA trade, i.e. when the original or final location country is US or CA.",
+  "•\tPackage Type – must be a valid package type from Package Type Master.",
+  "•\tUN Number (Conditional) – IMDG cargo only; numeric, maximum 4 digits.",
+  "•\tClass (Conditional) – IMDG cargo only; up to four characters (numeric, numeric with decimal, or alphanumeric with decimal).",
+  "•\tDangerous Contact Number – numeric; the special characters ( and + are allowed.",
+  "•\tReefer Ventilation (Conditional) – reefer cargo only; allowed values N, Q, H, T, F, E, C, X, Z.",
+  "•\tTemperature Type (Conditional) – reefer cargo only; C or F.",
+  "Containers",
+  "•\tEmpty Pickup – must be a valid depot code from HQ depot master.",
+  "•\tSOC Flag – Y / N.",
+  "•\tCargo Dimension (Conditional) – applicable only to OOG containers.",
+  "Parties",
+  "•\tShipper data is mandatory. If shipper data is missing, a QC error is raised.",
+  "•\tParty Type (Mandatory), Party Name (Conditional), Party Country (Conditional) – validated against HQ country master.",
+  "•\tReference Qualifier – must be a valid reference qualifier.",
+  {
+   "section": "Create Booking (Single/Batch)"
+  },
+  "The “Create Booking (Single/Batch)” option in DCSA Booking Activity is used when the auto booking generation registry (new config with values AUTO/MANUAL) is set to “MANUAL”.",
+  "If the registry is set to “AUTO”, a background job picks the respective agency record from the pool table and generates the actual booking once the QC process passes.",
+  "In the manual process, the agency user selects one or more DCSA booking requests listed on the screen. When the user clicks the “Create Booking” button, the selected booking requests are created as actual bookings in “Pre-Entered” status.",
+  "During conversion, the system runs the 2nd level QC check, including Global and General restrictions. The booking request is converted into an actual booking only if the QC check passes.",
+  "Preconditions",
+  "•\tDCSA standard data must be mapped and inserted into the eBK interface tables.",
+  "•\tFirst level and 2nd level QC must be validated.",
+  "•\tGlobal & General Restrictions must be passed.",
+  "Postconditions",
+  "•\tThe actual booking is created in “Pre-Entered” status and is available in the AFSYS+ booking module and ILISCyber Agency Booking.",
+  "•\tThe DCSA request status is “Received [Not Confirmed]” and is sent back to the shipper by calling the required HQ ITCS procedures.",
+  {
+   "section": "Edit Booking"
+  },
+  "The “Edit Booking” option in DCSA Booking Activity allows the agency user to amend the booking details. The option is enabled only after the request has been converted into an actual booking.",
+  "When the user clicks this option, the system navigates to ILISCyber Agency Booking and shows the selected booking details. The user can amend the booking details and carry out further booking-related processing.",
+  {
+   "section": "Communication History"
+  },
+  "The “Communication History” option in DCSA Booking Activity allows the agency user to view the list of communications received against the DCSA booking request ID.",
+  "The information is taken from the DCSA DOC HEADER table (T_LT_DCSA_DOC_HEADER).",
+  {
+   "section": "Timeline"
+  },
+  "The “Timeline” option in DCSA Booking Activity allows the agency user to view the list of actions the agency user has completed against a booking request.",
+  "The timeline details are maintained in the T_LT_DCSA_TIME_LINE table."
+ ],
+ "events": [
+  {
+   "section": "View Request",
+   "event_type": "Menu Click",
+   "description": "Opens the selected DCSA request in a new tab \"<DCSA Request ID> (<Version>)\" in view-only mode, showing Basic Information, Sailing, Containers & Cargo, Parties & Addresses, Communication History and Notes.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"View Request\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Tab Click",
+   "description": "Moves the page to the chosen section (Basic Information / Sailing / Containers & Cargo / Parties & Addresses / Communication History / Notes).",
+   "triggered_when": "User clicks a section tab in the request tab.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Button Click (SH / CN / N1 / N2 / FW)",
+   "description": "Shows the Shipper, Consignee, Notify 1, Notify 2 or Forwarder party details.",
+   "triggered_when": "User clicks a party button in Parties & Addresses.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Button Click",
+   "description": "Show Details: shows the selected note's text in \"Notes Detail – <Booking Number>\", filtered by the \"Last N Days\" value.",
+   "triggered_when": "User selects a note and clicks \"Show Details\".",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Icon Click (Refresh icon)",
+   "description": "Reloads the request details.",
+   "triggered_when": "User clicks the refresh icon on the right of the tab strip.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the request tab and returns to DCSA Activity.",
+   "triggered_when": "User clicks × on the request tab.",
+   "remarks": ""
+  },
+  {
+   "section": "View Customer Request Data (Meta Query)",
+   "event_type": "Menu Click",
+   "description": "Shows the booking request details as originally submitted by the customer (from the Temp 3 process), read-only.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"View Customer Request Data (Meta Query)\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Menu Click",
+   "description": "Opens the selected DCSA request in a new tab \"<DCSA Request ID> (<Version>)\" in edit mode with Submit and Cancel buttons. Not allowed once a booking has been generated against the request.",
+   "triggered_when": "User selects a DCSA request that has no booking generated yet and clicks \"Edit Request\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Button Click",
+   "description": "Submit: saves the amended booking request details.",
+   "triggered_when": "User amends the details and clicks \"Submit\" after filling all mandatory (*) fields.",
+   "remarks": "\"Edit Request ( <DCSA Request ID> (<Version>)) modified successfully\""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Button Click",
+   "description": "Cancel: discards the changes and closes the edit tab.",
+   "triggered_when": "User clicks \"Cancel\".",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Icon Click (View icon)",
+   "description": "Switches the request tab to view-only mode (same as View Request).",
+   "triggered_when": "User clicks the eye icon on the right of the tab strip.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Tab Click / Icon Click (Refresh icon, Close icon)",
+   "description": "Same as 2.2.1 (moves to a section / reloads the details / closes the tab).",
+   "triggered_when": "Same as 2.2.1.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Menu Click",
+   "description": "Runs the 2nd level QC check and the Global and General restriction checks for the selected request, then opens the \"Validate QC\" pop-up listing the results by DCSA Request ID (Code, Description, Solution).",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Validate QC\" in the ☰ menu.",
+   "remarks": "\"Validate QC Check Completed Sucessfully.\" (code DCSA001)"
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Button Click (All / Warning(s))",
+   "description": "Filters the result list to all items or to warnings only. The button shows the count, for example \"1 Warning(s)\".",
+   "triggered_when": "User clicks \"All\" or \"Warning(s)\" in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Expand/Collapse icon)",
+   "description": "Expands or collapses the grouped result rows under each DCSA Request ID.",
+   "triggered_when": "User clicks the expand/collapse icon in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Excel icon)",
+   "description": "Exports the QC results to Excel.",
+   "triggered_when": "User clicks the Excel icon in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the Validate QC pop-up.",
+   "triggered_when": "User clicks × on the pop-up title bar.",
+   "remarks": ""
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Menu Click (Single)",
+   "description": "Runs the 2nd level QC check plus the Global and General restriction checks for the request. If QC passes, it creates the actual booking in \"Pre Entered\" status and opens the \"Create Booking\" result pop-up.",
+   "triggered_when": "Auto booking registry is \"MANUAL\"; user clicks \"Create Booking\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Request Id :[<DCSA Request ID>] Actual Booking has been Created Successfully. - <Booking Number>\" (code DCSA002)"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Menu Click (Batch)",
+   "description": "Same checks and creation for every checked request; the pop-up lists the results grouped by DCSA Request ID.",
+   "triggered_when": "Auto booking registry is \"MANUAL\"; user ticks one or more requests and clicks \"Create Booking\" in the DCSA Activity ☰ menu.",
+   "remarks": "Same message, one per request."
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Button Click (All / Success) / Icon Click (Expand/Collapse icon, Excel icon)",
+   "description": "Same as 2.2.4: filter the results, expand or collapse the groups, export to Excel.",
+   "triggered_when": "User clicks the control in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the pop-up; the grid shows the new Booking Number, Booking Date and \"Pre Entered\" status.",
+   "triggered_when": "User clicks × on the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Menu Click",
+   "description": "Opens the ILISCyber Agency Booking screen for the request's booking in a new tab \"<Booking Number>\" in view mode, with Edit and Close buttons.",
+   "triggered_when": "User selects a DCSA request that has been converted into an actual booking and clicks \"Edit Booking\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Edit: switches the booking tab to edit mode; Edit/Close become Submit/Cancel.",
+   "triggered_when": "User clicks \"Edit\".",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Submit: saves the amended booking details.",
+   "triggered_when": "User amends the booking and clicks \"Submit\" after filling all mandatory (*) fields.",
+   "remarks": "\"Booking No.(<Booking Number>) modified successfully.\""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Cancel: discards the changes and returns to view mode.",
+   "triggered_when": "User clicks \"Cancel\" in edit mode.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Close: closes the booking tab and returns to DCSA Activity.",
+   "triggered_when": "User clicks \"Close\" in view mode.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Tab Click / Icon Click (Refresh icon, Close icon)",
+   "description": "Moves to a booking section (Basic, Sailing, Requirements, PR, Cargo & Containers, Charges, Instruction, Marks & Desc, Addresses, EDI Text/Ref, More Info, Notes) / reloads / closes the tab.",
+   "triggered_when": "User clicks the control.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Menu Click",
+   "description": "Opens a new tab \"<DCSA Request ID> (<Version>)\" listing the communications received against the request, taken from the DOC HEADER table: Document Number, Version, Confirm Version, Booking Number, Event Type, Current Event, Document Status, Status Event, Event By, Event On, Amendment.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Communication History\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Text Change (Search)",
+   "description": "Filters the listed rows by the text typed.",
+   "triggered_when": "User types in the Search box.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Drag & Drop (column header)",
+   "description": "Groups the rows by the dropped column.",
+   "triggered_when": "User drags a column header into the \"Drag a column header and drop it here to group by that column\" bar.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Icon Click (Expand/Collapse icon, Excel icon, Refresh icon, Close icon)",
+   "description": "Expands or collapses the groups / exports to Excel / reloads the list / closes the tab.",
+   "triggered_when": "User clicks the icon.",
+   "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Menu Click",
+   "description": "Opens a new tab \"<DCSA Request ID> (<Version>)\" with the list of actions done against the request, newest first. Each card shows the action (for example Book_Creation, Booking Request Confirmed, Temp2_Process), the date/time, the remarks and \"by <User>\".",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Time Line\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Card Click",
+   "description": "Shows the selected action in the Details panel as \"<Action> by <User> on <Date Time>\" with \"Remarks : <text>\".",
+   "triggered_when": "User clicks an action card in the left list.",
+   "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the Timeline tab.",
+   "triggered_when": "User clicks × on the tab.",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [
+  {
+   "title": "View Request"
+  },
+  {
+   "title": "Basic Information",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Request ID",
+     "type": "Display Item",
+     "ui": "Request ID of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Request Date",
+     "type": "Display Item",
+     "ui": "Request date and time of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking Number generated for the request (\"-\" until created)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Date",
+     "type": "Display Item",
+     "ui": "Booking date and time (\"-\" until created)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Request Status",
+     "type": "Display Item",
+     "ui": "Status of the selected request",
+     "db": "",
+     "values": "Submitted",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Carrier Booking Request Ref.",
+     "type": "Display Item",
+     "ui": "Carrier booking request reference of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Shipper Reference",
+     "type": "Display Item",
+     "ui": "Shipper Reference of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Office",
+     "type": "Display Item",
+     "ui": "Booking Office of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Party",
+     "type": "Display Item",
+     "ui": "Booking Party of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Origin Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Origin Location code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Load Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Load Port code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Receipt Type",
+     "type": "Single Select Drop Down",
+     "ui": "Receipt Type of the selected request",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Discharge Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Discharge Port code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Final Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Final Location code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Delivery Type",
+     "type": "Single Select Drop Down",
+     "ui": "Delivery Type of the selected request",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "HQ Trade Lane",
+     "type": "Display Item",
+     "ui": "HQ Trade Lane of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Trade ID",
+     "type": "Alphanumeric",
+     "ui": "Trade ID of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Quote Ref.",
+     "type": "Alphanumeric",
+     "ui": "Quote reference of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Prepaid Collect",
+     "type": "Toggle",
+     "ui": "Prepaid or Collect of the request",
+     "db": "",
+     "values": "Prepaid / Collect",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Payment Place",
+     "type": "Auto Populate",
+     "ui": "Payment place of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "BL Issue Place",
+     "type": "Auto Populate",
+     "ui": "BL issue place of the request",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in five char\"",
+     "editable": "No"
+    },
+    {
+     "name": "Trade",
+     "type": "Auto Populate",
+     "ui": "Trade of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Trade Lane",
+     "type": "Auto Populate",
+     "ui": "Trade Lane of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Special Booking Indicator",
+     "type": "Single Select Drop Down",
+     "ui": "Special booking indicator of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "ETD",
+     "type": "Date Picker",
+     "ui": "ETD of the request (dd/MM/yyyy)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Cargo Acceptance Date",
+     "type": "Date Picker",
+     "ui": "Cargo Acceptance Date of the request (dd/MM/yyyy)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "RCC",
+     "type": "Auto Populate",
+     "ui": "RCC of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "LCC",
+     "type": "Auto Populate",
+     "ui": "LCC of the request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Add Booking Contact Details",
+     "type": "Toggle",
+     "ui": "Shows the booking contact fields when on",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Contact Name",
+     "type": "Alphanumeric",
+     "ui": "Contact name of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "E-Mail",
+     "type": "Alphanumeric",
+     "ui": "E-mail of the contact; use \";\" for more than one",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Telephone",
+     "type": "Alphanumeric",
+     "ui": "Telephone of the contact",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Sailing",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Load Voyage",
+     "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+     "ui": "Load voyage and the voyage port (terminal – date time) of the request; ⇆ switches the first box between Auto Populate and Alphanumeric",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Allocation Voyage",
+     "type": "Auto Populate",
+     "ui": "Allocation voyage of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Edit (pencil icon)",
+     "type": "Icon",
+     "ui": "Greyed out in View Request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Search (magnifier icon)",
+     "type": "Icon",
+     "ui": "Greyed out in View Request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Port of Loading (name, date time)",
+     "type": "Display Item",
+     "ui": "Port of loading name and departure date/time of the voyage",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Transit Days",
+     "type": "Display Item",
+     "ui": "Days between departure and arrival, e.g. \"42 Days\"",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Port of Discharge (name, date time)",
+     "type": "Display Item",
+     "ui": "Port of discharge name and arrival date/time",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Voyage / Vessel / Voyage No",
+     "type": "Display Item",
+     "ui": "Voyage, vessel name and voyage number, e.g. FE42644W / OINY-ONE INTEGRITY / 011W",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Cost Gap",
+     "type": "Display Item",
+     "ui": "Cost gap of the voyage",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Mode",
+     "type": "Display Item",
+     "ui": "Mode of each leg of the route (vessel icon)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Port of Loading",
+     "type": "Display Item",
+     "ui": "Port of Loading name and terminal of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Departure",
+     "type": "Display Item",
+     "ui": "Departure of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Port of Discharge",
+     "type": "Display Item",
+     "ui": "Port of Discharge name and terminal of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Arrival",
+     "type": "Display Item",
+     "ui": "Arrival of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Vessel",
+     "type": "Display Item",
+     "ui": "Vessel of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Voyage No",
+     "type": "Display Item",
+     "ui": "Voyage No of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Service",
+     "type": "Display Item",
+     "ui": "Service of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Stage",
+     "type": "Display Item",
+     "ui": "Stage of each leg of the route",
+     "db": "",
+     "values": "1st Voyage",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "VGM Cut-Off",
+     "type": "Display Item",
+     "ui": "VGM Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "SI Cut-Off",
+     "type": "Display Item",
+     "ui": "SI Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "CY Cut-Off",
+     "type": "Display Item",
+     "ui": "CY Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Gate In Terminal",
+     "type": "Display Item",
+     "ui": "Gate In Terminal date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Containers & Cargo",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Container Count (20' / 40' / 45')",
+     "type": "Display Item",
+     "ui": "Number of containers per size, e.g. 20' - 1",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Units (Weight / Volume / Temperature / OOG)",
+     "type": "Display Item",
+     "ui": "Units used on the tab",
+     "db": "",
+     "values": "KG / CBM / °C / CM",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Add Container",
+     "type": "Button",
+     "ui": "Adds a new container block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Delete (bin icon)",
+     "type": "Icon",
+     "ui": "Removes the container block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Container Size/Type",
+     "type": "Auto Populate",
+     "ui": "Container size/type of the request",
+     "db": "",
+     "values": "e.g. 20DC",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Number Of Containers",
+     "type": "Numeric",
+     "ui": "Number of containers",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Cargo Gross Wgt.(Per Cntr)",
+     "type": "Numeric",
+     "ui": "Cargo gross weight per container",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Volume",
+     "type": "Numeric",
+     "ui": "Volume of the container",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Empty Pickup Depot",
+     "type": "Auto Populate",
+     "ui": "Empty pickup depot",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select Empty Pickup Depot\"",
+     "editable": "No"
+    },
+    {
+     "name": "OOG",
+     "type": "Toggle",
+     "ui": "Out of gauge container",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "O2",
+     "type": "Alphanumeric",
+     "ui": "O2 special instruction",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "CO2",
+     "type": "Alphanumeric",
+     "ui": "CO2 special instruction",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Humidity",
+     "type": "Alphanumeric",
+     "ui": "Humidity special instruction",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Air Exchange Type",
+     "type": "Single Select Drop Down",
+     "ui": "Air exchange type",
+     "db": "",
+     "values": "",
+     "remarks": "Greyed out",
+     "editable": "No"
+    },
+    {
+     "name": "Air Exchange",
+     "type": "Alphanumeric",
+     "ui": "Air Exchange special instruction",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Temperature Type / Unit",
+     "type": "Single Select Drop Down + Numeric",
+     "ui": "Temperature type and set value",
+     "db": "",
+     "values": "Fahrenheit",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "SOC",
+     "type": "Toggle",
+     "ui": "SOC special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "NOR",
+     "type": "Toggle",
+     "ui": "NOR special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Ventilation",
+     "type": "Toggle",
+     "ui": "Ventilation special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Drainholes",
+     "type": "Toggle",
+     "ui": "Drainholes special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Bulb Mode",
+     "type": "Toggle",
+     "ui": "Bulb Mode special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Cold Treatment",
+     "type": "Toggle",
+     "ui": "Cold Treatment special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Pre Cooling",
+     "type": "Toggle",
+     "ui": "Pre Cooling special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Genset",
+     "type": "Toggle",
+     "ui": "Genset special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Controlled Atmosphere",
+     "type": "Toggle",
+     "ui": "Controlled Atmosphere special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Add Cargo",
+     "type": "Button",
+     "ui": "Adds a new cargo block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Delete (bin icon)",
+     "type": "Icon",
+     "ui": "Removes the cargo block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Item No",
+     "type": "Alphanumeric",
+     "ui": "Cargo item number",
+     "db": "",
+     "values": "e.g. 001",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Commodity",
+     "type": "Alphanumeric",
+     "ui": "Commodity description",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "HS Code",
+     "type": "Auto Populate",
+     "ui": "HS code of the commodity",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Commodity Groups",
+     "type": "Alphanumeric",
+     "ui": "Commodity group",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Cargo Weight",
+     "type": "Numeric",
+     "ui": "Cargo weight",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "No"
+    },
+    {
+     "name": "Volume",
+     "type": "Numeric",
+     "ui": "Cargo volume",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Package",
+     "type": "Auto Populate",
+     "ui": "Package type",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in one char\"",
+     "editable": "No"
+    },
+    {
+     "name": "No. Of Packages",
+     "type": "Numeric",
+     "ui": "Number of packages",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Inner Package",
+     "type": "Auto Populate",
+     "ui": "Inner package type",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in one char\"",
+     "editable": "No"
+    },
+    {
+     "name": "No.Of Inner Packages",
+     "type": "Numeric",
+     "ui": "Number of inner packages",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "IMCO",
+     "type": "Toggle",
+     "ui": "Dangerous cargo",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Reefer",
+     "type": "Toggle",
+     "ui": "Reefer cargo",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Parties & Addresses",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Party buttons (SH / CN / N1 / N2 / FW)",
+     "type": "Button",
+     "ui": "Selects which party is shown: Shipper, Consignee, Notify 1, Notify 2, Forwarder (a tick marks a party that has data)",
+     "db": "",
+     "values": "SH / CN / N1 / N2 / FW",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Add",
+     "type": "Toggle",
+     "ui": "Turns on the party's address fields (Consignee/Notify/Forwarder panel)",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "Fields greyed out while off",
+     "editable": "No"
+    },
+    {
+     "name": "Name",
+     "type": "Single Select Drop Down",
+     "ui": "Party name of the request",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\"; Mandatory (*) for Consignee",
+     "editable": "No"
+    },
+    {
+     "name": "Address",
+     "type": "Text Area",
+     "ui": "Party address",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "PO Box",
+     "type": "LOV",
+     "ui": "PO box of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Country",
+     "type": "Auto Populate",
+     "ui": "Country of the party",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select Country\"; Mandatory (*) for Consignee",
+     "editable": "No"
+    },
+    {
+     "name": "State",
+     "type": "Auto Populate",
+     "ui": "State of the party",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select State\"",
+     "editable": "No"
+    },
+    {
+     "name": "City",
+     "type": "Alphanumeric",
+     "ui": "City of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Zip Code",
+     "type": "Alphanumeric",
+     "ui": "Zip code of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Email",
+     "type": "Alphanumeric",
+     "ui": "Email of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Telephone",
+     "type": "Alphanumeric",
+     "ui": "Telephone of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Fax",
+     "type": "Alphanumeric",
+     "ui": "Fax of the party",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Communication History",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Document Number",
+     "type": "Display Item",
+     "ui": "Document number of the communication (Carrier Booking Request Ref.)",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the document",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Confirm Version",
+     "type": "Display Item",
+     "ui": "Confirmed version",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking number",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event Type",
+     "type": "Display Item",
+     "ui": "Direction of the communication",
+     "db": "DOC HEADER",
+     "values": "IN",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Current Event",
+     "type": "Display Item",
+     "ui": "Current event",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Document Status",
+     "type": "Display Item",
+     "ui": "Document status",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Status Event",
+     "type": "Display Item",
+     "ui": "Status event",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event By",
+     "type": "Display Item",
+     "ui": "Who sent the communication",
+     "db": "DOC HEADER",
+     "values": "DCSA_SANDBOX",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event On",
+     "type": "Display Item",
+     "ui": "Date and time of the communication",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Amendment",
+     "type": "Display Item",
+     "ui": "Amendment details",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Notes",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Swap (⇆ icon)",
+     "type": "Icon",
+     "ui": "Switches the notes list view",
+     "db": "",
+     "values": "",
+     "remarks": "Greyed out",
+     "editable": "-"
+    },
+    {
+     "name": "Last … Days",
+     "type": "Single Select Drop Down",
+     "ui": "Select how many recent days of notes to list",
+     "db": "",
+     "values": "All",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Show Details",
+     "type": "Button",
+     "ui": "Shows the selected note in the Notes Detail panel",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Notes Basis",
+     "type": "Display Item",
+     "ui": "Basis (level) of the note",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Notes",
+     "type": "Display Item",
+     "ui": "Note text",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Created By",
+     "type": "Display Item",
+     "ui": "User who created the note",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Created On",
+     "type": "Display Item",
+     "ui": "Date and time the note was created",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Notes Detail – <Booking Number>",
+     "type": "Display Item",
+     "ui": "Full text of the selected note",
+     "db": "",
+     "values": "",
+     "remarks": "\"No records available.\" when there are no notes",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "View Customer Request Data (Meta Query)",
+   "text": "No screen design available."
+  },
+  {
+   "title": "Edit Request",
+   "text": "Same fields as 3.1 View Request; the differences in edit mode are listed below."
+  },
+  {
+   "title": "Edit Mode",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Editable fields (all items in 3.1.1–3.1.6 that are not Display Item)",
+     "type": "As in 3.1",
+     "ui": "Mandatory (*) fields must be filled before Submit; the user can amend the other fields",
+     "db": "",
+     "values": "",
+     "remarks": "Editing is not allowed once a booking has been generated against the request",
+     "editable": "Yes"
+    },
+    {
+     "name": "HQ Trade Lane",
+     "type": "Display Item",
+     "ui": "Greyed out; cannot be changed",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Add Container / Add Cargo / Delete (bin icon)",
+     "type": "Button / Icon",
+     "ui": "Add or remove container and cargo blocks",
+     "db": "",
+     "values": "",
+     "remarks": "Active in edit mode",
+     "editable": "-"
+    },
+    {
+     "name": "Submit",
+     "type": "Button",
+     "ui": "After all mandatory fields are filled, saves the amended booking request details",
+     "db": "",
+     "values": "",
+     "remarks": "\"Edit Request ( <DCSA Request ID> (<Version>)) modified successfully\"",
+     "editable": "-"
+    },
+    {
+     "name": "Cancel",
+     "type": "Button",
+     "ui": "Discards the changes and closes the edit tab",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "View (eye icon)",
+     "type": "Icon",
+     "ui": "Switches to view-only mode",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    }
+   ]
+  },
+  {
+   "title": "Validate QC"
+  },
+  {
+   "title": "Validate QC Pop-up",
+   "level": 3,
+   "rows": [
+    {
+     "name": "All",
+     "type": "Button",
+     "ui": "Shows all result rows",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Warning(s) count",
+     "type": "Button",
+     "ui": "Shows only the warning rows; the label shows the count",
+     "db": "",
+     "values": "e.g. 1 Warning(s)",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the results to Excel",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "DCSA Request ID (Count)",
+     "type": "Display Item",
+     "ui": "Group row per request with the number of results",
+     "db": "",
+     "values": "e.g. DCSA260000002 (Count: 1)",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Code",
+     "type": "Display Item",
+     "ui": "Result code",
+     "db": "",
+     "values": "DCSA001",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Description",
+     "type": "Display Item",
+     "ui": "Result message with a status icon",
+     "db": "",
+     "values": "\"Validate QC Check Completed Sucessfully.\"",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Solution",
+     "type": "Display Item",
+     "ui": "Suggested fix for a failed check",
+     "db": "",
+     "values": "\"-\" when none",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Close (× icon)",
+     "type": "Icon",
+     "ui": "Closes the pop-up",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    }
+   ]
+  },
+  {
+   "title": "Create Booking (Single/Batch)"
+  },
+  {
+   "title": "Create Booking Pop-up",
+   "level": 3,
+   "rows": [
+    {
+     "name": "All",
+     "type": "Button",
+     "ui": "Shows all result rows",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Success count",
+     "type": "Button",
+     "ui": "Shows only the success rows; the label shows the count",
+     "db": "",
+     "values": "e.g. 1 Success",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the results to Excel",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "DCSA Request ID (Count)",
+     "type": "Display Item",
+     "ui": "Group row per request with the number of results",
+     "db": "",
+     "values": "e.g. DCSA260000002 (Count: 1)",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Code",
+     "type": "Display Item",
+     "ui": "Result code",
+     "db": "",
+     "values": "DCSA002",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Description",
+     "type": "Display Item",
+     "ui": "Result message with a status icon",
+     "db": "",
+     "values": "\"Request Id :[<DCSA Request ID>] Actual Booking has been Created Successfully. - <Booking Number>\"",
+     "remarks": "The booking is created in \"Pre Entered\" status",
+     "editable": "No"
+    },
+    {
+     "name": "Solution",
+     "type": "Display Item",
+     "ui": "Suggested fix for a failed check",
+     "db": "",
+     "values": "\"-\" when none",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Close (× icon)",
+     "type": "Icon",
+     "ui": "Closes the pop-up",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    }
+   ]
+  },
+  {
+   "title": "Edit Booking",
+   "text": "Opens the ILISCyber Agency Booking screen; the Basic tab shown in the screen design is listed below. The other tabs follow the Agency Booking BRS."
+  },
+  {
+   "title": "Basic Tab",
+   "level": 3,
+   "rows": [
+    {
+     "name": "No Partial",
+     "type": "Check Box",
+     "ui": "If the booking is not partial, select the check box",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Pre Assign BL",
+     "type": "Check Box",
+     "ui": "If BL is to be pre-assigned, select the check box",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "MC TEUs",
+     "type": "Display Item",
+     "ui": "Total TEUs of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "MC TONs",
+     "type": "Display Item",
+     "ui": "Total tons of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Created By / Created On / Updated On",
+     "type": "Display Item",
+     "ui": "User and date-times of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking Number of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Customer",
+     "type": "Auto Populate",
+     "ui": "Customer code and name of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Contact",
+     "type": "Auto Populate",
+     "ui": "Contact of the customer",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Phone",
+     "type": "Alphanumeric",
+     "ui": "Phone of the contact",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Email",
+     "type": "Alphanumeric",
+     "ui": "Email of the contact",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Web Booking Number",
+     "type": "Display Item",
+     "ui": "Web booking number",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Ship Trans ID",
+     "type": "Display Item",
+     "ui": "Ship trans ID",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Shipper Reference",
+     "type": "Alphanumeric",
+     "ui": "Shipper reference of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Credit Customer",
+     "type": "Auto Populate",
+     "ui": "Credit customer of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\"",
+     "editable": "Yes"
+    },
+    {
+     "name": "On-Behalf Of Customer",
+     "type": "Auto Populate",
+     "ui": "On-behalf-of customer of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Origin Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Origin location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Load Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Load port code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Receipt Type",
+     "type": "Single Select Drop Down",
+     "ui": "Select receipt type manually from drop down list",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Discharge Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Discharge port code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Final Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Final location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Delivery Type",
+     "type": "Single Select Drop Down",
+     "ui": "Select delivery type manually from drop down list",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Delivery Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Delivery location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Trade",
+     "type": "Auto Populate",
+     "ui": "Trade of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Trade Lane",
+     "type": "Auto Populate",
+     "ui": "Trade lane of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Service Contract",
+     "type": "Alphanumeric + icon",
+     "ui": "Service contract of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "On Board Date",
+     "type": "Date Picker",
+     "ui": "Input On Board date",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Cargo Acceptance Date",
+     "type": "Date Picker",
+     "ui": "Input Cargo Acceptance date",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "FRT Approve Number",
+     "type": "Alphanumeric",
+     "ui": "Freight approval number",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Prepaid Collect",
+     "type": "Toggle",
+     "ui": "Prepaid or Collect",
+     "db": "",
+     "values": "Prepaid / Collect",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Payment Place",
+     "type": "Auto Populate",
+     "ui": "Payment place of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "BL Issue Place",
+     "type": "Auto Populate",
+     "ui": "BL issue place of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in two char\"",
+     "editable": "Yes"
+    },
+    {
+     "name": "Service Type",
+     "type": "Auto Populate",
+     "ui": "Service type of the booking",
+     "db": "",
+     "values": "FCL-FCL",
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
+    },
+    {
+     "name": "Terms",
+     "type": "Single Select Drop Down",
+     "ui": "Select terms manually from drop down list",
+     "db": "",
+     "values": "Free On Board",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Service Requirement",
+     "type": "Single Select Drop Down",
+     "ui": "Select service requirement manually from drop down list",
+     "db": "",
+     "values": "Normal",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Valid Till",
+     "type": "Date Picker",
+     "ui": "Input Valid Till date",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Partner App No",
+     "type": "Alphanumeric",
+     "ui": "Partner application number",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Port Forwarder",
+     "type": "Auto Populate",
+     "ui": "Port forwarder of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\"",
+     "editable": "Yes"
+    },
+    {
+     "name": "Customs Clearing Agent",
+     "type": "Alphanumeric",
+     "ui": "Customs clearing agent",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "VGM Method",
+     "type": "Single Select Drop Down",
+     "ui": "Select VGM method manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": "\"--- Select---\"",
+     "editable": "Yes"
+    },
+    {
+     "name": "Original Booking",
+     "type": "Alphanumeric",
+     "ui": "Original booking number",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Feeder BL",
+     "type": "Toggle",
+     "ui": "Feeder BL",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Edit",
+     "type": "Button",
+     "ui": "Switches the booking to edit mode",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Close",
+     "type": "Button",
+     "ui": "Closes the booking tab",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Submit",
+     "type": "Button",
+     "ui": "After all mandatory fields are filled, saves the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Booking No.(<Booking Number>) modified successfully.\"",
+     "editable": "-"
+    },
+    {
+     "name": "Cancel",
+     "type": "Button",
+     "ui": "Discards the changes and returns to view mode",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    }
+   ]
+  },
+  {
+   "title": "Communication History"
+  },
+  {
+   "title": "Communication History Grid",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Total Record(s)",
+     "type": "Display Item",
+     "ui": "Number of communications listed",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the list to Excel",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Refresh",
+     "type": "Icon",
+     "ui": "Reloads the list",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Search",
+     "type": "Alphanumeric",
+     "ui": "Filters the rows by the text typed",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Group-by bar",
+     "type": "Drag & Drop area",
+     "ui": "Drop a column header here to group by that column",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Document Number",
+     "type": "Display Item",
+     "ui": "Document number of the communication (Carrier Booking Request Ref.)",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the document",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Confirm Version",
+     "type": "Display Item",
+     "ui": "Confirmed version",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking number",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event Type",
+     "type": "Display Item",
+     "ui": "Direction of the communication",
+     "db": "DOC HEADER",
+     "values": "IN",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Current Event",
+     "type": "Display Item",
+     "ui": "Current event",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Document Status",
+     "type": "Display Item",
+     "ui": "Document status",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Status Event",
+     "type": "Display Item",
+     "ui": "Status event",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event By",
+     "type": "Display Item",
+     "ui": "Who sent the communication",
+     "db": "DOC HEADER",
+     "values": "DCSA_SANDBOX",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event On",
+     "type": "Display Item",
+     "ui": "Date and time of the communication",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Amendment",
+     "type": "Display Item",
+     "ui": "Amendment details",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Timeline"
+  },
+  {
+   "title": "Timeline Screen",
+   "level": 3,
+   "rows": [
+    {
+     "name": "<DCSA Request ID> (<Version>) panel",
+     "type": "Display Item",
+     "ui": "List of actions done on the request, newest first",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Action",
+     "type": "Display Item",
+     "ui": "Name of the action",
+     "db": "",
+     "values": "Book_Creation / Booking Request Confirmed / Temp2_Process",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Date Time",
+     "type": "Display Item",
+     "ui": "When the action was done",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Remarks",
+     "type": "Display Item",
+     "ui": "Message of the action",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "By",
+     "type": "Display Item",
+     "ui": "User who did the action, e.g. AGENCYOPA",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Details panel",
+     "type": "Display Item",
+     "ui": "The selected action as \"<Action> by <User> on <Date Time>\" and \"Remarks : <text>\"",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  }
+ ],
+ "possible_values_column": true
+}
