@@ -26,3 +26,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 3.1.5 Communication History approved (11 rows, DB = DOC HEADER).
 - 3.1.6 Notes approved (8 rows). 3.2 Meta Query = heading + 'No screen design available.'
 - 3.3 Edit Request → 3.3.1 Edit Mode approved (6 rows).
+- 3.4 Validate QC / 3.5 Create Booking pop-up tables approved (9 rows each).

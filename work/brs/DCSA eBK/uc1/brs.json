@@ -1562,6 +1562,168 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Validate QC"
+  },
+  {
+   "title": "Validate QC Pop-up",
+   "level": 3,
+   "rows": [
+    {
+     "name": "All",
+     "type": "Button",
+     "ui": "Shows all result rows",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Warning(s) count",
+     "type": "Button",
+     "ui": "Shows only the warning rows; the label shows the count",
+     "db": "",
+     "values": "e.g. 1 Warning(s)",
+     "remarks": ""
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the results to Excel",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "DCSA Request ID (Count)",
+     "type": "Display Item",
+     "ui": "Group row per request with the number of results",
+     "db": "",
+     "values": "e.g. DCSA260000002 (Count: 1)",
+     "remarks": ""
+    },
+    {
+     "name": "Code",
+     "type": "Display Item",
+     "ui": "Result code",
+     "db": "",
+     "values": "DCSA001",
+     "remarks": ""
+    },
+    {
+     "name": "Description",
+     "type": "Display Item",
+     "ui": "Result message with a status icon",
+     "db": "",
+     "values": "\"Validate QC Check Completed Sucessfully.\"",
+     "remarks": ""
+    },
+    {
+     "name": "Solution",
+     "type": "Display Item",
+     "ui": "Suggested fix for a failed check",
+     "db": "",
+     "values": "\"-\" when none",
+     "remarks": ""
+    },
+    {
+     "name": "Close (× icon)",
+     "type": "Icon",
+     "ui": "Closes the pop-up",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  },
+  {
+   "title": "Create Booking (Single/Batch)"
+  },
+  {
+   "title": "Create Booking Pop-up",
+   "level": 3,
+   "rows": [
+    {
+     "name": "All",
+     "type": "Button",
+     "ui": "Shows all result rows",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Success count",
+     "type": "Button",
+     "ui": "Shows only the success rows; the label shows the count",
+     "db": "",
+     "values": "e.g. 1 Success",
+     "remarks": ""
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the results to Excel",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "DCSA Request ID (Count)",
+     "type": "Display Item",
+     "ui": "Group row per request with the number of results",
+     "db": "",
+     "values": "e.g. DCSA260000002 (Count: 1)",
+     "remarks": ""
+    },
+    {
+     "name": "Code",
+     "type": "Display Item",
+     "ui": "Result code",
+     "db": "",
+     "values": "DCSA002",
+     "remarks": ""
+    },
+    {
+     "name": "Description",
+     "type": "Display Item",
+     "ui": "Result message with a status icon",
+     "db": "",
+     "values": "\"Request Id :[<DCSA Request ID>] Actual Booking has been Created Successfully. - <Booking Number>\"",
+     "remarks": "The booking is created in \"Pre Entered\" status"
+    },
+    {
+     "name": "Solution",
+     "type": "Display Item",
+     "ui": "Suggested fix for a failed check",
+     "db": "",
+     "values": "\"-\" when none",
+     "remarks": ""
+    },
+    {
+     "name": "Close (× icon)",
+     "type": "Icon",
+     "ui": "Closes the pop-up",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }
