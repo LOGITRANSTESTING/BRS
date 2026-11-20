@@ -262,6 +262,41 @@
    "description": "Shows the booking request details as originally submitted by the customer (from the Temp 3 process), read-only.",
    "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"View Customer Request Data (Meta Query)\" in the ☰ menu.",
    "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Menu Click",
+   "description": "Opens the selected DCSA request in a new tab \"<DCSA Request ID> (<Version>)\" in edit mode with Submit and Cancel buttons. Not allowed once a booking has been generated against the request.",
+   "triggered_when": "User selects a DCSA request that has no booking generated yet and clicks \"Edit Request\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Button Click",
+   "description": "Submit: saves the amended booking request details.",
+   "triggered_when": "User amends the details and clicks \"Submit\" after filling all mandatory (*) fields.",
+   "remarks": "\"Edit Request ( <DCSA Request ID> (<Version>)) modified successfully\""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Button Click",
+   "description": "Cancel: discards the changes and closes the edit tab.",
+   "triggered_when": "User clicks \"Cancel\".",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Icon Click (View icon)",
+   "description": "Switches the request tab to view-only mode (same as View Request).",
+   "triggered_when": "User clicks the eye icon on the right of the tab strip.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Request",
+   "event_type": "Tab Click / Icon Click (Refresh icon, Close icon)",
+   "description": "Same as 2.2.1 (moves to a section / reloads the details / closes the tab).",
+   "triggered_when": "Same as 2.2.1.",
+   "remarks": ""
   }
  ],
  "search_title": "",
