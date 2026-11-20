@@ -10,3 +10,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 
 - Builder: 2.1.x feature sub-titles + heading-only 1.2.x entries (Meta Query) added and tested. DCSA template has no captions -> images placed without captions (same as user's DCSA docs).
 - uc1/brs.json created: 22 marked src images under 1.2.1–1.2.8, 2.1.1–2.1.8 verbatim. Next: 2.2 events per function.
+- 2.2.1 View Request events approved (6 rows).

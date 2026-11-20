@@ -213,7 +213,50 @@
   "The “Timeline” option in DCSA Booking Activity allows the agency user to view the list of actions the agency user has completed against a booking request.",
   "The timeline details are maintained in the T_LT_DCSA_TIME_LINE table."
  ],
- "events": [],
+ "events": [
+  {
+   "section": "View Request",
+   "event_type": "Menu Click",
+   "description": "Opens the selected DCSA request in a new tab \"<DCSA Request ID> (<Version>)\" in view-only mode, showing Basic Information, Sailing, Containers & Cargo, Parties & Addresses, Communication History and Notes.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"View Request\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Tab Click",
+   "description": "Moves the page to the chosen section (Basic Information / Sailing / Containers & Cargo / Parties & Addresses / Communication History / Notes).",
+   "triggered_when": "User clicks a section tab in the request tab.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Button Click (SH / CN / N1 / N2 / FW)",
+   "description": "Shows the Shipper, Consignee, Notify 1, Notify 2 or Forwarder party details.",
+   "triggered_when": "User clicks a party button in Parties & Addresses.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Button Click",
+   "description": "Show Details: shows the selected note's text in \"Notes Detail – <Booking Number>\", filtered by the \"Last N Days\" value.",
+   "triggered_when": "User selects a note and clicks \"Show Details\".",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Icon Click (Refresh icon)",
+   "description": "Reloads the request details.",
+   "triggered_when": "User clicks the refresh icon on the right of the tab strip.",
+   "remarks": ""
+  },
+  {
+   "section": "View Request",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the request tab and returns to DCSA Activity.",
+   "triggered_when": "User clicks × on the request tab.",
+   "remarks": ""
+  }
+ ],
  "search_title": "",
  "search": [],
  "display_title": "",
