@@ -332,6 +332,34 @@
    "description": "Closes the Validate QC pop-up.",
    "triggered_when": "User clicks × on the pop-up title bar.",
    "remarks": ""
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Menu Click (Single)",
+   "description": "Runs the 2nd level QC check plus the Global and General restriction checks for the request. If QC passes, it creates the actual booking in \"Pre Entered\" status and opens the \"Create Booking\" result pop-up.",
+   "triggered_when": "Auto booking registry is \"MANUAL\"; user clicks \"Create Booking\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Request Id :[<DCSA Request ID>] Actual Booking has been Created Successfully. - <Booking Number>\" (code DCSA002)"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Menu Click (Batch)",
+   "description": "Same checks and creation for every checked request; the pop-up lists the results grouped by DCSA Request ID.",
+   "triggered_when": "Auto booking registry is \"MANUAL\"; user ticks one or more requests and clicks \"Create Booking\" in the DCSA Activity ☰ menu.",
+   "remarks": "Same message, one per request."
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Button Click (All / Success) / Icon Click (Expand/Collapse icon, Excel icon)",
+   "description": "Same as 2.2.4: filter the results, expand or collapse the groups, export to Excel.",
+   "triggered_when": "User clicks the control in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the pop-up; the grid shows the new Booking Number, Booking Date and \"Pre Entered\" status.",
+   "triggered_when": "User clicks × on the pop-up.",
+   "remarks": ""
   }
  ],
  "search_title": "",
