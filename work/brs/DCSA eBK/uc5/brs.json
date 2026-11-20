@@ -1,0 +1,93 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC5 - Confirm Booking Request",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "20.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Confirm Booking Request function.",
+ "images": [
+  {
+   "section": "Confirm Request",
+   "file": "work/brs/DCSA eBK/uc5/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "Confirm Request",
+   "file": "work/brs/DCSA eBK/uc5/src/1_2.png",
+   "caption": "Image II"
+  },
+  {
+   "section": "HQ Temp 2 Processing"
+  },
+  {
+   "section": "Track & Trace Event Log – Confirm"
+  }
+ ],
+ "features": [
+  {
+   "section": "Confirm Request"
+  },
+  "The “Confirm Request” option in DCSA Booking Activity (UC5: Confirm Booking Request) allows the agency user to manually select and confirm a booking request. Ideally, confirmation is triggered automatically when the booking confirmation is sent from the system. Because some Yang Ming agents do not process booking confirmations from AFSYS+, a manual option is provided.",
+  "The agency user can confirm the request only if a booking has been generated against it.",
+  "Preconditions",
+  "•\tThe booking request must be converted into a Yang Ming actual booking.",
+  "•\tThe actual booking must not be in PRE-ENTERED status.",
+  "•\tThe actual booking must not be in CANCELLED or FREEZE status.",
+  "When the user confirms the booking request, the system calls HQ Temp 2 Processing and the HQ Track & Trace Event Log. The booking request moves to CONFIRMED state.",
+  "Flow",
+  "•\tThe Carrier confirms the booking request and updates its state to CONFIRMED.",
+  "•\tThe Carrier sends a notification to the relevant registered counterparts with the Carrier Booking request reference, the Carrier Booking reference and the state of the booking.",
+  {
+   "section": "HQ Temp 2 Processing"
+  },
+  "When the agency user manually confirms a booking request, the system calls the HQ Temp 2 processing procedure.",
+  "Procedure Name: WEBEDI.DCSA_BKG_LINKAGE.BC_DETAILS_INSERT@HQ_LINK",
+  "All booking information is passed to the HQ procedure in a PL/SQL table that follows the HQ Temp 2 table format. Several of the required columns are not available in AFSYS+, so the missing data is taken from the Temp 3 intermediate process. The latest data available in AFSYS+ is used first, and the remaining data comes from Temp 3. Once the PL/SQL table is populated, the HQ procedure is called.",
+  "Parameter Sources",
+  "•\tP_HEADER_DETAILS – T_LT_DCSA_EBK_HEADER.",
+  "•\tP_BASIC_DETAILS – AFSYS+, otherwise T_LT_DCSA_EBK_HEADER.",
+  "•\tP_AMS_DETAILS – not available in Temp 3; passed as a NULL record.",
+  "•\tP_CFM_EQ_DETAILS / P_CFM_EQ_POSITION_DETAILS – AFSYS+, otherwise T_LT_DCSA_EBK_REQUIREMENTS.",
+  "•\tP_CHARGE_DETAILS / P_CUTOFF_DETAILS – AFSYS+.",
+  "•\tP_CONTACT_DETAILS – AFSYS+, otherwise T_LT_DCSA_EBK_CONTACT.",
+  "•\tP_CUS_REF_DETAILS – intermediate process, otherwise a NULL record.",
+  "•\tP_PTY_DETAILS – AFSYS+, otherwise T_LT_DCSA_EBK_PARTIES.",
+  {
+   "section": "Track & Trace Event Log – Confirm"
+  },
+  "When the agency user manually confirms a DCSA booking request, the system calls the HQ Track & Trace event log procedure to record the confirmation event.",
+  "Procedure Name: WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT@HQ_LINK",
+  "Key Parameter Values",
+  "•\tP_DATA_SOURCE = DCSA, P_DATA_TYPE = OUT, P_DOC_TYPE = BK",
+  "•\tP_DOC_NUMBER = Carrier booking request number (T_LT_DCSA_DOC_HEADER.DH_DOC_NUMBER)",
+  "•\tP_DOC_VERSION = T_LT_DCSA_DOC_HEADER.DH_DOC_VERSION",
+  "•\tP_CONFIRM_VERSION = T_LT_DCSA_DOC_HEADER.DH_CONFIRM_VERSION",
+  "•\tP_CONTRACT_REF = Trade ID (Case ID) if available",
+  "•\tP_CURRENT_EVENT = CONFIRMED, P_DOCUMENT_STATUS = CONFIRMED",
+  "•\tP_EVENT_TYPE_CODE = CONF, P_DOC_TYPE_CODE = BKG",
+  "•\tP_DOC_ID = AFSYS Booking No.",
+  "•\tP_EVENT_DATE / P_EVENT_CREATED_DATE = SYSDATE",
+  "•\tP_DOC_REF_DETAILS = Type CBR, Value: Carrier booking request number"
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}

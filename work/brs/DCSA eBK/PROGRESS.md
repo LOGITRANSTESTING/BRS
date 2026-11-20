@@ -32,3 +32,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - Editable = Yes/No/-, 7th column 'Possible Values' added; Item Type widened. Built UC1 BRS (62 pages); PR opened.
 - UC4: docs have no screenshots (SDS has 4 older ones) - user: skip UC4 for now.
 - UC5: user chose Confirm Request with 2 images (uc5/src/1_1,1_2); HQ Temp 2 Processing and T&T Event Log – Confirm heading-only.
+- UC5 2.1 approved (verbatim, 3 sub-titles).
