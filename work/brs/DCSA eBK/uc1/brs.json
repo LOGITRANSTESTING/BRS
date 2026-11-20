@@ -1336,6 +1336,100 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Communication History",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Document Number",
+     "type": "Display Item",
+     "ui": "Document number of the communication (Carrier Booking Request Ref.)",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the document",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Confirm Version",
+     "type": "Display Item",
+     "ui": "Confirmed version",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking number",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Event Type",
+     "type": "Display Item",
+     "ui": "Direction of the communication",
+     "db": "DOC HEADER",
+     "values": "IN",
+     "remarks": ""
+    },
+    {
+     "name": "Current Event",
+     "type": "Display Item",
+     "ui": "Current event",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": ""
+    },
+    {
+     "name": "Document Status",
+     "type": "Display Item",
+     "ui": "Document status",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": ""
+    },
+    {
+     "name": "Status Event",
+     "type": "Display Item",
+     "ui": "Status event",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Event By",
+     "type": "Display Item",
+     "ui": "Who sent the communication",
+     "db": "DOC HEADER",
+     "values": "DCSA_SANDBOX",
+     "remarks": ""
+    },
+    {
+     "name": "Event On",
+     "type": "Display Item",
+     "ui": "Date and time of the communication",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Amendment",
+     "type": "Display Item",
+     "ui": "Amendment details",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }
