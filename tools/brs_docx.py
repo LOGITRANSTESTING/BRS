@@ -23,6 +23,7 @@ SKELETON = {
     "template": DEFAULT_TEMPLATE,
     "company": "YANG MING MARINE TRANSPORT CORP.",
     "module": "Agency Booking",
+    "module_line": "",       # optional exact cover line, empty = "ILISCyber – <module>" (DCSA eBK: "DCSA – eBK Process")
     "function": "",
     "version": "01.01",
     "date": "",  # DD/MM/YYYY, today when empty
@@ -122,7 +123,7 @@ def build(spec, out):
     # cover (first non-empty Normal paragraphs, in the sample's order)
     cover = [p for p in P[:20] if p.text.strip()]
     date = spec.get('date') or datetime.date.today().strftime('%d/%m/%Y')
-    vals = [spec.get('company', cover[0].text.strip()), 'ILISCyber – ' + spec['module'],
+    vals = [spec.get('company', cover[0].text.strip()), spec.get('module_line') or 'ILISCyber – ' + spec['module'],
             'Business Requirement Specification', spec['function'], 'Version ' + spec.get('version', '01.01'), date]
     for p, v in zip(cover[:6], vals):
         set_par_text(p, v)
