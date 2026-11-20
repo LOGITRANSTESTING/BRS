@@ -30,8 +30,8 @@ SKELETON = {
     "history": [{"date": "", "version": "V01.01", "author": "Appsara",
                  "description": "Initial version created based on the confirmed screen designs"}],
     "purpose": "This document explains the purpose of <Module>'s <Screen> <Function> details.",
-    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes
-    "features": [],          # leave empty = blank section
+    "images": [{"file": "work/brs/<fn>/img/01.png", "caption": "Image I"}],  # optional "section": "Freeze" adds a 1.2.x sub-heading when it changes; an entry without "file" = sub-heading only (+ optional "text")
+    "features": [],          # leave empty = blank section; {"section": "X"} adds a 2.1.x sub-title
     "events": [{"event_type": "", "description": "", "triggered_when": "", "remarks": ""}],  # optional "section": one 2.2.x heading + table per section
     "search_title": "",      # optional 3.1 heading, empty = "Search"
     "search": [{"name": "", "type": "", "ui": "", "db": "", "values": ""}],
@@ -178,6 +178,11 @@ def build(spec, out):
                 hp._p.get_or_add_pPr().append(num)
             last.addnext(hp._p); last = hp._p
             if k == 1: first_reserve += Pt(28)
+        if not im.get('file'):
+            # heading-only entry: a function without a screen design keeps its 1.2.x sub-title
+            if im.get('text'):
+                tp = doc.add_paragraph(im['text']); last.addnext(tp._p); last = tp._p
+            continue
         cap = copy.deepcopy(cap_xml) if cap_xml is not None else None
         if cap is not None:
             last.addnext(cap); last = cap
@@ -201,10 +206,21 @@ def build(spec, out):
         body = [p for p in body_between(doc, i) if not p._p.xpath('.//w:tbl')]
         for p in body:
             if p.text.strip() or 'graphic' in p._p.xml: remove_par(p)
-        last = doc.paragraphs[i]._p
-        for line in reversed(spec.get(key) or []):
-            np_ = doc.add_paragraph(line)
-            last.addnext(np_._p)
+        hpar = doc.paragraphs[i]
+        last = hpar._p
+        for line in spec.get(key) or []:
+            if isinstance(line, dict) and line.get('section'):
+                # {"section": "View Request"} = 2.1.x sub-title, same numbering list one level down
+                np_ = doc.add_paragraph(line['section'], style=next(st for st in doc.styles if st.style_id == 'Heading3'))
+                np_.paragraph_format.keep_with_next = True
+                hnum = hpar._p.pPr.numPr if hpar._p.pPr is not None else None
+                if hnum is not None:
+                    from docx.oxml.ns import qn as _qn
+                    num = copy.deepcopy(hnum); num.find(_qn('w:ilvl')).set(_qn('w:val'), '2')
+                    np_._p.get_or_add_pPr().append(num)
+            else:
+                np_ = doc.add_paragraph(line)
+            last.addnext(np_._p); last = np_._p
 
     # tables: events (2), search (3), display (4) - located by header text, not index
     from docx.oxml.ns import qn as _qn_ev

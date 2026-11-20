@@ -1,0 +1,225 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC1 - Booking Request Submit",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "20.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Booking Request Submit function.",
+ "images": [
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_2.png",
+   "caption": "Image II"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_3.png",
+   "caption": "Image III"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_4.png",
+   "caption": "Image IV"
+  },
+  {
+   "section": "View Request",
+   "file": "work/brs/DCSA eBK/uc1/src/1_5.png",
+   "caption": "Image V"
+  },
+  {
+   "section": "View Customer Request Data (Meta Query)"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_1.png",
+   "caption": "Image VI"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_2.png",
+   "caption": "Image VII"
+  },
+  {
+   "section": "Edit Request",
+   "file": "work/brs/DCSA eBK/uc1/src/3_3.png",
+   "caption": "Image VIII"
+  },
+  {
+   "section": "Validate QC",
+   "file": "work/brs/DCSA eBK/uc1/src/4_1.png",
+   "caption": "Image IX"
+  },
+  {
+   "section": "Validate QC",
+   "file": "work/brs/DCSA eBK/uc1/src/4_2.png",
+   "caption": "Image X"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_1.png",
+   "caption": "Image XI"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_2.png",
+   "caption": "Image XII"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_3.png",
+   "caption": "Image XIII"
+  },
+  {
+   "section": "Create Booking (Single/Batch)",
+   "file": "work/brs/DCSA eBK/uc1/src/5_4.png",
+   "caption": "Image XIV"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_1.png",
+   "caption": "Image XV"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_2.png",
+   "caption": "Image XVI"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_3.png",
+   "caption": "Image XVII"
+  },
+  {
+   "section": "Edit Booking",
+   "file": "work/brs/DCSA eBK/uc1/src/6_4.png",
+   "caption": "Image XVIII"
+  },
+  {
+   "section": "Communication History",
+   "file": "work/brs/DCSA eBK/uc1/src/7_1.png",
+   "caption": "Image XIX"
+  },
+  {
+   "section": "Communication History",
+   "file": "work/brs/DCSA eBK/uc1/src/7_2.png",
+   "caption": "Image XX"
+  },
+  {
+   "section": "Timeline",
+   "file": "work/brs/DCSA eBK/uc1/src/8_1.png",
+   "caption": "Image XXI"
+  },
+  {
+   "section": "Timeline",
+   "file": "work/brs/DCSA eBK/uc1/src/8_2.png",
+   "caption": "Image XXII"
+  }
+ ],
+ "features": [
+  {
+   "section": "View Request"
+  },
+  "The “View Request” option in DCSA Booking Activity allows the agency user to view the booking request “Received” from the customers. By default, the agency user can only view the booking request details and cannot amend the information shown on the screen.",
+  "When the user clicks the “View Request” option, the system navigates to the next page, which shows the information of the selected DCSA request ID. The view screen has the following sections:",
+  "•\tBasic Information",
+  "•\tSailing",
+  "•\tCargo & Containers",
+  "•\tParties & Addresses",
+  "•\tCommunication History",
+  {
+   "section": "View Customer Request Data (Meta Query)"
+  },
+  "The “View Customer Request Data (Meta Query)” option in DCSA Booking Activity allows the agency user to view the booking request details as originally submitted by the customer, taken from the Temp 3 (Intermediate) process.",
+  "The data is shown read-only, so the agency user can compare the original customer request with the data held in the eBK interface tables.",
+  {
+   "section": "Edit Request"
+  },
+  "The “Edit Request” option in DCSA Booking Activity allows the agency user to amend the booking request details. Amendments are allowed until the request is accepted by the respective agency.",
+  "When the user clicks the “Edit Request” option, the system opens another tab page with the selected booking request information. The agency user can amend the details and “Submit” the booking information.",
+  "Once a booking has been generated against the request, the agency user can no longer make any changes to the DCSA booking request.",
+  {
+   "section": "Validate QC"
+  },
+  "The “Validate QC” option in DCSA Booking Activity allows the agency user to run the 2nd level QC check, Global restrictions and General restrictions as a separate process, before the booking request is converted into an actual booking.",
+  "The 2nd level QC check validates the following items:",
+  "Basic Information",
+  "•\tLoad Port / Discharge Port (Conditional) – validated against Port Master.",
+  "•\tReceipt Type / Delivery Type (Mandatory) – CY, D, F, L, CFS or T.",
+  "•\tDoor Pickup Address (Conditional) – required for a door move.",
+  "•\tPickup Date – must be earlier than the gate close date.",
+  "•\tPayment Mode (Mandatory) – Prepaid / Collect.",
+  "•\tPayment Location (Mandatory) – validated against Location Master. If it is blank, the system automatically uses the POR or POD, depending on the payment mode.",
+  "•\tAllocation Voyage (Conditional) – validated against Voyage Master and cannot be blank.",
+  "•\tCargo Call Type (Conditional) – raise an error if no ‘CG’ call type is found for BT_FROM / BT_TO under BT_UNKNOWN_VOYAGE. This check does not apply to Feeder voyages.",
+  "Cargo",
+  "•\tHS Code – must be a valid HS code from Commodity Master.",
+  "•\tCommodity Group (Conditional) – mandatory for USA trade, i.e. when the original or final location country is US or CA.",
+  "•\tPackage Type – must be a valid package type from Package Type Master.",
+  "•\tUN Number (Conditional) – IMDG cargo only; numeric, maximum 4 digits.",
+  "•\tClass (Conditional) – IMDG cargo only; up to four characters (numeric, numeric with decimal, or alphanumeric with decimal).",
+  "•\tDangerous Contact Number – numeric; the special characters ( and + are allowed.",
+  "•\tReefer Ventilation (Conditional) – reefer cargo only; allowed values N, Q, H, T, F, E, C, X, Z.",
+  "•\tTemperature Type (Conditional) – reefer cargo only; C or F.",
+  "Containers",
+  "•\tEmpty Pickup – must be a valid depot code from HQ depot master.",
+  "•\tSOC Flag – Y / N.",
+  "•\tCargo Dimension (Conditional) – applicable only to OOG containers.",
+  "Parties",
+  "•\tShipper data is mandatory. If shipper data is missing, a QC error is raised.",
+  "•\tParty Type (Mandatory), Party Name (Conditional), Party Country (Conditional) – validated against HQ country master.",
+  "•\tReference Qualifier – must be a valid reference qualifier.",
+  {
+   "section": "Create Booking (Single/Batch)"
+  },
+  "The “Create Booking (Single/Batch)” option in DCSA Booking Activity is used when the auto booking generation registry (new config with values AUTO/MANUAL) is set to “MANUAL”.",
+  "If the registry is set to “AUTO”, a background job picks the respective agency record from the pool table and generates the actual booking once the QC process passes.",
+  "In the manual process, the agency user selects one or more DCSA booking requests listed on the screen. When the user clicks the “Create Booking” button, the selected booking requests are created as actual bookings in “Pre-Entered” status.",
+  "During conversion, the system runs the 2nd level QC check, including Global and General restrictions. The booking request is converted into an actual booking only if the QC check passes.",
+  "Preconditions",
+  "•\tDCSA standard data must be mapped and inserted into the eBK interface tables.",
+  "•\tFirst level and 2nd level QC must be validated.",
+  "•\tGlobal & General Restrictions must be passed.",
+  "Postconditions",
+  "•\tThe actual booking is created in “Pre-Entered” status and is available in the AFSYS+ booking module and ILISCyber Agency Booking.",
+  "•\tThe DCSA request status is “Received [Not Confirmed]” and is sent back to the shipper by calling the required HQ ITCS procedures.",
+  {
+   "section": "Edit Booking"
+  },
+  "The “Edit Booking” option in DCSA Booking Activity allows the agency user to amend the booking details. The option is enabled only after the request has been converted into an actual booking.",
+  "When the user clicks this option, the system navigates to ILISCyber Agency Booking and shows the selected booking details. The user can amend the booking details and carry out further booking-related processing.",
+  {
+   "section": "Communication History"
+  },
+  "The “Communication History” option in DCSA Booking Activity allows the agency user to view the list of communications received against the DCSA booking request ID.",
+  "The information is taken from the DCSA DOC HEADER table (T_LT_DCSA_DOC_HEADER).",
+  {
+   "section": "Timeline"
+  },
+  "The “Timeline” option in DCSA Booking Activity allows the agency user to view the list of actions the agency user has completed against a booking request.",
+  "The timeline details are maintained in the T_LT_DCSA_TIME_LINE table."
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": []
+}
