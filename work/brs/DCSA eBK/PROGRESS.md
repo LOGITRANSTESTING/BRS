@@ -34,3 +34,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - UC5: user chose Confirm Request with 2 images (uc5/src/1_1,1_2); HQ Temp 2 Processing and T&T Event Log – Confirm heading-only.
 - UC5 2.1 approved (verbatim, 3 sub-titles).
 - UC5 2.2.1–2.2.3 and 3.1.1 approved; 3.2/3.3 'No screen design available.'; built 14 pages: output/DCSA eBK/BRS - DCSA eBK - UC5 - Confirm Booking Request V 1.0.docx
+- UC11 skipped by user. UC3, UC7, UC8, UC13, UC14 (and UC4) on hold until the user adds screenshots.
