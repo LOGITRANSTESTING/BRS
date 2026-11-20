@@ -79,7 +79,43 @@
   "•\tP_EVENT_DATE / P_EVENT_CREATED_DATE = SYSDATE",
   "•\tP_DOC_REF_DETAILS = Type CBR, Value: Carrier booking request number"
  ],
- "events": [],
+ "events": [
+  {
+   "section": "Confirm Request",
+   "event_type": "Menu Click",
+   "description": "Checks the preconditions; if they pass, calls HQ Temp 2 Processing and the Track & Trace Event Log, moves the request to CONFIRMED, shows \"Booking Request Confirmed\" in the grid and a green success bar.",
+   "triggered_when": "User clicks \"Confirm Request\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Booking request <DCSA Request ID> confirmed successfully.\" No notification is sent to the customer at this time."
+  },
+  {
+   "section": "Confirm Request",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the confirmation if no booking has been created, or the booking is PRE-ENTERED, CANCELLED or FREEZE.",
+   "triggered_when": "User clicks \"Confirm Request\" and a precondition is not met.",
+   "remarks": "Error message text to be confirmed."
+  },
+  {
+   "section": "Confirm Request",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the success message bar.",
+   "triggered_when": "User clicks × on the green message bar.",
+   "remarks": ""
+  },
+  {
+   "section": "HQ Temp 2 Processing",
+   "event_type": "System Event",
+   "description": "Fills the PL/SQL table in HQ Temp 2 format (AFSYS+ data first, remaining data from Temp 3) and calls WEBEDI.DCSA_BKG_LINKAGE.BC_DETAILS_INSERT@HQ_LINK.",
+   "triggered_when": "User confirms a request (2.2.1, row 1).",
+   "remarks": "P_AMS_DETAILS is passed as a NULL record."
+  },
+  {
+   "section": "Track & Trace Event Log – Confirm",
+   "event_type": "System Event",
+   "description": "Calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT@HQ_LINK to log the confirmation event (P_CURRENT_EVENT = CONFIRMED, P_EVENT_TYPE_CODE = CONF).",
+   "triggered_when": "User confirms a request (2.2.1, row 1).",
+   "remarks": "P_DOC_ID = AFSYS Booking No."
+  }
+ ],
  "search_title": "",
  "search": [],
  "display_title": "",
@@ -88,6 +124,74 @@
  "extra_tables": [],
  "references": [],
  "assumptions": [],
- "tables": [],
+ "tables": [
+  {
+   "title": "Confirm Request",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Confirm Request (Grid & Message)",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Confirm Request",
+     "type": "Menu Item",
+     "ui": "Allowed only when a booking exists and is not PRE-ENTERED, CANCELLED or FREEZE",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls HQ Temp 2 and Track & Trace Event Log"
+    },
+    {
+     "name": "Status",
+     "type": "Display Item",
+     "ui": "Request status after confirmation",
+     "db": "DOC HEADER",
+     "editable": "No",
+     "values": "Booking Request Confirmed",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Actual booking number and status",
+     "db": "",
+     "editable": "No",
+     "values": "e.g. N300316315 / Entered",
+     "remarks": "Must not be Pre Entered"
+    },
+    {
+     "name": "Success Message",
+     "type": "Display Item",
+     "ui": "Shown after a successful confirmation",
+     "db": "",
+     "editable": "No",
+     "values": "\"Booking request <DCSA Request ID> confirmed successfully.\"",
+     "remarks": ""
+    },
+    {
+     "name": "Close (× icon)",
+     "type": "Icon",
+     "ui": "Closes the message bar",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  },
+  {
+   "title": "HQ Temp 2 Processing",
+   "text": "No screen design available.",
+   "rows": []
+  },
+  {
+   "title": "Track & Trace Event Log – Confirm",
+   "text": "No screen design available.",
+   "rows": []
+  }
+ ],
  "possible_values_column": true
 }
