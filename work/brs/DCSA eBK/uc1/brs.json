@@ -1430,6 +1430,80 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Notes",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Swap (⇆ icon)",
+     "type": "Icon",
+     "ui": "Switches the notes list view",
+     "db": "",
+     "values": "",
+     "remarks": "Greyed out"
+    },
+    {
+     "name": "Last … Days",
+     "type": "Single Select Drop Down",
+     "ui": "Select how many recent days of notes to list",
+     "db": "",
+     "values": "All",
+     "remarks": ""
+    },
+    {
+     "name": "Show Details",
+     "type": "Button",
+     "ui": "Shows the selected note in the Notes Detail panel",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Notes Basis",
+     "type": "Display Item",
+     "ui": "Basis (level) of the note",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Notes",
+     "type": "Display Item",
+     "ui": "Note text",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Created By",
+     "type": "Display Item",
+     "ui": "User who created the note",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Created On",
+     "type": "Display Item",
+     "ui": "Date and time the note was created",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Notes Detail – <Booking Number>",
+     "type": "Display Item",
+     "ui": "Full text of the selected note",
+     "db": "",
+     "values": "",
+     "remarks": "\"No records available.\" when there are no notes"
+    }
+   ]
+  },
+  {
+   "title": "View Customer Request Data (Meta Query)",
+   "text": "No screen design available."
   }
  ]
 }

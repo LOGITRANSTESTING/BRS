@@ -24,3 +24,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 3.1.3 Containers & Cargo approved (39 rows).
 - 3.1.4 Parties & Addresses approved (12 rows).
 - 3.1.5 Communication History approved (11 rows, DB = DOC HEADER).
+- 3.1.6 Notes approved (8 rows). 3.2 Meta Query = heading + 'No screen design available.'
