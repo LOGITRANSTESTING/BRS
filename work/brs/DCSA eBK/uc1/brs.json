@@ -460,5 +460,280 @@
  "display": [],
  "extra_tables": [],
  "references": [],
- "assumptions": []
+ "assumptions": [],
+ "tables": [
+  {
+   "title": "View Request"
+  },
+  {
+   "title": "Basic Information",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Request ID",
+     "type": "Display Item",
+     "ui": "Request ID of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Request Date",
+     "type": "Display Item",
+     "ui": "Request date and time of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking Number generated for the request (\"-\" until created)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Date",
+     "type": "Display Item",
+     "ui": "Booking date and time (\"-\" until created)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Request Status",
+     "type": "Display Item",
+     "ui": "Status of the selected request",
+     "db": "",
+     "values": "Submitted",
+     "remarks": ""
+    },
+    {
+     "name": "Carrier Booking Request Ref.",
+     "type": "Display Item",
+     "ui": "Carrier booking request reference of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Shipper Reference",
+     "type": "Display Item",
+     "ui": "Shipper Reference of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Office",
+     "type": "Display Item",
+     "ui": "Booking Office of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Party",
+     "type": "Display Item",
+     "ui": "Booking Party of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Origin Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Origin Location code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Load Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Load Port code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Receipt Type",
+     "type": "Single Select Drop Down",
+     "ui": "Receipt Type of the selected request",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Discharge Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Discharge Port code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Final Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Final Location code and name of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Delivery Type",
+     "type": "Single Select Drop Down",
+     "ui": "Delivery Type of the selected request",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "HQ Trade Lane",
+     "type": "Display Item",
+     "ui": "HQ Trade Lane of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Trade ID",
+     "type": "Alphanumeric",
+     "ui": "Trade ID of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Quote Ref.",
+     "type": "Alphanumeric",
+     "ui": "Quote reference of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Prepaid Collect",
+     "type": "Toggle",
+     "ui": "Prepaid or Collect of the request",
+     "db": "",
+     "values": "Prepaid / Collect",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Payment Place",
+     "type": "Auto Populate",
+     "ui": "Payment place of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "BL Issue Place",
+     "type": "Auto Populate",
+     "ui": "BL issue place of the request",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in five char\""
+    },
+    {
+     "name": "Trade",
+     "type": "Auto Populate",
+     "ui": "Trade of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Trade Lane",
+     "type": "Auto Populate",
+     "ui": "Trade Lane of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Special Booking Indicator",
+     "type": "Single Select Drop Down",
+     "ui": "Special booking indicator of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "ETD",
+     "type": "Date Picker",
+     "ui": "ETD of the request (dd/MM/yyyy)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Cargo Acceptance Date",
+     "type": "Date Picker",
+     "ui": "Cargo Acceptance Date of the request (dd/MM/yyyy)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "RCC",
+     "type": "Auto Populate",
+     "ui": "RCC of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "LCC",
+     "type": "Auto Populate",
+     "ui": "LCC of the request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Add Booking Contact Details",
+     "type": "Toggle",
+     "ui": "Shows the booking contact fields when on",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Contact Name",
+     "type": "Alphanumeric",
+     "ui": "Contact name of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "E-Mail",
+     "type": "Alphanumeric",
+     "ui": "E-mail of the contact; use \";\" for more than one",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Telephone",
+     "type": "Alphanumeric",
+     "ui": "Telephone of the contact",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ]
 }
