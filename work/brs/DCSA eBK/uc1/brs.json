@@ -475,7 +475,8 @@
      "ui": "Request ID of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Version",
@@ -483,7 +484,8 @@
      "ui": "Version of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Request Date",
@@ -491,7 +493,8 @@
      "ui": "Request date and time of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Number",
@@ -499,7 +502,8 @@
      "ui": "Booking Number generated for the request (\"-\" until created)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Date",
@@ -507,7 +511,8 @@
      "ui": "Booking date and time (\"-\" until created)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Request Status",
@@ -515,7 +520,8 @@
      "ui": "Status of the selected request",
      "db": "",
      "values": "Submitted",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Carrier Booking Request Ref.",
@@ -523,7 +529,8 @@
      "ui": "Carrier booking request reference of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Shipper Reference",
@@ -531,7 +538,8 @@
      "ui": "Shipper Reference of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Office",
@@ -539,7 +547,8 @@
      "ui": "Booking Office of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Party",
@@ -547,7 +556,8 @@
      "ui": "Booking Party of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Origin Location",
@@ -555,7 +565,8 @@
      "ui": "Origin Location code and name of the selected request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Load Port",
@@ -563,7 +574,8 @@
      "ui": "Load Port code and name of the selected request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Receipt Type",
@@ -571,7 +583,8 @@
      "ui": "Receipt Type of the selected request",
      "db": "",
      "values": "Y-CY",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Discharge Port",
@@ -579,7 +592,8 @@
      "ui": "Discharge Port code and name of the selected request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Final Location",
@@ -587,7 +601,8 @@
      "ui": "Final Location code and name of the selected request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Delivery Type",
@@ -595,7 +610,8 @@
      "ui": "Delivery Type of the selected request",
      "db": "",
      "values": "Y-CY",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "HQ Trade Lane",
@@ -603,7 +619,8 @@
      "ui": "HQ Trade Lane of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Trade ID",
@@ -611,7 +628,8 @@
      "ui": "Trade ID of the request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Quote Ref.",
@@ -619,7 +637,8 @@
      "ui": "Quote reference of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Prepaid Collect",
@@ -627,7 +646,8 @@
      "ui": "Prepaid or Collect of the request",
      "db": "",
      "values": "Prepaid / Collect",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Payment Place",
@@ -635,7 +655,8 @@
      "ui": "Payment place of the request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "BL Issue Place",
@@ -643,7 +664,8 @@
      "ui": "BL issue place of the request",
      "db": "",
      "values": "",
-     "remarks": "\"Key in five char\""
+     "remarks": "\"Key in five char\"",
+     "editable": "No"
     },
     {
      "name": "Trade",
@@ -651,7 +673,8 @@
      "ui": "Trade of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Trade Lane",
@@ -659,7 +682,8 @@
      "ui": "Trade Lane of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Special Booking Indicator",
@@ -667,7 +691,8 @@
      "ui": "Special booking indicator of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "ETD",
@@ -675,7 +700,8 @@
      "ui": "ETD of the request (dd/MM/yyyy)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Cargo Acceptance Date",
@@ -683,7 +709,8 @@
      "ui": "Cargo Acceptance Date of the request (dd/MM/yyyy)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "RCC",
@@ -691,7 +718,8 @@
      "ui": "RCC of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "LCC",
@@ -699,7 +727,8 @@
      "ui": "LCC of the request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Add Booking Contact Details",
@@ -707,7 +736,8 @@
      "ui": "Shows the booking contact fields when on",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Contact Name",
@@ -715,7 +745,8 @@
      "ui": "Contact name of the request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "E-Mail",
@@ -723,7 +754,8 @@
      "ui": "E-mail of the contact; use \";\" for more than one",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Telephone",
@@ -731,7 +763,8 @@
      "ui": "Telephone of the contact",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     }
    ]
   },
@@ -745,7 +778,8 @@
      "ui": "Load voyage and the voyage port (terminal – date time) of the request; ⇆ switches the first box between Auto Populate and Alphanumeric",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Allocation Voyage",
@@ -753,7 +787,8 @@
      "ui": "Allocation voyage of the request",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Edit (pencil icon)",
@@ -761,7 +796,8 @@
      "ui": "Greyed out in View Request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Search (magnifier icon)",
@@ -769,7 +805,8 @@
      "ui": "Greyed out in View Request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Port of Loading (name, date time)",
@@ -777,7 +814,8 @@
      "ui": "Port of loading name and departure date/time of the voyage",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Transit Days",
@@ -785,7 +823,8 @@
      "ui": "Days between departure and arrival, e.g. \"42 Days\"",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Port of Discharge (name, date time)",
@@ -793,7 +832,8 @@
      "ui": "Port of discharge name and arrival date/time",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Voyage / Vessel / Voyage No",
@@ -801,7 +841,8 @@
      "ui": "Voyage, vessel name and voyage number, e.g. FE42644W / OINY-ONE INTEGRITY / 011W",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Cost Gap",
@@ -809,7 +850,8 @@
      "ui": "Cost gap of the voyage",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Mode",
@@ -817,7 +859,8 @@
      "ui": "Mode of each leg of the route (vessel icon)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Port of Loading",
@@ -825,7 +868,8 @@
      "ui": "Port of Loading name and terminal of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Departure",
@@ -833,7 +877,8 @@
      "ui": "Departure of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Port of Discharge",
@@ -841,7 +886,8 @@
      "ui": "Port of Discharge name and terminal of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Arrival",
@@ -849,7 +895,8 @@
      "ui": "Arrival of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Vessel",
@@ -857,7 +904,8 @@
      "ui": "Vessel of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Voyage No",
@@ -865,7 +913,8 @@
      "ui": "Voyage No of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Service",
@@ -873,7 +922,8 @@
      "ui": "Service of each leg of the route",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Stage",
@@ -881,7 +931,8 @@
      "ui": "Stage of each leg of the route",
      "db": "",
      "values": "1st Voyage",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "VGM Cut-Off",
@@ -889,7 +940,8 @@
      "ui": "VGM Cut-Off date/time of the voyage (\"-\" when not set)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "SI Cut-Off",
@@ -897,7 +949,8 @@
      "ui": "SI Cut-Off date/time of the voyage (\"-\" when not set)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "CY Cut-Off",
@@ -905,7 +958,8 @@
      "ui": "CY Cut-Off date/time of the voyage (\"-\" when not set)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Gate In Terminal",
@@ -913,7 +967,8 @@
      "ui": "Gate In Terminal date/time of the voyage (\"-\" when not set)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     }
    ]
   },
@@ -927,7 +982,8 @@
      "ui": "Number of containers per size, e.g. 20' - 1",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Units (Weight / Volume / Temperature / OOG)",
@@ -935,7 +991,8 @@
      "ui": "Units used on the tab",
      "db": "",
      "values": "KG / CBM / °C / CM",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Add Container",
@@ -943,7 +1000,8 @@
      "ui": "Adds a new container block (not used in View Request)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Delete (bin icon)",
@@ -951,7 +1009,8 @@
      "ui": "Removes the container block (not used in View Request)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Container Size/Type",
@@ -959,7 +1018,8 @@
      "ui": "Container size/type of the request",
      "db": "",
      "values": "e.g. 20DC",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Number Of Containers",
@@ -967,7 +1027,8 @@
      "ui": "Number of containers",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Cargo Gross Wgt.(Per Cntr)",
@@ -975,7 +1036,8 @@
      "ui": "Cargo gross weight per container",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Volume",
@@ -983,7 +1045,8 @@
      "ui": "Volume of the container",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Empty Pickup Depot",
@@ -991,7 +1054,8 @@
      "ui": "Empty pickup depot",
      "db": "",
      "values": "",
-     "remarks": "\"Select Empty Pickup Depot\""
+     "remarks": "\"Select Empty Pickup Depot\"",
+     "editable": "No"
     },
     {
      "name": "OOG",
@@ -999,7 +1063,8 @@
      "ui": "Out of gauge container",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "O2",
@@ -1007,7 +1072,8 @@
      "ui": "O2 special instruction",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "CO2",
@@ -1015,7 +1081,8 @@
      "ui": "CO2 special instruction",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Humidity",
@@ -1023,7 +1090,8 @@
      "ui": "Humidity special instruction",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Air Exchange Type",
@@ -1031,7 +1099,8 @@
      "ui": "Air exchange type",
      "db": "",
      "values": "",
-     "remarks": "Greyed out"
+     "remarks": "Greyed out",
+     "editable": "No"
     },
     {
      "name": "Air Exchange",
@@ -1039,7 +1108,8 @@
      "ui": "Air Exchange special instruction",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Temperature Type / Unit",
@@ -1047,7 +1117,8 @@
      "ui": "Temperature type and set value",
      "db": "",
      "values": "Fahrenheit",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "SOC",
@@ -1055,7 +1126,8 @@
      "ui": "SOC special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "NOR",
@@ -1063,7 +1135,8 @@
      "ui": "NOR special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Ventilation",
@@ -1071,7 +1144,8 @@
      "ui": "Ventilation special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Drainholes",
@@ -1079,7 +1153,8 @@
      "ui": "Drainholes special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Bulb Mode",
@@ -1087,7 +1162,8 @@
      "ui": "Bulb Mode special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Cold Treatment",
@@ -1095,7 +1171,8 @@
      "ui": "Cold Treatment special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Pre Cooling",
@@ -1103,7 +1180,8 @@
      "ui": "Pre Cooling special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Genset",
@@ -1111,7 +1189,8 @@
      "ui": "Genset special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Controlled Atmosphere",
@@ -1119,7 +1198,8 @@
      "ui": "Controlled Atmosphere special instruction",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Add Cargo",
@@ -1127,7 +1207,8 @@
      "ui": "Adds a new cargo block (not used in View Request)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Delete (bin icon)",
@@ -1135,7 +1216,8 @@
      "ui": "Removes the cargo block (not used in View Request)",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Item No",
@@ -1143,7 +1225,8 @@
      "ui": "Cargo item number",
      "db": "",
      "values": "e.g. 001",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Commodity",
@@ -1151,7 +1234,8 @@
      "ui": "Commodity description",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "HS Code",
@@ -1159,7 +1243,8 @@
      "ui": "HS code of the commodity",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Commodity Groups",
@@ -1167,7 +1252,8 @@
      "ui": "Commodity group",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Cargo Weight",
@@ -1175,7 +1261,8 @@
      "ui": "Cargo weight",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "No"
     },
     {
      "name": "Volume",
@@ -1183,7 +1270,8 @@
      "ui": "Cargo volume",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Package",
@@ -1191,7 +1279,8 @@
      "ui": "Package type",
      "db": "",
      "values": "",
-     "remarks": "\"Key in one char\""
+     "remarks": "\"Key in one char\"",
+     "editable": "No"
     },
     {
      "name": "No. Of Packages",
@@ -1199,7 +1288,8 @@
      "ui": "Number of packages",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Inner Package",
@@ -1207,7 +1297,8 @@
      "ui": "Inner package type",
      "db": "",
      "values": "",
-     "remarks": "\"Key in one char\""
+     "remarks": "\"Key in one char\"",
+     "editable": "No"
     },
     {
      "name": "No.Of Inner Packages",
@@ -1215,7 +1306,8 @@
      "ui": "Number of inner packages",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "IMCO",
@@ -1223,7 +1315,8 @@
      "ui": "Dangerous cargo",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Reefer",
@@ -1231,7 +1324,8 @@
      "ui": "Reefer cargo",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     }
    ]
   },
@@ -1245,7 +1339,8 @@
      "ui": "Selects which party is shown: Shipper, Consignee, Notify 1, Notify 2, Forwarder (a tick marks a party that has data)",
      "db": "",
      "values": "SH / CN / N1 / N2 / FW",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Add",
@@ -1253,7 +1348,8 @@
      "ui": "Turns on the party's address fields (Consignee/Notify/Forwarder panel)",
      "db": "",
      "values": "On / Off",
-     "remarks": "Fields greyed out while off"
+     "remarks": "Fields greyed out while off",
+     "editable": "No"
     },
     {
      "name": "Name",
@@ -1261,7 +1357,8 @@
      "ui": "Party name of the request",
      "db": "",
      "values": "",
-     "remarks": "\"Key in three char\"; Mandatory (*) for Consignee"
+     "remarks": "\"Key in three char\"; Mandatory (*) for Consignee",
+     "editable": "No"
     },
     {
      "name": "Address",
@@ -1269,7 +1366,8 @@
      "ui": "Party address",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "PO Box",
@@ -1277,7 +1375,8 @@
      "ui": "PO box of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Country",
@@ -1285,7 +1384,8 @@
      "ui": "Country of the party",
      "db": "",
      "values": "",
-     "remarks": "\"Select Country\"; Mandatory (*) for Consignee"
+     "remarks": "\"Select Country\"; Mandatory (*) for Consignee",
+     "editable": "No"
     },
     {
      "name": "State",
@@ -1293,7 +1393,8 @@
      "ui": "State of the party",
      "db": "",
      "values": "",
-     "remarks": "\"Select State\""
+     "remarks": "\"Select State\"",
+     "editable": "No"
     },
     {
      "name": "City",
@@ -1301,7 +1402,8 @@
      "ui": "City of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Zip Code",
@@ -1309,7 +1411,8 @@
      "ui": "Zip code of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Email",
@@ -1317,7 +1420,8 @@
      "ui": "Email of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Telephone",
@@ -1325,7 +1429,8 @@
      "ui": "Telephone of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Fax",
@@ -1333,7 +1438,8 @@
      "ui": "Fax of the party",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     }
    ]
   },
@@ -1347,7 +1453,8 @@
      "ui": "Document number of the communication (Carrier Booking Request Ref.)",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Version",
@@ -1355,7 +1462,8 @@
      "ui": "Version of the document",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Confirm Version",
@@ -1363,7 +1471,8 @@
      "ui": "Confirmed version",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Number",
@@ -1371,7 +1480,8 @@
      "ui": "Booking number",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Event Type",
@@ -1379,7 +1489,8 @@
      "ui": "Direction of the communication",
      "db": "DOC HEADER",
      "values": "IN",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Current Event",
@@ -1387,7 +1498,8 @@
      "ui": "Current event",
      "db": "DOC HEADER",
      "values": "Received",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Document Status",
@@ -1395,7 +1507,8 @@
      "ui": "Document status",
      "db": "DOC HEADER",
      "values": "Received",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Status Event",
@@ -1403,7 +1516,8 @@
      "ui": "Status event",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Event By",
@@ -1411,7 +1525,8 @@
      "ui": "Who sent the communication",
      "db": "DOC HEADER",
      "values": "DCSA_SANDBOX",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Event On",
@@ -1419,7 +1534,8 @@
      "ui": "Date and time of the communication",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Amendment",
@@ -1427,7 +1543,8 @@
      "ui": "Amendment details",
      "db": "DOC HEADER",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     }
    ]
   },
@@ -1441,7 +1558,8 @@
      "ui": "Switches the notes list view",
      "db": "",
      "values": "",
-     "remarks": "Greyed out"
+     "remarks": "Greyed out",
+     "editable": "-"
     },
     {
      "name": "Last … Days",
@@ -1449,7 +1567,8 @@
      "ui": "Select how many recent days of notes to list",
      "db": "",
      "values": "All",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Show Details",
@@ -1457,7 +1576,8 @@
      "ui": "Shows the selected note in the Notes Detail panel",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Notes Basis",
@@ -1465,7 +1585,8 @@
      "ui": "Basis (level) of the note",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Notes",
@@ -1473,7 +1594,8 @@
      "ui": "Note text",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Created By",
@@ -1481,7 +1603,8 @@
      "ui": "User who created the note",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Created On",
@@ -1489,7 +1612,8 @@
      "ui": "Date and time the note was created",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Notes Detail – <Booking Number>",
@@ -1497,7 +1621,8 @@
      "ui": "Full text of the selected note",
      "db": "",
      "values": "",
-     "remarks": "\"No records available.\" when there are no notes"
+     "remarks": "\"No records available.\" when there are no notes",
+     "editable": "No"
     }
    ]
   },
@@ -1519,7 +1644,8 @@
      "ui": "Mandatory (*) fields must be filled before Submit; the user can amend the other fields",
      "db": "",
      "values": "",
-     "remarks": "Editing is not allowed once a booking has been generated against the request"
+     "remarks": "Editing is not allowed once a booking has been generated against the request",
+     "editable": "Yes"
     },
     {
      "name": "HQ Trade Lane",
@@ -1527,7 +1653,8 @@
      "ui": "Greyed out; cannot be changed",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Add Container / Add Cargo / Delete (bin icon)",
@@ -1535,7 +1662,8 @@
      "ui": "Add or remove container and cargo blocks",
      "db": "",
      "values": "",
-     "remarks": "Active in edit mode"
+     "remarks": "Active in edit mode",
+     "editable": "-"
     },
     {
      "name": "Submit",
@@ -1543,7 +1671,8 @@
      "ui": "After all mandatory fields are filled, saves the amended booking request details",
      "db": "",
      "values": "",
-     "remarks": "\"Edit Request ( <DCSA Request ID> (<Version>)) modified successfully\""
+     "remarks": "\"Edit Request ( <DCSA Request ID> (<Version>)) modified successfully\"",
+     "editable": "-"
     },
     {
      "name": "Cancel",
@@ -1551,7 +1680,8 @@
      "ui": "Discards the changes and closes the edit tab",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "View (eye icon)",
@@ -1559,7 +1689,8 @@
      "ui": "Switches to view-only mode",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     }
    ]
   },
@@ -1576,7 +1707,8 @@
      "ui": "Shows all result rows",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Warning(s) count",
@@ -1584,7 +1716,8 @@
      "ui": "Shows only the warning rows; the label shows the count",
      "db": "",
      "values": "e.g. 1 Warning(s)",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Expand/Collapse",
@@ -1592,7 +1725,8 @@
      "ui": "Expands or collapses the groups",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Excel",
@@ -1600,7 +1734,8 @@
      "ui": "Exports the results to Excel",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "DCSA Request ID (Count)",
@@ -1608,7 +1743,8 @@
      "ui": "Group row per request with the number of results",
      "db": "",
      "values": "e.g. DCSA260000002 (Count: 1)",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Code",
@@ -1616,7 +1752,8 @@
      "ui": "Result code",
      "db": "",
      "values": "DCSA001",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Description",
@@ -1624,7 +1761,8 @@
      "ui": "Result message with a status icon",
      "db": "",
      "values": "\"Validate QC Check Completed Sucessfully.\"",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Solution",
@@ -1632,7 +1770,8 @@
      "ui": "Suggested fix for a failed check",
      "db": "",
      "values": "\"-\" when none",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Close (× icon)",
@@ -1640,7 +1779,8 @@
      "ui": "Closes the pop-up",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     }
    ]
   },
@@ -1657,7 +1797,8 @@
      "ui": "Shows all result rows",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Success count",
@@ -1665,7 +1806,8 @@
      "ui": "Shows only the success rows; the label shows the count",
      "db": "",
      "values": "e.g. 1 Success",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Expand/Collapse",
@@ -1673,7 +1815,8 @@
      "ui": "Expands or collapses the groups",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Excel",
@@ -1681,7 +1824,8 @@
      "ui": "Exports the results to Excel",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "DCSA Request ID (Count)",
@@ -1689,7 +1833,8 @@
      "ui": "Group row per request with the number of results",
      "db": "",
      "values": "e.g. DCSA260000002 (Count: 1)",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Code",
@@ -1697,7 +1842,8 @@
      "ui": "Result code",
      "db": "",
      "values": "DCSA002",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Description",
@@ -1705,7 +1851,8 @@
      "ui": "Result message with a status icon",
      "db": "",
      "values": "\"Request Id :[<DCSA Request ID>] Actual Booking has been Created Successfully. - <Booking Number>\"",
-     "remarks": "The booking is created in \"Pre Entered\" status"
+     "remarks": "The booking is created in \"Pre Entered\" status",
+     "editable": "No"
     },
     {
      "name": "Solution",
@@ -1713,7 +1860,8 @@
      "ui": "Suggested fix for a failed check",
      "db": "",
      "values": "\"-\" when none",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Close (× icon)",
@@ -1721,7 +1869,8 @@
      "ui": "Closes the pop-up",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     }
    ]
   },
@@ -1739,7 +1888,8 @@
      "ui": "If the booking is not partial, select the check box",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Pre Assign BL",
@@ -1747,7 +1897,8 @@
      "ui": "If BL is to be pre-assigned, select the check box",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "MC TEUs",
@@ -1755,7 +1906,8 @@
      "ui": "Total TEUs of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "MC TONs",
@@ -1763,7 +1915,8 @@
      "ui": "Total tons of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Created By / Created On / Updated On",
@@ -1771,7 +1924,8 @@
      "ui": "User and date-times of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Booking Number",
@@ -1779,7 +1933,8 @@
      "ui": "Booking Number of the selected request",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Customer",
@@ -1787,7 +1942,8 @@
      "ui": "Customer code and name of the booking",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Contact",
@@ -1795,7 +1951,8 @@
      "ui": "Contact of the customer",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Phone",
@@ -1803,7 +1960,8 @@
      "ui": "Phone of the contact",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Email",
@@ -1811,7 +1969,8 @@
      "ui": "Email of the contact",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Web Booking Number",
@@ -1819,7 +1978,8 @@
      "ui": "Web booking number",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Ship Trans ID",
@@ -1827,7 +1987,8 @@
      "ui": "Ship trans ID",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "No"
     },
     {
      "name": "Shipper Reference",
@@ -1835,7 +1996,8 @@
      "ui": "Shipper reference of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Credit Customer",
@@ -1843,7 +2005,8 @@
      "ui": "Credit customer of the booking",
      "db": "",
      "values": "",
-     "remarks": "\"Key in three char\""
+     "remarks": "\"Key in three char\"",
+     "editable": "Yes"
     },
     {
      "name": "On-Behalf Of Customer",
@@ -1851,7 +2014,8 @@
      "ui": "On-behalf-of customer of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Origin Location",
@@ -1859,7 +2023,8 @@
      "ui": "Origin location code and name",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Load Port",
@@ -1867,7 +2032,8 @@
      "ui": "Load port code and name",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Receipt Type",
@@ -1875,7 +2041,8 @@
      "ui": "Select receipt type manually from drop down list",
      "db": "",
      "values": "Y-CY",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Discharge Port",
@@ -1883,7 +2050,8 @@
      "ui": "Discharge port code and name",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Final Location",
@@ -1891,7 +2059,8 @@
      "ui": "Final location code and name",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Delivery Type",
@@ -1899,7 +2068,8 @@
      "ui": "Select delivery type manually from drop down list",
      "db": "",
      "values": "Y-CY",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Delivery Location",
@@ -1907,7 +2077,8 @@
      "ui": "Delivery location code and name",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Trade",
@@ -1915,7 +2086,8 @@
      "ui": "Trade of the booking",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Trade Lane",
@@ -1923,7 +2095,8 @@
      "ui": "Trade lane of the booking",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Service Contract",
@@ -1931,7 +2104,8 @@
      "ui": "Service contract of the booking",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "On Board Date",
@@ -1939,7 +2113,8 @@
      "ui": "Input On Board date",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Cargo Acceptance Date",
@@ -1947,7 +2122,8 @@
      "ui": "Input Cargo Acceptance date",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "FRT Approve Number",
@@ -1955,7 +2131,8 @@
      "ui": "Freight approval number",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Prepaid Collect",
@@ -1963,7 +2140,8 @@
      "ui": "Prepaid or Collect",
      "db": "",
      "values": "Prepaid / Collect",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Payment Place",
@@ -1971,7 +2149,8 @@
      "ui": "Payment place of the booking",
      "db": "",
      "values": "",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "BL Issue Place",
@@ -1979,7 +2158,8 @@
      "ui": "BL issue place of the booking",
      "db": "",
      "values": "",
-     "remarks": "\"Key in two char\""
+     "remarks": "\"Key in two char\"",
+     "editable": "Yes"
     },
     {
      "name": "Service Type",
@@ -1987,7 +2167,8 @@
      "ui": "Service type of the booking",
      "db": "",
      "values": "FCL-FCL",
-     "remarks": "Mandatory (*)"
+     "remarks": "Mandatory (*)",
+     "editable": "Yes"
     },
     {
      "name": "Terms",
@@ -1995,7 +2176,8 @@
      "ui": "Select terms manually from drop down list",
      "db": "",
      "values": "Free On Board",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Service Requirement",
@@ -2003,7 +2185,8 @@
      "ui": "Select service requirement manually from drop down list",
      "db": "",
      "values": "Normal",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Valid Till",
@@ -2011,7 +2194,8 @@
      "ui": "Input Valid Till date",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Partner App No",
@@ -2019,7 +2203,8 @@
      "ui": "Partner application number",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Port Forwarder",
@@ -2027,7 +2212,8 @@
      "ui": "Port forwarder of the booking",
      "db": "",
      "values": "",
-     "remarks": "\"Key in three char\""
+     "remarks": "\"Key in three char\"",
+     "editable": "Yes"
     },
     {
      "name": "Customs Clearing Agent",
@@ -2035,7 +2221,8 @@
      "ui": "Customs clearing agent",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "VGM Method",
@@ -2043,7 +2230,8 @@
      "ui": "Select VGM method manually from drop down list",
      "db": "",
      "values": "",
-     "remarks": "\"--- Select---\""
+     "remarks": "\"--- Select---\"",
+     "editable": "Yes"
     },
     {
      "name": "Original Booking",
@@ -2051,7 +2239,8 @@
      "ui": "Original booking number",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Feeder BL",
@@ -2059,7 +2248,8 @@
      "ui": "Feeder BL",
      "db": "",
      "values": "On / Off",
-     "remarks": ""
+     "remarks": "",
+     "editable": "Yes"
     },
     {
      "name": "Edit",
@@ -2067,7 +2257,8 @@
      "ui": "Switches the booking to edit mode",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Close",
@@ -2075,7 +2266,8 @@
      "ui": "Closes the booking tab",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
     },
     {
      "name": "Submit",
@@ -2083,7 +2275,8 @@
      "ui": "After all mandatory fields are filled, saves the booking",
      "db": "",
      "values": "",
-     "remarks": "\"Booking No.(<Booking Number>) modified successfully.\""
+     "remarks": "\"Booking No.(<Booking Number>) modified successfully.\"",
+     "editable": "-"
     },
     {
      "name": "Cancel",
@@ -2091,9 +2284,236 @@
      "ui": "Discards the changes and returns to view mode",
      "db": "",
      "values": "",
-     "remarks": ""
+     "remarks": "",
+     "editable": "-"
+    }
+   ]
+  },
+  {
+   "title": "Communication History"
+  },
+  {
+   "title": "Communication History Grid",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Total Record(s)",
+     "type": "Display Item",
+     "ui": "Number of communications listed",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Expand/Collapse",
+     "type": "Icon",
+     "ui": "Expands or collapses the groups",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Excel",
+     "type": "Icon",
+     "ui": "Exports the list to Excel",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Refresh",
+     "type": "Icon",
+     "ui": "Reloads the list",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Search",
+     "type": "Alphanumeric",
+     "ui": "Filters the rows by the text typed",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "Yes"
+    },
+    {
+     "name": "Group-by bar",
+     "type": "Drag & Drop area",
+     "ui": "Drop a column header here to group by that column",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "-"
+    },
+    {
+     "name": "Document Number",
+     "type": "Display Item",
+     "ui": "Document number of the communication (Carrier Booking Request Ref.)",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Version",
+     "type": "Display Item",
+     "ui": "Version of the document",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Confirm Version",
+     "type": "Display Item",
+     "ui": "Confirmed version",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking number",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event Type",
+     "type": "Display Item",
+     "ui": "Direction of the communication",
+     "db": "DOC HEADER",
+     "values": "IN",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Current Event",
+     "type": "Display Item",
+     "ui": "Current event",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Document Status",
+     "type": "Display Item",
+     "ui": "Document status",
+     "db": "DOC HEADER",
+     "values": "Received",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Status Event",
+     "type": "Display Item",
+     "ui": "Status event",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event By",
+     "type": "Display Item",
+     "ui": "Who sent the communication",
+     "db": "DOC HEADER",
+     "values": "DCSA_SANDBOX",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Event On",
+     "type": "Display Item",
+     "ui": "Date and time of the communication",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Amendment",
+     "type": "Display Item",
+     "ui": "Amendment details",
+     "db": "DOC HEADER",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    }
+   ]
+  },
+  {
+   "title": "Timeline"
+  },
+  {
+   "title": "Timeline Screen",
+   "level": 3,
+   "rows": [
+    {
+     "name": "<DCSA Request ID> (<Version>) panel",
+     "type": "Display Item",
+     "ui": "List of actions done on the request, newest first",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Action",
+     "type": "Display Item",
+     "ui": "Name of the action",
+     "db": "",
+     "values": "Book_Creation / Booking Request Confirmed / Temp2_Process",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Date Time",
+     "type": "Display Item",
+     "ui": "When the action was done",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Remarks",
+     "type": "Display Item",
+     "ui": "Message of the action",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "By",
+     "type": "Display Item",
+     "ui": "User who did the action, e.g. AGENCYOPA",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
+    },
+    {
+     "name": "Details panel",
+     "type": "Display Item",
+     "ui": "The selected action as \"<Action> by <User> on <Date Time>\" and \"Remarks : <text>\"",
+     "db": "",
+     "values": "",
+     "remarks": "",
+     "editable": "No"
     }
    ]
   }
- ]
+ ],
+ "possible_values_column": true
 }

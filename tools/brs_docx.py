@@ -41,6 +41,7 @@ SKELETON = {
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "extra_tables": [],      # optional 3.3, 3.4 ...: [{"title": "...", "rows": [display-style rows]}], after 3.2
     "tables": [],            # optional per-function 3.x / 3.x.y: [{"title", "level": 2|3, "text", "rows"}]; replaces 3.1/3.2
+    "possible_values_column": False,  # tables only: add "Possible Values" after "Editable" (DCSA template); rows get "editable"
     "references": [],
     "assumptions": []
 }
@@ -292,6 +293,23 @@ def build(spec, out):
         tbl = h.getnext()
         while tbl is not None and tbl.tag != _q('w:tbl'): tbl = tbl.getnext()
         h_xml, t_xml = copy.deepcopy(h), copy.deepcopy(tbl)
+        keys = ['name', 'type', 'ui', 'db', 'values', 'remarks']
+        if spec.get('possible_values_column'):
+            # DCSA template: ... | Editable | Remarks -> ... | Editable | Possible Values | Remarks (same table width)
+            widths = [1860, 1750, 2713, 1300, 1000, 2400, 3257]
+            grid = t_xml.find(_q('w:tblGrid'))
+            gc = grid.findall(_q('w:gridCol')); grid.insert(list(grid).index(gc[4]) + 1, copy.deepcopy(gc[4]))
+            for g, w in zip(grid.findall(_q('w:gridCol')), widths): g.set(_q('w:w'), str(w))
+            for ri, tr in enumerate(t_xml.findall(_q('w:tr'))):
+                tcs = tr.findall(_q('w:tc'))
+                if len(tcs) < 6: continue
+                nc = copy.deepcopy(tcs[4]); tcs[4].addnext(nc)
+                if ri == 0:
+                    set_cell(docx.table._Cell(nc, None), 'Possible Values')
+                for tc, w in zip(tr.findall(_q('w:tc')), widths):
+                    tw = tc.find('.//' + _q('w:tcW'))
+                    if tw is not None: tw.set(_q('w:w'), str(w))
+            keys = ['name', 'type', 'ui', 'db', 'editable', 'values', 'remarks']
         last = tbl
         while last.getnext() is not None and last.getnext().tag == _q('w:p') and not last.getnext().xpath('string(.)').strip() \
                 and last.getnext().find('.//' + _q('w:pStyle')) is None:
@@ -309,8 +327,7 @@ def build(spec, out):
                 tp = doc.add_paragraph(x['text']); last.addnext(tp._p); last = tp._p
             if x.get('rows'):
                 tc = copy.deepcopy(t_xml); last.addnext(tc); last = tc
-                fill_table(docx.table.Table(tc, doc.paragraphs[0]._parent), x['rows'],
-                           ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+                fill_table(docx.table.Table(tc, doc.paragraphs[0]._parent), x['rows'], keys)
                 sp = doc.add_paragraph(); last.addnext(sp._p); last = sp._p
 
     # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")

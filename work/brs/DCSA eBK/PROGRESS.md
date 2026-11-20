@@ -28,3 +28,5 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 3.3 Edit Request → 3.3.1 Edit Mode approved (6 rows).
 - 3.4 Validate QC / 3.5 Create Booking pop-up tables approved (9 rows each).
 - 3.6 Edit Booking → 3.6.1 Basic Tab approved (45 rows).
+- 3.7 / 3.8 approved. All UC1 content approved; building.
+- Editable = Yes/No/-, 7th column 'Possible Values' added; Item Type widened. Built UC1 BRS (62 pages); PR opened.
