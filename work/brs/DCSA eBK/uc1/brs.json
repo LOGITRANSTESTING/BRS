@@ -916,6 +916,324 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Containers & Cargo",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Container Count (20' / 40' / 45')",
+     "type": "Display Item",
+     "ui": "Number of containers per size, e.g. 20' - 1",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Units (Weight / Volume / Temperature / OOG)",
+     "type": "Display Item",
+     "ui": "Units used on the tab",
+     "db": "",
+     "values": "KG / CBM / °C / CM",
+     "remarks": ""
+    },
+    {
+     "name": "Add Container",
+     "type": "Button",
+     "ui": "Adds a new container block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Delete (bin icon)",
+     "type": "Icon",
+     "ui": "Removes the container block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Container Size/Type",
+     "type": "Auto Populate",
+     "ui": "Container size/type of the request",
+     "db": "",
+     "values": "e.g. 20DC",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Number Of Containers",
+     "type": "Numeric",
+     "ui": "Number of containers",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Cargo Gross Wgt.(Per Cntr)",
+     "type": "Numeric",
+     "ui": "Cargo gross weight per container",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Volume",
+     "type": "Numeric",
+     "ui": "Volume of the container",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Empty Pickup Depot",
+     "type": "Auto Populate",
+     "ui": "Empty pickup depot",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select Empty Pickup Depot\""
+    },
+    {
+     "name": "OOG",
+     "type": "Toggle",
+     "ui": "Out of gauge container",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "O2",
+     "type": "Alphanumeric",
+     "ui": "O2 special instruction",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "CO2",
+     "type": "Alphanumeric",
+     "ui": "CO2 special instruction",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Humidity",
+     "type": "Alphanumeric",
+     "ui": "Humidity special instruction",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Air Exchange Type",
+     "type": "Single Select Drop Down",
+     "ui": "Air exchange type",
+     "db": "",
+     "values": "",
+     "remarks": "Greyed out"
+    },
+    {
+     "name": "Air Exchange",
+     "type": "Alphanumeric",
+     "ui": "Air Exchange special instruction",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Temperature Type / Unit",
+     "type": "Single Select Drop Down + Numeric",
+     "ui": "Temperature type and set value",
+     "db": "",
+     "values": "Fahrenheit",
+     "remarks": ""
+    },
+    {
+     "name": "SOC",
+     "type": "Toggle",
+     "ui": "SOC special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "NOR",
+     "type": "Toggle",
+     "ui": "NOR special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Ventilation",
+     "type": "Toggle",
+     "ui": "Ventilation special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Drainholes",
+     "type": "Toggle",
+     "ui": "Drainholes special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Bulb Mode",
+     "type": "Toggle",
+     "ui": "Bulb Mode special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Cold Treatment",
+     "type": "Toggle",
+     "ui": "Cold Treatment special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Pre Cooling",
+     "type": "Toggle",
+     "ui": "Pre Cooling special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Genset",
+     "type": "Toggle",
+     "ui": "Genset special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Controlled Atmosphere",
+     "type": "Toggle",
+     "ui": "Controlled Atmosphere special instruction",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Add Cargo",
+     "type": "Button",
+     "ui": "Adds a new cargo block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Delete (bin icon)",
+     "type": "Icon",
+     "ui": "Removes the cargo block (not used in View Request)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Item No",
+     "type": "Alphanumeric",
+     "ui": "Cargo item number",
+     "db": "",
+     "values": "e.g. 001",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Commodity",
+     "type": "Alphanumeric",
+     "ui": "Commodity description",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "HS Code",
+     "type": "Auto Populate",
+     "ui": "HS code of the commodity",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Commodity Groups",
+     "type": "Alphanumeric",
+     "ui": "Commodity group",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Cargo Weight",
+     "type": "Numeric",
+     "ui": "Cargo weight",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Volume",
+     "type": "Numeric",
+     "ui": "Cargo volume",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Package",
+     "type": "Auto Populate",
+     "ui": "Package type",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in one char\""
+    },
+    {
+     "name": "No. Of Packages",
+     "type": "Numeric",
+     "ui": "Number of packages",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Inner Package",
+     "type": "Auto Populate",
+     "ui": "Inner package type",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in one char\""
+    },
+    {
+     "name": "No.Of Inner Packages",
+     "type": "Numeric",
+     "ui": "Number of inner packages",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "IMCO",
+     "type": "Toggle",
+     "ui": "Dangerous cargo",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Reefer",
+     "type": "Toggle",
+     "ui": "Reefer cargo",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }
