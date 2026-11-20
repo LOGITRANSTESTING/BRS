@@ -1724,6 +1724,376 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Edit Booking",
+   "text": "Opens the ILISCyber Agency Booking screen; the Basic tab shown in the screen design is listed below. The other tabs follow the Agency Booking BRS."
+  },
+  {
+   "title": "Basic Tab",
+   "level": 3,
+   "rows": [
+    {
+     "name": "No Partial",
+     "type": "Check Box",
+     "ui": "If the booking is not partial, select the check box",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Pre Assign BL",
+     "type": "Check Box",
+     "ui": "If BL is to be pre-assigned, select the check box",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "MC TEUs",
+     "type": "Display Item",
+     "ui": "Total TEUs of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "MC TONs",
+     "type": "Display Item",
+     "ui": "Total tons of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Created By / Created On / Updated On",
+     "type": "Display Item",
+     "ui": "User and date-times of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Booking Number",
+     "type": "Display Item",
+     "ui": "Booking Number of the selected request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Customer",
+     "type": "Auto Populate",
+     "ui": "Customer code and name of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Contact",
+     "type": "Auto Populate",
+     "ui": "Contact of the customer",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Phone",
+     "type": "Alphanumeric",
+     "ui": "Phone of the contact",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Email",
+     "type": "Alphanumeric",
+     "ui": "Email of the contact",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Web Booking Number",
+     "type": "Display Item",
+     "ui": "Web booking number",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Ship Trans ID",
+     "type": "Display Item",
+     "ui": "Ship trans ID",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Shipper Reference",
+     "type": "Alphanumeric",
+     "ui": "Shipper reference of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Credit Customer",
+     "type": "Auto Populate",
+     "ui": "Credit customer of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\""
+    },
+    {
+     "name": "On-Behalf Of Customer",
+     "type": "Auto Populate",
+     "ui": "On-behalf-of customer of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Origin Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Origin location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Load Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Load port code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Receipt Type",
+     "type": "Single Select Drop Down",
+     "ui": "Select receipt type manually from drop down list",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Discharge Port",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Discharge port code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Final Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Final location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Delivery Type",
+     "type": "Single Select Drop Down",
+     "ui": "Select delivery type manually from drop down list",
+     "db": "",
+     "values": "Y-CY",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Delivery Location",
+     "type": "LOV + Single Select Drop Down",
+     "ui": "Delivery location code and name",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Trade",
+     "type": "Auto Populate",
+     "ui": "Trade of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Trade Lane",
+     "type": "Auto Populate",
+     "ui": "Trade lane of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Service Contract",
+     "type": "Alphanumeric + icon",
+     "ui": "Service contract of the booking",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "On Board Date",
+     "type": "Date Picker",
+     "ui": "Input On Board date",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Cargo Acceptance Date",
+     "type": "Date Picker",
+     "ui": "Input Cargo Acceptance date",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "FRT Approve Number",
+     "type": "Alphanumeric",
+     "ui": "Freight approval number",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Prepaid Collect",
+     "type": "Toggle",
+     "ui": "Prepaid or Collect",
+     "db": "",
+     "values": "Prepaid / Collect",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Payment Place",
+     "type": "Auto Populate",
+     "ui": "Payment place of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "BL Issue Place",
+     "type": "Auto Populate",
+     "ui": "BL issue place of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in two char\""
+    },
+    {
+     "name": "Service Type",
+     "type": "Auto Populate",
+     "ui": "Service type of the booking",
+     "db": "",
+     "values": "FCL-FCL",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Terms",
+     "type": "Single Select Drop Down",
+     "ui": "Select terms manually from drop down list",
+     "db": "",
+     "values": "Free On Board",
+     "remarks": ""
+    },
+    {
+     "name": "Service Requirement",
+     "type": "Single Select Drop Down",
+     "ui": "Select service requirement manually from drop down list",
+     "db": "",
+     "values": "Normal",
+     "remarks": ""
+    },
+    {
+     "name": "Valid Till",
+     "type": "Date Picker",
+     "ui": "Input Valid Till date",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Partner App No",
+     "type": "Alphanumeric",
+     "ui": "Partner application number",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port Forwarder",
+     "type": "Auto Populate",
+     "ui": "Port forwarder of the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\""
+    },
+    {
+     "name": "Customs Clearing Agent",
+     "type": "Alphanumeric",
+     "ui": "Customs clearing agent",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "VGM Method",
+     "type": "Single Select Drop Down",
+     "ui": "Select VGM method manually from drop down list",
+     "db": "",
+     "values": "",
+     "remarks": "\"--- Select---\""
+    },
+    {
+     "name": "Original Booking",
+     "type": "Alphanumeric",
+     "ui": "Original booking number",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Feeder BL",
+     "type": "Toggle",
+     "ui": "Feeder BL",
+     "db": "",
+     "values": "On / Off",
+     "remarks": ""
+    },
+    {
+     "name": "Edit",
+     "type": "Button",
+     "ui": "Switches the booking to edit mode",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Close",
+     "type": "Button",
+     "ui": "Closes the booking tab",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Submit",
+     "type": "Button",
+     "ui": "After all mandatory fields are filled, saves the booking",
+     "db": "",
+     "values": "",
+     "remarks": "\"Booking No.(<Booking Number>) modified successfully.\""
+    },
+    {
+     "name": "Cancel",
+     "type": "Button",
+     "ui": "Discards the changes and returns to view mode",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }
