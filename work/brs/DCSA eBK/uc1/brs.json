@@ -255,6 +255,13 @@
    "description": "Closes the request tab and returns to DCSA Activity.",
    "triggered_when": "User clicks × on the request tab.",
    "remarks": ""
+  },
+  {
+   "section": "View Customer Request Data (Meta Query)",
+   "event_type": "Menu Click",
+   "description": "Shows the booking request details as originally submitted by the customer (from the Temp 3 process), read-only.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"View Customer Request Data (Meta Query)\" in the ☰ menu.",
+   "remarks": ""
   }
  ],
  "search_title": "",
