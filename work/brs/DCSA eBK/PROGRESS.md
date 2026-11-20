@@ -17,3 +17,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 2.2.5 Create Booking events approved (4 rows).
 - 2.2.6 Edit Booking events approved (6 rows).
 - 2.2.7 Communication History events approved (4 rows).
+- 2.2.8 Timeline events approved (3 rows). 2.2 complete. Next: 3.x tables per function.

@@ -430,6 +430,27 @@
    "description": "Expands or collapses the groups / exports to Excel / reloads the list / closes the tab.",
    "triggered_when": "User clicks the icon.",
    "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Menu Click",
+   "description": "Opens a new tab \"<DCSA Request ID> (<Version>)\" with the list of actions done against the request, newest first. Each card shows the action (for example Book_Creation, Booking Request Confirmed, Temp2_Process), the date/time, the remarks and \"by <User>\".",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Time Line\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Card Click",
+   "description": "Shows the selected action in the Details panel as \"<Action> by <User> on <Date Time>\" with \"Remarks : <text>\".",
+   "triggered_when": "User clicks an action card in the left list.",
+   "remarks": ""
+  },
+  {
+   "section": "Timeline",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the Timeline tab.",
+   "triggered_when": "User clicks × on the tab.",
+   "remarks": ""
   }
  ],
  "search_title": "",
