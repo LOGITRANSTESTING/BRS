@@ -734,6 +734,188 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Sailing",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Load Voyage",
+     "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+     "ui": "Load voyage and the voyage port (terminal – date time) of the request; ⇆ switches the first box between Auto Populate and Alphanumeric",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Allocation Voyage",
+     "type": "Auto Populate",
+     "ui": "Allocation voyage of the request",
+     "db": "",
+     "values": "",
+     "remarks": "Mandatory (*)"
+    },
+    {
+     "name": "Edit (pencil icon)",
+     "type": "Icon",
+     "ui": "Greyed out in View Request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Search (magnifier icon)",
+     "type": "Icon",
+     "ui": "Greyed out in View Request",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port of Loading (name, date time)",
+     "type": "Display Item",
+     "ui": "Port of loading name and departure date/time of the voyage",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Transit Days",
+     "type": "Display Item",
+     "ui": "Days between departure and arrival, e.g. \"42 Days\"",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port of Discharge (name, date time)",
+     "type": "Display Item",
+     "ui": "Port of discharge name and arrival date/time",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Voyage / Vessel / Voyage No",
+     "type": "Display Item",
+     "ui": "Voyage, vessel name and voyage number, e.g. FE42644W / OINY-ONE INTEGRITY / 011W",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Cost Gap",
+     "type": "Display Item",
+     "ui": "Cost gap of the voyage",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Mode",
+     "type": "Display Item",
+     "ui": "Mode of each leg of the route (vessel icon)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port of Loading",
+     "type": "Display Item",
+     "ui": "Port of Loading name and terminal of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Departure",
+     "type": "Display Item",
+     "ui": "Departure of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Port of Discharge",
+     "type": "Display Item",
+     "ui": "Port of Discharge name and terminal of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Arrival",
+     "type": "Display Item",
+     "ui": "Arrival of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Vessel",
+     "type": "Display Item",
+     "ui": "Vessel of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Voyage No",
+     "type": "Display Item",
+     "ui": "Voyage No of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Service",
+     "type": "Display Item",
+     "ui": "Service of each leg of the route",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Stage",
+     "type": "Display Item",
+     "ui": "Stage of each leg of the route",
+     "db": "",
+     "values": "1st Voyage",
+     "remarks": ""
+    },
+    {
+     "name": "VGM Cut-Off",
+     "type": "Display Item",
+     "ui": "VGM Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "SI Cut-Off",
+     "type": "Display Item",
+     "ui": "SI Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "CY Cut-Off",
+     "type": "Display Item",
+     "ui": "CY Cut-Off date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Gate In Terminal",
+     "type": "Display Item",
+     "ui": "Gate In Terminal date/time of the voyage (\"-\" when not set)",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }
