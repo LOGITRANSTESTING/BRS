@@ -297,6 +297,41 @@
    "description": "Same as 2.2.1 (moves to a section / reloads the details / closes the tab).",
    "triggered_when": "Same as 2.2.1.",
    "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Menu Click",
+   "description": "Runs the 2nd level QC check and the Global and General restriction checks for the selected request, then opens the \"Validate QC\" pop-up listing the results by DCSA Request ID (Code, Description, Solution).",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Validate QC\" in the ☰ menu.",
+   "remarks": "\"Validate QC Check Completed Sucessfully.\" (code DCSA001)"
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Button Click (All / Warning(s))",
+   "description": "Filters the result list to all items or to warnings only. The button shows the count, for example \"1 Warning(s)\".",
+   "triggered_when": "User clicks \"All\" or \"Warning(s)\" in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Expand/Collapse icon)",
+   "description": "Expands or collapses the grouped result rows under each DCSA Request ID.",
+   "triggered_when": "User clicks the expand/collapse icon in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Excel icon)",
+   "description": "Exports the QC results to Excel.",
+   "triggered_when": "User clicks the Excel icon in the pop-up.",
+   "remarks": ""
+  },
+  {
+   "section": "Validate QC",
+   "event_type": "Icon Click (Close icon)",
+   "description": "Closes the Validate QC pop-up.",
+   "triggered_when": "User clicks × on the pop-up title bar.",
+   "remarks": ""
   }
  ],
  "search_title": "",

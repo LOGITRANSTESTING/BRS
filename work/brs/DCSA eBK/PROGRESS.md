@@ -13,3 +13,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 2.2.1 View Request events approved (6 rows).
 - 2.2.2 Meta Query: 1 row (Menu Click) approved.
 - 2.2.3 Edit Request events approved (5 rows).
+- 2.2.4 Validate QC events approved (5 rows).
