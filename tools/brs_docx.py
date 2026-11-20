@@ -40,6 +40,7 @@ SKELETON = {
                              # 3.1 / 3.2 with no filled rows are always removed (heading + table)
     "display": [{"name": "", "type": "", "ui": "", "db": "", "values": "", "remarks": ""}],
     "extra_tables": [],      # optional 3.3, 3.4 ...: [{"title": "...", "rows": [display-style rows]}], after 3.2
+    "tables": [],            # optional per-function 3.x / 3.x.y: [{"title", "level": 2|3, "text", "rows"}]; replaces 3.1/3.2
     "references": [],
     "assumptions": []
 }
@@ -282,6 +283,35 @@ def build(spec, out):
                 elif c.tag == _q('w:tbl'):
                     fill_table(docx.table.Table(c, doc.paragraphs[0]._parent), x['rows'],
                                ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+
+    # tables: per-function 3.x headings with 3.x.y tables (UC BRS), cloned from the 3.2 heading + table.
+    # [{"title": "View Request"}, {"title": "Basic Information", "level": 3, "rows": [...]},
+    #  {"title": "Meta Query", "text": "No screen design available"}]. Leave search/display empty so 3.1/3.2 drop.
+    if spec.get('tables'):
+        h = doc.paragraphs[find_heading(doc, 'Display Area')]._p
+        tbl = h.getnext()
+        while tbl is not None and tbl.tag != _q('w:tbl'): tbl = tbl.getnext()
+        h_xml, t_xml = copy.deepcopy(h), copy.deepcopy(tbl)
+        last = tbl
+        while last.getnext() is not None and last.getnext().tag == _q('w:p') and not last.getnext().xpath('string(.)').strip() \
+                and last.getnext().find('.//' + _q('w:pStyle')) is None:
+            last = last.getnext()
+        for x in spec['tables']:
+            hc = copy.deepcopy(h_xml); last.addnext(hc); last = hc
+            hp = docx.text.paragraph.Paragraph(hc, doc.paragraphs[0]._parent)
+            set_par_text(hp, x.get('title') or '')
+            hp.paragraph_format.keep_with_next = True
+            if x.get('level') == 3:
+                hc.pPr.find(_q('w:pStyle')).set(_q('w:val'), 'Heading3')
+                ilvl = hc.pPr.find('.//' + _q('w:ilvl'))
+                if ilvl is not None: ilvl.set(_q('w:val'), '2')
+            if x.get('text'):
+                tp = doc.add_paragraph(x['text']); last.addnext(tp._p); last = tp._p
+            if x.get('rows'):
+                tc = copy.deepcopy(t_xml); last.addnext(tc); last = tc
+                fill_table(docx.table.Table(tc, doc.paragraphs[0]._parent), x['rows'],
+                           ['name', 'type', 'ui', 'db', 'values', 'remarks'])
+                sp = doc.add_paragraph(); last.addnext(sp._p); last = sp._p
 
     # optional renames of the 3.1 / 3.2 headings (empty = keep the template's "Search" / "Display Area")
     for head, key in [('Search', 'search_title'), ('Display Area', 'display_title')]:

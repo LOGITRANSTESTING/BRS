@@ -18,3 +18,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 2.2.6 Edit Booking events approved (6 rows).
 - 2.2.7 Communication History events approved (4 rows).
 - 2.2.8 Timeline events approved (3 rows). 2.2 complete. Next: 3.x tables per function.
+- 3.x structure: Option A approved (3.x per function, 3.x.y per tab/pop-up; Meta Query heading + 'No screen design available'). Builder: new 'tables' key (tested).
