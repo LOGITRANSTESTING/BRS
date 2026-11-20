@@ -1234,6 +1234,108 @@
      "remarks": ""
     }
    ]
+  },
+  {
+   "title": "Parties & Addresses",
+   "level": 3,
+   "rows": [
+    {
+     "name": "Party buttons (SH / CN / N1 / N2 / FW)",
+     "type": "Button",
+     "ui": "Selects which party is shown: Shipper, Consignee, Notify 1, Notify 2, Forwarder (a tick marks a party that has data)",
+     "db": "",
+     "values": "SH / CN / N1 / N2 / FW",
+     "remarks": ""
+    },
+    {
+     "name": "Add",
+     "type": "Toggle",
+     "ui": "Turns on the party's address fields (Consignee/Notify/Forwarder panel)",
+     "db": "",
+     "values": "On / Off",
+     "remarks": "Fields greyed out while off"
+    },
+    {
+     "name": "Name",
+     "type": "Single Select Drop Down",
+     "ui": "Party name of the request",
+     "db": "",
+     "values": "",
+     "remarks": "\"Key in three char\"; Mandatory (*) for Consignee"
+    },
+    {
+     "name": "Address",
+     "type": "Text Area",
+     "ui": "Party address",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "PO Box",
+     "type": "LOV",
+     "ui": "PO box of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Country",
+     "type": "Auto Populate",
+     "ui": "Country of the party",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select Country\"; Mandatory (*) for Consignee"
+    },
+    {
+     "name": "State",
+     "type": "Auto Populate",
+     "ui": "State of the party",
+     "db": "",
+     "values": "",
+     "remarks": "\"Select State\""
+    },
+    {
+     "name": "City",
+     "type": "Alphanumeric",
+     "ui": "City of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Zip Code",
+     "type": "Alphanumeric",
+     "ui": "Zip code of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Email",
+     "type": "Alphanumeric",
+     "ui": "Email of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Telephone",
+     "type": "Alphanumeric",
+     "ui": "Telephone of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Fax",
+     "type": "Alphanumeric",
+     "ui": "Fax of the party",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
   }
  ]
 }

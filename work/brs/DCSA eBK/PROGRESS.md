@@ -22,3 +22,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 3.1.1 View Request – Basic Information approved (33 rows, grouped rows split).
 - 3.1.2 Sailing approved (22 rows).
 - 3.1.3 Containers & Cargo approved (39 rows).
+- 3.1.4 Parties & Addresses approved (12 rows).
