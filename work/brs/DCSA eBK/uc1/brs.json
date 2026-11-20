@@ -360,6 +360,48 @@
    "description": "Closes the pop-up; the grid shows the new Booking Number, Booking Date and \"Pre Entered\" status.",
    "triggered_when": "User clicks × on the pop-up.",
    "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Menu Click",
+   "description": "Opens the ILISCyber Agency Booking screen for the request's booking in a new tab \"<Booking Number>\" in view mode, with Edit and Close buttons.",
+   "triggered_when": "User selects a DCSA request that has been converted into an actual booking and clicks \"Edit Booking\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Edit: switches the booking tab to edit mode; Edit/Close become Submit/Cancel.",
+   "triggered_when": "User clicks \"Edit\".",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Submit: saves the amended booking details.",
+   "triggered_when": "User amends the booking and clicks \"Submit\" after filling all mandatory (*) fields.",
+   "remarks": "\"Booking No.(<Booking Number>) modified successfully.\""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Cancel: discards the changes and returns to view mode.",
+   "triggered_when": "User clicks \"Cancel\" in edit mode.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Button Click",
+   "description": "Close: closes the booking tab and returns to DCSA Activity.",
+   "triggered_when": "User clicks \"Close\" in view mode.",
+   "remarks": ""
+  },
+  {
+   "section": "Edit Booking",
+   "event_type": "Tab Click / Icon Click (Refresh icon, Close icon)",
+   "description": "Moves to a booking section (Basic, Sailing, Requirements, PR, Cargo & Containers, Charges, Instruction, Marks & Desc, Addresses, EDI Text/Ref, More Info, Notes) / reloads / closes the tab.",
+   "triggered_when": "User clicks the control.",
+   "remarks": ""
   }
  ],
  "search_title": "",
