@@ -402,6 +402,34 @@
    "description": "Moves to a booking section (Basic, Sailing, Requirements, PR, Cargo & Containers, Charges, Instruction, Marks & Desc, Addresses, EDI Text/Ref, More Info, Notes) / reloads / closes the tab.",
    "triggered_when": "User clicks the control.",
    "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Menu Click",
+   "description": "Opens a new tab \"<DCSA Request ID> (<Version>)\" listing the communications received against the request, taken from the DOC HEADER table: Document Number, Version, Confirm Version, Booking Number, Event Type, Current Event, Document Status, Status Event, Event By, Event On, Amendment.",
+   "triggered_when": "User selects a DCSA request in the DCSA Activity grid and clicks \"Communication History\" in the ☰ menu.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Text Change (Search)",
+   "description": "Filters the listed rows by the text typed.",
+   "triggered_when": "User types in the Search box.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Drag & Drop (column header)",
+   "description": "Groups the rows by the dropped column.",
+   "triggered_when": "User drags a column header into the \"Drag a column header and drop it here to group by that column\" bar.",
+   "remarks": ""
+  },
+  {
+   "section": "Communication History",
+   "event_type": "Icon Click (Expand/Collapse icon, Excel icon, Refresh icon, Close icon)",
+   "description": "Expands or collapses the groups / exports to Excel / reloads the list / closes the tab.",
+   "triggered_when": "User clicks the icon.",
+   "remarks": ""
   }
  ],
  "search_title": "",
