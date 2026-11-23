@@ -135,3 +135,5 @@ Author: Appsara
 - 2026-11-18 Output reorganised: the 4 loose output/EMS docs moved to output/EMS/Cross Booking Depot Activity/; plan.json paths updated.
 - 2026-11-18 ES-FL Fix doc moved to output/EMS/ES-FL Fix/. Deleted manuals/EMS_-_Help_Manual_depot.gui (user request; all 21 functions done).
 - 2026-11-18 Added user manuals for next work: manuals/EMS_-_Help_Manual_Import_depot.gui, EMS-_Help_Manual_truck_order_generation.gui, ILISCyber_Container_Stock_Entry.gui.
+- 2026-11-23 Screen BRS Depot Activity (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Depot Activity V_1.0.docx', draft-all review. Awaiting user review.
+- 2026-11-23 Depot Activity screen: Data Grid images replaced with the user's full-width screenshots (screenshots/data_grid_left/right.png -> Image II, III); grid now 38 rows (adds Freeze icon col, DG/OOG/Reefer/MH/SOC, Haulier Code); Details panel per new layout (Origin / Load, Discharge / Final, Weight / Volume).

@@ -1,0 +1,1 @@
+- 2026-11-23 Screen BRS Cross Booking Depot Activity (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Cross Booking Depot Activity V_1.0.docx', draft-all review. Awaiting user review.

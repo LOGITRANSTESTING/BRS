@@ -16,3 +16,4 @@
 - Rework (user feedback "lines should be aligned"): Image I now from the user's screenshot image-4.png (clean menu, first-row line fixed by the user). The value "0" was replaced with "279" from 99d0_01 (same position, exact label match). The checkbox mark was removed from df47_01 (-1,1). 533 transparent px on row 188 (the user's erase) became white. The gate's 672 "outside" = 139 digit px + those 533.
 - Fn4 docx approved, done (8 pages). Image I with blue border saved for the user: output/previews/brs_EMS_Help_Manual_truck_order_generation_group_truck_order_rf/Truck_Order_RF_Image_I_with_border.png
 - All 4 Truck Order Generation functions done.
+- 2026-11-23 Screen BRS Truck Order Generation (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Truck Order Generation V_1.0.docx', draft-all review. Awaiting user review.

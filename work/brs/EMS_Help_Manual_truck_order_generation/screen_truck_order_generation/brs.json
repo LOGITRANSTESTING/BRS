@@ -1,0 +1,547 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Truck Order Generation",
+ "version": "01.01",
+ "date": "23/11/2026",
+ "history": [
+  {
+   "date": "23.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Truck Order Generation details.",
+ "images": [
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/01.png",
+   "caption": "Image I",
+   "section": "Query Screen"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/02.png",
+   "caption": "Image II",
+   "section": "Data Grid"
+  }
+ ],
+ "features": [
+  "Truck order generation is used for viewing Truck Order Preview and generating Truck Order Summary, Truck Order Summary RF, Truck Order RF.",
+  "This section allows the user to generate Truck order, truck order summary, Edit and Submit COPARN.",
+  "The Query Fields of Truck Order Generation allows the user to query Truck Order Generation data as per requirement.",
+  "Data Grid Screen allows the user to view data queried using query fields.",
+  "This screen allows the user to overwrite existing data like Haulier Code, Pickup Date etc.",
+  "This screen allows the user to access Truck order generation group function menu."
+ ],
+ "events": [
+  {
+   "event_type": "Button Click (Search)",
+   "description": "Queries the port releases matching the entered query fields and lists them in the data grid.",
+   "triggered_when": "User enters data in one or more query fields and clicks Search.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Reset)",
+   "description": "Clears multiple query fields at once to query with new data.",
+   "triggered_when": "User clicks Reset.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Expand / Collapse)",
+   "description": "Shows or hides the query fields panel.",
+   "triggered_when": "User clicks the arrow at the right of the grid search box.",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change (Sort By)",
+   "description": "Sorts the port releases in the data grid by the selected option.",
+   "triggered_when": "User selects an option in the Sort By drop down after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change (Search box)",
+   "description": "Filters the port releases listed in the data grid by the entered text.",
+   "triggered_when": "User enters text in the grid search box after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Excel)",
+   "description": "Exports the port releases listed in the data grid to an Excel file.",
+   "triggered_when": "User clicks the Excel icon after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Refresh)",
+   "description": "Reloads the data grid with the latest data for the current query.",
+   "triggered_when": "User clicks the Refresh icon.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Select All / Row)",
+   "description": "Selects or deselects all port releases (header check box) or a single record (row check box).",
+   "triggered_when": "User clicks the header select all check box or the check box of a record.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Menu Click (Group Function)",
+   "description": "Opens the Truck Order Generation group function menu for the selected records.",
+   "triggered_when": "User selects one or more records and clicks the ☰ icon near Truck Order Generation.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Edit)",
+   "description": "Opens the edit fields (Haulier Code, Pickup Date, Position Date, Load Reference, Haulier Instruction, Transporter Instruction, Full Terminal) with the Apply, Submit and Cancel buttons.",
+   "triggered_when": "User clicks Edit after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Apply)",
+   "description": "Applies the data entered in the edit fields to the selected records; if successfully applied, the data will be changed for the selected columns.",
+   "triggered_when": "User selects one or more records, enters data in the edit fields and clicks Apply.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Cancel)",
+   "description": "Cancels the changes and closes the edit fields.",
+   "triggered_when": "User clicks Cancel.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Submit)",
+   "description": "Submits the changed data of the selected records.",
+   "triggered_when": "User clicks Submit after applying the changes.",
+   "remarks": "\"Truck Order submitted successfully.\""
+  },
+  {
+   "event_type": "Button Click (Submit & COPARN)",
+   "description": "Submits the data and the COPARN of the selected records.",
+   "triggered_when": "User selects one or more records and clicks Submit & COPARN after querying data.",
+   "remarks": "\"COPARN submitted successfully.\""
+  }
+ ],
+ "search_title": "Truck Order Generation - Query Screen",
+ "search": [
+  {
+   "name": "Load Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Load Voyage. The ⇆ switches the voyage box between Auto Populate (Key in three char) and Alphanumeric. Select the voyage port call from the \"Select Load Voyage Port\" drop down list",
+   "db": "",
+   "values": "Voyage port call as terminal code - date & time (e.g. MD2326E)"
+  },
+  {
+   "name": "Trans.Mode",
+   "type": "Single Select Drop Down",
+   "ui": "Select Trans.Mode manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Type of Trans.",
+   "type": "Single Select Drop Down",
+   "ui": "Select Type of Trans. manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Booking Number",
+   "type": "LOV",
+   "ui": "Input or select the Booking Number to filter the records",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Haulier Code",
+   "type": "Auto Populate",
+   "ui": "Key in three char of the Haulier Code and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Truck From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Truck from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Position From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Position from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Single Select Drop Down",
+   "ui": "Select Status manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Coparn",
+   "type": "Single Select Drop Down",
+   "ui": "Select Coparn manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Imco",
+   "type": "Check Box",
+   "ui": "If only IMCO (DG) containers are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Reefer",
+   "type": "Check Box",
+   "ui": "If only Reefer containers are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "OOG",
+   "type": "Check Box",
+   "ui": "If only OOG containers are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Truck",
+   "type": "Check Box",
+   "ui": "If only PRs with truck are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Query All",
+   "type": "Check Box",
+   "ui": "If all records are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries data based on the data entered in the query fields",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clears multiple fields at once to query with new data",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "Truck Order Generation - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Total Port Release(s)",
+   "type": "Display Item",
+   "ui": "Count of the port releases queried",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried PRs are to be selected please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the PR is to be selected please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "View (document icon)",
+   "type": "Button",
+   "ui": "",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Type",
+   "type": "Display Item",
+   "ui": "Size type of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking number of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the PR",
+   "db": "",
+   "values": "e.g. Full Return / Supplied",
+   "remarks": ""
+  },
+  {
+   "name": "Freeze",
+   "type": "Display Item",
+   "ui": "Freeze status of the PR",
+   "db": "",
+   "values": "Yes / No",
+   "remarks": ""
+  },
+  {
+   "name": "Container Number",
+   "type": "Display Item",
+   "ui": "Container number of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Truck (🚚)",
+   "type": "Display Item",
+   "ui": "Indicates (✓) if the PR has truck",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "OOG (⊞)",
+   "type": "Display Item",
+   "ui": "Indicates (✓) if the container is OOG",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "IMCO (🔥)",
+   "type": "Display Item",
+   "ui": "Indicates (✓) if the container is IMCO (DG)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "$ icon",
+   "type": "Display Item",
+   "ui": "Indicates (✓)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "VGM icon",
+   "type": "Display Item",
+   "ui": "Indicates (✓) VGM of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Checklist icon",
+   "type": "Display Item",
+   "ui": "Indicates (✓)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Link icon",
+   "type": "Display Item",
+   "ui": "Indicates (✓)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "POD",
+   "type": "Display Item",
+   "ui": "Port of discharge of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Final",
+   "type": "Display Item",
+   "ui": "Final destination of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier",
+   "type": "Display Item",
+   "ui": "Haulier code and name of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Display Item",
+   "ui": "Empty Pickup depot of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Type of Trans.",
+   "type": "Display Item",
+   "ui": "Type of transport of the PR",
+   "db": "",
+   "values": "e.g. Agent / Merchant",
+   "remarks": ""
+  },
+  {
+   "name": "Voyage Code",
+   "type": "Display Item",
+   "ui": "Voyage code and terminal of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Mode Of Transport",
+   "type": "Display Item",
+   "ui": "Mode of transport of the PR",
+   "db": "",
+   "values": "e.g. Truck round / Inter modal",
+   "remarks": ""
+  },
+  {
+   "name": "Edit",
+   "type": "Button",
+   "ui": "Opens the edit fields to change the data of the selected PRs",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Submit & COPARN",
+   "type": "Button",
+   "ui": "Submits the data and the COPARN of the selected PRs",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [
+  {
+   "title": "Truck Order Generation - Details",
+   "rows": [
+    {
+     "name": "Voyage Code",
+     "type": "Display Item",
+     "ui": "Voyage Code of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": "Shown with the voyage ETA and ETD below"
+    },
+    {
+     "name": "Terminal Code",
+     "type": "Display Item",
+     "ui": "Terminal Code of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Vessel",
+     "type": "Display Item",
+     "ui": "Vessel of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Origin",
+     "type": "Display Item",
+     "ui": "Origin of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Load",
+     "type": "Display Item",
+     "ui": "Load of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Discharge",
+     "type": "Display Item",
+     "ui": "Discharge of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Final",
+     "type": "Display Item",
+     "ui": "Final of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Address",
+     "type": "Display Item",
+     "ui": "Address of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Transporter Instruction",
+     "type": "Display Item",
+     "ui": "Transporter Instruction of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Haulier Instruction",
+     "type": "Display Item",
+     "ui": "Haulier Instruction of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "COPARN Created On",
+     "type": "Display Item",
+     "ui": "COPARN Created On of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "COPARN Created By",
+     "type": "Display Item",
+     "ui": "COPARN Created By of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}
