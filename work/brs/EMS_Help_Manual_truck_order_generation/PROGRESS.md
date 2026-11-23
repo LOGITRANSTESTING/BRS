@@ -20,3 +20,4 @@
 - 2026-11-23 TOG screen: Data Grid replaced with the user's 8 scrolled screenshots (Images II-IX); grid extended to 58 rows (COPARN Created On ... Height). View icon behaviour confirmed by user (opens EMS Movement Query & Update - Query Screen) for Depot, Cross Booking, TOG; DB Validation left blank (user-confirmed).
 - 2026-11-23 TOG: UI Validation left blank for $ icon, Checklist icon, Link icon, Name (user: name only).
 - 2026-11-23 Icon header columns confirmed by user (Freeze Status, IMCO, OOG, Reefer, Carrier Haulage; TOG: Truck Order Created, OOG, IMCO, Extra Move, VGM Status, EDI Coparn Generated, Address Not Linked); docs rebuilt.
+- 2026-11-23 Screen BRS docx moved to output/EMS/Activity/ (user request).
