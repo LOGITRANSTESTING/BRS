@@ -24,6 +24,11 @@
    "file": "work/brs/Booking_Help_Manual_depot_cross_booking/screen_cross_booking_depot_activity/img/02.png",
    "caption": "Image II",
    "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/screen_cross_booking_depot_activity/img/03.png",
+   "caption": "Image III",
+   "section": "Data Grid"
   }
  ],
  "features": [
@@ -456,7 +461,7 @@
    "remarks": ""
   },
   {
-   "name": "Freeze",
+   "name": "Freeze (❄🌡 icon)",
    "type": "Display Item",
    "ui": "Freeze status of the PR",
    "db": "",
@@ -536,6 +541,70 @@
    "remarks": ""
   },
   {
+   "name": "Turn in Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Turn in Reference of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Actual Full Return Date",
+   "type": "Display Item",
+   "ui": "Actual full return date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "DG (🔥)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is DG",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "OOG (⊞)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is OOG",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Reefer (❄)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is Reefer",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Merchant Haulage (🚚)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is Merchant Haulage",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "SOC",
+   "type": "Display Item",
+   "ui": "Indicates if the container is SOC",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Code",
+   "type": "Display Item",
+   "ui": "Haulier code of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
    "name": "Overwrite",
    "type": "Check Box",
    "ui": "If the old data is to be overwritten with the new data please select the check box",
@@ -589,33 +658,17 @@
      "remarks": ""
     },
     {
-     "name": "Origin",
+     "name": "Origin / Load",
      "type": "Display Item",
-     "ui": "Origin of the PR selected in the data grid",
+     "ui": "Origin / Load of the PR selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
     },
     {
-     "name": "Load",
+     "name": "Discharge / Final",
      "type": "Display Item",
-     "ui": "Load of the PR selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Discharge",
-     "type": "Display Item",
-     "ui": "Discharge of the PR selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Final",
-     "type": "Display Item",
-     "ui": "Final of the PR selected in the data grid",
+     "ui": "Discharge / Final of the PR selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
@@ -645,7 +698,7 @@
      "remarks": ""
     },
     {
-     "name": "Min Temp",
+     "name": "Min Temp.",
      "type": "Display Item",
      "ui": "Min Temp of the PR selected in the data grid",
      "db": "",
@@ -653,7 +706,7 @@
      "remarks": ""
     },
     {
-     "name": "Max Temp",
+     "name": "Max Temp.",
      "type": "Display Item",
      "ui": "Max Temp of the PR selected in the data grid",
      "db": "",
@@ -709,17 +762,9 @@
      "remarks": ""
     },
     {
-     "name": "Weight",
+     "name": "Weight / Volume",
      "type": "Display Item",
-     "ui": "Weight of the PR selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Volume",
-     "type": "Display Item",
-     "ui": "Volume of the PR selected in the data grid",
+     "ui": "Weight / Volume of the PR selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
