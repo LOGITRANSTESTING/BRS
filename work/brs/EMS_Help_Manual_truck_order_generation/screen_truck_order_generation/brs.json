@@ -378,7 +378,7 @@
   {
    "name": "$ icon",
    "type": "Display Item",
-   "ui": "Indicates (✓)",
+   "ui": "",
    "db": "",
    "values": "",
    "remarks": ""
@@ -394,7 +394,7 @@
   {
    "name": "Checklist icon",
    "type": "Display Item",
-   "ui": "Indicates (✓)",
+   "ui": "",
    "db": "",
    "values": "",
    "remarks": ""
@@ -402,7 +402,7 @@
   {
    "name": "Link icon",
    "type": "Display Item",
-   "ui": "Indicates (✓)",
+   "ui": "",
    "db": "",
    "values": "",
    "remarks": ""
@@ -546,7 +546,7 @@
   {
    "name": "Name",
    "type": "Display Item",
-   "ui": "Name of the PR",
+   "ui": "",
    "db": "",
    "values": "",
    "remarks": ""
