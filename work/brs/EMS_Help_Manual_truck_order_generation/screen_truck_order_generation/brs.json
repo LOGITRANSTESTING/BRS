@@ -229,7 +229,7 @@
   {
    "name": "Imco",
    "type": "Check Box",
-   "ui": "If only IMCO (DG) containers are to be queried please select the check box",
+   "ui": "If only IMCO containers are to be queried please select the check box",
    "db": "",
    "values": "Checked / Unchecked"
   },
@@ -352,9 +352,9 @@
    "remarks": ""
   },
   {
-   "name": "Truck (🚚)",
+   "name": "Truck Order Created (🚚)",
    "type": "Display Item",
-   "ui": "Indicates (✓) if the PR has truck",
+   "ui": "Indicates (✓) if the truck order is created for the PR",
    "db": "",
    "values": "",
    "remarks": ""
@@ -370,13 +370,13 @@
   {
    "name": "IMCO (🔥)",
    "type": "Display Item",
-   "ui": "Indicates (✓) if the container is IMCO (DG)",
+   "ui": "Indicates (✓) if the container is IMCO",
    "db": "",
    "values": "",
    "remarks": ""
   },
   {
-   "name": "$ icon",
+   "name": "Extra Move ($ icon)",
    "type": "Display Item",
    "ui": "",
    "db": "",
@@ -384,15 +384,15 @@
    "remarks": ""
   },
   {
-   "name": "VGM icon",
+   "name": "VGM Status (VGM icon)",
    "type": "Display Item",
-   "ui": "Indicates (✓) VGM of the container",
+   "ui": "VGM status of the container",
    "db": "",
    "values": "",
    "remarks": ""
   },
   {
-   "name": "Checklist icon",
+   "name": "EDI Coparn Generated (checklist icon)",
    "type": "Display Item",
    "ui": "",
    "db": "",
@@ -400,7 +400,7 @@
    "remarks": ""
   },
   {
-   "name": "Link icon",
+   "name": "Address Not Linked (link icon)",
    "type": "Display Item",
    "ui": "",
    "db": "",

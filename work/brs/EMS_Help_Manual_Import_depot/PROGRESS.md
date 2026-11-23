@@ -51,3 +51,4 @@
 - 2026-11-19 Fn9 ECOR Number Cancellation (Single) docx approved; done. Import Depot manual complete.
 - 2026-11-19 Merged output/EMS/Import Depot Activity - Group and - Single into output/EMS/Import Depot Activity (10 docs); plan.json paths updated.
 - 2026-11-23 Screen BRS Import Depot Activity (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Import Depot Activity V_1.0.docx', draft-all review. Awaiting user review.
+- 2026-11-23 Icon header columns confirmed by user (Freeze Status, IMCO, OOG, Reefer, Carrier Haulage; TOG: Truck Order Created, OOG, IMCO, Extra Move, VGM Status, EDI Coparn Generated, Address Not Linked); docs rebuilt.

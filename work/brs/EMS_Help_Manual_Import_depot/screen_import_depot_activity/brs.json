@@ -484,9 +484,9 @@
    "remarks": ""
   },
   {
-   "name": "DG (🔥)",
+   "name": "IMCO (🔥)",
    "type": "Display Item",
-   "ui": "Indicates if the container is DG",
+   "ui": "Indicates if the container is IMCO",
    "db": "",
    "values": "",
    "remarks": ""
@@ -508,9 +508,9 @@
    "remarks": ""
   },
   {
-   "name": "Merchant Haulage (🚚)",
+   "name": "Carrier Haulage (🚚)",
    "type": "Display Item",
-   "ui": "Indicates if the container is Merchant Haulage",
+   "ui": "Indicates if the container is Carrier Haulage",
    "db": "",
    "values": "",
    "remarks": ""
