@@ -89,6 +89,12 @@
    "remarks": ""
   },
   {
+   "event_type": "Button Click (View)",
+   "description": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record.",
+   "triggered_when": "User clicks the eye icon of a record.",
+   "remarks": ""
+  },
+  {
    "event_type": "Menu Click (Group Function)",
    "description": "Opens the group function menu of the screen for the selected records.",
    "triggered_when": "User selects one or more records and clicks the ☰ icon near the screen name.",
@@ -433,7 +439,7 @@
   {
    "name": "View (eye icon)",
    "type": "Button",
-   "ui": "",
+   "ui": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record",
    "db": "",
    "values": "",
    "remarks": ""

@@ -17,3 +17,4 @@
 - Fn4 docx approved, done (8 pages). Image I with blue border saved for the user: output/previews/brs_EMS_Help_Manual_truck_order_generation_group_truck_order_rf/Truck_Order_RF_Image_I_with_border.png
 - All 4 Truck Order Generation functions done.
 - 2026-11-23 Screen BRS Truck Order Generation (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Truck Order Generation V_1.0.docx', draft-all review. Awaiting user review.
+- 2026-11-23 TOG screen: Data Grid replaced with the user's 8 scrolled screenshots (Images II-IX); grid extended to 58 rows (COPARN Created On ... Height). View icon behaviour confirmed by user (opens EMS Movement Query & Update - Query Screen) for Depot, Cross Booking, TOG; DB Validation left blank (user-confirmed).

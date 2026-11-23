@@ -24,6 +24,41 @@
    "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/02.png",
    "caption": "Image II",
    "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/03.png",
+   "caption": "Image III",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/04.png",
+   "caption": "Image IV",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/05.png",
+   "caption": "Image V",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/06.png",
+   "caption": "Image VI",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/07.png",
+   "caption": "Image VII",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/08.png",
+   "caption": "Image VIII",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_truck_order_generation/screen_truck_order_generation/img/09.png",
+   "caption": "Image IX",
+   "section": "Data Grid"
   }
  ],
  "features": [
@@ -81,6 +116,12 @@
    "event_type": "Check Box Click (Select All / Row)",
    "description": "Selects or deselects all port releases (header check box) or a single record (row check box).",
    "triggered_when": "User clicks the header select all check box or the check box of a record.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (View)",
+   "description": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record.",
+   "triggered_when": "User clicks the document icon of a record.",
    "remarks": ""
   },
   {
@@ -265,7 +306,7 @@
   {
    "name": "View (document icon)",
    "type": "Button",
-   "ui": "",
+   "ui": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record",
    "db": "",
    "values": "",
    "remarks": ""
@@ -291,7 +332,7 @@
    "type": "Display Item",
    "ui": "Status of the PR",
    "db": "",
-   "values": "e.g. Full Return / Supplied",
+   "values": "e.g. Prepared / Supplied / Full Return",
    "remarks": ""
   },
   {
@@ -420,6 +461,270 @@
    "ui": "Mode of transport of the PR",
    "db": "",
    "values": "e.g. Truck round / Inter modal",
+   "remarks": ""
+  },
+  {
+   "name": "COPARN Created On",
+   "type": "Display Item",
+   "ui": "Date and time the COPARN of the PR was created",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "COPARN Created By",
+   "type": "Display Item",
+   "ui": "User who created the COPARN of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Gross Weight",
+   "type": "Display Item",
+   "ui": "Gross weight of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "PR Weight",
+   "type": "Display Item",
+   "ui": "Weight of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Pos. Date",
+   "type": "Display Item",
+   "ui": "Position date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Address",
+   "type": "Display Item",
+   "ui": "Address of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "State Name",
+   "type": "Display Item",
+   "ui": "State name of the address",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "City Name",
+   "type": "Display Item",
+   "ui": "City name of the address",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Zip Code",
+   "type": "Display Item",
+   "ui": "Zip code of the address",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Coll. Point",
+   "type": "Display Item",
+   "ui": "Collection point of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Name",
+   "type": "Display Item",
+   "ui": "Name of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Cust.",
+   "type": "Display Item",
+   "ui": "Booking customer of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Transport Inst. (note icon)",
+   "type": "Button",
+   "ui": "Opens the Transporter Instruction of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Charge Cust.",
+   "type": "Display Item",
+   "ui": "Charge customer of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Amt.",
+   "type": "Display Item",
+   "ui": "Haulier amount of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Inst. (note icon)",
+   "type": "Button",
+   "ui": "Opens the Haulier Instruction of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Customer Remarks",
+   "type": "Display Item",
+   "ui": "Booking customer remarks of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Cust Clearing Agent",
+   "type": "Display Item",
+   "ui": "Customs clearing agent of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Display Item",
+   "ui": "Full Return depot of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full in Date",
+   "type": "Display Item",
+   "ui": "Full in date of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Pickup Date",
+   "type": "Display Item",
+   "ui": "Pickup date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Ref.",
+   "type": "Display Item",
+   "ui": "Load reference of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Charge Curr.",
+   "type": "Display Item",
+   "ui": "Charge currency of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "PR No.",
+   "type": "Display Item",
+   "ui": "PR number of the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Seal",
+   "type": "Display Item",
+   "ui": "Seal number of the container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Min Temp.",
+   "type": "Display Item",
+   "ui": "Minimum temperature of the reefer container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Max Temp.",
+   "type": "Display Item",
+   "ui": "Maximum temperature of the reefer container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Oper Temp.",
+   "type": "Display Item",
+   "ui": "Operating temperature of the reefer container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Front",
+   "type": "Display Item",
+   "ui": "Over dimension at the front of the OOG container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Rear",
+   "type": "Display Item",
+   "ui": "Over dimension at the rear of the OOG container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Right",
+   "type": "Display Item",
+   "ui": "Over dimension at the right of the OOG container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Left",
+   "type": "Display Item",
+   "ui": "Over dimension at the left of the OOG container",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Height",
+   "type": "Display Item",
+   "ui": "Over height of the OOG container",
+   "db": "",
+   "values": "",
    "remarks": ""
   },
   {
