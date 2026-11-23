@@ -1,0 +1,777 @@
+{
+ "template": "template/BRS_Sample_Accept_Release.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "EMS",
+ "function": "Cross Booking Depot Activity",
+ "version": "01.01",
+ "date": "23/11/2026",
+ "history": [
+  {
+   "date": "23.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of EMS's Cross Booking Depot Activity details.",
+ "images": [
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/screen_cross_booking_depot_activity/img/01.png",
+   "caption": "Image I",
+   "section": "Query Screen"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/screen_cross_booking_depot_activity/img/02.png",
+   "caption": "Image II",
+   "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/Booking_Help_Manual_depot_cross_booking/screen_cross_booking_depot_activity/img/03.png",
+   "caption": "Image III",
+   "section": "Data Grid"
+  }
+ ],
+ "features": [
+  "This option is used to update Empty Pickup/Full Return Depot details against booking.",
+  "This option allows user can assign Empty Pickup/Full Return Depot/Turn in Reference.",
+  "The Query Fields of Cross Booking Depot Activity allows the user to query depot activity data as per requirement.",
+  "Data Grid Screen allows the user to view data queried using query fields.",
+  "This screen allows the user to overwrite existing data like Empty Pickup, Full Return, etc.",
+  "This screen allows the user to access Booking wise menu and group function menu."
+ ],
+ "events": [
+  {
+   "event_type": "Button Click (Search)",
+   "description": "Queries the port releases matching the entered query fields and lists them in the data grid.",
+   "triggered_when": "User enters data in one or more query fields and clicks Search.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Reset)",
+   "description": "Clears multiple query fields at once to query with new data.",
+   "triggered_when": "User clicks Reset.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Expand / Collapse)",
+   "description": "Shows or hides the query fields panel.",
+   "triggered_when": "User clicks the arrow at the right of the grid search box.",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change (Sort By)",
+   "description": "Sorts the port releases in the data grid by the selected option.",
+   "triggered_when": "User selects an option in the Sort By drop down after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "On Change (Search box)",
+   "description": "Filters the port releases listed in the data grid by the entered text.",
+   "triggered_when": "User enters text in the grid search box after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Excel)",
+   "description": "Exports the port releases listed in the data grid to an Excel file.",
+   "triggered_when": "User clicks the Excel icon after querying data.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Refresh)",
+   "description": "Reloads the data grid with the latest data for the current query.",
+   "triggered_when": "User clicks the Refresh icon.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Select All / Row)",
+   "description": "Selects or deselects all port releases (header check box) or a single record (row check box).",
+   "triggered_when": "User clicks the header select all check box or the check box of a record.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (View)",
+   "description": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record.",
+   "triggered_when": "User clicks the eye icon of a record.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Menu Click (Group Function)",
+   "description": "Opens the group function menu of the screen for the selected records.",
+   "triggered_when": "User selects one or more records and clicks the ☰ icon near the screen name.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Menu Click (Single Function)",
+   "description": "Opens the single function menu of the record.",
+   "triggered_when": "User clicks the ☰ icon near the PR Number of a record.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Check Box Click (Overwrite)",
+   "description": "Overwrites the old data of the selected records with the new data entered in the edit fields.",
+   "triggered_when": "User selects records, enters data in the edit fields and clicks the Overwrite check box.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Clear)",
+   "description": "Clears the data entered in the edit fields.",
+   "triggered_when": "User clicks the Clear (brush) icon.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Apply)",
+   "description": "Applies the data entered in the edit fields to the selected records so that the user can preview the new data before actually submitting it.",
+   "triggered_when": "User selects one or more records, enters data in the edit fields and clicks Apply.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Cancel)",
+   "description": "Cancels the change from old data to new data.",
+   "triggered_when": "User clicks Cancel after clicking Apply.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Submit)",
+   "description": "Submits the new data of the selected records.",
+   "triggered_when": "User clicks Submit after applying the changes.",
+   "remarks": "\"PR details updated successfully.\""
+  }
+ ],
+ "search_title": "Cross Booking Depot Activity - Query Screen",
+ "search": [
+  {
+   "name": "Voyage",
+   "type": "Auto Populate / Alphanumeric + Single Select Drop Down",
+   "ui": "Input Voyage. The ⇆ switches the voyage box between Auto Populate (Key in three char) and Alphanumeric. Select the voyage port call from the \"Select Voyage Port\" drop down list",
+   "db": "",
+   "values": "Voyage port call as terminal code - date & time (e.g. BEANRP02-20/02/2024 07:01)"
+  },
+  {
+   "name": "Booking Number",
+   "type": "LOV",
+   "ui": "Input or select the Booking Number to filter the records",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Empty Pickup depot and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Full Return depot and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Auto Populate",
+   "ui": "Select Size Type from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container Prefix",
+   "type": "Alphanumeric",
+   "ui": "Input Container Prefix",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Container No.",
+   "type": "Alphanumeric",
+   "ui": "Input Container No.",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Status",
+   "type": "Single Select Drop Down",
+   "ui": "Select Status manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty Pickup From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Empty Pickup from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Customer",
+   "type": "Auto Populate",
+   "ui": "Key in three char of the Customer and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Final Location",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Final Location and select from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Select Depot Country",
+   "type": "Auto Populate",
+   "ui": "Select Depot Country from the list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Transporter By",
+   "type": "Single Select Drop Down",
+   "ui": "Select Transporter By manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Position From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Position from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Empty / Full",
+   "type": "Single Select Drop Down",
+   "ui": "Select Empty / Full manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Loading Type",
+   "type": "Single Select Drop Down",
+   "ui": "Select Loading Type manually from drop down list",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage ETA From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Voyage ETA from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Voyage ETD From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Voyage ETD from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Pickup From / To Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Pickup from and to date and time (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "SOC",
+   "type": "Check Box",
+   "ui": "If only SOC containers are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "COPARN Sent",
+   "type": "Check Box",
+   "ui": "If only PRs with COPARN sent are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Truck",
+   "type": "Check Box",
+   "ui": "If only PRs with truck are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Depot Blank",
+   "type": "Check Box",
+   "ui": "If only PRs with a blank depot are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Freeze",
+   "type": "Check Box",
+   "ui": "If only frozen PRs are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Valid ETA",
+   "type": "Check Box",
+   "ui": "If only PRs with a valid ETA are to be queried please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked"
+  },
+  {
+   "name": "Search",
+   "type": "Button",
+   "ui": "Queries data based on the data entered in the query fields",
+   "db": "",
+   "values": ""
+  },
+  {
+   "name": "Reset",
+   "type": "Button",
+   "ui": "Clears multiple fields at once to query with new data",
+   "db": "",
+   "values": ""
+  }
+ ],
+ "display_title": "Cross Booking Depot Activity - Data Grid",
+ "drop_display": false,
+ "display": [
+  {
+   "name": "Empty Pickup",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Empty Pickup depot for the selected PR and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Full Return depot for the selected PR and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Turn in Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Turn in Reference for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Pickup Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Pickup Reference for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Load Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Load Reference for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Code",
+   "type": "Auto Populate",
+   "ui": "Key in three char of the Haulier Code for the selected PR and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Pickup Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Pickup Date for the selected PR (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Position Date",
+   "type": "Date and Time Picker",
+   "ui": "Input Position Date for the selected PR (dd/MM/yyyy HH:mm)",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Instruction",
+   "type": "Text Area",
+   "ui": "Input Haulier Instruction for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Transporter Instruction",
+   "type": "Text Area",
+   "ui": "Input Transporter Instruction for the selected PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Total Port Release(s)",
+   "type": "Display Item",
+   "ui": "Count of the port releases queried, with the count per status",
+   "db": "",
+   "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze",
+   "remarks": ""
+  },
+  {
+   "name": "Select All (header check box)",
+   "type": "Check Box",
+   "ui": "If all the queried PRs are to be selected please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Check Box (row)",
+   "type": "Check Box",
+   "ui": "If the PR is to be selected please select the check box",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "View (eye icon)",
+   "type": "Button",
+   "ui": "Opens the EMS Movement Query & Update screen (EMS Normal Query) - Query Screen for the record",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "PR Number",
+   "type": "Display Item",
+   "ui": "PR number of the queried record. The ☰ near the PR Number opens the single functions menu of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Status",
+   "type": "Display Item",
+   "ui": "Status of the PR",
+   "db": "",
+   "values": "Prepared / Supplied / Full Return / Cancelled / Empty Return / Freeze",
+   "remarks": ""
+  },
+  {
+   "name": "Freeze Status (❄🌡 icon)",
+   "type": "Display Item",
+   "ui": "Freeze status of the PR",
+   "db": "",
+   "values": "Yes / No",
+   "remarks": ""
+  },
+  {
+   "name": "Booking Number",
+   "type": "Display Item",
+   "ui": "Booking number of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Size Type",
+   "type": "Display Item",
+   "ui": "Size type of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Container",
+   "type": "Display Item",
+   "ui": "Container number of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Empty Pickup",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Empty Pickup depot of the PR and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Empty Pickup Date",
+   "type": "Display Item",
+   "ui": "Empty pickup date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Collection",
+   "type": "Display Item",
+   "ui": "Collection of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Position Date",
+   "type": "Display Item",
+   "ui": "Position date of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return",
+   "type": "Auto Populate",
+   "ui": "Key in five char of the Full Return depot of the PR and select from the list",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Full Return Date",
+   "type": "Display Item",
+   "ui": "Full return date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Turn in Reference",
+   "type": "Alphanumeric",
+   "ui": "Input Turn in Reference of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Actual Full Return Date",
+   "type": "Display Item",
+   "ui": "Actual full return date and time of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "IMCO (🔥)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is IMCO",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "OOG (⊞)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is OOG",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Reefer (❄)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is Reefer",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Carrier Haulage (🚚)",
+   "type": "Display Item",
+   "ui": "Indicates if the container is Carrier Haulage",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "SOC",
+   "type": "Display Item",
+   "ui": "Indicates if the container is SOC",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Haulier Code",
+   "type": "Display Item",
+   "ui": "Haulier code of the PR",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Overwrite",
+   "type": "Check Box",
+   "ui": "If the old data is to be overwritten with the new data please select the check box",
+   "db": "",
+   "values": "Checked / Unchecked",
+   "remarks": ""
+  },
+  {
+   "name": "Clear (brush icon)",
+   "type": "Button",
+   "ui": "Clears the data entered in the edit fields",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Apply",
+   "type": "Button",
+   "ui": "Applies the data entered in the edit fields to the selected records to preview the new data before submitting",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Submit",
+   "type": "Button",
+   "ui": "Submits the new data of the selected records",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  }
+ ],
+ "extra_tables": [
+  {
+   "title": "Cross Booking Depot Activity - Details",
+   "rows": [
+    {
+     "name": "Voyage",
+     "type": "Display Item",
+     "ui": "Voyage of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Vessel",
+     "type": "Display Item",
+     "ui": "Vessel of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Origin / Load",
+     "type": "Display Item",
+     "ui": "Origin / Load of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Discharge / Final",
+     "type": "Display Item",
+     "ui": "Discharge / Final of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Pickup Reference",
+     "type": "Display Item",
+     "ui": "Pickup Reference of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Turn in Reference",
+     "type": "Display Item",
+     "ui": "Turn in Reference of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Opt. Temp",
+     "type": "Display Item",
+     "ui": "Opt. Temp of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Min Temp.",
+     "type": "Display Item",
+     "ui": "Min Temp of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Max Temp.",
+     "type": "Display Item",
+     "ui": "Max Temp of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Collection",
+     "type": "Display Item",
+     "ui": "Collection of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Pickup Date",
+     "type": "Display Item",
+     "ui": "Pickup Date of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Load Reference",
+     "type": "Display Item",
+     "ui": "Load Reference of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Address",
+     "type": "Display Item",
+     "ui": "Address of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Transporter Instruction",
+     "type": "Display Item",
+     "ui": "Transporter Instruction of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Haulier Instruction",
+     "type": "Display Item",
+     "ui": "Haulier Instruction of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    },
+    {
+     "name": "Weight / Volume",
+     "type": "Display Item",
+     "ui": "Weight / Volume of the PR selected in the data grid",
+     "db": "",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
+ "references": [],
+ "assumptions": []
+}

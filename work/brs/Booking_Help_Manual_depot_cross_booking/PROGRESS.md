@@ -1,0 +1,4 @@
+- 2026-11-23 Screen BRS Cross Booking Depot Activity (Query Screen + Data Grid; 3.3 Details panel): images unmarked (frame only, no repairs), specs drafted from screenshots/manual shared pages, docx built and checked. User chose: file name 'BRS - EMS - Cross Booking Depot Activity V_1.0.docx', draft-all review. Awaiting user review.
+- 2026-11-23 Cross Booking screen: Data Grid replaced with the user's 2 screenshots (Images II, III); grid now 38 rows (same columns as Depot: Freeze icon, Actual Full Return Date, DG/OOG/Reefer/MH/SOC, Haulier Code); Details per new panel (16 rows).
+- 2026-11-23 Icon header columns confirmed by user (Freeze Status, IMCO, OOG, Reefer, Carrier Haulage; TOG: Truck Order Created, OOG, IMCO, Extra Move, VGM Status, EDI Coparn Generated, Address Not Linked); docs rebuilt.
+- 2026-11-23 Screen BRS docx moved to output/EMS/Activity/ (user request).
