@@ -24,6 +24,11 @@
    "file": "work/brs/EMS_Help_Manual_Import_depot/screen_import_depot_activity/img/02.png",
    "caption": "Image II",
    "section": "Data Grid"
+  },
+  {
+   "file": "work/brs/EMS_Help_Manual_Import_depot/screen_import_depot_activity/img/03.png",
+   "caption": "Image III",
+   "section": "Data Grid"
   }
  ],
  "features": [
@@ -128,6 +133,18 @@
    "description": "Submits the new data of the selected records.",
    "triggered_when": "User clicks Submit after applying the changes.",
    "remarks": "\"PR details updated successfully.\""
+  },
+  {
+   "event_type": "Button Click (Auto)",
+   "description": "Auto-assigns Empty Return / Full Pickup depots to the selected containers.",
+   "triggered_when": "User selects one or more containers and clicks Auto.",
+   "remarks": ""
+  },
+  {
+   "event_type": "Button Click (Select)",
+   "description": "Selects the entered Qty. of containers of the chosen Size Type in the grid.",
+   "triggered_when": "User selects a Size Type, enters Qty. and clicks Select after querying data.",
+   "remarks": ""
   }
  ],
  "search_title": "Import Depot Activity - Query Screen",
@@ -364,6 +381,30 @@
    "remarks": ""
   },
   {
+   "name": "Size Type (grid select)",
+   "type": "Auto Populate",
+   "ui": "Select Size Type from the list to select containers of that size type",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Qty.",
+   "type": "Numeric",
+   "ui": "Input the quantity of containers to be selected",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
+   "name": "Select",
+   "type": "Button",
+   "ui": "Selects the entered Qty. of containers of the chosen Size Type in the grid",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
    "name": "Select All (header check box)",
    "type": "Check Box",
    "ui": "If all the queried records are to be selected please select the check box",
@@ -404,9 +445,9 @@
    "remarks": ""
   },
   {
-   "name": "AVANTITA",
+   "name": "AVANTIDA",
    "type": "Check Box",
-   "ui": "If the container is AVANTITA please select the check box",
+   "ui": "If the container is AVANTIDA please select the check box",
    "db": "",
    "values": "Checked / Unchecked",
    "remarks": ""
@@ -548,6 +589,14 @@
    "remarks": ""
   },
   {
+   "name": "Auto",
+   "type": "Button",
+   "ui": "Auto-assigns Empty Return / Full Pickup depots to the selected containers",
+   "db": "",
+   "values": "",
+   "remarks": ""
+  },
+  {
    "name": "Submit",
    "type": "Button",
    "ui": "Submits the new data of the selected records",
@@ -577,33 +626,17 @@
      "remarks": ""
     },
     {
-     "name": "Origin",
+     "name": "Origin / Load",
      "type": "Display Item",
-     "ui": "Origin of the container selected in the data grid",
+     "ui": "Origin / Load of the container selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
     },
     {
-     "name": "Load",
+     "name": "Discharge / Final",
      "type": "Display Item",
-     "ui": "Load of the container selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Discharge",
-     "type": "Display Item",
-     "ui": "Discharge of the container selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Final",
-     "type": "Display Item",
-     "ui": "Final of the container selected in the data grid",
+     "ui": "Discharge / Final of the container selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
@@ -697,17 +730,9 @@
      "remarks": ""
     },
     {
-     "name": "Weight",
+     "name": "Weight / Volume",
      "type": "Display Item",
-     "ui": "Weight of the container selected in the data grid",
-     "db": "",
-     "values": "",
-     "remarks": ""
-    },
-    {
-     "name": "Volume",
-     "type": "Display Item",
-     "ui": "Volume of the container selected in the data grid",
+     "ui": "Weight / Volume of the container selected in the data grid",
      "db": "",
      "values": "",
      "remarks": ""
