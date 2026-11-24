@@ -35,3 +35,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - UC5 2.1 approved (verbatim, 3 sub-titles).
 - UC5 2.2.1–2.2.3 and 3.1.1 approved; 3.2/3.3 'No screen design available.'; built 14 pages: output/DCSA eBK/BRS - DCSA eBK - UC5 - Confirm Booking Request V 1.0.docx
 - UC11 skipped by user. UC3, UC7, UC8, UC13, UC14 (and UC4) on hold until the user adds screenshots.
+- 24.11.2026 | UC4 Reject Booking Request | User supplied 2 screenshots: uc4/src/1_1 (row ☰ menu, Reject Request highlighted), 1_2 (Reject Request pop-up). Used as given. Plan (as UC5): 1.2.1 Reject Request = Image I, II; 1.2.2 Track & Trace Event Log heading-only. Sheet output/previews/brs_DCSA_eBK_uc4/sheet.png | Next: user OK on images, then 2.1.
