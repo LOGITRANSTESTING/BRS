@@ -5,7 +5,7 @@
  "module_line": "DCSA – eBK Process",
  "function": "UC1 - Booking Request Submit",
  "version": "01.01",
- "date": "",
+ "date": "20/11/2026",
  "history": [
   {
    "date": "20.11.2026",
@@ -40,9 +40,6 @@
    "section": "View Request",
    "file": "work/brs/DCSA eBK/uc1/src/1_5.png",
    "caption": "Image V"
-  },
-  {
-   "section": "View Customer Request Data (Meta Query)"
   },
   {
    "section": "Edit Request",
@@ -1625,10 +1622,6 @@
      "editable": "No"
     }
    ]
-  },
-  {
-   "title": "View Customer Request Data (Meta Query)",
-   "text": "No screen design available."
   },
   {
    "title": "Edit Request",
