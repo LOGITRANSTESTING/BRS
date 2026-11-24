@@ -43,3 +43,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - 24.11.2026 | UC3 Submit Updated Booking Request | 1 screenshot (uc3/src/1_1, grid row in red box, used as given). User: only 1.2 UI Design + 2.1 Features; no tables. Next: user OK on 2.1.
 - 24.11.2026 UC3 2.1 approved (SDS text incl. Flow). Built UC3 (8 pages): output/DCSA eBK/BRS - DCSA eBK - UC3 - Submit Updated Booking Request V 1.0.docx (1.2 Image I, 2.1 only; 2.2/3 empty). Added to PR #10. Remaining: UC7, UC8, UC13, UC14.
 - 24.11.2026 | UC11 Cancel Booking Request By Shipper | 1 screenshot (uc11/src/1_1, 800x455, two Cancel Booking Request By Shipper rows in red boxes, used as given). Next: user OK on 2.1/scope.
+- 24.11.2026 UC11 2.1 approved (UI Design + 2.1 only, as UC3). Built UC11 (8 pages): output/DCSA eBK/BRS - DCSA eBK - UC11 - Cancel Booking Request By Shipper V 1.0.docx. Added to PR #10. Remaining: UC7, UC8, UC13, UC14.
