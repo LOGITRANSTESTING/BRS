@@ -37,3 +37,4 @@ Source: SDS - DCSA eBK V03.01.docx. One BRS per SDS UC sub-topic; files = the 19
 - UC11 skipped by user. UC3, UC7, UC8, UC13, UC14 (and UC4) on hold until the user adds screenshots.
 - 24.11.2026 | UC4 Reject Booking Request | User supplied 2 screenshots: uc4/src/1_1 (row ☰ menu, Reject Request highlighted), 1_2 (Reject Request pop-up). Used as given. Plan (as UC5): 1.2.1 Reject Request = Image I, II; 1.2.2 Track & Trace Event Log heading-only. Sheet output/previews/brs_DCSA_eBK_uc4/sheet.png | Next: user OK on images, then 2.1.
 - 24.11.2026 UC4 images OK. User: drop the heading-only 'Track & Trace Event Log' entry from 1.2 (1.2 = Reject Request Image I, II only). Next: 2.1.
+- 24.11.2026 UC4 2.1 approved (2.1.1 Reject Request, 2.1.2 Track & Trace Event Log – Reject; text from SDS + existing Reject Request / T&T docs). Next: 2.2.
