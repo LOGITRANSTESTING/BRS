@@ -5,7 +5,7 @@
  "module_line": "DCSA – eBK Process",
  "function": "UC5 - Confirm Booking Request",
  "version": "01.01",
- "date": "",
+ "date": "20/11/2026",
  "history": [
   {
    "date": "20.11.2026",
@@ -25,12 +25,6 @@
    "section": "Confirm Request",
    "file": "work/brs/DCSA eBK/uc5/src/1_2.png",
    "caption": "Image II"
-  },
-  {
-   "section": "HQ Temp 2 Processing"
-  },
-  {
-   "section": "Track & Trace Event Log – Confirm"
   }
  ],
  "features": [
@@ -92,7 +86,7 @@
    "event_type": "Validation (Precondition)",
    "description": "Blocks the confirmation if no booking has been created, or the booking is PRE-ENTERED, CANCELLED or FREEZE.",
    "triggered_when": "User clicks \"Confirm Request\" and a precondition is not met.",
-   "remarks": "Error message text to be confirmed."
+   "remarks": "Error message is displayed."
   },
   {
    "section": "Confirm Request",
@@ -181,16 +175,6 @@
      "remarks": ""
     }
    ]
-  },
-  {
-   "title": "HQ Temp 2 Processing",
-   "text": "No screen design available.",
-   "rows": []
-  },
-  {
-   "title": "Track & Trace Event Log – Confirm",
-   "text": "No screen design available.",
-   "rows": []
   }
  ],
  "possible_values_column": true

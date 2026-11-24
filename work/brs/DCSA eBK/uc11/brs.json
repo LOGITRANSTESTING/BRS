@@ -1,0 +1,48 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC11 - Cancel Booking Request By Shipper",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Cancel Booking Request By Shipper function.",
+ "images": [
+  {
+   "file": "work/brs/DCSA eBK/uc11/src/1_1.png",
+   "caption": "Image I"
+  }
+ ],
+ "features": [
+  "The Shipper cancels the booking request. An option is provided in DCSA Booking Activity, allowing the user to manually select the booking request to be cancelled. The reason for cancellation is mandatory.",
+  "The agency user can cancel the request only if an actual booking has not yet been generated against it. If a booking has already been generated, cancellation is not allowed.",
+  "Preconditions",
+  "•\tThe booking request must not be converted into a Yang Ming actual booking.",
+  "When the request is cancelled, the booking request moves to CANCELLED state. There is no need to trigger any notifications at this time.",
+  "Flow",
+  "•\tThe Shipper cancels the booking request.",
+  "•\tThe Carrier performs an initial synchronous processing of the request to cancel the booking.",
+  "•\tThe Carrier can accept or reject the request itself and responds with the appropriate HTTP status code.",
+  "•\tThe Carrier sets the booking state to CANCELLED and sends a notification asynchronously to the relevant registered counterparts containing the Carrier Booking Request Reference and the state of the booking.",
+  "Note: As per recent communication, the Cancel Request right-click option is to be removed because it is replaced by UC11."
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}

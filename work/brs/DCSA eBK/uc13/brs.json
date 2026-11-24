@@ -1,0 +1,45 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC13 - Cancel Confirmed Booking by Shipper",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Cancel Confirmed Booking by Shipper function.",
+ "images": [
+  {
+   "file": "work/brs/DCSA eBK/uc13/src/1_1.png",
+   "caption": "Image I"
+  }
+ ],
+ "features": [
+  "In UC13, the Shipper requests to cancel a booking that has already been confirmed. When UC13 is received, the booking request moves to CANCELLATION RECEIVED state.",
+  "Data Flow [Event Type: IN]",
+  "•\tHQ calls PKG_DCSA_HQ_CALL_AF_INTERFACE.PRC_EBK_UPDATE_USE_CASE_STATUS with the required parameters.",
+  "•\tThe Carrier performs an initial synchronous processing of the request to cancel the booking. The Carrier can accept or reject the request itself and responds with the appropriate HTTP status code.",
+  "•\tThe Carrier sets the booking cancellation status to CANCELLATION RECEIVED in the original booking.",
+  "Status Flow",
+  "•\tDCSA event current status is updated to CANCELLATION RECEIVED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status keeps its previous status [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS]."
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}

@@ -1,0 +1,243 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC14 - Process Booking Cancellation",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Process Booking Cancellation function.",
+ "images": [
+  {
+   "section": "Cancellation Confirmed",
+   "file": "work/brs/DCSA eBK/uc14/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "Cancellation Confirmed",
+   "file": "work/brs/DCSA eBK/uc14/src/1_2.png",
+   "caption": "Image II"
+  },
+  {
+   "section": "Cancellation Declined",
+   "file": "work/brs/DCSA eBK/uc14/src/2_1.png",
+   "caption": "Image III"
+  },
+  {
+   "section": "Cancellation Declined",
+   "file": "work/brs/DCSA eBK/uc14/src/2_2.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "In UC14, the Carrier reviews the booking cancellation request and decides whether to Confirm or Decline it. UC14 is allowed only against UC13 data, and only the UC13 record in DCSA Booking Activity can be processed.",
+  {
+   "section": "Cancellation Confirmed"
+  },
+  "A new right-click option [Cancellation Confirmed] is provided in DCSA Booking Activity. The system asks the agency user for remarks and confirms the cancellation. When the user chooses this option, the AFSYS+ booking has already been CANCELLED. The system:",
+  "•\tCalls PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT, which calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT and passes the user remarks in P_FEEDBACK_DETAILS.",
+  "•\tTriggers the ‘REJE’/‘BKG’ TnT event for UC14, using the same parameters as UC10 and ‘booking cancelled’.",
+  "Status Update Flow",
+  "•\tDCSA event current status is updated to CANCELLATION CONFIRMED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status is updated to CANCELLED [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS].",
+  {
+   "section": "Cancellation Declined"
+  },
+  "A new right-click option [Cancellation Declined] is provided in DCSA Booking Activity. The system asks the agency user for remarks and declines the shipper’s UC13 cancellation request. The system:",
+  "•\tCalls PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT, which calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT and passes the user remarks in P_FEEDBACK_DETAILS.",
+  "Status Update Flow",
+  "•\tDCSA event current status is updated to CANCELLATION DECLINED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status keeps its previous status [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS]."
+ ],
+ "events": [
+  {
+   "section": "Cancellation Confirmed",
+   "event_type": "Menu Click",
+   "description": "Opens the \"Cancellation Confirmed\" pop-up for the selected booking request.",
+   "triggered_when": "User clicks \"Cancellation Confirmed\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Do you want to Cancellation Confirmed this booking request (<DCSA Request ID>)?\""
+  },
+  {
+   "section": "Cancellation Confirmed",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the action if the record is not a UC13 (cancellation received) record.",
+   "triggered_when": "User clicks \"Cancellation Confirmed\" and the precondition is not met.",
+   "remarks": "Error message is displayed."
+  },
+  {
+   "section": "Cancellation Confirmed",
+   "event_type": "Button Click (Yes)",
+   "description": "Calls PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT with the remarks in P_FEEDBACK_DETAILS and triggers the ‘REJE’/‘BKG’ TnT event (‘booking cancelled’); updates current event = CANCELLATION CONFIRMED, status = CANCELLED.",
+   "triggered_when": "User enters the reason and clicks Yes.",
+   "remarks": "Success message is displayed."
+  },
+  {
+   "section": "Cancellation Confirmed",
+   "event_type": "Button Click (No)",
+   "description": "Closes the pop-up without confirming.",
+   "triggered_when": "User clicks No.",
+   "remarks": ""
+  },
+  {
+   "section": "Cancellation Declined",
+   "event_type": "Menu Click",
+   "description": "Opens the \"Cancellation Declined\" pop-up for the selected booking request.",
+   "triggered_when": "User clicks \"Cancellation Declined\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Do you want to Cancellation Declined this booking request (<DCSA Request ID>)?\""
+  },
+  {
+   "section": "Cancellation Declined",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the action if the record is not a UC13 (cancellation received) record.",
+   "triggered_when": "User clicks \"Cancellation Declined\" and the precondition is not met.",
+   "remarks": "Error message is displayed."
+  },
+  {
+   "section": "Cancellation Declined",
+   "event_type": "Button Click (Yes)",
+   "description": "Calls PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT with the remarks in P_FEEDBACK_DETAILS; updates current event = CANCELLATION DECLINED, status unchanged.",
+   "triggered_when": "User enters the reason and clicks Yes.",
+   "remarks": "Success message is displayed."
+  },
+  {
+   "section": "Cancellation Declined",
+   "event_type": "Button Click (No)",
+   "description": "Closes the pop-up without declining.",
+   "triggered_when": "User clicks No.",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [
+  {
+   "title": "Cancellation Confirmed",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Cancellation Confirmed Pop-up",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Cancellation Confirmed",
+     "type": "Menu Item",
+     "ui": "Opens the Cancellation Confirmed pop-up; allowed only for a UC13 (cancellation received) record",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls event triggering and TnT event on Yes"
+    },
+    {
+     "name": "Confirmation Text",
+     "type": "Display Item",
+     "ui": "Shows the selected DCSA Request ID",
+     "db": "",
+     "editable": "No",
+     "values": "\"Do you want to Cancellation Confirmed this booking request (<DCSA Request ID>)?\"",
+     "remarks": ""
+    },
+    {
+     "name": "Reason for Cancellation Confirmed",
+     "type": "Text Area",
+     "ui": "Input the reason for cancellation confirmation",
+     "db": "P_FEEDBACK_DETAILS",
+     "editable": "Yes",
+     "values": "",
+     "remarks": "Placeholder \"Reason for Cancellation Confirmed\""
+    },
+    {
+     "name": "Yes",
+     "type": "Button",
+     "ui": "Confirms the cancellation: calls PRC_DCSA_POOL_INSERT, triggers the REJE/BKG TnT event, then updates the status to CANCELLATION CONFIRMED / CANCELLED",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Success message is displayed."
+    },
+    {
+     "name": "No",
+     "type": "Button",
+     "ui": "Closes the pop-up without confirming",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  },
+  {
+   "title": "Cancellation Declined",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Cancellation Declined Pop-up",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Cancellation Declined",
+     "type": "Menu Item",
+     "ui": "Opens the Cancellation Declined pop-up; allowed only for a UC13 (cancellation received) record",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls event triggering on Yes"
+    },
+    {
+     "name": "Confirmation Text",
+     "type": "Display Item",
+     "ui": "Shows the selected DCSA Request ID",
+     "db": "",
+     "editable": "No",
+     "values": "\"Do you want to Cancellation Declined this booking request (<DCSA Request ID>)?\"",
+     "remarks": ""
+    },
+    {
+     "name": "Reason for Cancellation Declined",
+     "type": "Text Area",
+     "ui": "Input the reason for cancellation decline",
+     "db": "P_FEEDBACK_DETAILS",
+     "editable": "Yes",
+     "values": "",
+     "remarks": "Placeholder \"Reason for Cancellation Declined\""
+    },
+    {
+     "name": "Yes",
+     "type": "Button",
+     "ui": "Declines the cancellation: calls PRC_DCSA_POOL_INSERT, then updates the current event to CANCELLATION DECLINED (DCSA status unchanged)",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Success message is displayed."
+    },
+    {
+     "name": "No",
+     "type": "Button",
+     "ui": "Closes the pop-up without declining",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
+ "possible_values_column": true
+}

@@ -73,3 +73,6 @@ These are the house item types, settled by the user on Voyage Update (depot cros
 - `events` rows: event_type, description, triggered_when, remarks
 
 - Event Type "Icon Click (<icon name>)": a grid icon that opens a pop-up, named as the pop-up's title, e.g. "Icon Click (Container History Arrangement icon)" (settled on Container Redelivery). 2.2 may be split per radio button selection (2.2.1 Offhire Instruct, 2.2.2 Pre sales Instruct, 2.2.3 Arrange) via the events "section" key.
+
+- Message text not given (no image and no SDS text shows it): Remarks = "Success message is displayed." / "Error message is displayed." Never write "to be confirmed" and never ask about it (settled on DCSA eBK UC4 Reject Request).
+- A sub-topic with no screen (for example Track & Trace Event Log, HQ Temp 2 Processing) is left out of 1.2 UI Design and 3 Column Definitions entirely - no heading, no "No screen design available." It still gets its 2.1 and 2.2 sub-sections (settled on DCSA eBK UC4, applied to UC5).

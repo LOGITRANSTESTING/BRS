@@ -1,0 +1,246 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC8 - Process Amendment to Confirmed Booking",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Process Amendment to Confirmed Booking function.",
+ "images": [
+  {
+   "section": "Amendment Confirmed",
+   "file": "work/brs/DCSA eBK/uc8/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "Amendment Confirmed",
+   "file": "work/brs/DCSA eBK/uc8/src/1_2.png",
+   "caption": "Image II"
+  },
+  {
+   "section": "Amendment Declined",
+   "file": "work/brs/DCSA eBK/uc8/src/2_1.png",
+   "caption": "Image III"
+  },
+  {
+   "section": "Amendment Declined",
+   "file": "work/brs/DCSA eBK/uc8/src/2_2.png",
+   "caption": "Image IV"
+  }
+ ],
+ "features": [
+  "In UC8, the Carrier reviews the booking amendment and decides whether to “Confirm” or “Decline” the proposed changes. UC8 is allowed only after UC7 has been received, and only the UC7 record in DCSA Booking Activity can be processed.",
+  {
+   "section": "Amendment Confirmed"
+  },
+  "A new right-click option [Amendment Confirmed] is provided in DCSA Booking Activity. The system asks the agency user for remarks and confirms the amendment. When the user chooses this option, the required amendment has already been made in the AFSYS+ booking. The system calls:",
+  "•\tPKG_DCSA_TEMP2_PROCESS.PRC_DCSA_TEMP2_PROCESS, passing the feedback remarks in P_FEEDBACK_DETAILS.",
+  "•\tPKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT, which calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT and passes the user remarks in P_FEEDBACK_DETAILS.",
+  "Status Update Flow",
+  "•\tDCSA event current status is updated to AMENDMENT CONFIRMED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status is updated to CONFIRMED [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS].",
+  "•\tDCSA amendment status is updated to AMENDMENT CONFIRMED [T_LT_DCSA_DOC_HEADER.DH_AMENDMENT_STATUS].",
+  {
+   "section": "Amendment Declined"
+  },
+  "A new right-click option [Amendment Declined] is provided in DCSA Booking Activity. The system asks the agency user for remarks and declines the shipper’s UC7 booking amendment request. The system calls:",
+  "•\tPKG_DCSA_TEMP2_PROCESS.PRC_DCSA_TEMP2_PROCESS, passing the feedback remarks in P_FEEDBACK_DETAILS.",
+  "•\tPKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT, which calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT and passes the user remarks in P_FEEDBACK_DETAILS.",
+  "Status Update Flow",
+  "•\tDCSA event current status is updated to AMENDMENT DECLINED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status keeps its previous status [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS].",
+  "•\tDCSA amendment status is updated to AMENDMENT DECLINED [T_LT_DCSA_DOC_HEADER.DH_AMENDMENT_STATUS]."
+ ],
+ "events": [
+  {
+   "section": "Amendment Confirmed",
+   "event_type": "Menu Click",
+   "description": "Opens the \"Amendment Confirmed\" pop-up for the selected booking request.",
+   "triggered_when": "User clicks \"Amendment Confirmed\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Do you want to Amendment Confirmed this booking request (<DCSA Request ID>)?\""
+  },
+  {
+   "section": "Amendment Confirmed",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the action if the record is not a UC7 (amendment received) record.",
+   "triggered_when": "User clicks \"Amendment Confirmed\" and the precondition is not met.",
+   "remarks": "Error message is displayed."
+  },
+  {
+   "section": "Amendment Confirmed",
+   "event_type": "Button Click (Yes)",
+   "description": "Calls PKG_DCSA_TEMP2_PROCESS.PRC_DCSA_TEMP2_PROCESS and PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT with the remarks in P_FEEDBACK_DETAILS; updates current event = AMENDMENT CONFIRMED, status = CONFIRMED, amendment status = AMENDMENT CONFIRMED.",
+   "triggered_when": "User enters the reason and clicks Yes.",
+   "remarks": "Success message is displayed."
+  },
+  {
+   "section": "Amendment Confirmed",
+   "event_type": "Button Click (No)",
+   "description": "Closes the pop-up without confirming.",
+   "triggered_when": "User clicks No.",
+   "remarks": ""
+  },
+  {
+   "section": "Amendment Declined",
+   "event_type": "Menu Click",
+   "description": "Opens the \"Amendment Declined\" pop-up for the selected booking request.",
+   "triggered_when": "User clicks \"Amendment Declined\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Do you want to Amendment Declined this booking request (<DCSA Request ID>)?\""
+  },
+  {
+   "section": "Amendment Declined",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the action if the record is not a UC7 (amendment received) record.",
+   "triggered_when": "User clicks \"Amendment Declined\" and the precondition is not met.",
+   "remarks": "Error message is displayed."
+  },
+  {
+   "section": "Amendment Declined",
+   "event_type": "Button Click (Yes)",
+   "description": "Calls PKG_DCSA_TEMP2_PROCESS.PRC_DCSA_TEMP2_PROCESS and PKG_DCSA_EBK_EVENT_TRIGGERING.PRC_DCSA_POOL_INSERT with the remarks in P_FEEDBACK_DETAILS; updates current event = AMENDMENT DECLINED, status unchanged, amendment status = AMENDMENT DECLINED.",
+   "triggered_when": "User enters the reason and clicks Yes.",
+   "remarks": "Success message is displayed."
+  },
+  {
+   "section": "Amendment Declined",
+   "event_type": "Button Click (No)",
+   "description": "Closes the pop-up without declining.",
+   "triggered_when": "User clicks No.",
+   "remarks": ""
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [
+  {
+   "title": "Amendment Confirmed",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Amendment Confirmed Pop-up",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Amendment Confirmed",
+     "type": "Menu Item",
+     "ui": "Opens the Amendment Confirmed pop-up; allowed only for a UC7 (amendment received) record",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls TEMP2 process and event triggering on Yes"
+    },
+    {
+     "name": "Confirmation Text",
+     "type": "Display Item",
+     "ui": "Shows the selected DCSA Request ID",
+     "db": "",
+     "editable": "No",
+     "values": "\"Do you want to Amendment Confirmed this booking request (<DCSA Request ID>)?\"",
+     "remarks": ""
+    },
+    {
+     "name": "Reason for Amendment Confirmed",
+     "type": "Text Area",
+     "ui": "Input the reason for amendment confirmation",
+     "db": "P_FEEDBACK_DETAILS",
+     "editable": "Yes",
+     "values": "",
+     "remarks": "Placeholder \"Reason for Amendment Confirmed\""
+    },
+    {
+     "name": "Yes",
+     "type": "Button",
+     "ui": "Confirms the amendment: calls PRC_DCSA_TEMP2_PROCESS and PRC_DCSA_POOL_INSERT, then updates the status to AMENDMENT CONFIRMED / CONFIRMED",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Success message is displayed."
+    },
+    {
+     "name": "No",
+     "type": "Button",
+     "ui": "Closes the pop-up without confirming",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  },
+  {
+   "title": "Amendment Declined",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Amendment Declined Pop-up",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Amendment Declined",
+     "type": "Menu Item",
+     "ui": "Opens the Amendment Declined pop-up; allowed only for a UC7 (amendment received) record",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls TEMP2 process and event triggering on Yes"
+    },
+    {
+     "name": "Confirmation Text",
+     "type": "Display Item",
+     "ui": "Shows the selected DCSA Request ID",
+     "db": "",
+     "editable": "No",
+     "values": "\"Do you want to Amendment Declined this booking request (<DCSA Request ID>)?\"",
+     "remarks": ""
+    },
+    {
+     "name": "Reason for Amendment Declined",
+     "type": "Text Area",
+     "ui": "Input the reason for amendment decline",
+     "db": "P_FEEDBACK_DETAILS",
+     "editable": "Yes",
+     "values": "",
+     "remarks": "Placeholder \"Reason for Amendment Declined\""
+    },
+    {
+     "name": "Yes",
+     "type": "Button",
+     "ui": "Declines the amendment: calls PRC_DCSA_TEMP2_PROCESS and PRC_DCSA_POOL_INSERT, then updates the amendment status to AMENDMENT DECLINED (DCSA status unchanged)",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Success message is displayed."
+    },
+    {
+     "name": "No",
+     "type": "Button",
+     "ui": "Closes the pop-up without declining",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
+ "possible_values_column": true
+}

@@ -1,0 +1,52 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC3 - Submit Updated Booking Request",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Submit Updated Booking Request function.",
+ "images": [
+  {
+   "file": "work/brs/DCSA eBK/uc3/src/1_1.png",
+   "caption": "Image I"
+  }
+ ],
+ "features": [
+  "UC3 is sent by the shipper to update the booking request for the same Carrier Booking Request Reference. The data is received into the DCSA Temp 3 tables, and the agency user can generate the actual booking based on the UC3 data. The overall procedure is similar to UC1.",
+  "Data Flow [Event Type: IN]",
+  "•\tHQ calls PKG_DCSA_INTERMEDIATE_PROCESS.PRC_CALL_INTERMEDIATE_PROCESS to pass the Temp 3 data.",
+  "•\tA background job transfers the data into the interface process tables. The previous use case version is changed to HISTORY, this version is marked as CURRENT, and the current event is “UPDATE RECEIVED - Submit updated Booking Request”.",
+  "•\tThe agency user reviews the data and converts it into an actual booking, provided the same Carrier Booking Request Reference has not already been converted.",
+  "Pre-Validations",
+  "•\tThe booking request must not be converted into an actual booking if a booking already exists for the same Carrier Booking Request Reference. HQ also validates this, but an additional check is added in DCSA Booking Activity.",
+  "Flow",
+  "•\tWhether or not requested by the Carrier, the Shipper submits an updated booking request.",
+  "•\tThe Carrier performs an initial synchronous processing of the updated booking request. The Carrier can accept or reject the request itself and responds with the appropriate HTTP status code.",
+  "•\tThe Carrier sets the booking state to UPDATE RECEIVED. If a previous update was submitted, the updated booking request overwrites the content and state of the previous one.",
+  "•\tThe Carrier sends a notification asynchronously to the relevant registered counterparts containing the Carrier Booking Request Reference and the state of the booking.",
+  "Status Flow",
+  "•\tDCSA event current status is updated to UPDATE RECEIVED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status is updated to UPDATE RECEIVED [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS]."
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}

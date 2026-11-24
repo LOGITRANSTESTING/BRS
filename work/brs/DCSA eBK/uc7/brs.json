@@ -1,0 +1,52 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC7 - Request Amendment to Confirmed Booking",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Request Amendment to Confirmed Booking function.",
+ "images": [
+  {
+   "file": "work/brs/DCSA eBK/uc7/src/1_1.png",
+   "caption": "Image I"
+  }
+ ],
+ "features": [
+  "UC7 is sent by the shipper to amend the booking after the actual booking has been generated. The data is received into the DCSA Temp 3 tables.",
+  "Because this event happens after the carrier booking request has been converted into an actual booking, the agency user cannot generate an actual booking for this use case. The user can only view the data from DCSA Booking Activity and apply the required amendments to the actual booking manually.",
+  "Assumption",
+  "•\tUC7 is an IN-event type, and it is received only after UC5 – Confirm Booking Request. No validations are needed on our side, since HQ validates it while receiving UC7.",
+  "Data Flow [Event Type: IN]",
+  "•\tHQ calls PKG_DCSA_INTERMEDIATE_PROCESS.PRC_CALL_INTERMEDIATE_PROCESS to pass the Temp 3 data.",
+  "•\tA background job transfers the data into the interface process tables. The previous use case version is changed to HISTORY, this version is marked as CURRENT, and the current event is “AMENDMENT RECEIVED - Request amendment to confirmed booking”.",
+  "•\tThe agency user reviews the data and processes the required amendments into the actual booking manually.",
+  "Pre-Validations",
+  "•\tThe booking request must be converted into an actual booking.",
+  "•\tUC5 – Confirm Booking Request must already be completed.",
+  "Status Flow",
+  "•\tDCSA event current status is updated to AMENDMENT RECEIVED [T_LT_DCSA_DOC_HEADER.DH_CURRENT_EVENT].",
+  "•\tDCSA status keeps its previous status [T_LT_DCSA_DOC_HEADER.DH_DOC_STATUS].",
+  "•\tDCSA amendment status is updated to AMENDMENT RECEIVED [T_LT_DCSA_DOC_HEADER.DH_AMENDMENT_STATUS]."
+ ],
+ "events": [],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}
