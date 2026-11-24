@@ -92,7 +92,7 @@
    "event_type": "Validation (Precondition)",
    "description": "Blocks the confirmation if no booking has been created, or the booking is PRE-ENTERED, CANCELLED or FREEZE.",
    "triggered_when": "User clicks \"Confirm Request\" and a precondition is not met.",
-   "remarks": "Error message text to be confirmed."
+   "remarks": "Error message is displayed."
   },
   {
    "section": "Confirm Request",

@@ -1,0 +1,110 @@
+{
+ "template": "BRS - DCSA eBK - Reject Request V 1.0.docx",
+ "company": "YANG MING MARINE TRANSPORT CORP.",
+ "module": "DCSA eBK",
+ "module_line": "DCSA – eBK Process",
+ "function": "UC4 - Reject Booking Request",
+ "version": "01.01",
+ "date": "",
+ "history": [
+  {
+   "date": "24.11.2026",
+   "version": "V01.01",
+   "author": "Appsara",
+   "description": "Initial version created based on the confirmed screen designs"
+  }
+ ],
+ "purpose": "This document explains the purpose of Reject Booking Request function.",
+ "images": [
+  {
+   "section": "Reject Request",
+   "file": "work/brs/DCSA eBK/uc4/src/1_1.png",
+   "caption": "Image I"
+  },
+  {
+   "section": "Reject Request",
+   "file": "work/brs/DCSA eBK/uc4/src/1_2.png",
+   "caption": "Image II"
+  }
+ ],
+ "features": [
+  {
+   "section": "Reject Request"
+  },
+  "The “Reject Request” option in DCSA Booking Activity (UC4: Reject Booking Request) allows the agency user to manually select and reject a booking request received from the shipper.",
+  "The agency user can reject the request only if a booking has not yet been generated against it. If a booking has already been generated, rejection is not allowed. The reason for rejection is mandatory.",
+  "Preconditions",
+  "•\tThe booking request must be in SUBMITTED status.",
+  "•\tA booking must not already be generated against the request.",
+  "Once the booking request is rejected by the user, the booking request is in state REJECTED.",
+  "Flow",
+  "•\tThe Carrier decides to reject the booking request and updates its state to REJECTED.",
+  "•\tCall HQ’s Track & Trace event log procedure with the relevant parameters.",
+  "•\tThe Carrier sends a notification to the relevant registered counterparts with the Carrier Booking request reference, the state of the booking and the reason for rejection.",
+  "There is no need to trigger any other notifications at this time.",
+  {
+   "section": "Track & Trace Event Log – Reject"
+  },
+  "When the agency user rejects a DCSA booking request, the system calls the HQ Track & Trace event log procedure to record the rejection event.",
+  "Procedure Name: WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT@HQ_LINK",
+  "Key Parameter Values",
+  "•\tP_DATA_SOURCE = DCSA, P_DATA_TYPE = OUT, P_DOC_TYPE = BK",
+  "•\tP_DOC_NUMBER / P_DOC_ID = Carrier booking request number (T_LT_DCSA_DOC_HEADER.DH_DOC_NUMBER)",
+  "•\tP_DOC_VERSION = T_LT_DCSA_DOC_HEADER.DH_DOC_VERSION",
+  "•\tP_CONTRACT_REF = Trade ID (Case ID) if available (T_LT_DCSA_EBK_HEADER.DBH_TRADE_ID)",
+  "•\tP_CURRENT_EVENT = REJECTED, P_DOCUMENT_STATUS = REJECTED",
+  "•\tP_EVENT_TYPE_CODE = REJE, P_DOC_TYPE_CODE = CBR",
+  "•\tP_EVENT_DATE / P_EVENT_CREATED_DATE = SYSDATE",
+  "•\tP_REF_DETAILS = Type CBR, Value: Carrier booking request number",
+  "•\tP_FEEDBACK_DETAILS = Rejection reason (T_LT_DCSA_EBK_NOTES.DEN_NOTES)",
+  "•\tP_NFT_TO = APC",
+  "The procedure returns P_EVENT_KEY, P_PROCESS_RESULT and P_PROCESS_DESC."
+ ],
+ "events": [
+  {
+   "section": "Reject Request",
+   "event_type": "Menu Click",
+   "description": "Opens the \"Reject Request\" pop-up for the selected booking request.",
+   "triggered_when": "User clicks \"Reject Request\" in the row's ☰ menu in the DCSA Activity grid.",
+   "remarks": "\"Do you want to reject this booking request (<DCSA Request ID>)?\""
+  },
+  {
+   "section": "Reject Request",
+   "event_type": "Validation (Precondition)",
+   "description": "Blocks the rejection if the request is not in SUBMITTED status or a booking is already generated against it.",
+   "triggered_when": "User clicks \"Reject Request\" and a precondition is not met.",
+   "remarks": "Error message is displayed."
+  },
+  {
+   "section": "Reject Request",
+   "event_type": "Button Click (Yes)",
+   "description": "Checks that Reason for Rejection is entered (mandatory), updates the request to REJECTED, saves the reason (T_LT_DCSA_EBK_NOTES) and calls the Track & Trace Event Log.",
+   "triggered_when": "User enters the reason and clicks Yes.",
+   "remarks": "Success message is displayed."
+  },
+  {
+   "section": "Reject Request",
+   "event_type": "Button Click (No)",
+   "description": "Closes the pop-up without rejecting.",
+   "triggered_when": "User clicks No.",
+   "remarks": ""
+  },
+  {
+   "section": "Track & Trace Event Log – Reject",
+   "event_type": "System Event",
+   "description": "Calls WEBEDI.DCSA_SHPMT_EVENT_LINKAGE.SHPMT_EVENT_DETAILS_INSERT@HQ_LINK to log the rejection event (P_CURRENT_EVENT = REJECTED, P_EVENT_TYPE_CODE = REJE).",
+   "triggered_when": "User confirms the rejection (2.2.1, row 3).",
+   "remarks": "P_FEEDBACK_DETAILS = rejection reason."
+  }
+ ],
+ "search_title": "",
+ "search": [],
+ "display_title": "",
+ "drop_display": false,
+ "display": [],
+ "extra_tables": [],
+ "references": [],
+ "assumptions": [],
+ "tables": [],
+ "possible_values_column": true
+}
