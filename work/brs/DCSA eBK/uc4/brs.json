@@ -105,6 +105,64 @@
  "extra_tables": [],
  "references": [],
  "assumptions": [],
- "tables": [],
+ "tables": [
+  {
+   "title": "Reject Request",
+   "text": "",
+   "rows": []
+  },
+  {
+   "title": "Reject Request Pop-up",
+   "level": 3,
+   "text": "",
+   "rows": [
+    {
+     "name": "Reject Request",
+     "type": "Menu Item",
+     "ui": "Opens the Reject Request pop-up; allowed only when the request is SUBMITTED and no booking is generated",
+     "db": "DOC HEADER",
+     "editable": "-",
+     "values": "",
+     "remarks": "Calls Track & Trace Event Log on Yes"
+    },
+    {
+     "name": "Confirmation Text",
+     "type": "Display Item",
+     "ui": "Shows the selected DCSA Request ID",
+     "db": "",
+     "editable": "No",
+     "values": "\"Do you want to reject this booking request (<DCSA Request ID>)?\"",
+     "remarks": ""
+    },
+    {
+     "name": "Reason for Rejection",
+     "type": "Text Area",
+     "ui": "Mandatory. Input the reason for rejection",
+     "db": "T_LT_DCSA_EBK_NOTES (DEN_NOTES)",
+     "editable": "Yes",
+     "values": "",
+     "remarks": "Placeholder \"Reason for Rejection\""
+    },
+    {
+     "name": "Yes",
+     "type": "Button",
+     "ui": "After the Reason for Rejection is entered, the request is updated to REJECTED, the reason is saved and the Track & Trace Event Log is called",
+     "db": "DOC HEADER, T_LT_DCSA_EBK_NOTES",
+     "editable": "-",
+     "values": "",
+     "remarks": "Success message is displayed."
+    },
+    {
+     "name": "No",
+     "type": "Button",
+     "ui": "Closes the pop-up without rejecting",
+     "db": "",
+     "editable": "-",
+     "values": "",
+     "remarks": ""
+    }
+   ]
+  }
+ ],
  "possible_values_column": true
 }
